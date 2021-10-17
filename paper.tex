@@ -1,0 +1,180 @@
+\documentclass[twocolumn]{aastex63}
+\usepackage{mathtools}
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}
+\setcitestyle{authoryear,open={(},close={)}}
+\usepackage{txfonts}
+\usepackage{lipsum, babel}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cleveref}
+\usepackage{physics}
+\usepackage{empheq}
+%\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{multirow}
+\usepackage[flushleft]{threeparttable}
+\usepackage{mathrsfs}
+\usepackage{soul}
+\pdfminorversion=5
+
+\newcommand{\MyDiamond}[1][fill=black]{
+\begin{tikzpicture}[x=1.2ex,y=1.2ex,line width=.1ex,line join=round, yshift=0.0ex] \draw  [#1]  (0,.5) -- (.5,1) -- (1,.5) -- (.5,0);
+\end{tikzpicture}
+}
+
+\newcommand{\MyPlus}[1][fill=black]
+{
+\begin{tikzpicture}[x=1.5ex,y=1.5ex,line width=0.5ex]
+\draw[#1] (0,.5) -- (1,.5);
+\draw[#1] (.5,0) -- (.5,1);
+\end{tikzpicture}
+}
+
+\newcommand{\MyCross}[1][fill=black]
+{
+\begin{tikzpicture}[x=1.ex,y=1.ex,line width=0.5ex]
+\draw[#1] (0,0) -- (1,1);
+\draw[#1] (0,1) -- (1,0);
+\end{tikzpicture}
+}
+
+\newcommand{\MyTriangle}[1][fill=black]
+{
+\begin{tikzpicture}[x=1.ex,y=1.ex,line width=0.2ex]
+\draw[#1] (0,1) -- (1,1);
+\draw[#1] (1,1) -- (.5,0);
+\draw[#1] (.5,0) -- (0,1);
+\fill[#1] (0,1) -- (1,1) -- (.5,0) -- cycle;
+\end{tikzpicture}
+}
+
+\newcommand{\MySolidLine}[1][fill=black]
+{
+\begin{tikzpicture}[x=2.ex,y=1.ex,line width=0.5ex]
+\draw[#1] (0,.5) -- (2.5,.5);
+\end{tikzpicture}
+}
+
+\newcommand{\MyDashedLine}[1][fill=black]
+{
+\begin{tikzpicture}[x=2.ex,y=1.ex,line width=0.5ex]
+\draw [#1,dashed] (0,.5) -- (2.5,.5);
+\end{tikzpicture}
+}
+
+\newcommand{\MyDashedDottedLine}[1][fill=black]
+{
+\begin{tikzpicture}[x=2.ex,y=1.ex,line width=0.5ex]
+\draw [#1,dash dot] (0,.5) -- (2.5,.5);
+\end{tikzpicture}
+}
+
+\newcommand{\MyDottedLine}[1][fill=black]
+{
+\begin{tikzpicture}[x=2.ex,y=1.ex,line width=0.5ex]
+\draw [#1,dotted] (0,.5) -- (2.5,.5);
+\end{tikzpicture}
+}
+
+\begin{document}
+\title{TITLE} 
+
+
+\author[0000-0002-1868-0660]{Po-Hsun Tseng}
+\affiliation{Institute of Astrophysics, National Taiwan University, Taipei 10617, Taiwan}
+
+\author[0000-0003-3269-4660]{H.-Y. Karen Yang}
+\affiliation{Institute of Astronomy and Department of Physics, National Tsing Hua University, Hsinchu 30013, Taiwan}
+
+\author[0000-0002-1249-279X]{Hsi-Yu Schive}
+\affiliation{Institute of Astrophysics, National Taiwan University, Taipei 10617, Taiwan}
+\affiliation{Department of Physics, National Taiwan University, Taipei 10617, Taiwan}
+\affiliation{Center for Theoretical Physics, National Taiwan University, Taipei 10617, Taiwan}
+\affiliation{Physics Division, National Center for Theoretical Sciences, Taipei 10617, Taiwan}
+
+\author[0000-0003-2654-8763]{Tzihong Chiueh}
+\affiliation{Institute of Astrophysics, National Taiwan University, Taipei 10617, Taiwan}
+\affiliation{Department of Physics, National Taiwan University, Taipei 10617, Taiwan}
+\affiliation{Center for Theoretical Physics, National Taiwan University, Taipei 10617, Taiwan}
+
+
+\correspondingauthor{Po-Hsun Tseng}
+\email{zengbs@gmail.com}
+
+
+\keywords{keywords}
+
+\begin{abstract}
+\end{abstract}
+
+\section{Introduction}
+ 
+
+\section{Methodology}
+We simulate 3D special relativistic hydrodynamics with passive CR injections from the GC using \
+the GPU code \textsc{gamer-sr} \citep{tseng2021}.
+
+
+\begin{subequations}
+  \label{conservative-form}
+  \begin{align}
+   &\partial_{t} D+\partial_{j} \left(DU^{j}/\gamma\right)=0,\label{D evolution}\\
+   &\partial_{t} M^{i}+\partial_{j} \left(M^{i}U^{j}/\gamma+p\delta^{ij}\right)=0,\label{M evolution}\\
+   &\partial_{t} \tilde{E}+\partial_j \left[\left(\tilde{E}+p\right)U^{j}/\gamma\right]=0, \label{E evoltion}\\
+   &\partial_{t} \left(\gamma e_{\text{cr}}\right) + \partial_{j} \left(e_{\text{cr}}U^{j}\right)=-p_{\text{cr}}\left(\frac{\partial\gamma}{\partial t} + \frac{1}{c}\partial_{j} U^{j}\right),\label{D evolution}
+  \end{align}
+\end{subequations}
+where the five conserved quantities of gas $D$, $M^{i}$, and $\tilde{E}$ are the mass density, \
+the momentum densities, and the reduced energy density, respectively. \
+$\gamma$ and $U^{j}$ are the temporal and spatial component of four-velocity of gas. \
+$p_{\text{cr}}$ and $e_{\text{cr}}$ are the CR pressure and CR energy density. \
+$c$ is the speed of light, and $\delta^{ij}$ is the Kronecker delta notation.
+
+\subsection{Assumptions and Numerical Techniques}
+\subsection{The Galactic Model}
+\subsection{Jet injection}
+
+\section{conclusions}
+
+\section*{Data Availability}
+The data underlying this article are available in the article and in its online supplementary material.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
+
+% The best way to enter references is to use BibTeX:
+
+\bibliographystyle{mnras}
+\bibliography{paper} % if your bibtex file is called example.bib
+
+
+
+
+% Alternatively you could enter them by hand, like this:
+% This method is tedious and prone to error if you have lots of references
+%\begin{thebibliography}{99}
+%\bibitem[\protect\citeauthoryear{Munz, Claus-Dieter and Núñez-de la Rosa, Jonatan}{2016}]{XTROEM}
+%Author A.~N., 2013, Journal of Improbable Astronomy, 1, 1
+%\bibitem[\protect\citeauthoryear{Others}{2013}]{Others2013}
+%Others S., 2012, Journal of Interesting Stuff, 17, 198
+%\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+
+\end{document}
