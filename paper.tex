@@ -129,16 +129,18 @@ the GPU code \textsc{gamer-sr} \citep{tseng2021}.
   \label{conservative-form}
   \begin{align}
    &\partial_{t} D+\partial_{j} \left(DU^{j}/\gamma\right)=0,\label{D evolution}\\
-   &\partial_{t} M^{i}+\partial_{j} \left(M^{i}U^{j}/\gamma+p\delta^{ij}\right)=0,\label{M evolution}\\
-   &\partial_{t} \tilde{E}+\partial_j \left[\left(\tilde{E}+p\right)U^{j}/\gamma\right]=0, \label{E evoltion}\\
+   &\partial_{t} M^{i}+\partial_{j} \left(M^{i}U^{j}/\gamma+p_{\text{gas}}\delta^{ij}\right)=0,\label{M evolution}\\
+   &\partial_{t} \tilde{E}+\partial_j \left[\left(\tilde{E}+p_{\text{gas}}\right)U^{j}/\gamma\right]=0, \label{E evoltion}\\
    &\partial_{t} \left(\gamma e_{\text{cr}}\right) + \partial_{j} \left(e_{\text{cr}}U^{j}\right)=-p_{\text{cr}}\left(\frac{\partial\gamma}{\partial t} + \frac{1}{c}\partial_{j} U^{j}\right),\label{D evolution}
   \end{align}
 \end{subequations}
 where the five conserved quantities of gas $D$, $M^{i}$, and $\tilde{E}$ are the mass density, \
 the momentum densities, and the reduced energy density, respectively. \
 $\gamma$ and $U^{j}$ are the temporal and spatial component of four-velocity of gas. \
+$p_{\text{gas}}$ is the gas pressure.\
 $p_{\text{cr}}$ and $e_{\text{cr}}$ are the CR pressure and CR energy density. \
-$c$ is the speed of light, and $\delta^{ij}$ is the Kronecker delta notation.
+$c$ is the speed of light, and $\delta^{ij}$ is the Kronecker delta notation. \
+Throughout this paper, Latin indices run from 1 to 3, except when stated otherwise.
 
 \subsection{Assumptions and Numerical Techniques}
 \subsection{The Galactic Model}

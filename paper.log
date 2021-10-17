@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.10)  17 OCT 2021 14:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.10)  17 OCT 2021 15:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1282,12 +1282,12 @@ me{equation.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.160 
+l.162 
        <./Orcid-ID.png>] [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
  (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 180.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 77E5BF5999D595224C0474152F44808F;353.
 
@@ -1296,13 +1296,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 25310 strings out of 480478
- 456338 string characters out of 5897135
+ 25311 strings out of 480478
+ 456346 string characters out of 5897135
  854515 words of memory out of 5000000
- 40758 multiletter control sequences out of 15000+600000
+ 40759 multiletter control sequences out of 15000+600000
  597358 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,60p,407b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,60p,407b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/projectW/tseng/opt/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</pr
 ojectW/tseng/opt/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.p
 fb></projectW/tseng/opt/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -1320,7 +1320,7 @@ pt/texlive/2020/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></projectW/tseng
 ng/opt/texlive/2020/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></projectW/t
 seng/opt/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></projectW/ts
 eng/opt/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (2 pages, 158596 bytes).
+Output written on paper.pdf (2 pages, 159770 bytes).
 PDF statistics:
  132 PDF objects out of 1000 (max. 8388607)
  109 compressed objects within 2 object streams
