@@ -1,1 +1,5 @@
-.nfs*
+*.aux
+*.blg
+*.log
+*.out
+*.pdf
