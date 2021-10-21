@@ -143,12 +143,16 @@
             It might somewhat affect the instabilities near the bubble's surface, but that's a secondary effect.
       \item Since $\mathbf{B}$ is zero, we can also ignore the effect of cosmic-ray diffusion.
     \end{enumerate}
+  \item Gravity
+    \begin{enumerate}
+      \item Since , we have assumed the 
+    \end{enumerate}
 \end{enumerate}
 We simulate 3D special relativistic hydrodynamics with passive CR injections from the GC using \
 the special hydrodynamics GPU code \textsc{gamer-sr} \citep{tseng2021}.
 
 \textsc{gamer-sr} solves mass and energy-momentum conservation laws of a special relativistic ideal fluid\
-with CR
+with CR.
 
 The CRs are advected with the thermal gas, but the gas cannot react to the CR pressure.\
 In this approach, the CRs are treated as a single species without distinction between electrons and protons.\
@@ -159,7 +163,8 @@ such as energy losses due to synchrotron and inverse Compton emission, and reacc
   \label{conservative-form}
   \begin{align}
    &\partial_{t} D+\partial_{j} \left(DU^{j}/\gamma\right)=0,\label{D evolution}\\
-   &\partial_{t} M^{i}+\partial_{j} \left(M^{i}U^{j}/\gamma+p_{\text{gas}}\delta^{ij}\right)=0,\label{M evolution}\\
+   &\partial_{t} M^{i}+\partial_{j} \left(M^{i}U^{j}/\gamma+p_{\text{gas}}\delta^{ij}\right)=\
+   -\rho\partial_{i}\Phi,\label{M evolution}\\
    &\partial_{t} \tilde{E}+\partial_j \left[\left(\tilde{E}+p_{\text{gas}}\right)U^{j}/\gamma\right]=0, \label{E evoltion}\\
    &\partial_{t} \left(\gamma e_{\text{cr}}\right) + \partial_{j} \left(e_{\text{cr}}U^{j}\right)=-p_{\text{cr}} \partial_{j} U^{j},\label{D evolution}
   \end{align}
@@ -169,8 +174,10 @@ the momentum densities, and the reduced energy density, respectively.\
 The reduced energy density is defined by subtracting the rest mass energy density of gas\
 from the total energy density of gas.\
 $\gamma$ and $U^{j}$ are the temporal and spatial component of four-velocity of gas.\
+$\rho$ is the gas density in the local rest frame defined by $D/\gamma$.\
 $p_{\text{gas}}$ is the gas pressure.\
 $p_{\text{cr}}$ and $e_{\text{cr}}$ are the CR pressure and CR energy density measured in the local rest frame.\
+$\Phi$ is the gravitation potential.\
 $c$ is the speed of light, and $\delta^{ij}$ is the Kronecker delta notation.\
 Throughout this paper, Latin indices run from 1 to 3, except when stated otherwise.
 
@@ -178,10 +185,10 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
 
 
 \begin{enumerate}
-\item Gravity
+\item Gravitational potential
   \begin{enumerate}
-    \item
-    \item
+    \item Isothermal slab
+    \item NFW potential
   \end{enumerate}
 
 \item Cold disk
@@ -193,6 +200,19 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
 \end{enumerate}
 
 \subsection{Jet injection}
+
+\subsection{X-ray and Gamma-ray emission}
+  \begin{enumerate}
+    \item X-ray
+       \begin{enumerate}
+         \item
+       \end{enumerate}
+    \item Gamma-ray
+       \begin{enumerate}
+         \item
+       \end{enumerate}
+  \end{enumerate}
+
 
 \section{conclusions}
 
