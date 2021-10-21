@@ -9,6 +9,7 @@
 \usepackage{ae,aecompl}
 \usepackage{tikz}
 \usepackage{graphicx}
+\usepackage{url}
 \usepackage{subfigure}
 \usepackage{float}
 \usepackage{amsmath}
@@ -16,7 +17,6 @@
 \usepackage{cleveref}
 \usepackage{physics}
 \usepackage{empheq}
-%\usepackage{siunitx}
 \usepackage{booktabs}
 \usepackage{array}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
@@ -123,20 +123,26 @@
 \section{Methodology}
 \subsection{Assumptions and Numerical Techniques}
 \begin{enumerate}
+  \item \textsc{gamer-sr}
+    \begin{enumerate}
+      \item GPU acceleration.
+      \item Using a new algorithm dedicated to the conversion between primitive and conserved variable,\
+            significantly reducing numerical error in the non-relativistic limit.
+    \end{enumerate}
   \item Cosmic-ray
-\begin{enumerate}
-  \item We treat CRs as a second fluid and solve directly for the evolution of CR pressure $p_{\text{cr}}$\
-        as a function of $\mathbf{r}$ and $t$.
-  \item We did not model the CR energy spectrum.
-  \item We neglected the cooling and heating processes of CRs, such as energy losses due to synchrotron\
-        and inverse Compton emission, and reacceleration in shocks.
-  \item We have assumed cosmic-ray is passive. (i.e. $p_{\text{cr}}\ll p_{\text{gas}}$)
-  \item We have assumed $\mathbf{B}$ is zero within the simulation box as the field inside\
-        the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
-        little effect on the overall dynamics.\
-        It might somewhat affect the instabilities near the bubble's surface, but that's a secondary effect.
-  \item Since $\mathbf{B}$ is zero, we can also ignore the effect of cosmic-ray diffusion.
-\end{enumerate}
+    \begin{enumerate}
+      \item We treat CRs as a second fluid and solve directly for the evolution of CR pressure $p_{\text{cr}}$\
+            as a function of $\mathbf{r}$ and $t$.
+      \item We did not model the CR energy spectrum.
+      \item We neglected the cooling and heating processes of CRs, such as energy losses due to synchrotron\
+            and inverse Compton emission, and reacceleration in shocks.
+      \item We have assumed cosmic-ray is passive. (i.e. $p_{\text{cr}}\ll p_{\text{gas}}$)
+      \item We have assumed $\mathbf{B}$ is zero within the simulation box as the field inside\
+            the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
+            little effect on the overall dynamics.\
+            It might somewhat affect the instabilities near the bubble's surface, but that's a secondary effect.
+      \item Since $\mathbf{B}$ is zero, we can also ignore the effect of cosmic-ray diffusion.
+    \end{enumerate}
 \end{enumerate}
 We simulate 3D special relativistic hydrodynamics with passive CR injections from the GC using \
 the special hydrodynamics GPU code \textsc{gamer-sr} \citep{tseng2021}.
@@ -144,7 +150,7 @@ the special hydrodynamics GPU code \textsc{gamer-sr} \citep{tseng2021}.
 \textsc{gamer-sr} solves mass and energy-momentum conservation laws of a special relativistic ideal fluid\
 with CR
 
-The CRs are advected with the thermal gas, and inreturn the gas can react to the gradients of the CR pressure.\
+The CRs are advected with the thermal gas, but the gas cannot react to the CR pressure.\
 In this approach, the CRs are treated as a single species without distinction between electrons and protons.\
 We did not model the CR energy spectrum, and we neglected the cooling and heating processes of CRs,\
 such as energy losses due to synchrotron and inverse Compton emission, and reacceleration in shocks.\
@@ -169,6 +175,23 @@ $c$ is the speed of light, and $\delta^{ij}$ is the Kronecker delta notation.\
 Throughout this paper, Latin indices run from 1 to 3, except when stated otherwise.
 
 \subsection{The Galactic Model}
+
+
+\begin{enumerate}
+\item Gravity
+  \begin{enumerate}
+    \item
+    \item
+  \end{enumerate}
+
+\item Cold disk
+  \begin{enumerate}
+    \item The fractal density is created using the publicly\
+          available pyFC code\footnote{\url{https://pypi.python.org/pypi/pyFC}}.
+    \item
+  \end{enumerate}
+\end{enumerate}
+
 \subsection{Jet injection}
 
 \section{conclusions}
