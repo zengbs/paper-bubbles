@@ -193,7 +193,7 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
 \begin{enumerate}
 \item Fixed externel gravitational potential:
   \begin{enumerate}
-    \item Bulge:
+    \item Bulge potential:
       \begin{enumerate}
        \item Peak density: $\rho_{\text{bulge}}^{\text{peak}}=4\times 10^{-24}$ g/cm$^3$.
        \item Potential (isothermal slab):
@@ -206,12 +206,13 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
                 \sqrt{\frac{k_{B}T_{\text{bulge}}}{m}}=100$ km/s \citep{velocity-dispersion-MW}.
       \end{enumerate}
 
-    \item Dark logarithmic halo:
+    \item Dark logarithmic halo potential:
          \begin{equation}
            \Phi_{\text{halo}}=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right),
          \end{equation}
          where $v_{\text{halo}}=131.5$ km/s, $d_{\text{h}}=12$ kpc.
 
+    \item Total potential: $\Phi_{\text{total}}=\Phi_{\text{bulge}}+\Phi_{\text{halo}}$.
   \end{enumerate}
 
 
@@ -223,7 +224,7 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
     \item Density:
           \begin{equation}
              \rho_{\text{disk}}=\rho_{\text{disk}}^{\text{peak}}
-             \exp\left[-\frac{\Phi_{\text{bulge}}}{k_{B}T_{\text{disk}}/m}\right].
+             \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{disk}}/m}\right].
              \label{disk-density}
           \end{equation}
 
@@ -238,7 +239,7 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
      \item Density:
           \begin{equation}
              \rho_{\text{atmp}}=\rho_{\text{atmp}}^{\text{peak}}
-             \exp\left[-\frac{\Phi_{\text{bulge}}}{k_{B}T_{\text{atmp}}/m}\right],
+             \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{atmp}}/m}\right],
              \label{atmosphere-density}
           \end{equation}
           where $\rho_{\text{atmp}}^{\text{peak}}$ can be obtained by assuming that pressure\
