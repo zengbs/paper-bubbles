@@ -146,7 +146,12 @@
     \end{enumerate}
   \item Assumptions on gravity:
     \begin{enumerate}
-      \item Since , we have assumed the
+      \item The ISM disk and atmosphere are subjected to the fixed external potential of bulge.
+      \item In addition to the gravitational interaction, we ignore other interactions between stars and gases.
+      \item We also ignore the self-gravity of the ISM disk and of the atmosphere.
+      \item We ignore the Milky Way rotation.
+      \item We use the potential of isothermal slab to mimic the fixed gravitational potential of the stellar bulge.
+      \item The interface between cold ISM disk and atmosphere is parallel to galactic plane and is pressure balanced.
     \end{enumerate}
 \end{enumerate}
 We simulate 3D special relativistic hydrodynamics with passive CR injections from the GC using \
@@ -186,32 +191,63 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
 
 
 \begin{enumerate}
-\item Gravitational potential:
+\item Fixed externel gravitational potential:
   \begin{enumerate}
-    \item Isothermal slab (bulge)
+    \item Bulge:
+      \begin{enumerate}
+       \item Peak density: $\rho_{\text{bulge}}^{\text{peak}}=4\times 10^{-24}$ g/cm$^3$.
+       \item Potential (isothermal slab):
          \begin{equation}
-           \Phi_{\text{slab}}=2\sigma^2_{\text{slab}}\ln\cosh\left(z\sqrt{\frac{2\pi G\rho_{0}}{\sigma^2_{\text{slab}}}}\right),
+           \Phi_{\text{bulge}}=\
+           2\sigma^2_{\text{bulge}}\
+           \ln\cosh\left(z\sqrt{\frac{2\pi G\rho_{\text{bulge}}^{\text{peak}}}{\sigma^2_{\text{bulge}}}}\right),
          \end{equation}
-          where $\displaystyle \sigma^2_{\text{slab}}=\sqrt{\frac{k_{B}T_{\text{slab}}}{m}}=100$ km/s \citep{velocity-dispersion-MW}.
+          where $\displaystyle \sigma_{\text{bulge}}=\
+                \sqrt{\frac{k_{B}T_{\text{bulge}}}{m}}=100$ km/s \citep{velocity-dispersion-MW}.
+      \end{enumerate}
 
-         \begin{equation}
-           \rho_{\text{slab}} = \rho_{0}\cosh^{-2}\left(z\sqrt{\frac{2\pi G \rho_{0}}{\sigma^2_{\text{slab}}}}\right).
-         \end{equation}
     \item Dark logarithmic halo:
          \begin{equation}
            \Phi_{\text{halo}}=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right),
          \end{equation}
          where $v_{\text{halo}}=131.5$ km/s, $d_{\text{h}}=12$ kpc.
+
   \end{enumerate}
 
-\item Cold disk:
+
+\item Clummpy cold disk:
   \begin{enumerate}
+    \item Scale height: $z_{0}=100$ pc. \citep{paek-ism-density}
+    \item Peak density: $\rho_{\text{disk}}^{\text{peak}}=10^{-23}$ g/cm$^3$. \citep{paek-ism-density}
+    \item $T_{\text{disk}}=10^{3}$ K. \citep{paek-ism-density}
+    \item Density:
+          \begin{equation}
+             \rho_{\text{disk}}=\rho_{\text{disk}}^{\text{peak}}
+             \exp\left[-\frac{\Phi_{\text{bulge}}}{k_{B}T_{\text{disk}}/m}\right].
+             \label{disk-density}
+          \end{equation}
+
     \item The fractal density is created using the publicly\
           available pyFC code\footnote{\url{https://pypi.python.org/pypi/pyFC}}.
-    \item
   \end{enumerate}
-\end{enumerate}
 
+
+\item Isothermal atmosphere:
+  \begin{enumerate}
+     \item $T_{\text{atmp}}=10^{6}$ K. \citep{temperature-MW}
+     \item Density:
+          \begin{equation}
+             \rho_{\text{atmp}}=\rho_{\text{atmp}}^{\text{peak}}
+             \exp\left[-\frac{\Phi_{\text{bulge}}}{k_{B}T_{\text{atmp}}/m}\right],
+             \label{atmosphere-density}
+          \end{equation}
+          where $\rho_{\text{atmp}}^{\text{peak}}$ can be obtained by assuming that pressure\
+          and gravitational potential are continuous at the interface between disk and atmosphere (i.e. $z=\pm z_{0}$).
+  \end{enumerate}
+
+
+
+\end{enumerate}
 \subsection{Jet injection}
 
 \subsection{X-ray and Gamma-ray emission}

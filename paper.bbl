@@ -17,6 +17,13 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
+\bibitem[\protect\citeauthoryear{Ferri{\`{e}}re}{Ferri{\`{e}}re}{2001}]{paek-ism-density}
+Ferri{\`{e}}re K.~M.,  2001, ] {10.1103/revmodphys.73.1031}, 73, 1031
+
+\bibitem[\protect\citeauthoryear{Miller \& Bregman}{Miller \&
+  Bregman}{2013}]{temperature-MW}
+Miller M.~J.,  Bregman J.~N.,  2013, ] {10.1088/0004-637x/770/2/118}, 770, 118
+
 \bibitem[\protect\citeauthoryear{Tseng, Schive  \& Chiueh}{Tseng
   et~al.}{2021}]{tseng2021}
 Tseng P.-H.,  Schive H.-Y.,   Chiueh T.,  2021, \mn@doi [Monthly Notices of the
