@@ -17,8 +17,30 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
+\bibitem[\protect\citeauthoryear{{Arnaud}}{{Arnaud}}{1996}]{XSPEC}
+{Arnaud} K.~A.,  1996, in {Jacoby} G.~H.,  {Barnes} J.,  eds,  Astronomical
+  Society of the Pacific Conference Series Vol. 101, Astronomical Data Analysis
+  Software and Systems V. p.~17
+
 \bibitem[\protect\citeauthoryear{Ferri{\`{e}}re}{Ferri{\`{e}}re}{2001}]{paek-ism-density}
 Ferri{\`{e}}re K.~M.,  2001, ] {10.1103/revmodphys.73.1031}, 73, 1031
+
+\bibitem[\protect\citeauthoryear{{Kaastra} \& {Mewe}}{{Kaastra} \&
+  {Mewe}}{1993}]{Xray-2}
+{Kaastra} J.~S.,  {Mewe} R.,  1993, \aaps, \href
+  {https://ui.adsabs.harvard.edu/abs/1993A&AS...97..443K} {97, 443}
+
+\bibitem[\protect\citeauthoryear{{Liedahl}, {Osterheld}  \&
+  {Goldstein}}{{Liedahl} et~al.}{1995}]{Xray-3}
+{Liedahl} D.~A.,  {Osterheld} A.~L.,   {Goldstein} W.~H.,  1995, \mn@doi
+  [\apjl] {10.1086/187729}, \href
+  {https://ui.adsabs.harvard.edu/abs/1995ApJ...438L.115L} {438, L115}
+
+\bibitem[\protect\citeauthoryear{{Mewe}, {Gronenschild}  \& {van den
+  Oord}}{{Mewe} et~al.}{1985}]{Xray-1}
+{Mewe} R.,  {Gronenschild} E.~H.~B.~M.,   {van den Oord} G.~H.~J.,  1985,
+  \aaps, \href {https://ui.adsabs.harvard.edu/abs/1985A&AS...62..197M} {62,
+  197}
 
 \bibitem[\protect\citeauthoryear{Miller \& Bregman}{Miller \&
   Bregman}{2013}]{temperature-MW}

@@ -87,7 +87,7 @@
 }
 
 \begin{document}
-\title{Fermi and eROSITA bubbles} 
+\title{Fermi and eROSITA bubbles}
 
 
 \author[0000-0002-1868-0660]{Po-Hsun Tseng}
@@ -272,7 +272,9 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
   \begin{enumerate}
     \item X-ray:
        \begin{enumerate}
-         \item Thermal bremsstrahlung:
+         \item Thermal bremsstrahlung: The X-ray emissivity in an energy range 1.4–1.6 keV is calculated\
+               using the MEKAL model (\citealt{Xray-1}; \citealt{Xray-2}; \citealt{Xray-3})\
+               implemented in the utility XSPEC\citep{XSPEC}, assuming solar metallicity.
        \end{enumerate}
     \item Gamma-ray:
        \begin{enumerate}
@@ -286,32 +288,13 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
 \section*{Data Availability}
 The data underlying this article are available in the article and in its online supplementary material.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
-
-% The best way to enter references is to use BibTeX:
-
 \bibliographystyle{mnras}
 \bibliography{paper} % if your bibtex file is called example.bib
-
-
-
-
-% Alternatively you could enter them by hand, like this:
-% This method is tedious and prone to error if you have lots of references
-%\begin{thebibliography}{99}
-%\bibitem[\protect\citeauthoryear{Munz, Claus-Dieter and Núñez-de la Rosa, Jonatan}{2016}]{XTROEM}
-%Author A.~N., 2013, Journal of Improbable Astronomy, 1, 1
-%\bibitem[\protect\citeauthoryear{Others}{2013}]{Others2013}
-%Others S., 2012, Journal of Interesting Stuff, 17, 198
-%\end{thebibliography}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
 
 \appendix
-
 
 \end{document}
