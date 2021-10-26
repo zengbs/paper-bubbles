@@ -23,7 +23,8 @@
   Software and Systems V. p.~17
 
 \bibitem[\protect\citeauthoryear{Ferri{\`{e}}re}{Ferri{\`{e}}re}{2001}]{paek-ism-density}
-Ferri{\`{e}}re K.~M.,  2001, ] {10.1103/revmodphys.73.1031}, 73, 1031
+Ferri{\`{e}}re K.~M.,  2001, \mn@doi [Rev. Mod. Phys.]
+  {10.1103/revmodphys.73.1031}, 73, 1031
 
 \bibitem[\protect\citeauthoryear{{Kaastra} \& {Mewe}}{{Kaastra} \&
   {Mewe}}{1993}]{Xray-2}
@@ -44,7 +45,8 @@ Ferri{\`{e}}re K.~M.,  2001, ] {10.1103/revmodphys.73.1031}, 73, 1031
 
 \bibitem[\protect\citeauthoryear{Miller \& Bregman}{Miller \&
   Bregman}{2013}]{temperature-MW}
-Miller M.~J.,  Bregman J.~N.,  2013, ] {10.1088/0004-637x/770/2/118}, 770, 118
+Miller M.~J.,  Bregman J.~N.,  2013, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637x/770/2/118}, 770, 118
 
 \bibitem[\protect\citeauthoryear{Tseng, Schive  \& Chiueh}{Tseng
   et~al.}{2021}]{tseng2021}
@@ -53,7 +55,8 @@ Tseng P.-H.,  Schive H.-Y.,   Chiueh T.,  2021, \mn@doi [Monthly Notices of the
 
 \bibitem[\protect\citeauthoryear{Valenti et~al.,}{Valenti
   et~al.}{2018}]{velocity-dispersion-MW}
-Valenti E.,  et~al., 2018, ] {10.1051/0004-6361/201832905}, 616, A83
+Valenti E.,  et~al., 2018, \mn@doi [\aaps] {10.1051/0004-6361/201832905}, 616,
+  A83
 
 \bibitem[\protect\citeauthoryear{Yang, Ruszkowski  \& Zweibel}{Yang
   et~al.}{2013}]{Yang2013}
