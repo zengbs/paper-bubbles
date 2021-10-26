@@ -138,15 +138,16 @@
       \item We neglected the cooling and heating processes of CRs, such as energy losses due to synchrotron\
             and inverse Compton emission, and reacceleration in shocks.
       \item We have assumed cosmic-ray is passive. (i.e. $p_{\text{cr}}\ll p_{\text{gas}}$)
-      \item We have assumed $\mathbf{B}$ is zero within the simulation box as the field inside\
+      \item We have ignored the $\mathbf{B}$ field within\
+            the simulation box as the field inside\
             the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
             little effect on the overall dynamics.\
-            It might somewhat affect the instabilities near the bubble's surface, but that's a secondary effect.
-      \item Since $\mathbf{B}$ is zero, we can also ignore the effect of cosmic-ray diffusion.
+            We also assumed the magnetic field is highly entangled in small-scale (how small?), resulting in\
+            the negligible cosmic-ray diffusion.
     \end{enumerate}
   \item Assumptions on gravity:
     \begin{enumerate}
-      \item We have assumeed relativistic gravity is insignificant.
+      \item We have assumed relativistic gravity is insignificant.
       \item The ISM disk and atmosphere are subjected to the fixed external potential\
             contributed by disk bulge and dark matter halo.
       \item In addition to the gravitational interaction, we ignore other interactions between stars and gases.
@@ -193,7 +194,7 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
 
 
 \begin{enumerate}
-\item Fixed externel gravitational potential:
+\item Fixed external gravitational potential:
   \begin{enumerate}
     \item Bulge potential:
       \begin{enumerate}
@@ -212,26 +213,38 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
          \begin{equation}
            \Phi_{\text{halo}}=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right),
          \end{equation}
-         where $v_{\text{halo}}=131.5$ km/s, $d_{\text{h}}=12$ kpc.
+         where $v_{\text{halo}}=131.5$ km/s, $d_{\text{h}}=12$ kpc \citep{Yang2013}.
 
     \item Total potential: $\Phi_{\text{total}}=\Phi_{\text{bulge}}+\Phi_{\text{halo}}$.
   \end{enumerate}
 
 
-\item Clummpy cold disk:
+\item Clumpy cold disk:
   \begin{enumerate}
-    \item Scale height: $z_{0}=100$ pc. \citep{paek-ism-density}
-    \item Peak density: $\rho_{\text{disk}}^{\text{peak}}=10^{-23}$ g/cm$^3$. \citep{paek-ism-density}
-    \item $T_{\text{disk}}=10^{3}$ K. \citep{paek-ism-density}
-    \item Density:
+    \item Dimension: $14\times14\times0.2$ kpc. i.e. Scale heght $=z_{0}=100$ pc. \citep{paek-ism-density}
+    \item Peak mass density: $\rho_{\text{disk}}^{\text{peak}}=10^{-23}$ g/cm$^3$. \citep{paek-ism-density}
+    \item Temperature: $T_{\text{disk}}=10^{3}$ K. \citep{paek-ism-density}
+    \item Average mass density:
           \begin{equation}
              \rho_{\text{disk}}=\rho_{\text{disk}}^{\text{peak}}
              \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{disk}}/m}\right].
              \label{disk-density}
           \end{equation}
 
-    \item The fractal density is created using the publicly\
-          available pyFC code\footnote{\url{https://pypi.python.org/pypi/pyFC}}.
+    \item Pressure: $\displaystyle p_{\text{disk}}=\rho_{\text{disk}}T_{\text{disk}}$.
+
+    \item The clumpy cuboid, using the publicly\
+          available pyFC code\footnote{\url{https://pypi.python.org/pypi/pyFC}},\
+          are described by a log-normal distribution with mean 1.0 and variance 5.0.\
+          Also, the power spectrum of the clumpy cuboid is characterized by $k_{\text{min}}$ and $\beta$,\
+          where $k_{\text{min}}$ sets the maximum cloud size within the clumpy cuboid,\
+          and $\beta$ is the slope of power spectrum in Fourier space.
+          In this paper, we set $\beta=-5/3$ and $k_{\text{min}}=375$ to follow the Kolmogorov spectrum\
+          and to limits the maximum size of an individual cloud to approximately 25 pc.
+
+    \item The clumpy disk is constructed by multiplying a fractal cuboid with \Cref{disk-density}.
+
+    \item The clouds and voids within clumpy disk are pressure balanced.
   \end{enumerate}
 
 
