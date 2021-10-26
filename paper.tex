@@ -125,10 +125,11 @@
 \begin{enumerate}
   \item Numerical features:
     \begin{enumerate}
-      \item GPU acceleration with the \textsc{gamer-sr} code.
+      \item GPU acceleration with \textsc{gamer-sr} code.
       \item Special relativistic hydrodynamics.
-      \item Using a new algorithm dedicated to the conversion between primitive and conserved variable,\
-            significantly reducing numerical error caused by the non-relativistic cold disk.
+      \item Using a new algorithm \citep{tseng2021} dedicated to the conversion between primitive and conserved variable,\
+            significantly reducing numerical error caused by catastrophic cancellation occurs\
+            within the non-relativistically cold disk.
     \end{enumerate}
   \item Assumptions on cosmic-ray:
     \begin{enumerate}
@@ -221,7 +222,7 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
 
 \item Clumpy cold disk:
   \begin{enumerate}
-    \item Dimension: $14\times14\times0.2$ kpc. i.e. Scale heght $=z_{0}=100$ pc. \citep{paek-ism-density}
+    \item Dimension: $14\times14\times0.2$ kpc. i.e. Scale height $(z_{0})=100$ pc. \citep{paek-ism-density}
     \item Peak mass density: $\rho_{\text{disk}}^{\text{peak}}=10^{-23}$ g/cm$^3$. \citep{paek-ism-density}
     \item Temperature: $T_{\text{disk}}=10^{3}$ K. \citep{paek-ism-density}
     \item Average mass density:
@@ -242,7 +243,7 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
           In this paper, we set $\beta=-5/3$ and $k_{\text{min}}=375$ to follow the Kolmogorov spectrum\
           and to limits the maximum size of an individual cloud to approximately 25 pc.
 
-    \item The clumpy disk is constructed by multiplying a fractal cuboid with \Cref{disk-density}.
+    \item The clumpy disk is then constructed by multiplying a fractal cuboid with \Cref{disk-density}.
 
     \item The clouds and voids within clumpy disk are pressure balanced.
   \end{enumerate}
@@ -250,6 +251,7 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
 
 \item Isothermal atmosphere:
   \begin{enumerate}
+     \item The region outside the clumpy cold disk is atmosphere.
      \item $T_{\text{atmp}}=10^{6}$ K. \citep{temperature-MW}
      \item Density:
           \begin{equation}
