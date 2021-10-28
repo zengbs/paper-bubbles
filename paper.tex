@@ -132,6 +132,10 @@
             numerical error caused by catastrophic cancellations that commonly occur\
             within the jet-ISM interaction zones.
     \end{enumerate}
+  \item Assumptions on hydrodynamics:
+    \begin{enumerate}
+      \item Ideal fluid with TM EoS.
+    \end{enumerate}
   \item Assumptions on cosmic-ray:
     \begin{enumerate}
       \item We treat CRs as a second fluid and solve directly for the evolution of CR pressure $p_{\text{cr}}$\
@@ -144,17 +148,22 @@
             the simulation box as the field inside\
             the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
             little effect on the overall dynamics.\
-            We also assumed the magnetic field is highly entangled in small-scale (how small?), resulting in\
+            We also assumed the magnetic field is highly entangled on small-scale (how small?), resulting in\
             the negligible cosmic-ray diffusion.
     \end{enumerate}
   \item Assumptions on gravity:
     \begin{enumerate}
-      \item We have assumed relativistic gravity is insignificant.
+      \item We use the potential of isothermal slab, symmetric about $z=0$ and\
+            supported by gas pressure and under its own self-gravity,\
+            to mimic the realistic potential of Galactic bulge.
+      \item We still use Newtonian gravity as relativistic fluid ejected by the jet source\
+            is quickly slowed down by heavy disk in a short time, and the relativistic fluid\
+            accounts for a little minority of total mass inside the simulation box.
       \item The ISM disk and atmosphere are subjected to the fixed external potential\
             due to a disk bulge and dark matter halo.
       \item In addition to the gravitational interaction, we ignore other interactions between stars and gases.
       \item We also ignore the self-gravity of the ISM disk and of the atmosphere.
-      \item We ignore the centrifugal force due to the rotation of Milky Way.
+      \item We ignore the centrifugal force of Milky Way rotation acting on the bubbles.
       \item We use the potential of isothermal slab to mimic the gravitational potential due to the stellar bulge.
       \item The interface between cold ISM disk and atmosphere is parallel to galactic plane and is pressure balanced.
     \end{enumerate}
