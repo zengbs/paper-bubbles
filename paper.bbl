@@ -37,6 +37,10 @@ Ferri{\`{e}}re K.~M.,  2001, \mn@doi [Rev. Mod. Phys.]
   [\apjl] {10.1086/187729}, \href
   {https://ui.adsabs.harvard.edu/abs/1995ApJ...438L.115L} {438, L115}
 
+\bibitem[\protect\citeauthoryear{{Mathews}}{{Mathews}}{1971}]{TM_EOS}
+{Mathews} W.~G.,  1971, \mn@doi [\apj] {10.1086/150883}, \href
+  {https://ui.adsabs.harvard.edu/abs/1971ApJ...165..147M} {165, 147}
+
 \bibitem[\protect\citeauthoryear{{Mewe}, {Gronenschild}  \& {van den
   Oord}}{{Mewe} et~al.}{1985}]{Xray-1}
 {Mewe} R.,  {Gronenschild} E.~H.~B.~M.,   {van den Oord} G.~H.~J.,  1985,
@@ -47,6 +51,10 @@ Ferri{\`{e}}re K.~M.,  2001, \mn@doi [Rev. Mod. Phys.]
   Bregman}{2013}]{temperature-MW}
 Miller M.~J.,  Bregman J.~N.,  2013, \mn@doi [The Astrophysical Journal]
   {10.1088/0004-637x/770/2/118}, 770, 118
+
+\bibitem[\protect\citeauthoryear{{Taub}}{{Taub}}{1948}]{Taub}
+{Taub} A.~H.,  1948, \mn@doi [Physical Review] {10.1103/PhysRev.74.328}, \href
+  {https://ui.adsabs.harvard.edu/abs/1948PhRv...74..328T} {74, 328}
 
 \bibitem[\protect\citeauthoryear{Tseng, Schive  \& Chiueh}{Tseng
   et~al.}{2021}]{tseng2021}
