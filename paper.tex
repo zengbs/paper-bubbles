@@ -130,8 +130,12 @@
       \item We use a new algorithm \citep{tseng2021}, dedicated to the conversion between\
             primitive and conserved variables, to significantly reduce\
             numerical error caused by catastrophic cancellations that commonly occur\
-            within the jet-ISM interaction zones. (high Mach number..)
-      \item Adaptive min-mod coefficient \citep{tseng2021}. (avoid using "floor")
+            within the regions with high Mach number. i.e. jet-ISM interaction zones.
+      \item To further alleviate the numerical error due to high Mach number,\
+            \textsc{gamer-sr} also adaptively reduce the min-mod coefficient \citep{tseng2021}\
+            inside the failed patch.\
+            Doing so provides an elegant way to avoid the use of pressure/density floor,\
+            which is unnatural but widely used in almost publicly available code.
       \item Accuracy analysis and show why it is a numerical challenge.
     \end{enumerate}
   \item Assumptions on hydrodynamics:
