@@ -127,8 +127,8 @@
     \begin{enumerate}
       \item GPU acceleration with \textsc{gamer-sr} code.
       \item Special relativistic hydrodynamics.
-      \item We use a new algorithm \citep{tseng2021}, dedicated to the conversion between\
-            primitive and conserved variables, to significantly reduce\
+      \item We use a new algorithm \citep{tseng2021} to convert between\
+            primitive and conserved variables, significantly reducing\
             numerical error caused by catastrophic cancellations that commonly occur\
             within the regions with high Mach number. i.e. jet-ISM interaction zones.
       \item To further alleviate the numerical error due to high Mach number,\
@@ -136,7 +136,6 @@
             inside the failed patch.\
             Doing so provides an elegant way to avoid the use of pressure/density floor,\
             which is unnatural but widely used in almost publicly available code.
-      \item Accuracy analysis and show why it is a numerical challenge.
     \end{enumerate}
   \item Assumptions on hydrodynamics:
     \begin{enumerate}
@@ -150,19 +149,19 @@
       \item We neglected the cooling and heating processes of CRs, such as energy losses due to synchrotron\
             and inverse Compton emission, and reacceleration in shocks.
       \item We have assumed cosmic-ray is passive. (i.e. $p_{\text{cr}}\ll p_{\text{gas}}$)
-      \item We have ignored the $\mathbf{B}$ field within\
+      \item \textcolor{red}{We have ignored the $\mathbf{B}$ field within\
             the simulation box as the field inside\
             the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
             little effect on the overall dynamics.\
             We also assumed the magnetic field is highly entangled on small-scale (how small?), resulting in\
-            the negligible cosmic-ray diffusion.
+            the negligible cosmic-ray diffusion.}
     \end{enumerate}
   \item Assumptions on gravity:
     \begin{enumerate}
       \item We use the potential of isothermal slab, symmetric about $z=0$ and\
-            supported by gas pressure and under its own self-gravity,\
+            supported by gas pressure and by under its own self-gravity,\
             to mimic the realistic potential of Galactic bulge.
-      \item We still use Newtonian gravity as relativistic fluid ejected by the jet source\
+      \item We still use Newtonian gravity, as the relativistic fluid ejected by the jet source\
             is quickly slowed down by heavy disk in a short time, and the relativistic fluid\
             accounts for a little minority of total mass inside the simulation box.
       \item The ISM disk and atmosphere are subjected to the fixed external potential\
@@ -171,7 +170,7 @@
       \item We also ignore the self-gravity of the ISM disk and of the atmosphere.
       \item We ignore the centrifugal force of Milky Way rotation acting on the bubbles.
       \item We use the potential of isothermal slab to mimic the gravitational potential due to the stellar bulge.
-      \item The interface between cold ISM disk and atmosphere is parallel to galactic plane and is pressure balanced.
+      \item The interface between cold ISM disk and atmosphere is parallel to the Galactic plane and is pressure balanced.
     \end{enumerate}
 \end{enumerate}
 We simulate 3D special relativistic hydrodynamics with passive CR injections from the GC using\
@@ -238,9 +237,9 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
 
 \item Clumpy cold disk:
   \begin{enumerate}
-    \item Dimension: $14\times14\times0.2$ kpc. i.e. Scale height $(z_{0})=100$ pc. \citep{paek-ism-density}
+    \item Dimension: $14\times14\times0.2$ kpc. i.e. Scale height, $z_{0}=100$ pc. \citep{paek-ism-density}
     \item Peak mass density: $\rho_{\text{disk}}^{\text{peak}}=10^{-23}$ g/cm$^3$. \citep{paek-ism-density}
-    \item Temperature: $T_{\text{disk}}=10^{3}$ K. \citep{paek-ism-density}
+    \item Average temperature: $T_{\text{disk}}=10^{3}$ K. \citep{paek-ism-density}
     \item Average mass density:
           \begin{equation}
              \rho_{\text{disk}}=\rho_{\text{disk}}^{\text{peak}}
@@ -294,7 +293,12 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
        \end{enumerate}
     \item Gamma-ray:
        \begin{enumerate}
-         \item Hadronic process:
+         \item Hadronic process:pion decay
+          In the hadronic model, CRp undergo hadronic collisions with thermal gas protons\
+          and produce $\gamma$-ray via pion decay. The volume emissivity of the emission can be writen as
+          \begin{equation}
+             \epsilon \propto U_{\text{CRp}}n_{p}\sigma_{p}\kappa_{pp}.
+          \end{equation}
        \end{enumerate}
   \end{enumerate}
 
