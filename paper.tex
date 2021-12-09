@@ -122,40 +122,65 @@
 
 \section{Methodology}
 \subsection{Assumptions and Numerical Techniques}
+  We used the GPU-accelerated special relativistic hydrodynamics AMR code (\textsc{gamer-sr}) developed at the\
+  National Taiwan University\
+  (Schive et al. \citeyear{gamer-1}, \citeyear{gamer-2}; \citeauthor{tseng2021} \citeyear{tseng2021}) to carry out\
+  the simulations of Fermi and eROSITA bubbles. \textsc{gamer-sr} adopts a new algorithm \citep{tseng2021} to convert between\
+  primitive and conserved variables, significantly reducing numerical error caused by catastrophic cancellations\
+  that commonly occur within the regions with high Mach number. i.e. jet-ISM interaction zones.
+
+  \textsc{gamer-sr} also adaptively and locally reduce the min-mod coefficient \citep{tseng2021} within the failed patch group.\
+  Doing so provides an elegant way to avoid the use of pressure/density floor,\
+  being unnatural but widely used in almost publicly available code.
+  %to further alleviate the numerical error due to extremely high Mach number,\
+
+  The simulation box is $14\times14\times28$ kpc, slightly larger than the size of eROISTA bubbles,\
+  with a root grid $N=16\times16\times32$. We resolve the jet source located at the center of the simulation domain,\
+  cells are refined to level 11, leading to a finest spatial resolution of 0.4 pc.\
+
+  To save computational costs further, we restrict the refinement level is 7 within the cold disk so that\
+  a molecular colud can be adequately resolved by approximately 30 cells along their diameter, 100 pc.
+
+  We treat CRs as a second fluid and solve directly for the evolution of CR pressure $p_{\text{cr}}$\
+  as a function of $\mathbf{r}$ and $t$.\
+  We did not model the CR energy spectrum and neglect the cooling and heating processes of CRs,\
+  such as energy losses due to synchrotron and inverse Compton emission, and reacceleration in shocks.
+
+  We have assumed cosmic-ray is passive. (i.e. $p_{\text{cr}}\ll p_{\text{gas}}$)
+
+  We have ignored the $\mathbf{B}$ field within\
+  the simulation box as the field inside\
+  the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
+  little effect on the overall dynamics.\
+
+  We also assumed the magnetic field is highly entangled on small-scale (how small?), resulting in\
+  the negligible cosmic-ray diffusion.
+
+  \textsc{gamer-sr} solves the mass and energy-momentum conservation laws of special relativistic ideal fluid\
+  including CR advection, and dynamical coupling between the thermal gas and CRs. The governing equations\
+  can be written as
+
+
 \begin{enumerate}
-  \item Numerical features:
-    \begin{enumerate}
-      \item GPU acceleration with \textsc{gamer-sr} code.
-      \item Special relativistic hydrodynamics.
-      \item We use a new algorithm \citep{tseng2021} to convert between\
-            primitive and conserved variables, significantly reducing\
-            numerical error caused by catastrophic cancellations that commonly occur\
-            within the regions with high Mach number. i.e. jet-ISM interaction zones.
-      \item To further alleviate the numerical error due to high Mach number,\
-            \textsc{gamer-sr} also adaptively reduce the min-mod coefficient \citep{tseng2021}\
-            inside the failed patch.\
-            Doing so provides an elegant way to avoid the use of pressure/density floor,\
-            which is unnatural but widely used in almost publicly available code.
-    \end{enumerate}
   \item Assumptions on hydrodynamics:
     \begin{enumerate}
       \item Ideal fluid with TM EoS (\citealt{Taub}; \citealt{TM_EOS}).
     \end{enumerate}
-  \item Assumptions on cosmic-ray:
-    \begin{enumerate}
-      \item We treat CRs as a second fluid and solve directly for the evolution of CR pressure $p_{\text{cr}}$\
-            as a function of $\mathbf{r}$ and $t$.
-      \item We did not model the CR energy spectrum.
-      \item We neglected the cooling and heating processes of CRs, such as energy losses due to synchrotron\
-            and inverse Compton emission, and reacceleration in shocks.
-      \item We have assumed cosmic-ray is passive. (i.e. $p_{\text{cr}}\ll p_{\text{gas}}$)
-      \item \textcolor{red}{We have ignored the $\mathbf{B}$ field within\
-            the simulation box as the field inside\
-            the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
-            little effect on the overall dynamics.\
-            We also assumed the magnetic field is highly entangled on small-scale (how small?), resulting in\
-            the negligible cosmic-ray diffusion.}
-    \end{enumerate}
+%  \item Assumptions on cosmic-ray:
+%    \begin{enumerate}
+%      \item We treat CRs as a second fluid and solve directly for the evolution of CR pressure $p_{\text{cr}}$\
+%            as a function of $\mathbf{r}$ and $t$.
+%      \item We did not model the CR energy spectrum.
+%      \item We neglected the cooling and heating processes of CRs, such as energy losses due to synchrotron\
+%            and inverse Compton emission, and reacceleration in shocks.
+%      \item We have assumed cosmic-ray is passive. (i.e. $p_{\text{cr}}\ll p_{\text{gas}}$)
+%      \item \textcolor{red}{We have ignored the $\mathbf{B}$ field within\
+%            the simulation box as the field inside\
+%            the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
+%            little effect on the overall dynamics.\
+%            We also assumed the magnetic field is highly entangled on small-scale (how small?), resulting in\
+%            the negligible cosmic-ray diffusion.}
+%    \end{enumerate}
   \item Assumptions on gravity:
     \begin{enumerate}
       \item We use the potential of isothermal slab, symmetric about $z=0$ and\
@@ -294,6 +319,8 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
 
 
 \subsection{X-ray and Gamma-ray emission}
+
+
   \begin{enumerate}
     \item X-ray:
        \begin{enumerate}
@@ -315,12 +342,57 @@ Throughout this paper, Latin indices run from 1 to 3, except when stated otherwi
   \end{enumerate}
 
 
+
 Note that the observed X-ray emission is contributed by all the gas in the Milky Way halo,\
 which likely extends to a radius of $\sim$250 kpc (\citealt{halo-radius-1}; \citealt{halo-radius-2}),\
 much bigger than our simulation box. Therefore, we first compute the X-ray emissivity\
 from the simulated gas within a radius of 25 kpc away from the GC.
 Then, beyond 25 kpc the gas is assumed to be isothermal with $T=10^6$ K and\
 follows out to a radius of 250 kpc the observed density profile of \citep{temperature-MW}.
+
+Inverse Compton scattering
+\begin{equation}
+  \frac{dE}{dtd\epsilon_{1}dV} = \frac{3}{4}\sigma_{T}c\textit{C}\int^{\epsilon_{\text{max}}}_{\epsilon_{\text{min}}}
+               \epsilon_{1}\frac{n(\epsilon)}{\epsilon}d\epsilon\int^{\gamma_{\text{max}}}_{\gamma_{\text{min}}}
+               \gamma^{-(p+2)}f(q, \Gamma)d\gamma.
+\end{equation}
+
+
+\begin{equation}
+f(q, \Gamma) = 2q\ln q+(1+2q)(1-q)+0.5(1-q)\frac{\left(\Gamma q\right)^2}{1+\Gamma q},
+\end{equation}
+
+\begin{equation}
+\Gamma=\frac{4\epsilon \gamma_{\text{e}}}{m_{\text{e}}c^2}
+\end{equation}
+
+\begin{equation}
+q=\frac{\epsilon_{1}/\gamma_{\text{e}}m_{\text{e}}c^{2}}{\Gamma\left(1-\epsilon_{1}/\gamma_{\text{e}}m_{\text{e}}c^{2}\right)}.
+\end{equation}
+
+
+Hadronic process
+\begin{equation}
+  \frac{dE}{dtd\epsilon_{1}dV} = cn_{H}pC\left(\frac{\epsilon_{1}}{m_{\text{p}}c^2}\right)^{-p}\int_{0}^{1}\sigma(\epsilon_{\text{p}}) F(x,\epsilon_{\text{p}}) x^{p}dx.
+\end{equation}
+
+\begin{equation}
+\sigma(\epsilon_{\text{p}})=34.3+1.88L+0.25L^{2} \text{ mb}.
+\end{equation}
+
+\begin{equation}
+F(x,\epsilon_{\text{p}})=B\frac{d}{dx}\left[\ln(x)\left(\frac{1-x^{\beta}}{1+kx^{\beta}\left(1-x^{\beta}\right)}\right)^4\right],
+\end{equation}
+
+
+where $B=1.30+0.14L+0.011L^2$, $\beta=\left(1.79+0.11L+0.008L^{2}\right)^{-1}$,\
+$\left(0.801+0.049L+0.014L^{2}\right)^{-1}$, $L=\ln(\epsilon_{\text{p}}/1 \text{ TeV})$.
+
+
+\section{to-do-list}
+\begin{enumerate}
+  \item Predict cold inner bubbles, emitting OIII or OII spectrum.
+\end{enumerate}
 
 \section{conclusions}
 
