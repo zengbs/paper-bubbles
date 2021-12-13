@@ -115,36 +115,46 @@
 \keywords{keywords}
 
 \begin{abstract}
+\begin{enumerate}
+  \item Release the caveat of jet direction.
+  \item Rule out the hadronic process.
+  \item Predict the small inner bubbles.
+  \item How to explain why we assume e_CR << e_gas
+  \item How to explain the lifespan of bubbles is too long.
+  \item How to explain the jet power.
+  \item How to explain the inconsistant of gamma-ray map.
+\end{enumerate}
 \end{abstract}
 
 \section{Introduction}
 
 
 \section{Methodology}
-\subsection{Assumptions and Numerical Techniques}
+
   We used the GPU-accelerated special relativistic hydrodynamics AMR code (\textsc{gamer-sr}) developed at the\
   National Taiwan University\
-  (Schive et al. \citeyear{gamer-1}, \citeyear{gamer-2}; \citeauthor{tseng2021} \citeyear{tseng2021}) to carry out\
-  the simulations of Fermi and eROSITA bubbles. \textsc{gamer-sr} adopts a new algorithm \citep{tseng2021} to convert between\
-  primitive and conserved variables, significantly reducing numerical error caused by catastrophic cancellations\
-  that commonly occur within the regions with high Mach number. i.e. jet-ISM interaction zones.
+  (Schive et al. \citeyear{gamer-1}, \citeyear{gamer-2}; \citeauthor{tseng2021} \citeyear{tseng2021})\
+  to carry out the simulations of the Fermi and eROSITA bubbles by CR and relativistic fluid injections from the GC.
 
-  \textsc{gamer-sr} also adaptively and locally reduce the min-mod coefficient \citep{tseng2021} within the failed patch group.\
-  Doing so provides an elegant way to avoid the use of pressure/density floor,\
-  being unnatural but widely used in almost publicly available code.
-  %to further alleviate the numerical error due to extremely high Mach number,\
+  The CRs are advected with the thermal gas, and in return the velocities of gas\
+  can react to the gradients of the CR pressure\
+  via the presence of a source (or coupling) term containing spatial derivatives of fluid velocities.
 
-  The simulation box is $14\times14\times28$ kpc, slightly larger than the size of eROISTA bubbles,\
-  with a root grid $N=16\times16\times32$. We resolve the jet source located at the center of the simulation domain,\
-  cells are refined to level 11, leading to a finest spatial resolution of 0.4 pc.\
+  Since CR diuusion insignificantly affect on the overall mophology of the Fermi bubbles\
+  but only sharpen the edges of the simulated bubbles by the interplay between anisotropic CR diffusion\
+  and magnetic fields
+with suppressed perpendicular diffusion across the bubble surface.
 
-  To save computational costs further, we restrict the refinement level is 7 within the cold disk so that\
-  a molecular colud can be adequately resolved by approximately 30 cells along their diameter, 100 pc.
+  Since the sharpness of bubble edges requires suppression of CR diffusion across the bubble surface
+ has a insignificant effect on the overall mophology of the Fermi bubbles
 
-  We treat CRs as a second fluid and solve directly for the evolution of CR pressure $p_{\text{cr}}$\
+  In this approach, the CRs are treated as a single species without distinction between electrons and protons.\
+  We do not simulate the spectral evolution of the CR, and we neglected the cooling and heating processes of CRs,\
+  such as energy losses due to synchrotron and inverse Compton emission, and reacceleration in shocks.\
+
+  We treat CRs as a second fluid with a initially fixed energy\
+  and solve directly for the evolution of CR pressure $p_{\text{cr}}$\
   as a function of $\mathbf{r}$ and $t$.\
-  We did not model the CR energy spectrum and neglect the cooling and heating processes of CRs,\
-  such as energy losses due to synchrotron and inverse Compton emission, and reacceleration in shocks.
 
   We have assumed cosmic-ray is passive. (i.e. $p_{\text{cr}}\ll p_{\text{gas}}$)
 
@@ -156,9 +166,59 @@
   We also assumed the magnetic field is highly entangled on small-scale (how small?), resulting in\
   the negligible cosmic-ray diffusion.
 
+  We still use Newtonian gravity, as the relativistic fluid ejected by the jet source\
+  is quickly slowed down by heavy disk in a short time, and the relativistic fluid\
+  accounts for a little minority of total mass inside the simulation box.
+
   \textsc{gamer-sr} solves the mass and energy-momentum conservation laws of special relativistic ideal fluid\
-  including CR advection, and dynamical coupling between the thermal gas and CRs. The governing equations\
-  can be written as
+  including CR advection, and dynamical coupling between the thermal gas and CRs without diffusion.\
+  The governing equations can be written as
+
+
+  \begin{subequations}
+    \label{conservative-form}
+    \begin{align}
+     &\partial_{t} D+\partial_{j} \left(DU^{j}/\gamma\right)=0,\label{D evolution}\\
+     &\partial_{t} M^{i}+\partial_{j} \left(M^{i}U^{j}/\gamma+p_{\text{gas}}\delta^{ij}\right)=\
+     -\rho\partial_{i}\Phi,\label{M evolution}\\
+     &\partial_{t} \tilde{E}+\partial_j \left[\left(\tilde{E}+p_{\text{gas}}\right)U^{j}/\gamma\right]=0, \label{E evoltion}\\
+     &\partial_{t} \left(\gamma e_{\text{cr}}\right) + \partial_{j} \left(e_{\text{cr}}U^{j}\right)=\
+     -p_{\text{cr}} \partial_{j} U^{j},\label{D evolution}
+    \end{align}
+  \end{subequations}
+
+
+  where the five conserved quantities of gas $D$, $M^{i}$, and $\tilde{E}$ are the mass density,\
+  the momentum densities, and the reduced energy density, respectively.\
+  The reduced energy density is defined by subtracting the rest mass energy density of gas\
+  from the total energy density of gas.\
+  $\gamma$ and $U^{j}$ are the temporal and spatial component of four-velocity of gas.\
+  $\rho$ is the gas density in the local rest frame defined by $D/\gamma$.\
+  $p_{\text{gas}}$ is the gas pressure.\
+  $p_{\text{cr}}$ and $e_{\text{cr}}$ are the CR pressure and CR energy density measured in the local rest frame.\
+  $\Phi$ is the gravitation potential.\
+  $c$ is the speed of light, and $\delta^{ij}$ is the Kronecker delta notation.\
+  Throughout this paper, Latin indices run from 1 to 3, except when stated otherwise.
+
+  \textsc{gamer-sr} adopts a new algorithm \citep{tseng2021} to convert between\
+  primitive ($p$, $\rho$, $U^{j}$) and conserved variables, significantly reducing numerical error\
+  caused by catastrophic cancellations\
+  that commonly occur within the regions with high Mach number. e.g., jet-ISM interaction zones.
+
+  \textsc{gamer-sr} also adaptively and locally reduce the min-mod coefficient \citep{tseng2021} within the failed patch group.\
+  Doing so provides an elegant way to avoid the use of pressure/density floor,\
+  being unnatural but widely used in almost publicly available code.
+  %to further alleviate the numerical error due to extremely high Mach number,\
+
+\subsection{Initial conditions for the Fermi and eROSITA bubbles}
+  The simulation box is $14\times14\times28$ kpc, slightly larger than the size of eROISTA bubbles,\
+  with a root grid $N=16\times16\times32$. We resolve the jet source located at the center of the simulation domain,\
+  cells are refined to level 11, leading to a finest spatial resolution of 0.4 pc.\
+
+
+
+  To save computational costs further, we restrict the refinement level is 7 within the cold disk so that\
+  a molecular colud can be adequately resolved by approximately 30 cells along their diameter, 100 pc.
 
 
 \begin{enumerate}
@@ -186,9 +246,9 @@
       \item We use the potential of isothermal slab, symmetric about $z=0$ and\
             supported by gas pressure and by under its own self-gravity,\
             to mimic the realistic potential of Galactic bulge.
-      \item We still use Newtonian gravity, as the relativistic fluid ejected by the jet source\
-            is quickly slowed down by heavy disk in a short time, and the relativistic fluid\
-            accounts for a little minority of total mass inside the simulation box.
+%      \item We still use Newtonian gravity, as the relativistic fluid ejected by the jet source\
+%            is quickly slowed down by heavy disk in a short time, and the relativistic fluid\
+%            accounts for a little minority of total mass inside the simulation box.
       \item The ISM disk and atmosphere are subjected to the fixed external potential\
             due to a disk bulge and dark matter halo.
       \item In addition to the gravitational interaction, we ignore other interactions between stars and gases.
@@ -203,33 +263,6 @@ the special hydrodynamics GPU code \textsc{gamer-sr} \citep{tseng2021}.
 
 \textsc{gamer-sr} solves mass and energy-momentum conservation laws of a special relativistic ideal fluid\
 with CR.
-
-The CRs are advected with the thermal gas, but the gas cannot react to the CR pressure.\
-In this approach, the CRs are treated as a single species without distinction between electrons and protons.\
-We did not model the CR energy spectrum, and we neglected the cooling and heating processes of CRs,\
-such as energy losses due to synchrotron and inverse Compton emission, and reacceleration in shocks.\
-
-\begin{subequations}
-  \label{conservative-form}
-  \begin{align}
-   &\partial_{t} D+\partial_{j} \left(DU^{j}/\gamma\right)=0,\label{D evolution}\\
-   &\partial_{t} M^{i}+\partial_{j} \left(M^{i}U^{j}/\gamma+p_{\text{gas}}\delta^{ij}\right)=\
-   -\rho\partial_{i}\Phi,\label{M evolution}\\
-   &\partial_{t} \tilde{E}+\partial_j \left[\left(\tilde{E}+p_{\text{gas}}\right)U^{j}/\gamma\right]=0, \label{E evoltion}\\
-   &\partial_{t} \left(\gamma e_{\text{cr}}\right) + \partial_{j} \left(e_{\text{cr}}U^{j}\right)=-p_{\text{cr}} \partial_{j} U^{j},\label{D evolution}
-  \end{align}
-\end{subequations}
-where the five conserved quantities of gas $D$, $M^{i}$, and $\tilde{E}$ are the mass density,\
-the momentum densities, and the reduced energy density, respectively.\
-The reduced energy density is defined by subtracting the rest mass energy density of gas\
-from the total energy density of gas.\
-$\gamma$ and $U^{j}$ are the temporal and spatial component of four-velocity of gas.\
-$\rho$ is the gas density in the local rest frame defined by $D/\gamma$.\
-$p_{\text{gas}}$ is the gas pressure.\
-$p_{\text{cr}}$ and $e_{\text{cr}}$ are the CR pressure and CR energy density measured in the local rest frame.\
-$\Phi$ is the gravitation potential.\
-$c$ is the speed of light, and $\delta^{ij}$ is the Kronecker delta notation.\
-Throughout this paper, Latin indices run from 1 to 3, except when stated otherwise.
 
 \subsection{The Galactic Model}
 
@@ -352,19 +385,21 @@ follows out to a radius of 250 kpc the observed density profile of \citep{temper
 
 Inverse Compton scattering
 \begin{equation}
-  \frac{dE}{dtd\epsilon_{1}dV} = \frac{3}{4}\sigma_{T}c\textit{C}\int^{\epsilon_{\text{max}}}_{\epsilon_{\text{min}}}
-               \epsilon_{1}\frac{n(\epsilon)}{\epsilon}d\epsilon\int^{\gamma_{\text{max}}}_{\gamma_{\text{min}}}
+  \frac{dE}{dtd\epsilon_{1}dV} = \frac{3}{4}\sigma_{T}c\textit{C}\epsilon_{1}\int^{\epsilon_{\text{max}}}_{\epsilon_{\text{min}}}
+               \frac{n(\epsilon)}{\epsilon}d\epsilon\int^{\gamma_{\text{max}}}_{\gamma_{\text{min}}\left(\epsilon\right)}
                \gamma^{-(p+2)}f(q, \Gamma)d\gamma.
 \end{equation}
 
 
 \begin{equation}
-f(q, \Gamma) = 2q\ln q+(1+2q)(1-q)+0.5(1-q)\frac{\left(\Gamma q\right)^2}{1+\Gamma q},
+f(\gamma_{\text{e}}, \epsilon) = 2q\ln q+(1+2q)(1-q)+0.5(1-q)\frac{\left(\Gamma q\right)^2}{1+\Gamma q},
 \end{equation}
 
 \begin{equation}
 \Gamma=\frac{4\epsilon \gamma_{\text{e}}}{m_{\text{e}}c^2}
 \end{equation}
+
+$\gamma_{\text{min}}\left(\epsilon\right)$ is the root of $f(\gamma_{\text{e}}, \epsilon)=0$ at a specific incident photon energy.
 
 \begin{equation}
 q=\frac{\epsilon_{1}/\gamma_{\text{e}}m_{\text{e}}c^{2}}{\Gamma\left(1-\epsilon_{1}/\gamma_{\text{e}}m_{\text{e}}c^{2}\right)}.
@@ -377,7 +412,7 @@ Hadronic process
 \end{equation}
 
 \begin{equation}
-\sigma(\epsilon_{\text{p}})=34.3+1.88L+0.25L^{2} \text{ mb}.
+\sigma(\epsilon_{\text{p}})=34.3+1.88L+0.25L^{2}\left[1-\frac{E_{\text{threshold}}}{E_{\text{p}}}\right]^{4} \text{ mb}.
 \end{equation}
 
 \begin{equation}
@@ -385,7 +420,8 @@ F(x,\epsilon_{\text{p}})=B\frac{d}{dx}\left[\ln(x)\left(\frac{1-x^{\beta}}{1+kx^
 \end{equation}
 
 
-where $B=1.30+0.14L+0.011L^2$, $\beta=\left(1.79+0.11L+0.008L^{2}\right)^{-1}$,\
+where
+$x=\epsilon_{1}/\epsilon_{\text{p}}$, $B=1.30+0.14L+0.011L^2$, $\beta=\left(1.79+0.11L+0.008L^{2}\right)^{-1}$,\
 $\left(0.801+0.049L+0.014L^{2}\right)^{-1}$, $L=\ln(\epsilon_{\text{p}}/1 \text{ TeV})$.
 
 
