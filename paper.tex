@@ -142,11 +142,11 @@
 
   Although the high-energy CRe ($10$ --- $100$ GeV) plays a crucial role in reproducing the $\gamma$-ray map\
   within the range of $1$ --- $100$ GeV, we assume the pressure of CRe is much less than that of gas\
-  thoughout the simulation so that we , and the Fermi bubbles can be outlined against the eROSITA bubbles.
+  throughout the simulation so that we , and the Fermi bubbles can be outlined against the eROSITA bubbles.
 
-  As stressed by \citet{Yang2012}, CR diffusion has insignificant effect on the overall mophology of the Fermi bubbles,\
+  As stressed by \citet{Yang2012}, CR diffusion has insignificant effect on the overall morphology of the Fermi bubbles,\
   but only sharpens the edges of the simulated bubbles by the interplay between anisotropic CR diffusion\
-  and magnetic fields with suppressed perpendicular diffusion across the bubble surface. Morever,\
+  and magnetic fields with suppressed perpendicular diffusion across the bubble surface. Moreover,\
   the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
   little effect on the overall dynamics. For these two reasons,\
   we have ignored the CR diffusion and the magnetic field throughout\
@@ -204,7 +204,7 @@
   \textsc{gamer-sr} also adaptively and locally reduce the min-mod coefficient\
   \citep{tseng2021} within the failed patch group.\
   Doing so provides an elegant way to avoid the use of pressure/density floor,\
-  being unnatural but widely used in almost publicly available code.
+  being unnatural but widely used in almost publicly available codes.
 
 
 \subsection{Initial conditions for the Fermi and eROSITA bubbles}
@@ -215,7 +215,7 @@
 
 
   To save computational costs further, we restrict the refinement level is 7 within the cold disk so that\
-  a molecular colud can be adequately resolved by approximately 30 cells along their diameter, 100 pc.
+  a molecular cloud can be adequately resolved by approximately 30 cells along their diameter, 100 pc.
 
 
 \begin{enumerate}
@@ -223,21 +223,8 @@
     \begin{enumerate}
       \item Ideal fluid with TM EoS (\citealt{Taub}; \citealt{TM_EOS}).
     \end{enumerate}
-%  \item Assumptions on cosmic-ray:
-%    \begin{enumerate}
-%      \item We treat CRs as a second fluid and solve directly for the evolution of CR pressure $p_{\text{cr}}$\
-%            as a function of $\mathbf{r}$ and $t$.
-%      \item We did not model the CR energy spectrum.
-%      \item We neglected the cooling and heating processes of CRs, such as energy losses due to synchrotron\
-%            and inverse Compton emission, and reacceleration in shocks.
-%      \item We have assumed cosmic-ray is passive. (i.e. $p_{\text{cr}}\ll p_{\text{gas}}$)
-%      \item \textcolor{red}{We have ignored the $\mathbf{B}$ field within\
-%            the simulation box as the field inside\
-%            the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
-%            little effect on the overall dynamics.\
-%            We also assumed the magnetic field is highly entangled on small-scale (how small?), resulting in\
-%            the negligible cosmic-ray diffusion.}
-%    \end{enumerate}
+
+
   \item Assumptions on gravity:
     \begin{enumerate}
       \item We use the potential of isothermal slab, symmetric about $z=0$ and\
