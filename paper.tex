@@ -119,7 +119,7 @@
   \item Release the caveat of jet direction.
   \item Rule out the hadronic process.
   \item Predict the small inner bubbles.
-  \item How to explain why we assume e_CR << e_gas
+  \item How to explain why we assume e\_CR << e\_gas
   \item How to explain the lifespan of bubbles is too long.
   \item How to explain the jet power.
   \item How to explain the inconsistant of gamma-ray map.
@@ -137,42 +137,38 @@
   to carry out the simulations of the Fermi and eROSITA bubbles by CR and relativistic fluid injections from the GC.
 
   The CRs are advected with the thermal gas, and in return the velocities of gas\
-  can react to the gradients of the CR pressure\
-  via the presence of a source (or coupling) term containing spatial derivatives of fluid velocities.
+  can react to the gradients of the CR pressure via the source term\
+  containing spatial divergence of fluid velocities.\
 
-  Since CR diuusion insignificantly affect on the overall mophology of the Fermi bubbles\
-  but only sharpen the edges of the simulated bubbles by the interplay between anisotropic CR diffusion\
-  and magnetic fields
-with suppressed perpendicular diffusion across the bubble surface.
+  Although the high-energy CRe ($10$ --- $100$ GeV) plays a crucial role in reproducing the $\gamma$-ray map\
+  within the range of $1$ --- $100$ GeV, we assume the pressure of CRe is much less than that of gas\
+  thoughout the simulation so that we , and the Fermi bubbles can be outlined against the eROSITA bubbles.
 
-  Since the sharpness of bubble edges requires suppression of CR diffusion across the bubble surface
- has a insignificant effect on the overall mophology of the Fermi bubbles
+  As stressed by \citet{Yang2012}, CR diffusion has insignificant effect on the overall mophology of the Fermi bubbles,\
+  but only sharpens the edges of the simulated bubbles by the interplay between anisotropic CR diffusion\
+  and magnetic fields with suppressed perpendicular diffusion across the bubble surface. Morever,\
+  the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
+  little effect on the overall dynamics. For these two reasons,\
+  we have ignored the CR diffusion and the magnetic field throughout\
+  the simulation.
 
-  In this approach, the CRs are treated as a single species without distinction between electrons and protons.\
   We do not simulate the spectral evolution of the CR, and we neglected the cooling and heating processes of CRs,\
   such as energy losses due to synchrotron and inverse Compton emission, and reacceleration in shocks.\
 
-  We treat CRs as a second fluid with a initially fixed energy\
-  and solve directly for the evolution of CR pressure $p_{\text{cr}}$\
+  In this approach, we treat CRs as a single species without distinction between electrons and protons,\
+  that cannot react to the gas via the application of CRe pressure,\
+  and solve directly for the evolution of CR energy density $e_{\text{cr}}$\
   as a function of $\mathbf{r}$ and $t$.\
 
-  We have assumed cosmic-ray is passive. (i.e. $p_{\text{cr}}\ll p_{\text{gas}}$)
+  Since the relativistic fluid ejected by the jet source\
+  is quickly stalled off and slowed down by a dense ISM disk in a short time,\
+  and the relativistic fluid\
+  accounts for a little minority of total mass inside the simulation box,\
+  we still use the Newtonian gravity to attack this problem.
 
-  We have ignored the $\mathbf{B}$ field within\
-  the simulation box as the field inside\
-  the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
-  little effect on the overall dynamics.\
-
-  We also assumed the magnetic field is highly entangled on small-scale (how small?), resulting in\
-  the negligible cosmic-ray diffusion.
-
-  We still use Newtonian gravity, as the relativistic fluid ejected by the jet source\
-  is quickly slowed down by heavy disk in a short time, and the relativistic fluid\
-  accounts for a little minority of total mass inside the simulation box.
-
-  \textsc{gamer-sr} solves the mass and energy-momentum conservation laws of special relativistic ideal fluid\
-  including CR advection, and dynamical coupling between the thermal gas and CRs without diffusion.\
-  The governing equations can be written as
+  The governing equations solving the special relativistic ideal fluid\
+  including CR advection, and dynamical coupling between the thermal gas and CRs without diffusion\
+  turn out to be
 
 
   \begin{subequations}
@@ -201,14 +197,15 @@ with suppressed perpendicular diffusion across the bubble surface.
   Throughout this paper, Latin indices run from 1 to 3, except when stated otherwise.
 
   \textsc{gamer-sr} adopts a new algorithm \citep{tseng2021} to convert between\
-  primitive ($p$, $\rho$, $U^{j}$) and conserved variables, significantly reducing numerical error\
-  caused by catastrophic cancellations\
+  primitive ($p$, $\rho$, $U^{j}$) and conserved variables, ($D$, $M^{j}$, $\tilde{E}$)\
+  significantly reducing numerical error caused by catastrophic cancellations\
   that commonly occur within the regions with high Mach number. e.g., jet-ISM interaction zones.
 
-  \textsc{gamer-sr} also adaptively and locally reduce the min-mod coefficient \citep{tseng2021} within the failed patch group.\
+  \textsc{gamer-sr} also adaptively and locally reduce the min-mod coefficient\
+  \citep{tseng2021} within the failed patch group.\
   Doing so provides an elegant way to avoid the use of pressure/density floor,\
   being unnatural but widely used in almost publicly available code.
-  %to further alleviate the numerical error due to extremely high Mach number,\
+
 
 \subsection{Initial conditions for the Fermi and eROSITA bubbles}
   The simulation box is $14\times14\times28$ kpc, slightly larger than the size of eROISTA bubbles,\
