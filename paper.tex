@@ -201,38 +201,74 @@
   hot gases coexisting with non-relativistically cold gases.
 
   \textsc{gamer-sr} adopts a new algorithm \citep{tseng2021} to convert between\
-  primitive ($p$, $\rho$, $U^{j}$) and conserved variables, ($D$, $M^{j}$, $\tilde{E}$)\
+  primitive ($\rho$, $U^{j}$, $p$) and conserved variables ($D$, $M^{j}$, $\tilde{E}$),\
   significantly reducing numerical error caused by catastrophic cancellations\
   that commonly occur within the regions with high Mach number. e.g., jet-ISM interaction zones.
 
   \textsc{gamer-sr} also adaptively and locally reduce the min-mod coefficient\
   \citep{tseng2021} within the failed patch group.\
   Doing so provides an elegant way to avoid the use of pressure/density floor,\
-  being unnatural but widely used in almost publicly available codes.
+  being unnatural but widely used in almost publicly available codes.\
+
+  \subsection{The Galactic Model}
+
+  We model the external and fixed gravity of the Milky Way by prescribing a\
+  plane parallel self-gravitating isothermal slab, symmetry about the mid-plane $z=0$,\
+  in a simulation box size of\
+  $14\times14\times28$ kpc, slightly larger than the size of eROISTA bubbles.
+
+  In our 3D simulation, the Galactic potential can be written as
+
+  \begin{equation}
+    \Phi_{\text{total}} = \Phi_{\text{disk}} + \Phi_{\text{halo}},
+  \end{equation}
+
+  where $\Phi_{\text{halo}}=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right)$\
+
+  is dark logarithmic halo potential,
+
+  \begin{equation}
+    \Phi_{\text{disk}}=\
+    2\sigma^2_{\text{disk}}\
+    \ln\cosh\left(z\sqrt{\frac{2\pi G\rho_{\text{disk}}^{\text{peak}}}{\sigma^2_{\text{disk}}}}\right),
+  \end{equation}
+
+  is the potential of a plane-parallel isothermal slab.
+
+  The slab is used to mimic the gravity contributed by the stars within the Galactic plane,\
+  the  thus
+
+  We mimic the galactic potential by using
+
+  The potential of slab is mainly contributed by the stars within the Galactic center.
 
 
-\subsection{Initial conditions for the Fermi and eROSITA bubbles}
-  The simulation box is $14\times14\times28$ kpc, slightly larger than the size of eROISTA bubbles,\
-  with a root grid $N=16\times16\times32$. We resolve the jet source located at the center of the simulation domain,\
-  cells are refined to level 11, leading to a finest spatial resolution of 0.4 pc.\
+  The AMR base level is covered by $16\times16\times32$ root grids, refined progressively on the plane $z=0$\
+  , with the outflow boundary condition.
+
+  confined by an external dark halo potential.
 
 
-  To save computational costs, we restrict the refinement level is 7 within the cold disk so that\
-  a molecular cloud can be adequately resolved by approximately 30 cells along their diameter, 100 pc.
+  We use three components (1) cold ISM disk (2) hot gas ambient (3) stellar disk\
+  to locally mimic the environment near the GC (i.e. no galactic rotation).\
+
+
+  The density distributions of ISM disk and hot gas ambient are derived from\
+  hydrostatic equilibrium within the fixed external potential.
+
+
+  We use the potential of isothermal slab, symmetric about $z=0$, and\
+  supported by gas pressure and by its own self-gravity,\
+  to mimic the realistic potential of Galactic bulge.
+
 
 
 \begin{enumerate}
-  \item Assumptions on hydrodynamics:
-
-
   \item Assumptions on gravity:
     \begin{enumerate}
       \item We use the potential of isothermal slab, symmetric about $z=0$ and\
             supported by gas pressure and by under its own self-gravity,\
             to mimic the realistic potential of Galactic bulge.
-%      \item We still use Newtonian gravity, as the relativistic fluid ejected by the jet source\
-%            is quickly slowed down by heavy disk in a short time, and the relativistic fluid\
-%            accounts for a little minority of total mass inside the simulation box.
       \item The ISM disk and atmosphere are subjected to the fixed external potential\
             due to a disk bulge and dark matter halo.
       \item In addition to the gravitational interaction, we ignore other interactions between stars and gases.
@@ -242,13 +278,7 @@
       \item The interface between cold ISM disk and atmosphere is parallel to the Galactic plane and is pressure balanced.
     \end{enumerate}
 \end{enumerate}
-We simulate 3D special relativistic hydrodynamics with passive CR injections from the GC using\
-the special hydrodynamics GPU code \textsc{gamer-sr} \citep{tseng2021}.
 
-\textsc{gamer-sr} solves mass and energy-momentum conservation laws of a special relativistic ideal fluid\
-with CR.
-
-\subsection{The Galactic Model}
 
 
 \begin{enumerate}
@@ -323,7 +353,15 @@ with CR.
 
 
 \end{enumerate}
+
+\subsection{Cold disk}
+  We restrict the refinement level is 7 within the cold disk so that\
+  a molecular cloud can be adequately resolved by approximately 30 cells along their diameter, 100 pc.\
+
 \subsection{Jet injection}
+  We resolve the jet source located at the center of the simulation domain,\
+  cells are refined to level 11, leading to a finest spatial resolution of 0.4 pc.\
+
  \begin{enumerate}
     \item Why the overall structure is insensitive to jet direction?
       \begin{enumerate}
