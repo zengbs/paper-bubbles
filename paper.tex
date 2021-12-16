@@ -167,7 +167,7 @@
   we still use the Newtonian gravity to attack this problem.
 
   The governing equations solving the special relativistic ideal fluid\
-  including CR advection, and dynamical coupling between the thermal gas and CRs without diffusion\
+  including CR advection, and dynamical coupling between the thermal gas and CRs without CR diffusion\
   turn out to be
 
 
@@ -194,7 +194,11 @@
   $p_{\text{cr}}$ and $e_{\text{cr}}$ are the CR pressure and CR energy density measured in the local rest frame.\
   $\Phi$ is the gravitation potential.\
   $c$ is the speed of light, and $\delta^{ij}$ is the Kronecker delta notation.\
-  Throughout this paper, Latin indices run from 1 to 3, except when stated otherwise.
+  Throughout this paper, Latin indices run from 1 to 3, except when stated otherwise.\
+
+  The set of equations is closed by using the Taub-Mathews equation of state (\citealt{Taub}; \citealt{TM_EOS})\
+  that approximates the exact EoS \citep{Synge} for ultra-relativistically\
+  hot gases coexisting with non-relativistically cold gases.
 
   \textsc{gamer-sr} adopts a new algorithm \citep{tseng2021} to convert between\
   primitive ($p$, $\rho$, $U^{j}$) and conserved variables, ($D$, $M^{j}$, $\tilde{E}$)\
@@ -213,16 +217,12 @@
   cells are refined to level 11, leading to a finest spatial resolution of 0.4 pc.\
 
 
-
-  To save computational costs further, we restrict the refinement level is 7 within the cold disk so that\
+  To save computational costs, we restrict the refinement level is 7 within the cold disk so that\
   a molecular cloud can be adequately resolved by approximately 30 cells along their diameter, 100 pc.
 
 
 \begin{enumerate}
   \item Assumptions on hydrodynamics:
-    \begin{enumerate}
-      \item Ideal fluid with TM EoS (\citealt{Taub}; \citealt{TM_EOS}).
-    \end{enumerate}
 
 
   \item Assumptions on gravity:
