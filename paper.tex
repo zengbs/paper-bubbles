@@ -212,7 +212,7 @@
 
   \subsection{The Galactic Model}
 
-  We model the external and fixed gravity of the Milky Way by prescribing a\
+  We model the external gravity of the Milky Way by prescribing a\
   plane parallel self-gravitating isothermal slab, symmetry about the mid-plane $z=0$,\
   in a simulation box size of\
   $14\times14\times28$ kpc, slightly larger than the size of eROISTA bubbles.
@@ -224,7 +224,6 @@
   \end{equation}
 
   where $\Phi_{\text{halo}}=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right)$\
-
   is dark logarithmic halo potential,
 
   \begin{equation}
@@ -233,33 +232,47 @@
     \ln\cosh\left(z\sqrt{\frac{2\pi G\rho_{\text{disk}}^{\text{peak}}}{\sigma^2_{\text{disk}}}}\right),
   \end{equation}
 
-  is the potential of a plane-parallel isothermal slab.
+  is the potential of a plane-parallel isothermal slab contributed by stars within the Galactic plane.
 
-  The slab is used to mimic the gravity contributed by the stars within the Galactic plane,\
-  the  thus
 
-  We mimic the galactic potential by using
+  The steady-state density distribution in a total potential, $\Phi_{\text{total}}$,\
+  for the atmosphere gas can be derived from the isothermal and hydrostatic equilibrium condition,\
+  given by
 
-  The potential of slab is mainly contributed by the stars within the Galactic center.
+  \begin{equation}
+     \rho(z)=
+     \begin{cases}
+     \displaystyle\rho_{\text{atmp}}^{\text{peak}}
+     \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{atmp}}/m}\right] & \text{if z > $z_{0}$}\\
+     \displaystyle\rho_{\text{disk}}^{\text{peak}}
+     \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{disk}}/m}\right] & \text{if z > $z_{0}$}
+     \end{cases}
+  \end{equation}
 
+
+
+
+  where $\rho_{\text{atmp}}^{\text{peak}}$ can be obtained by assuming that pressure\
+  and gravitational potential are continuous at the interface ($z=\pm z_{0}$) between disk and atmosphere.
 
   The AMR base level is covered by $16\times16\times32$ root grids, refined progressively on the plane $z=0$\
   , with the outflow boundary condition.
 
   confined by an external dark halo potential.
 
+  The adopted parameters for are
 
-  We use three components (1) cold ISM disk (2) hot gas ambient (3) stellar disk\
-  to locally mimic the environment near the GC (i.e. no galactic rotation).\
-
-
-  The density distributions of ISM disk and hot gas ambient are derived from\
-  hydrostatic equilibrium within the fixed external potential.
+  %We use three components (1) cold ISM disk (2) hot gas ambient (3) stellar disk\
+  %to locally mimic the environment near the GC (i.e. no galactic rotation).\
 
 
-  We use the potential of isothermal slab, symmetric about $z=0$, and\
-  supported by gas pressure and by its own self-gravity,\
-  to mimic the realistic potential of Galactic bulge.
+  %The density distributions of ISM disk and hot gas ambient are derived from\
+  %hydrostatic equilibrium within the fixed external potential.
+
+
+  %We use the potential of isothermal slab, symmetric about $z=0$, and\
+  %supported by gas pressure and by its own self-gravity,\
+  %to mimic the realistic potential of Galactic bulge.
 
 
 
