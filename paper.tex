@@ -7,6 +7,7 @@
 \usepackage{lipsum, babel}
 \usepackage[T1]{fontenc}
 \usepackage{ae,aecompl}
+\usepackage{xcolor,colortbl}
 \usepackage{tikz}
 \usepackage{graphicx}
 \usepackage{url}
@@ -85,6 +86,8 @@
 \draw [#1,dotted] (0,.5) -- (2.5,.5);
 \end{tikzpicture}
 }
+
+\definecolor{Gray}{gray}{0.85}
 
 \begin{document}
 \title{Fermi and eROSITA bubbles}
@@ -280,23 +283,25 @@
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table*}[t]
-\begin{tabular}{@{}llc@{}}
-\toprule
-Parameter                           & Description                   & Value                         \\ \midrule
-Potential \& halo                   &                               &                               \\
-$\sigma_{\text{bulge}}$             & Velocity dispersion of bulge  & 100 km/s                      \\
-$\rho_{\text{bulge}}^{\text{peak}}$ & Peak average density of bulge & $4\times 10^{-24}$ g/cm$^{3}$ \\
-$v_{\text{halo}}$                   &                               & 131.5 km/s                    \\
-$d_{\text{h}}$                      &                               & 12 kpc                        \\
-Atmosphere                          &                               &                               \\
-$T_{\text{\text{atmp}}}$            &                               & $10^{6}$ K                    \\
-Disk                                &                               &                               \\
-$z_{0}$                             & Scale height of disk          & 100 pc                        \\
-$\rho_{\text{disk}}^{\text{peak}}$  & Peak number density of disk   & $6\text{ c.c.}^{-1}$          \\
-$T_{\text{\text{disk}}}$            & Temperature of disk           & $10^{3}$ K                    \\ \bottomrule
+\centering
+\caption{Parameters of the disk, atmosphere, and gravitational potential in the simulation.}
+\label{table-parameters}
+\begin{tabular}{@{}llrr@{}}
+\toprule[1pt]\midrule[0.3pt]
+Parameter                           & Description                   & Value                                & Reference                         \\ \midrule
+{\bf Potential \& halo}             &                               &                                      &                                   \\ \cmidrule(r){1-1}
+$\sigma_{\text{bulge}}$             & Velocity dispersion of bulge  & 100 km/s                             & \citep{velocity-dispersion-MW}    \\
+$\rho_{\text{bulge}}^{\text{peak}}$ & Peak average density of bulge & $4\times 10^{-24}$ g/cm$^{3}$        &                                   \\
+$v_{\text{halo}}$                   &                               & 131.5 km/s                           & \citep{Johnston1995}              \\
+$d_{\text{h}}$                      &                               & 12 kpc                               & \citep{Johnston1995}              \\
+{\bf Atmosphere}                    &                               &                                      &                                   \\ \cmidrule(r){1-1}
+$T_{\text{\text{atmp}}}$            &                               & $10^{6}$ K                           & \citep{temperature-MW}            \\
+{\bf Disk}                          &                               &                                      &                                   \\ \cmidrule(r){1-1}
+$z_{0}$                             & Scale height of disk          & 100 pc                               &                                   \\
+		$\rho_{\text{disk}}^{\text{peak}}$  & Peak number density of disk   & $6\text{ c.c.}^{-1}$ & \citep{peak-ism-density}          \\
+$T_{\text{\text{disk}}}$            & Temperature of disk           & $10^{3}$ K                           &                                   \\ \midrule
 \end{tabular}
 \end{table*}
-
 
 
 \begin{enumerate}
@@ -345,9 +350,9 @@ $T_{\text{\text{disk}}}$            & Temperature of disk           & $10^{3}$ K
 
 \item Clumpy cold disk:
   \begin{enumerate}
-    \item Dimension: $14\times14\times0.2$ kpc. i.e. Scale height, $z_{0}=100$ pc. \citep{paek-ism-density}
-    \item Peak mass density: $\rho_{\text{disk}}^{\text{peak}}=10^{-23}$ g/cm$^3$. \citep{paek-ism-density}
-    \item Average temperature: $T_{\text{disk}}=10^{3}$ K. \citep{paek-ism-density}
+    \item Dimension: $14\times14\times0.2$ kpc. i.e. Scale height, $z_{0}=100$ pc. \citep{peak-ism-density}
+    \item Peak mass density: $\rho_{\text{disk}}^{\text{peak}}=10^{-23}$ g/cm$^3$. \citep{peak-ism-density}
+    \item Average temperature: $T_{\text{disk}}=10^{3}$ K. \citep{peak-ism-density}
     \item Average mass density:
           \begin{equation}
              \rho_{\text{disk}}=\rho_{\text{disk}}^{\text{peak}}
