@@ -241,20 +241,20 @@
   The steady-state density distribution in a total potential, $\Phi_{\text{total}}$,\
   for the gas can be derived from the isothermal and hydrostatic equilibrium condition,\
   given by
-
   \begin{equation}
      \rho(z)=
      \begin{cases}
      \displaystyle\rho_{\text{disk}}^{\text{peak}}
-     \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{disk}}/m}\right] & \text{, if $|z| < z_{0}$,}\\\\
+     \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{disk}}/m}\right] & \text{, if $|z| < z_{0}$}\\
+     \\
      \displaystyle\rho_{\text{atmp}}^{\text{peak}}
      \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{atmp}}/m}\right] & \text{, otherwise.}
      \end{cases}
   \end{equation}
 
-
   where $\rho_{\text{disk}}^{\text{peak}}$ and $\rho_{\text{atmp}}^{\text{peak}}$ is the mass density\
-  of the bulge and the atmosphere at the $z=0$ plane.
+  of the bulge and atmosphere on the $z=0$ plane.
+
 
 
   where $\rho_{\text{atmp}}^{\text{peak}}$ can be obtained by assuming that pressure\
@@ -293,13 +293,13 @@ Parameter                           & Description                       & Value 
 $\sigma_{\text{bulge}}$             & Velocity dispersion of bulge      & 100 km/s                             & \citep{velocity-dispersion-MW}    \\
 $\rho_{\text{bulge}}^{\text{peak}}$ & Peak average density of bulge     & $4\times 10^{-24}$ g/cm$^{3}$        &                                   \\
 $v_{\text{halo}}$                   &                                   & 131.5 km/s                           & \citep{Johnston1995}              \\
-$d_{\text{h}}$                      &                                   & 12 kpc                               & \citep{Johnston1995}              \\ \hline
+$d_{\text{h}}$                      & Core radius                       & 12 kpc                               & \citep{Johnston1995}              \\ \hline
 {\bf Atmosphere}                    &                                   &                                      &                                   \\
 $T_{\text{\text{atmp}}}$            & Temperature of atmosphere         & $10^{6}$ K                           & \citep{temperature-MW}            \\ \hline
 {\bf Disk}                          &                                   &                                      &                                   \\
 $z_{0}$                             & Scale height of disk              & 100 pc                               & \citep{peak-ism-density}          \\
 $T_{\text{\text{disk}}}$            & Temperature of disk               & $10^{3}$ K                           & \citep{peak-ism-density}          \\
-$\rho_{\text{disk}}^{\text{peak}}$  & Peak number density of disk       & $6\text{ c.c.}^{-1}$                 & \citep{peak-ism-density}          \\ \midrule
+$\rho_{\text{disk}}^{\text{peak}}$  & Peak mass density of disk         & $10^{-23}$ g/cm$^{3}$                & \citep{peak-ism-density}          \\ \midrule
 \end{tabular}
 \end{table*}
 
