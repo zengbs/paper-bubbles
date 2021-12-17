@@ -220,36 +220,38 @@
   In our 3D simulation, the Galactic potential can be written as
 
   \begin{equation}
-    \Phi_{\text{total}} = \Phi_{\text{disk}} + \Phi_{\text{halo}},
+    \Phi_{\text{total}} = \Phi_{\text{bulge}} + \Phi_{\text{halo}},
   \end{equation}
 
   where $\Phi_{\text{halo}}=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right)$\
   is dark logarithmic halo potential,
 
   \begin{equation}
-    \Phi_{\text{disk}}=\
-    2\sigma^2_{\text{disk}}\
-    \ln\cosh\left(z\sqrt{\frac{2\pi G\rho_{\text{disk}}^{\text{peak}}}{\sigma^2_{\text{disk}}}}\right),
+    \Phi_{\text{bulge}}=\
+    2\sigma^2_{\text{bulge}}\
+    \ln\cosh\left(z\sqrt{\frac{2\pi G\rho_{\text{bulge}}^{\text{peak}}}{\sigma^2_{\text{bulge}}}}\right)
   \end{equation}
 
-  is the potential of a plane-parallel isothermal slab contributed by stars within the Galactic plane.
+  is the potential of a plane-parallel isothermal slab mainly contributed by stars within the Galactic plane.
 
 
   The steady-state density distribution in a total potential, $\Phi_{\text{total}}$,\
-  for the atmosphere gas can be derived from the isothermal and hydrostatic equilibrium condition,\
+  for the gas can be derived from the isothermal and hydrostatic equilibrium condition,\
   given by
 
   \begin{equation}
      \rho(z)=
      \begin{cases}
+     \displaystyle\rho_{\text{bulge}}^{\text{peak}}
+     \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{bulge}}/m}\right] & \text{, if $|z| < z_{0}$,}\\
      \displaystyle\rho_{\text{atmp}}^{\text{peak}}
-     \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{atmp}}/m}\right] & \text{if z > $z_{0}$}\\
-     \displaystyle\rho_{\text{disk}}^{\text{peak}}
-     \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{disk}}/m}\right] & \text{if z > $z_{0}$}
+     \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{atmp}}/m}\right] & \text{, otherwise.}
      \end{cases}
   \end{equation}
 
 
+  where $\rho_{\text{bulge}}^{\text{peak}}$ and $\rho_{\text{atmp}}^{\text{peak}}$ is the mass density\
+  of the bulge and the atmosphere at the $z=0$ plane.
 
 
   where $\rho_{\text{atmp}}^{\text{peak}}$ can be obtained by assuming that pressure\
@@ -273,6 +275,27 @@
   %We use the potential of isothermal slab, symmetric about $z=0$, and\
   %supported by gas pressure and by its own self-gravity,\
   %to mimic the realistic potential of Galactic bulge.
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table*}[t]
+\begin{tabular}{@{}llc@{}}
+\toprule
+Parameter                           & Description                   & Value                         \\ \midrule
+Potential \& halo                   &                               &                               \\
+$\sigma_{\text{bulge}}$             & Velocity dispersion of bulge  & 100 km/s                      \\
+$\rho_{\text{bulge}}^{\text{peak}}$ & Peak average density of bulge & $4\times 10^{-24}$ g/cm$^{3}$ \\
+$v_{\text{halo}}$                   &                               & 131.5 km/s                    \\
+$d_{\text{h}}$                      &                               & 12 kpc                        \\
+Atmosphere                          &                               &                               \\
+$T_{\text{\text{atmp}}}$            &                               & $10^{6}$ K                    \\
+Disk                                &                               &                               \\
+$z_{0}$                             & Scale height of disk          & 100 pc                        \\
+$\rho_{\text{disk}}^{\text{peak}}$  & Peak number density of disk   & $6\text{ c.c.}^{-1}$          \\
+$T_{\text{\text{disk}}}$            & Temperature of disk           & $10^{3}$ K                    \\ \bottomrule
+\end{tabular}
+\end{table*}
 
 
 
