@@ -90,7 +90,7 @@
 \definecolor{Gray}{gray}{0.85}
 
 \begin{document}
-\title{Fermi and eROSITA bubbles}
+\title{Fermi and eROSITA bubbles: a proof of concept study}
 
 
 \author[0000-0002-1868-0660]{Po-Hsun Tseng}
@@ -215,19 +215,18 @@
 
   \subsection{The Galactic Model}
 
-  We model the external gravity of the Milky Way by prescribing a\
-  plane parallel self-gravitating isothermal slab, symmetry about the mid-plane $z=0$,\
+  As a proof-of-concept study, we approximate conventionally axisymmetric potential of Milky Way\
+  by a plane-parallel potential that is symmetric about the mid-plane $z=0$\
   in a simulation box size of\
   $14\times14\times28$ kpc, slightly larger than the size of eROISTA bubbles.
 
-  In our 3D simulation, the Galactic potential can be written as
+  The plane-parallel potential is fixed throughout our simulations and given by
 
   \begin{equation}
     \Phi_{\text{total}} = \Phi_{\text{bulge}} + \Phi_{\text{halo}},
   \end{equation}
 
-  where $\Phi_{\text{halo}}=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right)$\
-  is dark logarithmic halo potential,
+  where
 
   \begin{equation}
     \Phi_{\text{bulge}}=\
@@ -235,12 +234,14 @@
     \ln\cosh\left(z\sqrt{\frac{2\pi G\rho_{\text{bulge}}^{\text{peak}}}{\sigma^2_{\text{bulge}}}}\right)
   \end{equation}
 
-  is the potential of a plane-parallel isothermal slab mainly contributed by stars within the Galactic plane.
+  is the potential of a isothermal slab mainly contributed by stars within the Galactic plane.
 
+  $\Phi_{\text{halo}}=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right)$\
+  is a plane-parallel dark logarithmic halo potential.
 
-  The steady-state density distribution in a total potential, $\Phi_{\text{total}}$,\
-  for the gas can be derived from the isothermal and hydrostatic equilibrium condition,\
-  given by
+  With the help of the isothermal and hydrostatic equilibrium conditions,\
+  the steady-state gaseous density distribution in a total potential, $\Phi_{\text{total}}$,\
+  can be written as
   \begin{equation}
      \rho(z)=
      \begin{cases}
@@ -255,10 +256,10 @@
   where $\rho_{\text{disk}}^{\text{peak}}$ and $\rho_{\text{atmp}}^{\text{peak}}$ is the mass density\
   of the bulge and atmosphere on the $z=0$ plane.
 
+  All parameters are listed in \Cref{table-parameters}, excpet for $\rho_{\text{atmp}}^{\text{peak}}$ that\
+  can be derived from the pressure equilibrium on the interfaces ($|z|=z_{0}$) between disk and atmosphere.
 
 
-  where $\rho_{\text{atmp}}^{\text{peak}}$ can be obtained by assuming that pressure\
-  and gravitational potential are continuous at the interface ($z=\pm z_{0}$) between disk and atmosphere.
 
   The AMR base level is covered by $16\times16\times32$ root grids, refined progressively on the plane $z=0$\
   , with the outflow boundary condition.
@@ -289,17 +290,17 @@
 \begin{tabular}{@{}llrr@{}}
 \toprule[1pt]\midrule[0.3pt]
 Parameter                           & Description                       & Value                                & Reference                         \\ \midrule
+{\bf Disk}                          &                                   &                                      &                                   \\
+$z_{0}$                             & Scale height of disk              & 100 pc                               & \citep{peak-ism-density}          \\
+$T_{\text{\text{disk}}}$            & Temperature of disk               & $10^{3}$ K                           & \citep{peak-ism-density}          \\
+$\rho_{\text{disk}}^{\text{peak}}$  & Peak mass density of disk         & $10^{-23}$ g/cm$^{3}$                & \citep{peak-ism-density}          \\ \hline
+{\bf Atmosphere}                    &                                   &                                      &                                   \\
+$T_{\text{\text{atmp}}}$            & Temperature of atmosphere         & $10^{6}$ K                           & \citep{temperature-MW}            \\ \hline
 {\bf Potential \& halo}             &                                   &                                      &                                   \\
 $\sigma_{\text{bulge}}$             & Velocity dispersion of bulge      & 100 km/s                             & \citep{velocity-dispersion-MW}    \\
 $\rho_{\text{bulge}}^{\text{peak}}$ & Peak average density of bulge     & $4\times 10^{-24}$ g/cm$^{3}$        &                                   \\
 $v_{\text{halo}}$                   &                                   & 131.5 km/s                           & \citep{Johnston1995}              \\
-$d_{\text{h}}$                      & Core radius                       & 12 kpc                               & \citep{Johnston1995}              \\ \hline
-{\bf Atmosphere}                    &                                   &                                      &                                   \\
-$T_{\text{\text{atmp}}}$            & Temperature of atmosphere         & $10^{6}$ K                           & \citep{temperature-MW}            \\ \hline
-{\bf Disk}                          &                                   &                                      &                                   \\
-$z_{0}$                             & Scale height of disk              & 100 pc                               & \citep{peak-ism-density}          \\
-$T_{\text{\text{disk}}}$            & Temperature of disk               & $10^{3}$ K                           & \citep{peak-ism-density}          \\
-$\rho_{\text{disk}}^{\text{peak}}$  & Peak mass density of disk         & $10^{-23}$ g/cm$^{3}$                & \citep{peak-ism-density}          \\ \midrule
+$d_{\text{h}}$                      & Core radius                       & 12 kpc                               & \citep{Johnston1995}              \\ \midrule
 \end{tabular}
 \end{table*}
 
