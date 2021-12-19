@@ -275,14 +275,28 @@
   \caption{Captions}
   \end{figure*}
 
+
   The AMR base level is covered by $16\times16\times32$ root grids, refined progressively on the plane $z=0$\
   , with the outflow boundary condition.
 
 
   \subsubsection{The clumpy, and warm/cold ISM disk}
 
-  A crucial ingredient in the simulations is the clumpy ISM disk,\
-  in which the temperature ranging from
+  A crucial ingredient in our work is the clumpy ISM disk initialized by\
+  the publicly available pyFC code
+  \footnote{\url{https://pypi.python.org/pypi/pyFC}}.
+  The spatial density distribution $\rho(\bold{x})$ of clumpy ISM obeys\
+  the log-normal probability distribution in real space,\
+  and the Kolmogorov power spectrum in the Fourier space.
+  \begin{equation}
+    D(k)=\int k^{2} \hat{\rho}(k)\hat{\rho}^{*}(k)dk \propto k^{-5/3},
+  \end{equation}
+  where $\hat{\rho}(k)$ is the Fourier transform of $\rho(\bold{r})$.
+
+
+
+  \citet{LA2002} and \citet{Wagner2012} have outlined a detailed procedure\
+   for constructing clumpy structure, and we do not repeat here.
 
 
 % Please add the following required packages to your document preamble:

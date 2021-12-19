@@ -49,6 +49,10 @@ Johnston K.~V.,  Spergel D.~N.,   Hernquist L.,  1995, \mn@doi [The
 {Kaastra} J.~S.,  {Mewe} R.,  1993, \aaps, \href
   {https://ui.adsabs.harvard.edu/abs/1993A&AS...97..443K} {97, 443}
 
+\bibitem[\protect\citeauthoryear{Lewis \& Austin}{Lewis \&
+  Austin}{2002}]{LA2002}
+Lewis G.~M.,  Austin P.~H.,  2002, 1th Conference on AtmosphericRadiation
+
 \bibitem[\protect\citeauthoryear{{Liedahl}, {Osterheld}  \&
   {Goldstein}}{{Liedahl} et~al.}{1995}]{Xray-3}
 {Liedahl} D.~A.,  {Osterheld} A.~L.,   {Goldstein} W.~H.,  1995, \mn@doi
@@ -107,6 +111,11 @@ Tseng P.-H.,  Schive H.-Y.,   Chiueh T.,  2021, \mn@doi [Monthly Notices of the
   et~al.}{2018}]{velocity-dispersion-MW}
 Valenti E.,  et~al., 2018, \mn@doi [\aaps] {10.1051/0004-6361/201832905}, 616,
   A83
+
+\bibitem[\protect\citeauthoryear{Wagner, Bicknell  \& Umemura}{Wagner
+  et~al.}{2012}]{Wagner2012}
+Wagner A.~Y.,  Bicknell G.~V.,   Umemura M.,  2012, \mn@doi [The Astrophysical
+  Journal] {10.1088/0004-637x/757/2/136}, 757, 136
 
 \bibitem[\protect\citeauthoryear{Yang, Ruszkowski, Ricker, Zweibel  \&
   Lee}{Yang et~al.}{2012}]{Yang2012}
