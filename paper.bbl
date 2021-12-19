@@ -60,11 +60,6 @@ Johnston K.~V.,  Spergel D.~N.,   Hernquist L.,  1995, \mn@doi [The
   \aaps, \href {https://ui.adsabs.harvard.edu/abs/1985A&AS...62..197M} {62,
   197}
 
-\bibitem[\protect\citeauthoryear{Miller \& Bregman}{Miller \&
-  Bregman}{2013}]{temperature-MW}
-Miller M.~J.,  Bregman J.~N.,  2013, \mn@doi [The Astrophysical Journal]
-  {10.1088/0004-637x/770/2/118}, 770, 118
-
 \bibitem[\protect\citeauthoryear{Schive, Tsai  \& Chiueh}{Schive
   et~al.}{2010}]{gamer-1}
 Schive H.-Y.,  Tsai Y.-C.,   Chiueh T.,  2010, \mn@doi [The Astrophysical
@@ -82,6 +77,11 @@ Synge J.~L.,  1957, North-Holland Pub. Co.; Interscience Publishers
 \bibitem[\protect\citeauthoryear{{Taub}}{{Taub}}{1948}]{Taub}
 {Taub} A.~H.,  1948, \mn@doi [Physical Review] {10.1103/PhysRev.74.328}, \href
   {https://ui.adsabs.harvard.edu/abs/1948PhRv...74..328T} {74, 328}
+
+\bibitem[\protect\citeauthoryear{Tepper-Garc{\'{\i}}a, Bland-Hawthorn  \&
+  Sutherland}{Tepper-Garc{\'{\i}}a et~al.}{2015}]{temperature-MW}
+Tepper-Garc{\'{\i}}a T.,  Bland-Hawthorn J.,   Sutherland R.~S.,  2015, \mn@doi
+  [The Astrophysical Journal] {10.1088/0004-637x/813/2/94}, 813, 94
 
 \bibitem[\protect\citeauthoryear{Tseng, Schive  \& Chiueh}{Tseng
   et~al.}{2021}]{tseng2021}

@@ -213,7 +213,7 @@
   Doing so provides an elegant way to avoid the use of pressure/density floor,\
   being unnatural but widely used in almost publicly available codes.\
 
-  \subsection{The Galactic Model}
+  \subsection{The Galactic and Disk Models}
   As a proof-of-concept study, we approximate conventionally axisymmetric stellar potential of Milky Way\
   by an external plane-parallel potential that is symmetric about the mid-plane $z=0$\
   in a simulation box size of\
@@ -234,7 +234,7 @@
   is a plane-parallel dark logarithmic halo potential.
 
   With the help of the isothermal and hydrostatic equilibrium conditions,\
-  we can write the steady-state gaseous density distributions of disk and atmosphere\
+  we can write the steady-state gaseous density distributions of disk and the Galactic atmosphere\
   that are in pressure equilibrium and\
   confined in the total potential, $\Phi_{\text{total}}$, as\
   \begin{equation}
@@ -256,24 +256,26 @@
   can be derived from the known parameters and pressure equilibrium condition\
   on the interfaces $(z=\pm z_{0})$ between disk and atmosphere.
 
+  \Cref{density-profile} shows the initial density profile of hot halo for the simulation presented here.\
+
+
+  \begin{figure*}[h]
+    \subfigure[The initial gaseous density profile along z-axis] % caption
+    {
+      \includegraphics[width=0.4\linewidth]{figures/fig__density-profile.png}
+      \label{density-profile}
+    }
+  \caption{Captions}
+  \end{figure*}
+
   The AMR base level is covered by $16\times16\times32$ root grids, refined progressively on the plane $z=0$\
   , with the outflow boundary condition.
 
-  confined by an external dark halo potential.
 
-  The adopted parameters for are
+  \subsubsection{The clumpy, and warm/cold ISM disk}
 
-  %We use three components (1) cold ISM disk (2) hot gas ambient (3) stellar disk\
-  %to locally mimic the environment near the GC (i.e. no galactic rotation).\
-
-
-  %The density distributions of ISM disk and hot gas ambient are derived from\
-  %hydrostatic equilibrium within the fixed external potential.
-
-
-  %We use the potential of isothermal slab, symmetric about $z=0$, and\
-  %supported by gas pressure and by its own self-gravity,\
-  %to mimic the realistic potential of Galactic bulge.
+  A crucial ingredient in the simulations is the clumpy ISM disk,\
+  in which the temperature ranging from
 
 
 % Please add the following required packages to your document preamble:
