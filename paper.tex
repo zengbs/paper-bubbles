@@ -229,13 +229,13 @@
     2\sigma^2_{\text{bulge}}\
     \ln\cosh\left(z\sqrt{\frac{2\pi G\rho_{\text{bulge}}^{\text{peak}}}{\sigma^2_{\text{bulge}}}}\right)
   \end{equation}
-  is the potential of an isothermal slab mainly contributed by stars around the Galactic plane, and\
+  is the potential of an isothermal slab mainly contributed by stars around the Galactic bulge, and\
   $\Phi_{\text{halo}}(z)=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right)$\
   is a plane-parallel dark logarithmic halo potential.
 
   With the help of the isothermal and hydrostatic equilibrium conditions,\
+  and assuming the disk and atmosphere is in pressure equilibrium,\
   we can write the steady-state gaseous density distributions of disk and the Galactic atmosphere\
-  that are in pressure equilibrium and\
   confined in the total potential, $\Phi_{\text{total}}$, as\
   \begin{equation}
      \rho(z)=
@@ -252,11 +252,18 @@
   $\rho_{\text{disk}}^{\text{peak}}$ and $\rho_{\text{atmp}}^{\text{peak}}$ is the peak mass density\
   of the disk and atmosphere on the mid-plane $z=0$.
 
-  All parameters are listed in \Cref{table-parameters}, except for $\rho_{\text{atmp}}^{\text{peak}}$ that\
+  We tabulate all parameters in \Cref{table-parameters}, except for $\rho_{\text{atmp}}^{\text{peak}}$ that\
   can be derived from the known parameters and pressure equilibrium condition\
-  on the interfaces $(z=\pm z_{0})$ between disk and atmosphere.
+  on the interfaces $(z=\pm z_{0})$ between disk and atmosphere.\
 
-  \Cref{density-profile} shows the initial density profile of hot halo for the simulation presented here.\
+  The initial density profile based on the above construction is shown in \Cref{density-profile}\
+  and compared to the observed result beyond 1 kpc \citep{Miller_2013}.\
+
+  Note that there is an difficulty in disentangling the contribution\
+  of the Local Bubble, a supernova remnant in which the Solar System is embedded \citep{Snowden1990},\
+  and the contribution from solar wind charge-exchange processes, which produce soft\
+  X-ray emission throughout the Solar System. As a result, the density profile of the Galactic halo remains unclear\
+  \citep{BlandHawthorn2016}.
 
 
   \begin{figure*}[h]
@@ -287,7 +294,7 @@
 \begin{tabular}{@{}llrr@{}}
 \toprule[1pt]\midrule[0.3pt]
 Parameter                                             & Description                   & Value                          & Reference                       \\ \midrule
-{\bf Disk }\citep{peak-ism-density}                   &                               &                                &                                 \\
+{\bf ISM Disk }\citep{peak-ism-density}                   &                               &                                &                                 \\
 $z_{0}$                                               & Scale height of disk          & 100 pc                         &                                 \\
 $T_{\text{\text{disk}}}$                              & Temperature of disk           & $10^{3}$ K                     &                                 \\
 $\rho_{\text{disk}}^{\text{peak}}$                    & Peak mass density of disk     & $10^{-23}$ g/cm$^{3}$          &                                 \\ \hline

@@ -22,6 +22,11 @@
   Society of the Pacific Conference Series Vol. 101, Astronomical Data Analysis
   Software and Systems V. p.~17
 
+\bibitem[\protect\citeauthoryear{Bland-Hawthorn \& Gerhard}{Bland-Hawthorn \&
+  Gerhard}{2016}]{BlandHawthorn2016}
+Bland-Hawthorn J.,  Gerhard O.,  2016, \mn@doi [Annual Review of Astronomy and
+  Astrophysics] {10.1146/annurev-astro-081915-023441}, 54, 529
+
 \bibitem[\protect\citeauthoryear{Blitz \& Robishaw}{Blitz \&
   Robishaw}{2000}]{halo-radius-1}
 Blitz L.,  Robishaw T.,  2000, ] {10.1086/309457}, 541, 675
@@ -60,6 +65,11 @@ Johnston K.~V.,  Spergel D.~N.,   Hernquist L.,  1995, \mn@doi [The
   \aaps, \href {https://ui.adsabs.harvard.edu/abs/1985A&AS...62..197M} {62,
   197}
 
+\bibitem[\protect\citeauthoryear{Miller \& Bregman}{Miller \&
+  Bregman}{2013}]{Miller_2013}
+Miller M.~J.,  Bregman J.~N.,  2013, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637x/770/2/118}, 770, 118
+
 \bibitem[\protect\citeauthoryear{Schive, Tsai  \& Chiueh}{Schive
   et~al.}{2010}]{gamer-1}
 Schive H.-Y.,  Tsai Y.-C.,   Chiueh T.,  2010, \mn@doi [The Astrophysical
@@ -70,6 +80,11 @@ Schive H.-Y.,  Tsai Y.-C.,   Chiueh T.,  2010, \mn@doi [The Astrophysical
 Schive H.-Y.,  ZuHone J.~A.,  Goldbaum N.~J.,  Turk M.~J.,  Gaspari M.,   Cheng
   C.-Y.,  2018, \mn@doi [Monthly Notices of the Royal Astronomical Society]
   {10.1093/mnras/sty2586}, 481, 4815
+
+\bibitem[\protect\citeauthoryear{Snowden, Cox, McCammon  \& Sanders}{Snowden
+  et~al.}{1990}]{Snowden1990}
+Snowden S.~L.,  Cox D.~P.,  McCammon D.,   Sanders W.~T.,  1990, \mn@doi [The
+  Astrophysical Journal] {10.1086/168680}, 354, 211
 
 \bibitem[\protect\citeauthoryear{Synge}{Synge}{1957}]{Synge}
 Synge J.~L.,  1957, North-Holland Pub. Co.; Interscience Publishers
