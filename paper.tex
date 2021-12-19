@@ -175,7 +175,7 @@
 
 
   \begin{subequations}
-    \label{conservative-form}
+    \label{governing-eq}
     \begin{align}
      &\partial_{t} D+\partial_{j} \left(DU^{j}/\gamma\right)=0,\label{D evolution}\\
      &\partial_{t} M^{i}+\partial_{j} \left(M^{i}U^{j}/\gamma+p_{\text{gas}}\delta^{ij}\right)=\
@@ -199,7 +199,7 @@
   $c$ is the speed of light, and $\delta^{ij}$ is the Kronecker delta notation.\
   Throughout this paper, Latin indices run from 1 to 3, except when stated otherwise.\
 
-  The set of equations is closed by using the Taub-Mathews equation of state (\citealt{Taub}; \citealt{TM_EOS})\
+  The set of \Cref{governing-eq} is closed by using the Taub-Mathews equation of state (\citealt{Taub}; \citealt{TM_EOS})\
   that approximates the exact EoS \citep{Synge} for ultra-relativistically\
   hot gases coexisting with non-relativistically cold gases.
 
@@ -214,52 +214,47 @@
   being unnatural but widely used in almost publicly available codes.\
 
   \subsection{The Galactic Model}
-
-  As a proof-of-concept study, we approximate conventionally axisymmetric potential of Milky Way\
-  by a plane-parallel potential that is symmetric about the mid-plane $z=0$\
+  As a proof-of-concept study, we approximate conventionally axisymmetric stellar potential of Milky Way\
+  by an external plane-parallel potential that is symmetric about the mid-plane $z=0$\
   in a simulation box size of\
   $14\times14\times28$ kpc, slightly larger than the size of eROISTA bubbles.
 
   The plane-parallel potential is fixed throughout our simulations and given by
-
   \begin{equation}
-    \Phi_{\text{total}} = \Phi_{\text{bulge}} + \Phi_{\text{halo}},
+    \Phi_{\text{total}}(z) = \Phi_{\text{bulge}}(z) + \Phi_{\text{halo}}(z),
   \end{equation}
-
   where
-
   \begin{equation}
-    \Phi_{\text{bulge}}=\
+    \Phi_{\text{bulge}}(z)=\
     2\sigma^2_{\text{bulge}}\
     \ln\cosh\left(z\sqrt{\frac{2\pi G\rho_{\text{bulge}}^{\text{peak}}}{\sigma^2_{\text{bulge}}}}\right)
   \end{equation}
-
-  is the potential of a isothermal slab mainly contributed by stars within the Galactic plane.
-
-  $\Phi_{\text{halo}}=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right)$\
+  is the potential of an isothermal slab mainly contributed by stars around the Galactic plane, and\
+  $\Phi_{\text{halo}}(z)=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right)$\
   is a plane-parallel dark logarithmic halo potential.
 
   With the help of the isothermal and hydrostatic equilibrium conditions,\
-  the steady-state gaseous density distribution in a total potential, $\Phi_{\text{total}}$,\
+  the steady-state gaseous density distribution of disk and atmosphere\
+  confined in the total potential, $\Phi_{\text{total}}$,\
   can be written as
   \begin{equation}
      \rho(z)=
      \begin{cases}
      \displaystyle\rho_{\text{disk}}^{\text{peak}}
-     \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{disk}}/m}\right] & \text{, if $|z| < z_{0}$}\\
+     \exp\left[-\frac{\Phi_{\text{total}}(z)}{k_{B}T_{\text{disk}}/m_{\text{p}}}\right] & \text{, if $|z| < z_{0}$}\\
      \\
      \displaystyle\rho_{\text{atmp}}^{\text{peak}}
-     \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{atmp}}/m}\right] & \text{, otherwise.}
+     \exp\left[-\frac{\Phi_{\text{total}}(z)}{k_{B}T_{\text{atmp}}/m_{\text{p}}}\right] & \text{, otherwise,}
      \end{cases}
   \end{equation}
-
-  where $\rho_{\text{disk}}^{\text{peak}}$ and $\rho_{\text{atmp}}^{\text{peak}}$ is the mass density\
-  of the bulge and atmosphere on the $z=0$ plane.
+  where $m_{\text{p}}$ is a proton mass,\
+  $T_{\text{disk}}$ and $T_{\text{atmp}}$ is the temperature of the disk and the atmosphere,\
+  $\rho_{\text{disk}}^{\text{peak}}$ and $\rho_{\text{atmp}}^{\text{peak}}$ is the peak mass density\
+  of the bulge and atmosphere on the mid-plane $z=0$.
 
   All parameters are listed in \Cref{table-parameters}, excpet for $\rho_{\text{atmp}}^{\text{peak}}$ that\
-  can be derived from the pressure equilibrium on the interfaces ($|z|=z_{0}$) between disk and atmosphere.
-
-
+  can be derived from the known parameters and pressure equilibrium\
+  on the interfaces $(z=\pm z_{0})$ between disk and atmosphere.
 
   The AMR base level is covered by $16\times16\times32$ root grids, refined progressively on the plane $z=0$\
   , with the outflow boundary condition.
@@ -289,18 +284,19 @@
 \label{table-parameters}
 \begin{tabular}{@{}llrr@{}}
 \toprule[1pt]\midrule[0.3pt]
-Parameter                           & Description                       & Value                                & Reference                         \\ \midrule
-{\bf Disk}                          &                                   &                                      &                                   \\
-$z_{0}$                             & Scale height of disk              & 100 pc                               & \citep{peak-ism-density}          \\
-$T_{\text{\text{disk}}}$            & Temperature of disk               & $10^{3}$ K                           & \citep{peak-ism-density}          \\
-$\rho_{\text{disk}}^{\text{peak}}$  & Peak mass density of disk         & $10^{-23}$ g/cm$^{3}$                & \citep{peak-ism-density}          \\ \hline
-{\bf Atmosphere}                    &                                   &                                      &                                   \\
-$T_{\text{\text{atmp}}}$            & Temperature of atmosphere         & $10^{6}$ K                           & \citep{temperature-MW}            \\ \hline
-{\bf Potential \& halo}             &                                   &                                      &                                   \\
-$\sigma_{\text{bulge}}$             & Velocity dispersion of bulge      & 100 km/s                             & \citep{velocity-dispersion-MW}    \\
-$\rho_{\text{bulge}}^{\text{peak}}$ & Peak average density of bulge     & $4\times 10^{-24}$ g/cm$^{3}$        &                                   \\
-$v_{\text{halo}}$                   &                                   & 131.5 km/s                           & \citep{Johnston1995}              \\
-$d_{\text{h}}$                      & Core radius                       & 12 kpc                               & \citep{Johnston1995}              \\ \midrule
+Parameter                                             & Description                   & Value                          & Reference                       \\ \midrule
+{\bf Disk }\citep{peak-ism-density}                   &                               &                                &                                 \\
+$z_{0}$                                               & Scale height of disk          & 100 pc                         &                                 \\
+$T_{\text{\text{disk}}}$                              & Temperature of disk           & $10^{3}$ K                     &                                 \\
+$\rho_{\text{disk}}^{\text{peak}}$                    & Peak mass density of disk     & $10^{-23}$ g/cm$^{3}$          &                                 \\ \hline
+{\bf Atmosphere }\citep{temperature-MW}               &                               &                                &                                 \\
+$T_{\text{\text{atmp}}}$                              & Temperature of atmosphere     & $10^{6}$ K                     &                                 \\ \hline
+{\bf Static stellar potential }                       &                               &                                &                                 \\
+$\sigma_{\text{bulge}}$                               & Velocity dispersion of bulge  & 100 km/s                       & \citep{velocity-dispersion-MW}  \\
+$\rho_{\text{bulge}}^{\text{peak}}$                   & Peak average density of bulge & $4\times 10^{-24}$ g/cm$^{3}$  &                                 \\ \hline
+{\bf Static dark halo potential }\citep{Johnston1995} &                               &                                &                                 \\
+$v_{\text{halo}}$                                     &                               & 131.5 km/s                     &                                 \\
+$d_{\text{h}}$                                        & Core radius                   & 12 kpc                         &                                 \\ \midrule
 \end{tabular}
 \end{table*}
 
