@@ -247,7 +247,7 @@
      \exp\left[-\frac{\Phi_{\text{total}}(z)}{k_{B}T_{\text{atmp}}/m_{\text{p}}}\right] & \text{, otherwise,}
      \end{cases}
   \end{equation}
-  where $m_{\text{p}}$ is a proton mass,\
+  where $m_{\text{p}}$ is the proton mass,\
   $T_{\text{disk}}$ and $T_{\text{atmp}}$ is the temperature of the disk and the atmosphere,\
   $\rho_{\text{disk}}^{\text{peak}}$ and $\rho_{\text{atmp}}^{\text{peak}}$ is the peak mass density\
   of the disk and the atmosphere on the mid-plane $z=0$.
@@ -286,13 +286,14 @@
   the publicly available pyFC code
   \footnote{\url{https://pypi.python.org/pypi/pyFC}}.
   The spatial density distribution $\rho(\bold{x})$ of clumpy ISM obeys\
-  the log-normal probability distribution in real space,\
-  and the Kolmogorov power spectrum in the Fourier space.
+  the log-normal probability distribution \citep{Berkhuijsen2008} with mean $\mu=1.3$ and dispersion $\sigma=0.13$ in real space,\
+  and the power-law Kolmogorov spectrum
   \begin{equation}
     D(k)=\int k^{2} \hat{\rho}(k)\hat{\rho}^{*}(k)dk \propto k^{-5/3},
   \end{equation}
-  where $\hat{\rho}(k)$ is the Fourier transform of $\rho(\bold{x})$.
-
+  where $\hat{\rho}(k)$ is the Fourier transform of $\rho(\bold{x})$.\
+  The spectrum $D(k)$ with index $-5/3$ in the Fourier space has the cutoff wave number $k_{\text{min}}=375.0$,\
+  corresponding to the average clump sizes of $\sim 20$ pc.
 
 
   \citet{LA2002} and \citet{Wagner2012} have outlined a detailed procedure\
@@ -308,7 +309,7 @@
 \begin{tabular}{@{}llrr@{}}
 \toprule[1pt]\midrule[0.3pt]
 Parameter                                             & Description                   & Value                          & Reference                       \\ \midrule
-{\bf ISM Disk }\citep{peak-ism-density}                   &                               &                                &                                 \\
+{\bf ISM Disk }\citep{peak-ism-density}               &                               &                                &                                 \\
 $z_{0}$                                               & Scale height of disk          & 100 pc                         &                                 \\
 $T_{\text{\text{disk}}}$                              & Temperature of disk           & $10^{3}$ K                     &                                 \\
 $\rho_{\text{disk}}^{\text{peak}}$                    & Peak mass density of disk     & $10^{-23}$ g/cm$^{3}$          &                                 \\ \hline
