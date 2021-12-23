@@ -234,29 +234,33 @@
   is a plane-parallel dark logarithmic halo potential.
 
   With the help of the isothermal and hydrostatic equilibrium conditions,\
-  and assuming the disk and atmosphere is in pressure equilibrium,\
+  and assuming the isothermal disk and atmosphere is in pressure equilibrium,\
   we can write the steady-state gaseous density distributions,\
-  confined in the total potential, of disk and the Galactic atmosphere as\
-  \begin{equation}
-     \rho(z)=
-     \begin{cases}
-     \displaystyle\rho_{\text{disk}}^{\text{peak}}
-     \exp\left[-\frac{\Phi_{\text{total}}(z)}{k_{B}T_{\text{disk}}/m_{\text{p}}}\right] & \text{, if $|z| < z_{0}$}\\
-     \\
-     \displaystyle\rho_{\text{atmp}}^{\text{peak}}
-     \exp\left[-\frac{\Phi_{\text{total}}(z)}{k_{B}T_{\text{atmp}}/m_{\text{p}}}\right] & \text{, otherwise,}
-     \end{cases}
-  \end{equation}
+  confined in the total potential, of the disk and the Galactic atmosphere as\
+  \begin{subequations}
+  \begin{align}
+     \displaystyle \rho_{\text{isoDisk}}(z) = \rho_{\text{isoDisk}}^{\text{peak}}
+     \exp\left[-\frac{\Phi_{\text{total}}(z)}{k_{B}T_{\text{isoDisk}}/m_{\text{p}}}\right]&\label{isothermal-disk-density}\\
+     \text{, if $|z| < z_{0}$}& \nonumber \\
+     \nonumber\\
+     \displaystyle \rho_{\text{atmp}}(z) = \rho_{\text{atmp}}^{\text{peak}}
+     \exp\left[-\frac{\Phi_{\text{total}}(z)}{k_{B}T_{\text{atmp}}/m_{\text{p}}}\right]&\label{isothermal-atmp-density}\\
+     \text{, otherwise,}& \nonumber
+  \end{align}
+  \label{disk-atm-sys}
+  \end{subequations}
   where $m_{\text{p}}$ is the proton mass,\
-  $T_{\text{disk}}$ and $T_{\text{atmp}}$ is the temperature of the disk and the atmosphere,\
-  $\rho_{\text{disk}}^{\text{peak}}$ and $\rho_{\text{atmp}}^{\text{peak}}$ is the peak mass density\
-  of the disk and the atmosphere on the mid-plane $z=0$.
+  $T_{\text{isoDisk}}$ and $T_{\text{atmp}}$ is the temperature of the isothermal disk and atmosphere,\
+  $\rho_{\text{isoDisk}}^{\text{peak}}$ and $\rho_{\text{atmp}}^{\text{peak}}$ is the peak mass density\
+  of the disk and atmosphere on the mid-plane $z=0$.
 
-  We tabulate all parameters in \Cref{table-parameters}, except for $\rho_{\text{atmp}}^{\text{peak}}$ that\
+  We tabulate parameters in the \textbf{Isothermal disk} and \textbf{Atmosphere}\
+  categories in \Cref{table-parameters},\
+  except for $\rho_{\text{atmp}}^{\text{peak}}$ that\
   can be derived from the known parameters and pressure equilibrium condition\
-  on the interfaces $(z=\pm z_{0})$ between disk and atmosphere.\
+  on the interfaces $(z=\pm z_{0})$ between the disk and atmosphere.\
 
-  The initial density profile based on the above construction is shown in \Cref{density-profile}\
+  The initial density profile of \Cref{disk-atm-sys} is shown in \Cref{density-profile}\
   and compared to the observed result \citep{Miller_2013} beyond 1 kpc.\
 
   Note that there is an difficulty in disentangling the contribution\
@@ -285,19 +289,26 @@
   A crucial component in our work is the clumpy ISM disk initialized by\
   the publicly available pyFC code
   \footnote{\url{https://pypi.python.org/pypi/pyFC}}.
-  The spatial density distribution $\rho(\bold{x})$ of clumpy ISM obeys\
-  the log-normal probability distribution with mean $\mu$ and dispersion $\sigma$,\
-  %the log-normal probability distribution \citep{Berkhuijsen2008} with mean $\mu$ and dispersion $\sigma$,\
+  The spatial density distribution $\rho_{\text{clumpy}}(\bold{x})$ of clumpy disk obeys\
+  the log-normal probability distribution\
+  %the log-normal probability distribution \citep{Berkhuijsen2008}\
+  with mean $\mu_{\text{clumpy}}$ and dispersion $\sigma_{\text{clumpy}}$,\
   and the power-law Kolmogorov spectrum
   \begin{equation}
     D(k)=\int k^{2} \hat{\rho}(k)\hat{\rho}^{*}(k)dk \propto k^{-\beta},
+    \label{Kolmogorov-spectrum}
   \end{equation}
-  where $\hat{\rho}(k)$ is the Fourier transform of $\rho(\bold{x})$.\
+  where $\hat{\rho}(k)$ is the Fourier transform of $\rho_{\text{clumpy}}(\bold{x})$.\
   The spectrum $D(k)$ in the Fourier space is characterized by the power law index $\beta$,\
   the Nyquist limit $k_{\text{max}}$, and the lower cutoff wave number $k_{\text{min}}$.
-  $k_{\text{max}}$ is one-half of the cell numbers along the edge of the simulation box,\
-  and $k_{\text{min}}$ is set to 375.0, corresponding to the maximum size of an individual cloud $\sim 20$ pc.\
-  \Cref{table-parameters} presents the parameters of clumpy disk and their references.
+  $k_{\text{max}}$ is one-half of the spatial resolution within disk,\
+  and $k_{\text{min}}$ is 375.0, corresponding to the maximum size of an individual cloud $\sim 20$ pc.\
+
+
+  The temperature in each cell of the clumpy disk is determined by $p_{\text{disk}}$
+
+
+  We summarize the parameters of clumpy disk and their references in \Cref{table-parameters}.
 
 
 
@@ -311,6 +322,15 @@
   by hot gas. This makes the gas porous.
 
 
+  \begin{enumerate}
+     \item Constructing the isothermal disk $\rho_{\text{isoDisk}}(\bold{x})$ by \Cref{isothermal-disk-density}.
+     \item Using PyFC code to obtain the clumpy cuboid $\rho_{\text{clumpy}}$ obeying\
+           lognormal distribution and the power-law spectrum, \Cref{Kolmogorov-spectrum}.
+     \item $\rho_{\text{ismDisk}}(\bf{x}) = \rho_{\text{clumpy}}(\bf{x}) \times \rho_{\text{isoDisk}}(\bf{x})$.
+     \item
+  \end{enumerate}
+
+
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table*}[t]
@@ -320,17 +340,18 @@
 \begin{tabular}{@{}llrc@{}}
 \toprule[1pt]\midrule[0.3pt]
 Parameter                                             & Description                               & Value                                & Reference                       \\ \midrule
-{\bf ISM Disk }                                       &                                           &                                      &                                 \\
+{\bf Isothermal disk }                                &                                           &                                      &                                 \\
 $z_{0}$                                               & Scale height of disk                      & 100 pc                               & \citet{peak-ism-density}        \\
-$T_{\text{\text{disk}}}$                              & Temperature of disk                       & $10^{3}$ K                           & \multicolumn{1}{c}{''}          \\
-$\rho_{\text{disk}}^{\text{peak}}$                    & Peak mass density of disk                 & $10^{-23}$ g$\cdot$cm$^{-3}$         & \multicolumn{1}{c}{''}          \\
-$T_{\text{\text{c}}}$                                 & Critical temperature of warm atomic phase & $3\times 10^{4}$ K                   & \multicolumn{1}{c}{''}          \\
-$k_{\text{min}}$                                      & Cutoff wave number                        & 375.0                                & \multicolumn{1}{c}{''}          \\
-$\mu$                                                 & Mean of number density                    & 1.0 $\text{cm}^{-3}$                 & \citet{Wagner2012}              \\
-$\sigma$                                              & Dispersion of number density              & 1.7 $\text{cm}^{-3}$                 & \multicolumn{1}{c}{''}          \\
-$\beta$                                               & Power law index                           & -5/3                                 & \multicolumn{1}{c}{''}          \\ \hline
+$T_{\text{\text{isoDisk}}}$                           & Temperature of disk                       & $10^{3}$ K                           & \multicolumn{1}{c}{''}          \\
+$\rho_{\text{isoDisk}}^{\text{peak}}$                 & Peak mass density of disk                 & $10^{-23}$ g$\cdot$cm$^{-3}$         & \multicolumn{1}{c}{''}          \\ \hline
 {\bf Atmosphere }                                     &                                           &                                      &                                 \\
 $T_{\text{\text{atmp}}}$                              & Temperature of atmosphere                 & $10^{6}$ K                           & \citet{temperature-MW}          \\ \hline
+{\bf Clumpy disk }                                    &                                           &                                      &                                 \\
+$T_{\text{\text{c}}}$                                 & Critical temperature of warm atomic phase & $3\times 10^{4}$ K                   & \multicolumn{1}{c}{''}          \\
+$k_{\text{min}}$                                      & Cutoff wave number                        & 375.0                                & \multicolumn{1}{c}{''}          \\
+$\mu_{\text{clumpy}}$                                 & Mean of number density                    & 1.0 $\text{cm}^{-3}$                 & \citet{Wagner2012}              \\
+$\sigma_{\text{clumpy}}$                              & Dispersion of number density              & 1.7 $\text{cm}^{-3}$                 & \multicolumn{1}{c}{''}          \\
+$\beta$                                               & Power law index                           & -5/3                                 & \multicolumn{1}{c}{''}          \\ \hline
 {\bf Static stellar potential }                       &                                           &                                      &                                 \\
 $\sigma_{\text{bulge}}$                               & Velocity dispersion of bulge              & 100 km$\cdot$s$^{-1}$                & \citet{velocity-dispersion-MW}  \\
 $\rho_{\text{bulge}}^{\text{peak}}$                   & Peak average density of bulge             & $4\times 10^{-24}$ g$\cdot$cm$^{-3}$ &                                 \\ \hline
