@@ -289,8 +289,8 @@
   A crucial component in our work is the clumpy ISM disk initialized by\
   the publicly available pyFC code
   \footnote{\url{https://pypi.python.org/pypi/pyFC}}.
-  First, pyFC creates a dimensionless 3D scalar field $f_{\text{clumpy}}(\bold{x})$ that is clumpy but obeys\
-  the log-normal probability distribution\
+  The pyFC randomly generates dimensionless 3D scalar field $f_{\text{clumpy}}(\bold{x})$ that is clumpy and porous.
+  The random scalar field obeys the log-normal probability distribution\
   %the log-normal probability distribution \citep{Berkhuijsen2008}\
   with mean $\mu_{\text{clumpy}}$ and dispersion $\sigma_{\text{clumpy}}$,\
   and follows the power-law Kolmogorov spectrum
@@ -299,40 +299,39 @@
     \label{Kolmogorov-spectrum}
   \end{equation}
   where $\hat{f}(\bold{k})$ is the Fourier transform of $f_{\text{clumpy}}(\bold{x})$.\
-  The spectrum $D(\bold{k})$ in the Fourier space is characterized by the power law index $\beta$,\
+  The spectrum $D(\bold{k})$ in the Fourier space is characterized by the power law index $\beta=5/3$,\
   the Nyquist limit $k_{\text{max}}$, and the lower cutoff wave number $k_{\text{min}}$.
   $k_{\text{max}}$ is one-half of the spatial resolution within disk,\
   and $k_{\text{min}}$ is 375.0, corresponding to the maximum size of an individual clump $\sim 20$ pc.\
 
-
-  The temperature in each cell of the clumpy disk is determined by $p_{\text{disk}}$
-
-
   We summarize the parameters of clumpy disk and their references in \Cref{table-parameters}.
-
-
-
-  %The reader is referred to \citet{LA2002} and \citet{Wagner2012} for further details of this method.
   \citet{LA2002} and \citet{Wagner2012} have outlined a detailed procedure\
   for constructing clumpy structure, and we do not repeat here.
 
+  Finally, we multiply $f_{\text{clumpy}}(\bold{x})$ and $\rho_{\text{isoDisk}}(z)$\
+  to obtain the density of ISM disk $\rho_{\text{ismDisk}}(\bold{x})$. i.e.\
+  $\displaystyle\rho_{\text{ismDisk}}(\bold{x}) =\
+  f_{\text{clumpy}}(\bold{x}) \rho_{\text{isoDisk}}(z)$.
 
-  The temperature in each cell of the warm gas distribution is determined by pressure equilibrium with hot gas.\
+  The temperature in each cell of the disk is determined by pressure equilibrium with hot gas.\
+
+
+
+
   When the warm gas temperature exceeds $T_{\text{crit}}=$ K, it is deemed to be thermally unstable and is replaced\
   by hot gas. This makes the gas porous.
 
 
-  \begin{enumerate}
-     \item Constructing the isothermal disk $\rho_{\text{isoDisk}}(\bold{x})$ by \Cref{isothermal-disk-density}.
-     \item Using PyFC code to obtain a dimensionless clumpy distribution $f_{\text{clumpy}}$ obeying\
-           lognormal distribution and the power-law spectrum, \Cref{Kolmogorov-spectrum}.
-     \item $\rho_{\text{ismDisk}}(\bf{x}) = f_{\text{clumpy}}(\bf{x}) \rho_{\text{isoDisk}}(\bf{x})$.
-     \item
-  \end{enumerate}
+%  \begin{enumerate}
+%     \item Constructing the isothermal disk $\rho_{\text{isoDisk}}(z)$ by \Cref{isothermal-disk-density}.
+%     \item Using PyFC code to obtain a dimensionless clumpy distribution $f_{\text{clumpy}}$ obeying\
+%           lognormal distribution and the power-law spectrum, \Cref{Kolmogorov-spectrum}.
+%     \item \Cref{density-ism-disk}.
+%     \item
+%  \end{enumerate}
 
 
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
+
 \begin{table*}[t]
 \centering
 \caption{Parameters of the disk, atmosphere, and gravitational potential in the simulation.}
@@ -355,8 +354,8 @@ $T_{\text{\text{atmp}}}$                                     & Temperature of at
 {\bf Clumpy disk }\citep{Wagner2012}                         &                                           &                                      \\
 $T_{\text{\text{c}}}$                                        & Critical temperature of warm atomic phase & $3\times 10^{4}$ K                   \\
 $k_{\text{min}}$                                             & Cutoff wave number                        & 375.0                                \\
-$\mu_{\text{clumpy}}$                                        & Mean of number density                    & 1.0 $\text{cm}^{-3}$                 \\
-$\sigma_{\text{clumpy}}$                                     & Dispersion of number density              & 1.7 $\text{cm}^{-3}$                 \\ % RELATIVISTIC JET FEEDBACK IN EVOLVING GALAXIES Wagner (2011)
+$\mu_{\text{clumpy}}$                                        & Mean of scalar field                      & 1.0                                  \\
+$\sigma_{\text{clumpy}}$                                     & Dispersion of scalar field                & 1.7                                  \\ % RELATIVISTIC JET FEEDBACK IN EVOLVING GALAXIES Wagner (2011)
 $\beta$                                                      & Power law index                           & -5/3                                 \\ \midrule
 \end{tabular}
 \end{table*}
