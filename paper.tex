@@ -286,12 +286,18 @@
 
   \subsubsection{The clumpy, and warm/cold ISM disk}
 
+   % The dispersion:
+   %   2010-Comparing the statistics of interstellar turbulence in simulations and observations
+   %   2011-RELATIVISTIC JET FEEDBACK IN EVOLVING GALAXIES
+
+
+
   A crucial component in our work is the clumpy ISM disk initialized by\
   the publicly available pyFC code
-  \footnote{\url{https://pypi.python.org/pypi/pyFC}}.
-  The pyFC randomly generates dimensionless 3D scalar field $f_{\text{clumpy}}(\bold{x})$ that is clumpy and porous.
-  The random scalar field obeys the log-normal probability distribution\
-  %the log-normal probability distribution \citep{Berkhuijsen2008}\
+  \footnote{\url{https://pypi.python.org/pypi/pyFC}}.\
+
+  The pyFC randomly generates dimensionless 3D scalar field $f_{\text{clumpy}}(\bold{x})$\ % that is clumpy and porous.
+  that obeys the log-normal probability distribution\
   with mean $\mu_{\text{clumpy}}$ and dispersion $\sigma_{\text{clumpy}}$,\
   and follows the power-law Kolmogorov spectrum
   \begin{equation}
@@ -304,9 +310,6 @@
   $k_{\text{max}}$ is one-half of the spatial resolution within disk,\
   and $k_{\text{min}}$ is 375.0, corresponding to the maximum size of an individual clump $\sim 20$ pc.\
 
-  We summarize the parameters of clumpy disk and their references in \Cref{table-parameters}.
-  \citet{LA2002} and \citet{Wagner2012} have outlined a detailed procedure\
-  for constructing clumpy structure, and we do not repeat here.
 
   Finally, we multiply $f_{\text{clumpy}}(\bold{x})$ and $\rho_{\text{isoDisk}}(z)$\
   to obtain the density of ISM disk $\rho_{\text{ismDisk}}(\bold{x})$. i.e.\
@@ -315,6 +318,14 @@
 
   The temperature in each cell of the disk is determined by pressure equilibrium with hot gas.\
 
+  The porosity of the warm phase arises by imposing an upper temperature cutoff for the\
+  existence of clouds at $T_{\text{crit}} = 10^{4}$ K, beyond which clouds
+  are deemed thermally unstable.
+
+
+  We summarize the parameters of clumpy disk and their references in \Cref{table-parameters}.
+  \citet{LA2002} and \citet{Wagner2012} have outlined a detailed procedure\
+  for constructing clumpy structure, and we do not repeat here.
 
 
 
@@ -333,7 +344,7 @@
 
 
 \begin{table*}[t]
-\centering
+\raggedright
 \caption{Parameters of the disk, atmosphere, and gravitational potential in the simulation.}
 \label{table-parameters}
 \begin{tabular}{@{}llrc@{}}
@@ -345,19 +356,24 @@ $\rho_{\text{bulge}}^{\text{peak}}$                          & Peak average dens
 {\bf Static dark halo potential }\citep{Johnston1995}        &                                           &                                      \\
 $v_{\text{halo}}$                                            &                                           & 131.5 km$\cdot$s$^{-1}$              \\
 $d_{\text{h}}$                                               & Core radius                               & 12 kpc                               \\ \hline
+{\bf Atmosphere }\citep{temperature-MW}                      &                                           &                                      \\
+$T_{\text{\text{atmp}}}$                                     & Temperature of atmosphere                 & $10^{6}$ K                           \\ \hline
 {\bf Isothermal disk }\citep{peak-ism-density}               &                                           &                                      \\
 $z_{0}$                                                      & Scale height of disk                      & 100 pc                               \\
 $T_{\text{\text{isoDisk}}}$                                  & Temperature of disk                       & $10^{3}$ K                           \\
 $\rho_{\text{isoDisk}}^{\text{peak}}$                        & Peak mass density of disk                 & $10^{-23}$ g$\cdot$cm$^{-3}$         \\ \hline
-{\bf Atmosphere }\citep{temperature-MW}                      &                                           &                                      \\
-$T_{\text{\text{atmp}}}$                                     & Temperature of atmosphere                 & $10^{6}$ K                           \\ \hline
 {\bf Clumpy disk }\citep{Wagner2012}                         &                                           &                                      \\
 $T_{\text{\text{c}}}$                                        & Critical temperature of warm atomic phase & $3\times 10^{4}$ K                   \\
-$k_{\text{min}}$                                             & Cutoff wave number                        & 375.0                                \\
+$\dagger k_{\text{min}}$                                             & Cutoff wave number                        & 375.0                                \\
 $\mu_{\text{clumpy}}$                                        & Mean of scalar field                      & 1.0                                  \\
 $\sigma_{\text{clumpy}}$                                     & Dispersion of scalar field                & 1.7                                  \\ % RELATIVISTIC JET FEEDBACK IN EVOLVING GALAXIES Wagner (2011)
 $\beta$                                                      & Power law index                           & -5/3                                 \\ \midrule
 \end{tabular}
+\begin{tablenotes}
+      \raggedright
+      \small
+      \item  $\dagger k_{\text{min}}=375.0$ leads to the size of an individual clump $\sim 100$ pc.
+    \end{tablenotes}
 \end{table*}
 
 
