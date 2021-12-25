@@ -349,30 +349,30 @@
 \label{table-parameters}
 \begin{tabular}{@{}llrc@{}}
 \toprule[1pt]\midrule[0.3pt]
-Parameter                                                    & Description                               & Value                                \\ \midrule
-{\bf Static stellar potential }\citep{velocity-dispersion-MW}&                                           &                                      \\
-$\sigma_{\text{bulge}}$                                      & Velocity dispersion of bulge              & 100 km$\cdot$s$^{-1}$                \\
-$\rho_{\text{bulge}}^{\text{peak}}$                          & Peak average density of bulge             & $4\times 10^{-24}$ g$\cdot$cm$^{-3}$ \\ \hline
-{\bf Static dark halo potential }\citep{Johnston1995}        &                                           &                                      \\
-$v_{\text{halo}}$                                            &                                           & 131.5 km$\cdot$s$^{-1}$              \\
-$d_{\text{h}}$                                               & Core radius                               & 12 kpc                               \\ \hline
-{\bf Atmosphere }\citep{temperature-MW}                      &                                           &                                      \\
-$T_{\text{\text{atmp}}}$                                     & Temperature of atmosphere                 & $10^{6}$ K                           \\ \hline
-{\bf Isothermal disk }\citep{peak-ism-density}               &                                           &                                      \\
-$z_{0}$                                                      & Scale height of disk                      & 100 pc                               \\
-$T_{\text{\text{isoDisk}}}$                                  & Temperature of disk                       & $10^{3}$ K                           \\
-$\rho_{\text{isoDisk}}^{\text{peak}}$                        & Peak mass density of disk                 & $10^{-23}$ g$\cdot$cm$^{-3}$         \\ \hline
-{\bf Clumpy disk }\citep{Wagner2012}                         &                                           &                                      \\
-$T_{\text{\text{c}}}$                                        & Critical temperature of warm atomic phase & $3\times 10^{4}$ K                   \\
-$\dagger k_{\text{min}}$                                             & Cutoff wave number                        & 375.0                                \\
-$\mu_{\text{clumpy}}$                                        & Mean of scalar field                      & 1.0                                  \\
-$\sigma_{\text{clumpy}}$                                     & Dispersion of scalar field                & 1.7                                  \\ % RELATIVISTIC JET FEEDBACK IN EVOLVING GALAXIES Wagner (2011)
-$\beta$                                                      & Power law index                           & -5/3                                 \\ \midrule
+Parameter                             & Description                               & Value                                &  Reference                     \\ \midrule
+{\bf Static stellar potential }       &                                           &                                      &                                \\
+$\sigma_{\text{bulge}}$               & Velocity dispersion of bulge              & 100 km$\cdot$s$^{-1}$                & \citep{velocity-dispersion-MW} \\
+$\rho_{\text{bulge}}^{\text{peak}}$   & Peak average density of bulge             & $4\times 10^{-24}$ g$\cdot$cm$^{-3}$ &   N/A                          \\ \hline
+{\bf Static dark halo potential }     &                                           &                                      &                                \\
+$v_{\text{halo}}$                     &                                           & 131.5 km$\cdot$s$^{-1}$              & \citep{Johnston1995}           \\
+$d_{\text{h}}$                        & Core radius                               & 12 kpc                               & \multicolumn{1}{c}{''}         \\ \hline
+{\bf Atmosphere }                     &                                           &                                      &                                \\
+$T_{\text{\text{atmp}}}$              & Temperature of atmosphere                 & $10^{6}$ K                           & \citep{temperature-MW}         \\ \hline
+{\bf Isothermal disk }                &                                           &                                      &                                \\
+$z_{0}$                               & Scale height of disk                      & 100 pc                               & \citep{peak-ism-density}       \\
+$T_{\text{\text{isoDisk}}}$           & Temperature of disk                       & $10^{3}$ K                           & \multicolumn{1}{c}{''}         \\
+$\rho_{\text{isoDisk}}^{\text{peak}}$ & Peak mass density of disk                 & $10^{-23}$ g$\cdot$cm$^{-3}$         & \multicolumn{1}{c}{''}         \\ \hline
+{\bf Clumpy disk }                    &                                           &                                      &                                \\
+$T_{\text{\text{c}}}$                 & Critical temperature of warm atomic phase & $10^{4}$ K                           & \citep{peak-ism-density}       \\
+$\dagger$  $k_{\text{min}}$           & Cutoff wave number                        & 375.0                                &   N/A                          \\
+$\mu_{\text{clumpy}}$                 & Mean of scalar field                      & 1.0                                  &   N/A                          \\
+$\ddag$  $\sigma_{\text{clumpy}}$     & Dispersion of scalar field                & 2.2                                  & \citep{Federrath2010}          \\
+$\beta$                               & Power law index                           & -5/3                                 &   N/A                          \\ \midrule
 \end{tabular}
 \begin{tablenotes}
       \raggedright
-      \small
-      \item  $\dagger k_{\text{min}}=375.0$ leads to the size of an individual clump $\sim 100$ pc.
+      \item  $\dagger$  $k_{\text{min}}=375.0$ leads to the size of an individual clump $\sim 100$ pc.
+      \item    $\ddag$  $\sigma_{\text{clumpy}}=$ ....
     \end{tablenotes}
 \end{table*}
 
