@@ -215,7 +215,7 @@
 
   \subsection{The Galactic and Disk Models}
   As a proof-of-concept study, we approximate conventionally axisymmetric stellar potential of Milky Way\
-  by an external plane-parallel potential that is symmetric about the mid-plane $z=0$\
+  by an plane-parallel potential that is symmetric about the mid-plane $z=0$\
   in a simulation box size of\
   $14\times14\times28$ kpc, slightly larger than the size of eROISTA bubbles.
 
@@ -296,32 +296,42 @@
   the publicly available pyFC code
   \footnote{\url{https://pypi.python.org/pypi/pyFC}}.\
 
-  The pyFC randomly generates dimensionless 3D scalar field $f_{\text{clumpy}}(\bold{x})$\ % that is clumpy and porous.
+  pyFC randomly generates dimensionless 3D scalar field $f(\bold{x})$\ % that is clumpy and porous.
   that obeys the log-normal probability distribution\
-  with mean $\mu_{\text{clumpy}}$ and dispersion $\sigma_{\text{clumpy}}$,\
+  with mean $\mu$ and dispersion $\sigma$,\
   and follows the power-law Kolmogorov spectrum
   \begin{equation}
     D(\bold{k})=\int k^{2} \hat{f}(\bold{k})\hat{f}^{*}(\bold{k})d\Omega \propto k^{-\beta},
     \label{Kolmogorov-spectrum}
   \end{equation}
-  where $\hat{f}(\bold{k})$ is the Fourier transform of $f_{\text{clumpy}}(\bold{x})$.\
+  where $\hat{f}(\bold{k})$ is the Fourier transform of $f(\bold{x})$.\
   The spectrum $D(\bold{k})$ in the Fourier space is characterized by the power law index $\beta=5/3$,\
   the Nyquist limit $k_{\text{max}}$, and the lower cutoff wave number $k_{\text{min}}$.
   $k_{\text{max}}$ is one-half of the spatial resolution within disk,\
   and $k_{\text{min}}$ is 375.0, corresponding to the maximum size of an individual clump $\sim 20$ pc.\
 
 
-  Finally, we multiply $f_{\text{clumpy}}(\bold{x})$ and $\rho_{\text{isoDisk}}(z)$\
-  to obtain the density of ISM disk $\rho_{\text{ismDisk}}(\bold{x})$. i.e.\
-  $\displaystyle\rho_{\text{ismDisk}}(\bold{x}) =\
-  f_{\text{clumpy}}(\bold{x}) \rho_{\text{isoDisk}}(z)$.
+  \begin{enumerate}
+     \item  We multiply $f(\bold{x})$ and $\rho_{\text{isoDisk}}(z)$\
+            to obtain the density of disk $\tilde{\rho}_{\text{ismDisk}}(\bold{x})$. i.e.\
+            $\displaystyle\tilde{\rho}_{\text{ismDisk}}(\bold{x}) =\
+            f(\bold{x}) \rho_{\text{isoDisk}}(z)$.\
+            The temperature is determined by
+            $\displaystyle \tilde{T}_{\text{ismDisk}} = T_{\text{isoDisk}}\rho_{\text{isoDisk}}/\tilde{\rho}_{\text{ismDisk}}$.
+     \item  If $\tilde{T}_{\text{ismDisk}}$ larger than $T_{\text{crit}}$,
+  \end{enumerate}
 
-  The temperature in each cell of the disk is determined by pressure equilibrium with hot gas.\
 
-  The porosity of the warm phase arises by imposing an upper temperature cutoff for the\
+
+
+
+  The porosity of the disk arises by imposing an upper temperature cutoff for the\
   existence of clouds at $T_{\text{crit}} = 10^{4}$ K, beyond which clouds
-  are deemed thermally unstable.
+  are deemed thermally unstable and replaced by temperature of atmosphere.
 
+  The temperature in each cell within the disk is determined by pressure equilibrium with hot gas.\
+  The clouds within the disk are in pressure equilibrium with the surrounding hot voids, thus\
+  $\displaystyle T_{\text{ismDisk}} = T_{\text{isoDisk}}\rho_{\text{isoDisk}}/\rho_{\text{ismDisk}}$.
 
   We summarize the parameters of clumpy disk and their references in \Cref{table-parameters}.
   \citet{LA2002} and \citet{Wagner2012} have outlined a detailed procedure\
@@ -335,7 +345,7 @@
 
 %  \begin{enumerate}
 %     \item Constructing the isothermal disk $\rho_{\text{isoDisk}}(z)$ by \Cref{isothermal-disk-density}.
-%     \item Using PyFC code to obtain a dimensionless clumpy distribution $f_{\text{clumpy}}$ obeying\
+%     \item Using PyFC code to obtain a dimensionless clumpy distribution $f$ obeying\
 %           lognormal distribution and the power-law spectrum, \Cref{Kolmogorov-spectrum}.
 %     \item \Cref{density-ism-disk}.
 %     \item
@@ -365,14 +375,14 @@ $\rho_{\text{isoDisk}}^{\text{peak}}$ & Peak mass density of disk               
 {\bf Clumpy disk }                    &                                           &                                      &                                \\
 $T_{\text{\text{c}}}$                 & Critical temperature of warm atomic phase & $10^{4}$ K                           & \citep{peak-ism-density}       \\
 $\dagger$  $k_{\text{min}}$           & Cutoff wave number                        & 375.0                                &   N/A                          \\
-$\mu_{\text{clumpy}}$                 & Mean of scalar field                      & 1.0                                  &   N/A                          \\
-$\ddag$  $\sigma_{\text{clumpy}}$     & Dispersion of scalar field                & 2.2                                  & \citep{Federrath2010}          \\
+$\mu$                                 & Mean of scalar field                      & 1.0                                  &   N/A                          \\
+$\ddag$  $\sigma$                     & Dispersion of scalar field                & 2.2                                  & \citep{Federrath2010}          \\
 $\beta$                               & Power law index                           & -5/3                                 &   N/A                          \\ \midrule
 \end{tabular}
 \begin{tablenotes}
       \raggedright
       \item  $\dagger$  $k_{\text{min}}=375.0$ leads to the size of an individual clump $\sim 100$ pc.
-      \item    $\ddag$  $\sigma_{\text{clumpy}}=$ ....
+      \item    $\ddag$  $\sigma=$ ....
     \end{tablenotes}
 \end{table*}
 
