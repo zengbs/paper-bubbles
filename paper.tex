@@ -280,17 +280,13 @@ Early attempts to model the Fermi bubbles assumed that the jet is vertial to the
   \end{figure*}
 
 
-  The AMR base level is covered by $16\times16\times32$ root grids, refined progressively on the plane $z=0$\
-  , with the outflow boundary condition.
-
-
-  \subsubsection{The clumpy, and warm/cold ISM disk}
 
    % The dispersion:
    %   2010-Comparing the statistics of interstellar turbulence in simulations and observations
    %   2011-RELATIVISTIC JET FEEDBACK IN EVOLVING GALAXIES
 
 
+  \subsection{The Clumpy Multiphase Interstellar Medium}
 
   A crucial component in our work is the clumpy ISM disk initialized by\
   the publicly available pyFC code
@@ -321,21 +317,20 @@ Early attempts to model the Fermi bubbles assumed that the jet is vertial to the
   $\displaystyle T_{\text{ismDisk}}(\bold{x}) =\
   T_{\text{isoDisk}}(z)\rho_{\text{isoDisk}}(z)/\rho_{\text{ismDisk}}(\bold{x})$.
 
-  Moreover, as the clouds are considered to be thermally unstable\
-  when the cloud temperature beyond\
-  the critical temperature of the warm atomic phase.\
-  We replace the cell density with\
-  $\rho_{\text{ismDisk}}T_{\text{ismDisk}}/T_{\text{atmp}}$\
-  for a cell temperature greater than the critical value $T_{\text{crit}}$.
-
-
-  %Doing so, the porosity of the disk can arises,\
+%  Moreover, since the clouds are considered to be thermally unstable\
+%  when the cloud temperature beyond\
+%  the critical temperature of the warm atomic phase,\
+%  we replace the cell density as\
+%  $\rho_{\text{ismDisk}}T_{\text{ismDisk}}/T_{\text{atmp}}$\
+%  when the cell temperature beyond the critical value $T_{\text{crit}}$.
 
 
   We summarize the parameters of clumpy disk and their references in \Cref{table-parameters}.
 
-
-
+  The AMR base level is covered by $16\times16\times32$ root cells, refined progressively on the mid-plane $z=0$\
+  based on the gradient of mass desnity.\
+  The highest refinement level is 7 so that the clumps within the disk can be adequately\
+  resolved by approximately 30 cells along their diameter, 20 pc.
 
 \begin{table*}[t]
 \raggedright
@@ -358,15 +353,17 @@ $T_{\text{\text{isoDisk}}}$           & Temperature of disk                     
 $\rho_{\text{isoDisk}}^{\text{peak}}$ & Peak mass density of disk                 & $10^{-23}$ g$\cdot$cm$^{-3}$         & \multicolumn{1}{c}{''}         \\ \hline
 {\bf Clumpy disk }                    &                                           &                                      &                                \\
 $T_{\text{\text{c}}}$                 & Critical temperature of warm atomic phase & $10^{4}$ K                           & \citep{peak-ism-density}       \\
-$\dagger$  $k_{\text{min}}$           & Cutoff wave number                        & 375.0                                &   N/A                          \\
+$\dagger$  $k_{\text{min}}$           & Cutoff wave number                        & 375.0                                & \multicolumn{1}{c}{''}         \\
 $\mu$                                 & Mean of scalar field                      & 1.0                                  &   N/A                          \\
-$\ddag$  $\sigma$                     & Dispersion of scalar field                & 2.2                                  & \citep{Federrath2010}          \\
+$\ddag$  $\sigma$                     & Dispersion of scalar field                & 5.0                                  & \citep{Federrath2010}          \\
 $\beta$                               & Power law index                           & -5/3                                 &   N/A                          \\ \midrule
 \end{tabular}
 \begin{tablenotes}
       \raggedright
-      \item  $\dagger$  $k_{\text{min}}=375.0$ leads to the size of an individual clump $\sim 100$ pc.
-      \item    $\ddag$  $\sigma=$ ....
+      \item  $\dagger$  $k_{\text{min}}=375.0$ leads to the size of an individual molecular cloud $\sim 100$ pc.
+      \item  $\ddag$ In numerical simulations of turbulence,\
+             \citet{Federrath2010} find $\sigma\sim 3.6$ and 35 for solenoidal (divergence-free) and compressive (curl-free) forcing,\
+             respectively, so that our adopted value of 5 is closer to their solenoidal result.
     \end{tablenotes}
 \end{table*}
 
@@ -463,8 +460,6 @@ $\beta$                               & Power law index                         
 \end{enumerate}
 
 \subsection{Cold disk}
-  We restrict the refinement level is 7 within the cold disk so that\
-  a molecular cloud can be adequately resolved by approximately 30 cells along their diameter, 100 pc.\
 
 \subsection{Jet injection}
   We resolve the jet source located at the center of the simulation domain,\
