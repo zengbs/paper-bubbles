@@ -368,100 +368,14 @@ $\beta$                               & Power law index                         
 \end{table*}
 
 
-%\begin{enumerate}
-%  \item Assumptions on gravity:
-%    \begin{enumerate}
-%      \item We use the potential of isothermal slab, symmetric about $z=0$ and\
-%            supported by gas pressure and by under its own self-gravity,\
-%            to mimic the realistic potential of Galactic bulge.
-%      \item The ISM disk and atmosphere are subjected to the fixed external potential\
-%            due to a disk bulge and dark matter halo.
-%      \item In addition to the gravitational interaction, we ignore other interactions between stars and gases.
-%      \item We also ignore the self-gravity of the ISM disk and of the atmosphere.
-%      \item We ignore the centrifugal force of Milky Way rotation acting on the bubbles.
-%      \item We use the potential of isothermal slab to mimic the gravitational potential due to the stellar bulge.
-%      \item The interface between cold ISM disk and atmosphere is parallel to the Galactic plane and is pressure balanced.
-%    \end{enumerate}
-%\end{enumerate}
-%
-%
-%
-%\begin{enumerate}
-%\item Fixed external gravitational potential:
-%  \begin{enumerate}
-%    \item Bulge potential:
-%      \begin{enumerate}
-%       \item Peak density: $\rho_{\text{bulge}}^{\text{peak}}=4\times 10^{-24}$ g/cm$^3$.
-%       \item Potential (isothermal slab):
-%         \begin{equation}
-%           \Phi_{\text{bulge}}=\
-%           2\sigma^2_{\text{bulge}}\
-%           \ln\cosh\left(z\sqrt{\frac{2\pi G\rho_{\text{bulge}}^{\text{peak}}}{\sigma^2_{\text{bulge}}}}\right),
-%         \end{equation}
-%          where $\displaystyle \sigma_{\text{bulge}}=\
-%                \sqrt{\frac{k_{B}T_{\text{bulge}}}{m}}=100$ km/s \citep{velocity-dispersion-MW}.
-%      \end{enumerate}
-%
-%    \item Dark logarithmic halo potential:
-%         \begin{equation}
-%           \Phi_{\text{halo}}=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right),
-%         \end{equation}
-%         where $v_{\text{halo}}=131.5$ km/s, $d_{\text{h}}=12$ kpc \citep{Yang2013}.
-%
-%    \item Total potential: $\Phi_{\text{total}}=\Phi_{\text{bulge}}+\Phi_{\text{halo}}$.
-%  \end{enumerate}
-%
-%
-%\item Clumpy cold disk:
-%  \begin{enumerate}
-%    \item Dimension: $14\times14\times0.2$ kpc. i.e. Scale height, $z_{0}=100$ pc. \citep{peak-ism-density}
-%    \item Peak mass density: $\rho_{\text{disk}}^{\text{peak}}=10^{-23}$ g/cm$^3$. \citep{peak-ism-density}
-%    \item Average temperature: $T_{\text{disk}}=10^{3}$ K. \citep{peak-ism-density}
-%    \item Average mass density:
-%          \begin{equation}
-%             \rho_{\text{disk}}=\rho_{\text{disk}}^{\text{peak}}
-%             \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{disk}}/m}\right].
-%             \label{disk-density}
-%          \end{equation}
-%
-%    \item Pressure: $\displaystyle p_{\text{disk}}=\rho_{\text{disk}}T_{\text{disk}}$.
-%
-%    \item The clumpy cuboid, using the publicly\
-%          available pyFC code\footnote{\url{https://pypi.python.org/pypi/pyFC}},\
-%          are described by a log-normal distribution with mean 1.0 and variance 5.0.\
-%          Also, the power spectrum of the clumpy cuboid is characterized by $k_{\text{min}}$ and $\beta$,\
-%          where $k_{\text{min}}$ sets the maximum cloud size within the clumpy cuboid,\
-%          and $\beta$ is the slope of power spectrum in Fourier space.
-%          In this paper, we set $\beta=-5/3$ and $k_{\text{min}}=375$ to follow the Kolmogorov spectrum\
-%          and to limits the maximum size of an individual cloud to approximately 25 pc.
-%
-%    \item The clumpy disk is then constructed by multiplying a fractal cuboid with \Cref{disk-density}.
-%
-%    \item The clouds and voids within clumpy disk are pressure balanced.
-%  \end{enumerate}
-%
-%
-%\item Isothermal atmosphere:
-%  \begin{enumerate}
-%     \item The region outside the clumpy cold disk is atmosphere.
-%     \item $T_{\text{atmp}}=10^{6}$ K. \citep{temperature-MW}
-%     \item Density:
-%          \begin{equation}
-%             \rho_{\text{atmp}}=\rho_{\text{atmp}}^{\text{peak}}
-%             \exp\left[-\frac{\Phi_{\text{total}}}{k_{B}T_{\text{atmp}}/m}\right],
-%             \label{atmosphere-density}
-%          \end{equation}
-%          where $\rho_{\text{atmp}}^{\text{peak}}$ can be obtained by assuming that pressure\
-%          and gravitational potential are continuous at the interface ($z=\pm z_{0}$) between disk and atmosphere.
-%  \end{enumerate}
-%
-%
-%
-%\end{enumerate}
+% In addition to the gravitational interaction, we ignore other interactions between stars and gases.
+% We also ignore the self-gravity of the ISM disk and of the atmosphere.
+% We ignore the centrifugal force of Milky Way rotation acting on the bubbles.
 %
 
 \subsection{Jet injection}
-  We resolve the jet source located at the center of the simulation domain,\
+  The core of this work is to release the caveat that the jet direction must be perpendicular to the Galactic plane.\
+  We resolve the jet source at the center of the simulation domain,\
   cells are refined to level 11, leading to a finest spatial resolution of 0.4 pc.\
 
  \begin{enumerate}
@@ -469,7 +383,7 @@ $\beta$                               & Power law index                         
       \begin{enumerate}
         \item Jet source size.
         \item Cold disk.
-        \item Large pressure gradient along z-dircetion.
+        \item Large pressure gradient along z-direction.
       \end{enumerate}
  \end{enumerate}
 
