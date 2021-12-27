@@ -130,7 +130,7 @@
 \end{abstract}
 
 \section{Introduction}
-
+Early attempts to model the Fermi bubbles assumed that the jet is vertial to the Galactic plane...
 
 \section{Methodology}
 
@@ -171,7 +171,7 @@
 
   The governing equations solving the special relativistic ideal fluid\
   including CR advection, and dynamical coupling between the thermal gas and CRs without CR diffusion\
-  turn out to be
+  can be written a succinct form as
 
 
   \begin{subequations}
@@ -310,46 +310,30 @@
   $k_{\text{max}}$ is one-half of the spatial resolution within disk,\
   and $k_{\text{min}}$ is 375.0, corresponding to the maximum size of an individual clump $\sim 20$ pc.\
 
+  \citet{LA2002} and \citet{Wagner2012} have outlined a detailed procedure\
+  for constructing a clumpy scalar field, and we do not repeat here.
 
-  \begin{enumerate}
-     \item  We multiply $f(\bold{x})$ and $\rho_{\text{isoDisk}}(z)$\
-            to obtain the density of disk $\tilde{\rho}_{\text{ismDisk}}(\bold{x})$. i.e.\
-            $\displaystyle\tilde{\rho}_{\text{ismDisk}}(\bold{x}) =\
-            f(\bold{x}) \rho_{\text{isoDisk}}(z)$.\
-            The temperature is determined by
-            $\displaystyle \tilde{T}_{\text{ismDisk}} = T_{\text{isoDisk}}\rho_{\text{isoDisk}}/\tilde{\rho}_{\text{ismDisk}}$.
-     \item  If $\tilde{T}_{\text{ismDisk}}$ larger than $T_{\text{crit}}$,
-  \end{enumerate}
+  The density of clumpy disk can thus be obtained by taking the scalar products of\
+  $f(\bold{x})$ with $\rho_{\text{isoDisk}}(z)$ over all cells within the disk:\
+  $\displaystyle\rho_{\text{ismDisk}}(\bold{x}) =\
+  f(\bold{x}) \rho_{\text{isoDisk}}(z)$.\
+  Also, the pressure equilibrium condition implies that the temperature of disk is
+  $\displaystyle T_{\text{ismDisk}}(\bold{x}) =\
+  T_{\text{isoDisk}}(z)\rho_{\text{isoDisk}}(z)/\rho_{\text{ismDisk}}(\bold{x})$.
+
+  Moreover, as the clouds are considered to be thermally unstable\
+  when the cloud temperature beyond\
+  the critical temperature of the warm atomic phase.\
+  We replace the cell density with\
+  $\rho_{\text{ismDisk}}T_{\text{ismDisk}}/T_{\text{atmp}}$\
+  for a cell temperature greater than the critical value $T_{\text{crit}}$.
 
 
+  %Doing so, the porosity of the disk can arises,\
 
-
-
-  The porosity of the disk arises by imposing an upper temperature cutoff for the\
-  existence of clouds at $T_{\text{crit}} = 10^{4}$ K, beyond which clouds
-  are deemed thermally unstable and replaced by temperature of atmosphere.
-
-  The temperature in each cell within the disk is determined by pressure equilibrium with hot gas.\
-  The clouds within the disk are in pressure equilibrium with the surrounding hot voids, thus\
-  $\displaystyle T_{\text{ismDisk}} = T_{\text{isoDisk}}\rho_{\text{isoDisk}}/\rho_{\text{ismDisk}}$.
 
   We summarize the parameters of clumpy disk and their references in \Cref{table-parameters}.
-  \citet{LA2002} and \citet{Wagner2012} have outlined a detailed procedure\
-  for constructing clumpy structure, and we do not repeat here.
 
-
-
-  When the warm gas temperature exceeds $T_{\text{crit}}=$ K, it is deemed to be thermally unstable and is replaced\
-  by hot gas. This makes the gas porous.
-
-
-%  \begin{enumerate}
-%     \item Constructing the isothermal disk $\rho_{\text{isoDisk}}(z)$ by \Cref{isothermal-disk-density}.
-%     \item Using PyFC code to obtain a dimensionless clumpy distribution $f$ obeying\
-%           lognormal distribution and the power-law spectrum, \Cref{Kolmogorov-spectrum}.
-%     \item \Cref{density-ism-disk}.
-%     \item
-%  \end{enumerate}
 
 
 
