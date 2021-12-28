@@ -329,7 +329,7 @@ Early attempts to model the Fermi bubbles assumed that the jet is vertial to the
   On the basis of this setup, we cover the AMR base level with\
   $16\times16\times32$ root cells, refined progressively on the mid-plane $z=0$\
   based on the gradient of mass density.\
-  We also restrict the refinement level is 7 within the cold disk so that\
+  We also restrict the refinement level at 7 within the cold disk so that\
   a molecular cloud can be adequately resolved by approximately 30 cells along their diameter, 20 pc.
 
 \begin{table*}[t]
@@ -373,8 +373,27 @@ $\beta$                               & Power law index                         
 % We ignore the centrifugal force of Milky Way rotation acting on the bubbles.
 %
 
-\subsection{Jet injection}
-  The core of this work is to release the caveat that the jet direction must be perpendicular to the Galactic plane.\
+\subsection{Inclined jet injection}
+  Recent paper \citep{Gallimore2006} has proposed that\
+  there is a lack of preferred orientation of jets with respect to the plane of the disc.\
+  There are a number of galaxies in which the jets are inclined to the disc normal\
+  (e.g. NGC 3079, \citealt{Cecil2001}; NGC 1052, \citealt{Dopita2015}),\
+  including galaxies in which the jets lie in the plane of the disc (e.g. IC 5063, \citealt{Morganti2015}).
+
+  Motivated by these observations, we simulate three different inclined angles
+  $10^{\circ}$, $45^{\circ}$, and $80^{\circ}$ with respect to the Galactic plane to\
+  release the caveat that\
+  the jet direction must be perpendicular to the Galactic plane, and in particular to\
+  investigate the effect of inclined angle on the shape of bubbles.
+
+
+  The jet is constantly ejected from a cylindrical source with
+  four-velocity
+
+
+  the density contrast between the thermal gas contained in the jets
+  and the ambient gas
+
   We resolve the jet source at the center of the simulation domain,\
   cells are refined to level 11, leading to a finest spatial resolution of 0.4 pc.\
 
@@ -388,8 +407,10 @@ $\beta$                               & Power law index                         
  \end{enumerate}
 
 
+\section{Results}
 
-\subsection{X-ray and Gamma-ray emission}
+
+\subsection{X-ray emission}
 
 
   \begin{enumerate}
@@ -421,7 +442,10 @@ from the simulated gas within a radius of 25 kpc away from the GC.
 Then, beyond 25 kpc the gas is assumed to be isothermal with $T=10^6$ K and\
 follows out to a radius of 250 kpc the observed density profile of \citep{temperature-MW}.
 
-Inverse Compton scattering
+\subsection{Gamma-ray emission}
+
+\subsubsection{Leptonic process}
+
 \begin{equation}
   \frac{dE}{dtd\epsilon_{1}dV} = \frac{3}{4}\sigma_{T}c\textit{C}\epsilon_{1}\int^{\epsilon_{\text{max}}}_{\epsilon_{\text{min}}}
                \frac{n(\epsilon)}{\epsilon}d\epsilon\int^{\gamma_{\text{max}}}_{\gamma_{\text{min}}\left(\epsilon\right)}
@@ -444,7 +468,8 @@ q=\frac{\epsilon_{1}/\gamma_{\text{e}}m_{\text{e}}c^{2}}{\Gamma\left(1-\epsilon_
 \end{equation}
 
 
-Hadronic process
+\subsubsection{Hadronic process}
+
 \begin{equation}
   \frac{dE}{dtd\epsilon_{1}dV} = cn_{H}pC\left(\frac{\epsilon_{1}}{m_{\text{p}}c^2}\right)^{-p}\int_{0}^{1}\sigma(\epsilon_{\text{p}}) F(x,\epsilon_{\text{p}}) x^{p}dx.
 \end{equation}

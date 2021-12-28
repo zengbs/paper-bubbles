@@ -31,6 +31,16 @@ Bland-Hawthorn J.,  Gerhard O.,  2016, \mn@doi [Annual Review of Astronomy and
   Robishaw}{2000}]{halo-radius-1}
 Blitz L.,  Robishaw T.,  2000, ] {10.1086/309457}, 541, 675
 
+\bibitem[\protect\citeauthoryear{Cecil, Bland-Hawthorn, Veilleux  \&
+  Filippenko}{Cecil et~al.}{2001}]{Cecil2001}
+Cecil G.,  Bland-Hawthorn J.,  Veilleux S.,   Filippenko A.~V.,  2001, \mn@doi
+  [The Astrophysical Journal] {10.1086/321481}, 555, 338
+
+\bibitem[\protect\citeauthoryear{Dopita et~al.,}{Dopita
+  et~al.}{2015}]{Dopita2015}
+Dopita M.~A.,  et~al., 2015, \mn@doi [The Astrophysical Journal Supplement
+  Series] {10.1088/0067-0049/217/1/12}, 217, 12
+
 \bibitem[\protect\citeauthoryear{Federrath, Roman-Duval, Klessen, Schmidt  \&
   Low}{Federrath et~al.}{2010}]{Federrath2010}
 Federrath C.,  Roman-Duval J.,  Klessen R.~S.,  Schmidt W.,   Low M.-M.~M.,
@@ -40,6 +50,12 @@ Federrath C.,  Roman-Duval J.,  Klessen R.~S.,  Schmidt W.,   Low M.-M.~M.,
 \bibitem[\protect\citeauthoryear{Ferri{\`{e}}re}{Ferri{\`{e}}re}{2001}]{peak-ism-density}
 Ferri{\`{e}}re K.~M.,  2001, \mn@doi [Rev. Mod. Phys.]
   {10.1103/revmodphys.73.1031}, 73, 1031
+
+\bibitem[\protect\citeauthoryear{Gallimore, Axon, O{\textquotesingle}Dea, Baum
+  \& Pedlar}{Gallimore et~al.}{2006}]{Gallimore2006}
+Gallimore J.~F.,  Axon D.~J.,  O{\textquotesingle}Dea C.~P.,  Baum S.~A.,
+  Pedlar A.,  2006, \mn@doi [The Astronomical Journal] {10.1086/504593}, 132,
+  546
 
 \bibitem[\protect\citeauthoryear{Grcevich \& Putman}{Grcevich \&
   Putman}{2009}]{halo-radius-2}
@@ -79,6 +95,12 @@ Lewis G.~M.,  Austin P.~H.,  2002, 1th Conference on AtmosphericRadiation
   Bregman}{2013}]{Miller_2013}
 Miller M.~J.,  Bregman J.~N.,  2013, \mn@doi [The Astrophysical Journal]
   {10.1088/0004-637x/770/2/118}, 770, 118
+
+\bibitem[\protect\citeauthoryear{Morganti, Oosterloo, Oonk, Frieswijk  \&
+  Tadhunter}{Morganti et~al.}{2015}]{Morganti2015}
+Morganti R.,  Oosterloo T.,  Oonk J. B.~R.,  Frieswijk W.,   Tadhunter C.,
+  2015, \mn@doi [Astronomy {\&} Astrophysics] {10.1051/0004-6361/201525860},
+  580, A1
 
 \bibitem[\protect\citeauthoryear{Schive, Tsai  \& Chiueh}{Schive
   et~al.}{2010}]{gamer-1}
