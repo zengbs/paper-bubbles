@@ -374,28 +374,44 @@ $\beta$                               & Power law index                         
 %
 
 \subsection{Inclined jet injection}
-  Recent paper \citep{Gallimore2006} has proposed that\
+  Early observation \citep{Gallimore2006} has proposed that\
   there is a lack of preferred orientation of jets with respect to the plane of the disc.\
   There are a number of galaxies in which the jets are inclined to the disc normal\
   (e.g. NGC 3079, \citealt{Cecil2001}; NGC 1052, \citealt{Dopita2015}),\
   including galaxies in which the jets lie in the plane of the disc (e.g. IC 5063, \citealt{Morganti2015}).
 
-  Motivated by these observations, we simulate three different inclined angles
-  $10^{\circ}$, $45^{\circ}$, and $80^{\circ}$ with respect to the Galactic plane to\
-  release the caveat that\
+  Motivated by these observations, we simulate three different inclined angles,\
+  $10^{\circ}$, $45^{\circ}$, and $80^{\circ}$ with respect to the Galactic plane\
+  in order to release the caveat that\
   the jet direction must be perpendicular to the Galactic plane, and in particular to\
-  investigate the effect of inclined angle on the shape of bubbles.
+  investigate the effect of the jet-disk misalignment on the symmetry of bubbles.
 
 
-  The jet is constantly ejected from a cylindrical source with
-  four-velocity
+  All three cases with different inclined angles share the same injection parameters:\
+  the density contrast between the thermal gas contained in the jet source and the ambient gas,\
+  $\rho_{\text{jet}}/\rho_{\text{amb}}=10^{-3}$,\
+  the temperature contrast, $T_{\text{jet}}/T_{\text{amb}}=2\times10^{4}$,\
+  the CR energy density $e_{\text{CR}}=??$,\
+  and the flow 4-velocity inside the jet source $\beta\gamma = 0.6$\
+  along the symmetric axis of cylinder.
 
+  Note that as we inject the jets within the clumpy disk,\
+  we define the ambient gas density by the peak density of\
+  the isothermal disk on the mid-plane $z=0$ (i.e. $\rho^{\text{peak}}_{\text{isoDisk}}$),\
+  as opposed to the \textit{clumpy} density around the jet source, to avoid ambiguous definition.
 
-  the density contrast between the thermal gas contained in the jets
-  and the ambient gas
+  Jet power Eddington luminosity
+
+  The bipolar jets are constantly and bidirectionally ejected from a cylindrical source\
+  with diameter and height of 4 pc, leading to the volume $\sim 50 \text{pc}^{3}$,\
+  much smaller than that of individual clump by a factor of 83.\
+  By intentionally reducing the ratio of the volume of jet source and of clump,\
+  we
 
   We resolve the jet source at the center of the simulation domain,\
   cells are refined to level 11, leading to a finest spatial resolution of 0.4 pc.\
+
+  Source size is much smaller than clump
 
  \begin{enumerate}
     \item Why the overall structure is insensitive to jet direction?
