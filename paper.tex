@@ -476,7 +476,10 @@ The emissivity of the upscattered photons at the energy $\epsilon_{1}$ is given 
                &2q\ln q+(1+2q)(1-q)+0.5(1-q)\frac{\left(\Gamma q\right)^2}{1+\Gamma q},\\
   &q=\frac{\epsilon_{1}/\gamma_{\text{e}}\
                m_{\text{e}}c^{2}}{\Gamma\left(1-\epsilon_{1}/\gamma_{\text{e}}m_{\text{e}}c^{2}\right)},\\
-  &\Gamma=\frac{4\epsilon \gamma_{\text{e}}}{m_{\text{e}}c^2},
+  &\Gamma=\frac{4\epsilon \gamma_{\text{e}}}{m_{\text{e}}c^2},\\
+  &\gamma_{\text{min}}(\epsilon)=\
+   0.5\left(\frac{\epsilon_{1}}{mc^2}+\sqrt{\left(\frac{\epsilon_{1}}{mc^2}\right)^2+\
+   \frac{\epsilon_{1}}{\epsilon}}\right).
   \end{align}
 \end{subequations}
 
@@ -488,17 +491,6 @@ $n(\epsilon)$ is the photon number density of ISRF per energy,
 We set $\gamma_{\text{max}}$ to be $10^{6}$, corresponding to the cutoff CRe energy $0.5$ GeV,\
 $\gamma_{\text{min}}(\epsilon)$ is the minimum Lorentz factor of CRe such that CRe is energetic enough to\
 produce scattered photon at the energy $\epsilon_{1}$ from an incident photon energy $\epsilon$.
-
-
-
-$\gamma_{\text{min}}\left(\epsilon\right)$ is the root of $f(\gamma_{\text{e}}, \epsilon)=0$ at a specific incident photon energy.
-
-
-\begin{equation}
-\gamma_{\text{min}}=\
- 0.5\left(\frac{\epsilon_{1}}{mc^2}+\sqrt{\left(\frac{\epsilon_{1}}{mc^2}\right)^2+\
- \frac{\epsilon_{1}}{\epsilon}}\right).
-\end{equation}
 
 
 \subsubsection{Hadronic process}
