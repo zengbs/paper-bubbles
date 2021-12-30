@@ -462,35 +462,45 @@ follows out to a radius of 250 kpc the observed density profile of \citep{temper
 \subsubsection{Leptonic process}
 
 In the leptonic scenario, the gamma-rays originate from IC scattering of the ISRF by CRe.\
+
 The emissivity of the upscattered photons at the energy $\epsilon_{1}$ is given by\
-\citet{Jones1968,BLUMENTHAL1970}.
+the double integrals \citep{BLUMENTHAL1970}\
+over the range of incident photon energy and the CRe Lorentz factor:
 
 \begin{subequations}
   \begin{align}
   &\frac{dE}{dtd\epsilon_{1}dV} =\nonumber\\
-               &\frac{3}{4}\sigma_{T}c\textit{C}\epsilon_{1}\int^{\epsilon_{\text{max}}}_{\epsilon_{\text{min}}}
+               &\frac{3}{4}\sigma_{T}c\mathbb{C}\epsilon_{1}\int^{\epsilon_{\text{max}}}_{\epsilon_{\text{min}}}
                \frac{n(\epsilon)}{\epsilon}d\epsilon\int^{\gamma_{\text{max}}}_{\gamma_{\text{min}}\left(\epsilon\right)}
                \gamma^{-(p+2)}f(q, \Gamma)d\gamma,\\
   \nonumber\\
   &f(q, \Gamma) =\nonumber\\
                &2q\ln q+(1+2q)(1-q)+0.5(1-q)\frac{\left(\Gamma q\right)^2}{1+\Gamma q},\\
-  &q=\frac{\epsilon_{1}/\gamma_{\text{e}}\
-               m_{\text{e}}c^{2}}{\Gamma\left(1-\epsilon_{1}/\gamma_{\text{e}}m_{\text{e}}c^{2}\right)},\\
-  &\Gamma=\frac{4\epsilon \gamma_{\text{e}}}{m_{\text{e}}c^2},\\
+  &q=\frac{\epsilon_{1}/\gamma\
+               m_{\text{e}}c^{2}}{\Gamma\left(1-\epsilon_{1}/\gamma m_{\text{e}}c^{2}\right)},\\
+  &\Gamma=\frac{4\epsilon \gamma}{m_{\text{e}}c^2},\\
   &\gamma_{\text{min}}(\epsilon)=\
    0.5\left(\frac{\epsilon_{1}}{mc^2}+\sqrt{\left(\frac{\epsilon_{1}}{mc^2}\right)^2+\
-   \frac{\epsilon_{1}}{\epsilon}}\right).
+   \frac{\epsilon_{1}}{\epsilon}}\right),
   \end{align}
 \end{subequations}
 
-where $\gamma_{\text{min}}(\epsilon)$ and $\gamma_{\text{max}}=10^{6}$\
-are the minimum and maximum Lorentz factor of CRe,\
-$n(\epsilon)$ is the photon number density of ISRF per energy,
-
-
-We set $\gamma_{\text{max}}$ to be $10^{6}$, corresponding to the cutoff CRe energy $0.5$ GeV,\
+where $\sigma_{T}$ is the Thomson cross section, $c$ speed of light, $m_{\text{e}}$ electron mass,\
+$n(\epsilon)$ the photon number density of ISRF per energy, $\gamma$ the Lorentz factor of CRe,\
+$\mathbb{C}$ and $p$ are the normalization constant and spectral index of CRe power-law spectrum,\
 $\gamma_{\text{min}}(\epsilon)$ is the minimum Lorentz factor of CRe such that CRe is energetic enough to\
-produce scattered photon at the energy $\epsilon_{1}$ from an incident photon energy $\epsilon$.
+produce scattered photon at the energy $\epsilon_{1}$ from an incident photon energy $\epsilon$.\
+We set $\gamma_{\text{max}}$ to be $10^{6}$, corresponding to the cutoff CRe energy $0.5$ GeV.
+
+To  we integrate the incident photon energy from\
+$\epsilon_{\text{min}}=1.13\times10^{-4}$ eV (CMB radiation) to\
+$\epsilon_{\text{max}}=13.59$ eV (starlight).
+
+
+The gamma-ray emissivity\
+is computed for each computational volume element in our simulations\
+using the Klein–Nishina IC cross-section \citep{Jones1968} based\
+on the simulated CR number density and the ISRF model given by \citep{Porter2017}.
 
 
 \subsubsection{Hadronic process}
