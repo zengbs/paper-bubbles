@@ -309,10 +309,10 @@ Early attempts to model the Fermi bubbles assumed that the jet is vertial to the
   for constructing a clumpy scalar field, and we do not repeat here.
 
   The density of clumpy disk can thus be obtained by taking the scalar products of\
-  $f(\bold{x})$ with $\rho_{\text{isoDisk}}(z)$ over all cells within the disk:\
+  $f(\bold{x})$ with $\rho_{\text{isoDisk}}(z)$ over all cells within the disk, i.e.,\
   $\displaystyle\rho_{\text{ismDisk}}(\bold{x}) =\
   f(\bold{x}) \rho_{\text{isoDisk}}(z)$.\
-  Also, the pressure equilibrium condition implies that the temperature of disk is
+  Also, the pressure equilibrium within the clumpy disk implies that the temperature of disk is
   $\displaystyle T_{\text{ismDisk}}(\bold{x}) =\
   T_{\text{isoDisk}}(z)\rho_{\text{isoDisk}}(z)/\rho_{\text{ismDisk}}(\bold{x})$.
 
@@ -380,7 +380,7 @@ $\beta$                               & Power law index                         
   (e.g. NGC 3079, \citealt{Cecil2001}; NGC 1052, \citealt{Dopita2015}),\
   including galaxies in which the jets lie in the plane of the disc (e.g. IC 5063, \citealt{Morganti2015}).
 
-  Motivated by these observations, we simulate three different inclined angles,\
+  Motivated by these observations, we simulate three cases with different inclined angles,\
   $10^{\circ}$, $45^{\circ}$, and $80^{\circ}$ with respect to the Galactic plane\
   in order to release the caveat that\
   the jet direction must be perpendicular to the Galactic plane, and in particular to\
@@ -393,16 +393,16 @@ $\beta$                               & Power law index                         
   the temperature contrast, $T_{\text{jet}}/T_{\text{amb}}=2\times10^{4}$,\
   the CR energy density $e_{\text{CR}}=??$,\
   and the flow 4-velocity inside the jet source $\beta\gamma = 0.6$\
-  along the symmetric axis of cylinder.
+  along the symmetric axis of cylinder.\
+  The jet power is thus $3.2\times 10^{42}$ erg/s, resulting in the Eddington ratio 0.008.
 
   Note that as we inject the jets at the center of the clumpy disk,\
   we define the ambient gas density by the peak density of\
   the isothermal disk on the mid-plane $z=0$ (i.e. $\rho^{\text{peak}}_{\text{isoDisk}}$),\
   as opposed to the \textit{clumpy} density around the jet source, to avoid ambiguous definition.
 
-  Jet power Eddington luminosity
 
-  The bipolar jets are constantly and bidirectionally ejected from a cylindrical source\
+  The bipolar jets are constantly ejected from a cylindrical source\
   with diameter and height of 4 pc, leading to the source volume $\sim 50 \text{ pc}^{3}$ is\
   much smaller than that of individual clump by a factor of 83.\
   By intentionally reducing the volume ratio of the jet source to an individual clump,\
