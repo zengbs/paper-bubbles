@@ -461,25 +461,43 @@ follows out to a radius of 250 kpc the observed density profile of \citep{temper
 
 \subsubsection{Leptonic process}
 
-\begin{equation}
-  \frac{dE}{dtd\epsilon_{1}dV} = \frac{3}{4}\sigma_{T}c\textit{C}\epsilon_{1}\int^{\epsilon_{\text{max}}}_{\epsilon_{\text{min}}}
+In the leptonic scenario, the gamma-rays originate from IC scattering of the ISRF by CRe.\
+The emissivity of the upscattered photons at the energy $\epsilon_{1}$ is given by\
+\citet{Jones1968,BLUMENTHAL1970}.
+
+\begin{subequations}
+  \begin{align}
+  &\frac{dE}{dtd\epsilon_{1}dV} =\nonumber\\
+               &\frac{3}{4}\sigma_{T}c\textit{C}\epsilon_{1}\int^{\epsilon_{\text{max}}}_{\epsilon_{\text{min}}}
                \frac{n(\epsilon)}{\epsilon}d\epsilon\int^{\gamma_{\text{max}}}_{\gamma_{\text{min}}\left(\epsilon\right)}
-               \gamma^{-(p+2)}f(q, \Gamma)d\gamma.
-\end{equation}
+               \gamma^{-(p+2)}f(q, \Gamma)d\gamma,\\
+  \nonumber\\
+  &f(q, \Gamma) =\nonumber\\
+               &2q\ln q+(1+2q)(1-q)+0.5(1-q)\frac{\left(\Gamma q\right)^2}{1+\Gamma q},\\
+  &q=\frac{\epsilon_{1}/\gamma_{\text{e}}\
+               m_{\text{e}}c^{2}}{\Gamma\left(1-\epsilon_{1}/\gamma_{\text{e}}m_{\text{e}}c^{2}\right)},\\
+  &\Gamma=\frac{4\epsilon \gamma_{\text{e}}}{m_{\text{e}}c^2},
+  \end{align}
+\end{subequations}
+
+where $\gamma_{\text{min}}(\epsilon)$ and $\gamma_{\text{max}}=10^{6}$\
+are the minimum and maximum Lorentz factor of CRe,\
+$n(\epsilon)$ is the photon number density of ISRF per energy,
 
 
-\begin{equation}
-f(\gamma_{\text{e}}, \epsilon) = 2q\ln q+(1+2q)(1-q)+0.5(1-q)\frac{\left(\Gamma q\right)^2}{1+\Gamma q},
-\end{equation}
+We set $\gamma_{\text{max}}$ to be $10^{6}$, corresponding to the cutoff CRe energy $0.5$ GeV,\
+$\gamma_{\text{min}}(\epsilon)$ is the minimum Lorentz factor of CRe such that CRe is energetic enough to\
+produce scattered photon at the energy $\epsilon_{1}$ from an incident photon energy $\epsilon$.
 
-\begin{equation}
-\Gamma=\frac{4\epsilon \gamma_{\text{e}}}{m_{\text{e}}c^2}
-\end{equation}
+
 
 $\gamma_{\text{min}}\left(\epsilon\right)$ is the root of $f(\gamma_{\text{e}}, \epsilon)=0$ at a specific incident photon energy.
 
+
 \begin{equation}
-q=\frac{\epsilon_{1}/\gamma_{\text{e}}m_{\text{e}}c^{2}}{\Gamma\left(1-\epsilon_{1}/\gamma_{\text{e}}m_{\text{e}}c^{2}\right)}.
+\gamma_{\text{min}}=\
+ 0.5\left(\frac{\epsilon_{1}}{mc^2}+\sqrt{\left(\frac{\epsilon_{1}}{mc^2}\right)^2+\
+ \frac{\epsilon_{1}}{\epsilon}}\right).
 \end{equation}
 
 
