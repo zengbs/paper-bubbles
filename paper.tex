@@ -463,6 +463,9 @@ follows out to a radius of 250 kpc the observed density profile of \citep{temper
 \subsubsection{Leptonic process}
 
 In the leptonic scenario, the gamma-rays originate from IC scattering of the ISRF by CRe.\
+The CRe spectrum follows a power law distribution with a spectral index 2 and ranges from\
+$m_{\text{e}}c^2$ ($0.5$ MeV) to $10^{6}m_{\text{e}}c^2$ ($0.5$ TeV).\
+
 
 The emissivity of the upscattered photons at the energy $\epsilon_{1}$ is given by\
 the double integrals \citep{BLUMENTHAL1970}\
@@ -489,21 +492,31 @@ over the range of incident photon energy and the CRe Lorentz factor:
 where $\sigma_{T}$ is the Thomson cross section, $c$ speed of light, $m_{\text{e}}$ electron mass,\
 $n(\epsilon)$ the photon number density of ISRF per energy, $\gamma$ the Lorentz factor of CRe,\
 $\mathbb{C}$ and $p$ are the normalization constant and spectral index of CRe power-law spectrum,\
-$\gamma_{\text{min}}(\epsilon)$ is the minimum required Lorentz factor of CRe such that CRe is energetic enough to\
-produce scattered photon at the energy $\epsilon_{1}$ from an incident photon energy $\epsilon$.\
-We set $\gamma_{\text{max}}$ to be $10^{6}$, corresponding to the cutoff CRe energy $0.5$ GeV.
+$\gamma_{\text{min}}(\epsilon)$ is the minimum required Lorentz factor of CRe such that CRe is energetic sufficient for\
+producing scattered photon at the energy $\epsilon_{1}$ from an incident photon energy $\epsilon$.\
+$\gamma_{\text{max}}$ is the maximum CRe Lorentz factor in the spectrum, i.e. $\gamma_{\text{max}}=10^{6}$.
 
-To  we integrate the incident photon energy from\
+
+Since the ISRF is dominated by the cosmic microwave background (CMB)\
+at high latitudes and optical starlight at low latitudes,\
+
+we integrate the incident photon energy from\
 $\epsilon_{\text{min}}=1.13\times10^{-4}$ eV (CMB radiation) to\
 $\epsilon_{\text{max}}=13.59$ eV (starlight).
 
 
 The gamma-ray emissivity\
-is computed for each computational volume element in our simulations\
+is computed for each computational cell in our simulations\
 using the Klein–Nishina IC cross-section \citep{Jones1968} based\
 on the simulated CR number density and the ISRF model given by \citet{Porter2017}.
 
+
+
 % After projection the photon flux at energy $$ is computed ..
+
+\begin{equation}
+I = \frac{1}{\epsilon_{1}}\int \frac{dE}{dtd\epsilon_{1}dV} dl,
+\end{equation}
 
 \subsubsection{Hadronic process}
 
