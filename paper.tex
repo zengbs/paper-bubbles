@@ -199,7 +199,7 @@ Early attempts to model the Fermi bubbles assumed that the jet is vertial to the
   $c$ is the speed of light, and $\delta^{ij}$ is the Kronecker delta notation.\
   Throughout this paper, Latin indices run from 1 to 3, except when stated otherwise.\
 
-  The set of \Cref{governing-eq} is closed by using the Taub-Mathews equation of state (\citealt{Taub}; \citealt{TM_EOS})\
+  The set of \Cref{governing-eq} is closed by using the Taub-Mathews equation of state \citep{Taub,TM_EOS}\
   that approximates the exact EoS \citep{Synge} for ultra-relativistically\
   hot gases coexisting with non-relativistically cold gases.
 
@@ -433,8 +433,8 @@ $\beta$                               & Power law index                         
     \item X-ray:
        \begin{enumerate}
          \item Thermal bremsstrahlung: The X-ray emissivity in an energy range 1.4–1.6 keV is calculated\
-               using the MEKAL model (\citealt{Xray-1}; \citealt{Xray-2}; \citealt{Xray-3})\
-               implemented in the utility XSPEC\citep{XSPEC}, assuming solar metallicity.
+               using the MEKAL model \citep{Xray-1,Xray-2,Xray-3}\
+               implemented in the utility XSPEC \citep{XSPEC}, assuming solar metallicity.
        \end{enumerate}
     \item Gamma-ray:
        \begin{enumerate}
@@ -452,7 +452,7 @@ $\beta$                               & Power law index                         
 
 
 Note that the observed X-ray emission is contributed by all the gas in the Milky Way halo,\
-which likely extends to a radius of $\sim$250 kpc (\citealt{halo-radius-1}; \citealt{halo-radius-2}),\
+which likely extends to a radius of $\sim$250 kpc \citep{halo-radius-1,halo-radius-2},\
 much bigger than our simulation box. Therefore, we first compute the X-ray emissivity\
 from the simulated gas within a radius of 25 kpc away from the GC.
 Then, beyond 25 kpc the gas is assumed to be isothermal with $T=10^6$ K and\
@@ -497,12 +497,10 @@ producing scattered photon at the energy $\epsilon_{1}$ from an incident photon 
 $\gamma_{\text{max}}$ is the maximum CRe Lorentz factor in the spectrum, i.e. $\gamma_{\text{max}}=10^{6}$.
 
 
-Since the ISRF is dominated by the cosmic microwave background (CMB)\
-at high latitudes and optical starlight at low latitudes,\
-
-we integrate the incident photon energy from\
+We integrate the incident photon energy from\
 $\epsilon_{\text{min}}=1.13\times10^{-4}$ eV (CMB radiation) to\
-$\epsilon_{\text{max}}=13.59$ eV (starlight).
+$\epsilon_{\text{max}}=13.59$ eV (starlight) in order to\
+facilitate a reliable interpretation.
 
 
 The gamma-ray emissivity\
@@ -511,11 +509,11 @@ using the Klein–Nishina IC cross-section \citep{Jones1968} based\
 on the simulated CR number density and the ISRF model given by \citet{Porter2017}.
 
 
-To evaluate the simulated photon flux at the energy $\epsilon_{1}$ and\
+To evaluate the simulated photon flux $I$ at the energy $\epsilon_{1}$ and\
 take into account the perspective projection effect,
-we integrate the emissivity along line-of-sights from the solar position:
+we integrate the emissivity over line-of-sights from the solar position:
 \begin{equation}
-I = \frac{1}{\epsilon_{1}}\int \frac{dE}{dtd\epsilon_{1}dV} dl,
+I = \frac{1}{\epsilon_{1}}\int \frac{dE}{dtd\epsilon_{1}dV} dl.
 \end{equation}
 
 
