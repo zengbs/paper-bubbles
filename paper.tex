@@ -429,27 +429,9 @@ $\beta$                               & Power law index                         
 \subsection{X-ray emission}
 
 
-  \begin{enumerate}
-    \item X-ray:
-       \begin{enumerate}
-         \item Thermal bremsstrahlung: The X-ray emissivity in an energy range 1.4–1.6 keV is calculated\
-               using the MEKAL model \citep{Xray-1,Xray-2,Xray-3}\
-               implemented in the utility XSPEC \citep{XSPEC}, assuming solar metallicity.
-       \end{enumerate}
-    \item Gamma-ray:
-       \begin{enumerate}
-         \item Leptonic process:\\
-          The gamma-ray emission is produced by inverse Comptom scattering of the ISRF by CRe.
-         \item Hadronic process:\\
-          In the hadronic model, CRp undergo hadronic collisions with thermal gas protons\
-          and produce $\gamma$-ray via pion decay. The volume emissivity of the emission can be written as
-          \begin{equation}
-             \epsilon \propto U_{\text{CRp}}n_{p}\sigma_{p}\kappa_{pp}.
-          \end{equation}
-       \end{enumerate}
-  \end{enumerate}
-
-
+Thermal bremsstrahlung: The X-ray emissivity in an energy range 1.4–1.6 keV is calculated\
+using the MEKAL model \citep{Xray-1,Xray-2,Xray-3}\
+implemented in the utility XSPEC \citep{XSPEC}, assuming solar metallicity.\
 
 Note that the observed X-ray emission is contributed by all the gas in the Milky Way halo,\
 which likely extends to a radius of $\sim$250 kpc \citep{halo-radius-1,halo-radius-2},\
@@ -461,7 +443,6 @@ follows out to a radius of 250 kpc the observed density profile of \citep{temper
 \subsection{Gamma-ray emission}
 
 \subsubsection{Leptonic process}
-
 In the leptonic scenario, the gamma-rays originate from IC scattering of the ISRF by CRe.\
 The CRe spectrum follows a power law distribution with a spectral index 2 and ranges from\
 $m_{\text{e}}c^2$ ($0.5$ MeV) to $10^{6}m_{\text{e}}c^2$ ($0.5$ TeV).\
@@ -520,6 +501,12 @@ I = \frac{1}{\epsilon_{1}}\int \frac{dE}{dtd\epsilon_{1}dV} dl.
 
 
 \subsubsection{Hadronic process}
+In the hadronic model, CRp undergo hadronic collisions with thermal gas protons\
+and produce $\gamma$-ray via pion decay. The volume emissivity of the emission can be written as
+\begin{equation}
+   \epsilon \propto U_{\text{CRp}}n_{p}\sigma_{p}\kappa_{pp}.
+\end{equation}
+
 \begin{equation}
   \frac{dE}{dtd\epsilon_{1}dV} =\
    cn_{H}pC\left(\frac{\epsilon_{1}}{m_{\text{p}}c^2}\right)^{-p}\
