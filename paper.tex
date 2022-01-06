@@ -11,6 +11,8 @@
 \usepackage{tikz}
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage{floatrow}
+%\usepackage[FIGTOPCAP]{subfigure}
 \usepackage{subfigure}
 \usepackage{float}
 \usepackage{amsmath}
@@ -437,8 +439,8 @@ $\beta$                               & Power law index                         
              In the both cases, the bipolar jets are injected at the origin along the $z=-y$ direction\
              with a constant 4-velocity of 0.6 for a duration of 1.2 Myr.
              The pressure (top), temperature (middle), and number density (bottom) slices\
-             through the jet source show that the dense disk not only helps the bubbles to align the disk normal\
-             but also create an under pressure, cold, and dense bubble in the most inner region.
+             through the jet sources show that the dense disk not only helps the bubbles to align the disk normal\
+             but also creates an under pressure, cold, and dense bubble in the most inner region.
              }
     \label{fig__jetI5+ismSeed3-45deg_no-disk-stratified-ambient-Pres-Dens-Temp}
   \end{figure}
@@ -459,13 +461,23 @@ Then, beyond 25 kpc the gas is assumed to be isothermal with $T=10^6$ K and\
 follows out to a radius of 250 kpc the observed density profile of \citep{temperature-MW}.
 
 
+  %\begin{figure*}[ht]
   \begin{figure*}
-    \includegraphics[width=\linewidth]{figures/fig__xRay.png}
-    \caption{One-dimensional surface-brightness\
-             profiles in the same energy band\
-             , cut at various galactic latitudes (as labelled).\
-             For comparison, we also show ...}
-    \label{fig__xRay.png}
+    \subfigure[Simulated count rate (photons s$^{-1}$ deg$^{-2}$) map in the 0.6-1.0 keV range,\
+               using a Hammer-Aitoff projection.]
+     {
+      \includegraphics[width=\linewidth]{figures/fig__xray_0.8keV_angle_000.png}
+      \label{fig__xray_0.8keV_angle_000}
+     }
+    \subfigure[Comparison of observed (black; \citealt{Predehl2020}) and simulated (red) one-dimensional\
+               count rate profiles in the same energy band as \Cref{fig__xray_0.8keV_angle_000},\
+               cut at various galactic latitudes (as labelled).]
+     {
+      \includegraphics[width=\linewidth]{figures/fig__x-ray-profile-0.8keV-000.png}
+      \label{fig__x-ray-profile-0.8keV-000}
+     }
+    \caption{dddd}
+    \label{fig_xray}
   \end{figure*}
 
 \subsection{Gamma-ray emission}
