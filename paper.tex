@@ -225,7 +225,7 @@ Early attempts to model the Fermi bubbles assumed that the jet is vertial to the
   is a plane-parallel dark logarithmic halo potential.
 
   With the help of the isothermal and hydrostatic equilibrium conditions,\
-  and assuming the interfaces between isothermal disk and atmosphere are in pressure equilibrium,\
+  and assuming the interfaces between isothermal disk and atmosphere are in thermal pressure equilibrium,\
   we can write the steady-state gaseous density distributions,\
   confined in the total potential, of the disk and the Galactic atmosphere as\
   \begin{subequations}
@@ -248,39 +248,31 @@ Early attempts to model the Fermi bubbles assumed that the jet is vertial to the
   We tabulate parameters in the first four\
   categories of \Cref{table-parameters},\
   except for $\rho_{\text{atmp}}^{\text{peak}}$ that\
-  can be derived from the other known parameters and pressure equilibrium condition\
+  can be derived from the other known parameters and thermal pressure equilibrium condition\
   on the interfaces $(z=\pm z_{0})$ between the disk and atmosphere.\
 
-  The density profile of \Cref{disk-atm-sys} is shown in \Cref{fig__initial-density-profile}\
-  and compared to the observed result \citep{Miller_2013} beyond 1 kpc.\
+  The density profile of \Cref{disk-atm-sys} is shown in \Cref{fig__initial-density-profile}.\
+  Beyond the core radius ($\sim 2 \text{ kpc}$) the gaseous density decreases rapidly as a power-law.
 
-  Note that there is an difficulty in disentangling the contribution\
-  of the Local Bubble, a supernova remnant in which the Solar System is embedded \citep{Snowden1990},\
-  and the contribution from solar wind charge-exchange processes, which produce soft\
-  X-ray emission throughout the Solar System. As a result, the density profile of the Galactic halo remains unclear\
-  \citep{BlandHawthorn2016}.
+%  The density profile of \Cref{disk-atm-sys} is shown in \Cref{fig__initial-density-profile}\
+%  and compared to the observed result \citep{Miller_2013} beyond 1 kpc.\
+%
+%  Note that there is an difficulty in disentangling the contribution\
+%  of the Local Bubble, a supernova remnant in which the Solar System is embedded \citep{Snowden1990},\
+%  and the contribution from solar wind charge-exchange processes, which produce soft\
+%  X-ray emission throughout the Solar System. As a result, the density profile of the Galactic halo remains unclear\
+%  \citep{BlandHawthorn2016}.
 
   \begin{figure}
     \includegraphics[width=\columnwidth]{figures/fig__initial-density-profile.png}
-    \caption{The profile of $\rho_{\text{isoDisk}}(z)$ along z-axis.}
+    \caption{The density profile of the isothermal disk (red pluses) and\
+             atmosphere (blue crosses) along the positive z-axis.\
+             The density distribution is derived from hydrostatic equilibrium,\
+             the interface ($z=0.1$) between the isothermal disk\
+             and the atmosphere is pressure balanced.}
     \label{fig__initial-density-profile}
   \end{figure}
 
-
-
-  \begin{figure}
-      \includegraphics[width=\columnwidth]{figures/fig__numberDensityHistogram.png}
-      \caption{The initial density distribution of the number density\
-               for a settling ISM without jet source.} % caption
-      \label{fig__numberDensityHistogram}
-  \end{figure}
-
-  \begin{figure}
-    \includegraphics[width=\columnwidth]{figures/fig__zoom-in-disk.png}
-    \caption{The slice of pressure (top), temperature (middle), and number density (bottom)\
-             in the y-z plane passing through the center of the disk.}
-    \label{fig__zoom-in-disk}
-  \end{figure}
 
 
 
@@ -315,7 +307,7 @@ Early attempts to model the Fermi bubbles assumed that the jet is vertial to the
   $f(\bold{x})$ with $\rho_{\text{isoDisk}}(z)$ over all cells within the disk, i.e.,\
   $\displaystyle\rho_{\text{ismDisk}}(\bold{x}) =\
   f(\bold{x}) \rho_{\text{isoDisk}}(z)$.\
-  Also, the pressure equilibrium within the clumpy disk implies that the temperature of disk is
+  Also, the thermal pressure equilibrium within the clumpy disk implies that the temperature of disk is
   $\displaystyle T_{\text{ismDisk}}(\bold{x}) =\
   T_{\text{isoDisk}}(z)\rho_{\text{isoDisk}}(z)/\rho_{\text{ismDisk}}(\bold{x})$.
 
@@ -327,6 +319,31 @@ Early attempts to model the Fermi bubbles assumed that the jet is vertial to the
   based on the gradient of mass density.\
   We also restrict the refinement level at 7 within the cold disk so that\
   a molecular cloud can be adequately resolved by approximately 30 cells along their diameter, 20 pc.
+
+  \Cref{fig__zoom-in-disk} shows a close-up view of the\
+  pressure, temperature, and number density slices
+  in the y-z plane through the center of the disk.
+
+  \Cref{fig__numberDensityHistogram} plots the volume filling factor as a function of\
+  initial number density within the disk without jet source.\
+
+  \begin{figure}
+      \includegraphics[width=\columnwidth]{figures/fig__numberDensityHistogram.png}
+    \caption{The volume filling factor as a function of\
+             initial number density within the disk without jet source.\
+             The regions covered by vertical bands represent the allowable number densities \citep{peak-ism-density} for\
+             hot ionized, warm neutral (WNM), warm ionized (WIM), cold nuetral mediums (CNM), and molecular clouds.}
+      \label{fig__numberDensityHistogram}
+  \end{figure}
+
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{figures/fig__zoom-in-disk.png}
+    \caption{Close-up view of the\
+             pressure (top), temperature (middle), and number density (bottom) slices\
+             in the y-z plane through the center of the disk.
+             }
+    \label{fig__zoom-in-disk}
+  \end{figure}
 
 \begin{table*}[t]
 \raggedright
@@ -372,7 +389,7 @@ $\beta$                               & Power law index                         
 \subsection{Inclined jet injection}
   Early observation \citep{Gallimore2006} has proposed that\
   there is a lack of preferred orientation of jets with respect to the plane of the disc.\
-  There are a number of galaxies in which the jets are inclined to the disc normal\
+  A number of galaxies in which the jets are inclined to the disc normal\
   (e.g. NGC 3079, \citealt{Cecil2001}; NGC 1052, \citealt{Dopita2015}),\
   including galaxies in which the jets lie in the plane of the disc (e.g. IC 5063, \citealt{Morganti2015}).
 
