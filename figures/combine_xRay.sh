@@ -1,5 +1,8 @@
-convert fig__x-ray-profile-0.8keV-000.png -resize 1334x fig__x-ray-profile-0.8keV-000-resize.png
+convert fig__xray_0.8keV_observed.png -resize 1100x fig__xray_0.8keV_observed-resize.png
 
-convert -trim fig__xray_0.8keV_angle_000.png fig__x-ray-profile-0.8keV-000-resize.png -smush 10 fig__xRay.png
+convert -size 1320x1200 \
+        -page 0x0 fig__xray_0.8keV_observed-resize.png  \
+        -page 50x50 fig__xray_0.8keV_angle_000.png  \
+        -layers flatten  fig__xRayMap.png
 
-rm fig__x-ray-profile-0.8keV-000-resize.png
+rm fig__xray_0.8keV_observed-resize.png
