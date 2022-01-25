@@ -111,6 +111,11 @@ Morganti R.,  Oosterloo T.,  Oonk J. B.~R.,  Frieswijk W.,   Tadhunter C.,
   2015, \mn@doi [Astronomy {\&} Astrophysics] {10.1051/0004-6361/201525860},
   580, A1
 
+\bibitem[\protect\citeauthoryear{Narayanan \& Slatyer}{Narayanan \&
+  Slatyer}{2017}]{Narayanan2017}
+Narayanan S.~A.,  Slatyer T.~R.,  2017, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1093/mnras/stx577}, 468, 3051
+
 \bibitem[\protect\citeauthoryear{Porter, J{\'{o}}hannesson  \&
   Moskalenko}{Porter et~al.}{2017}]{Porter2017}
 Porter T.~A.,  J{\'{o}}hannesson G.,   Moskalenko I.~V.,  2017, \mn@doi [The
@@ -120,6 +125,11 @@ Porter T.~A.,  J{\'{o}}hannesson G.,   Moskalenko I.~V.,  2017, \mn@doi [The
   et~al.}{2020}]{Predehl2020}
 Predehl P.,  et~al., 2020, \mn@doi [Nature] {10.1038/s41586-020-2979-0}, 588,
   227
+
+\bibitem[\protect\citeauthoryear{Predehl et~al.,}{Predehl
+  et~al.}{2021}]{Predehl2021}
+Predehl P.,  et~al., 2021, \mn@doi [Astronomy {\&} Astrophysics]
+  {10.1051/0004-6361/202039313}, 647, A1
 
 \bibitem[\protect\citeauthoryear{Schive, Tsai  \& Chiueh}{Schive
   et~al.}{2010}]{gamer-1}
@@ -136,6 +146,11 @@ Schive H.-Y.,  ZuHone J.~A.,  Goldbaum N.~J.,  Turk M.~J.,  Gaspari M.,   Cheng
   et~al.}{2015}]{Selig2015}
 Selig M.,  Vacca V.,  Oppermann N.,   En{\ss}lin T.~A.,  2015, \mn@doi
   [Astronomy {\&} Astrophysics] {10.1051/0004-6361/201425172}, 581, A126
+
+\bibitem[\protect\citeauthoryear{Su \& Finkbeiner}{Su \&
+  Finkbeiner}{2012}]{Su2012}
+Su M.,  Finkbeiner D.~P.,  2012, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637x/753/1/61}, 753, 61
 
 \bibitem[\protect\citeauthoryear{Synge}{Synge}{1957}]{Synge}
 Synge J.~L.,  1957, North-Holland Pub. Co.; Interscience Publishers
