@@ -17,6 +17,11 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
+\bibitem[\protect\citeauthoryear{Ackermann et~al.,}{Ackermann
+  et~al.}{2014}]{Ackermann2014}
+Ackermann M.,  et~al., 2014, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637x/793/1/64}, 793, 64
+
 \bibitem[\protect\citeauthoryear{{Arnaud}}{{Arnaud}}{1996}]{XSPEC}
 {Arnaud} K.~A.,  1996, in {Jacoby} G.~H.,  {Barnes} J.,  eds,  Astronomical
   Society of the Pacific Conference Series Vol. 101, Astronomical Data Analysis
