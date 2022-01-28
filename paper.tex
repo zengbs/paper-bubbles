@@ -294,6 +294,24 @@ Early attempts to model the Fermi bubbles assumed that the jet is vertial to the
 
 
 
+  To quantify the synchrotron radiation as a function of position, it\
+  is essential to start the simulation with a more realistic magnetic\
+  field distribution. To this end, for our fixed magnetic field we adopt\
+  the default exponential model in \textsc{galprop} \citep{Strong2007}
+  which has the following spatial dependence:\
+
+  \begin{equation}
+     |\mathbf{B}(R, z)|=B_{0}\exp{-z/z_{0}}\exp{-R/R_{0}},
+  \end{equation}
+
+
+  where $R=\sqrt{x^{2}+y^{2}}$, $B_{0}$ is the average field strength at the GC\
+  and $z_{0}$ and $R_{0}$ are the characteristic scales in the vertical and radial\
+  directions, respectively. We adopt $z_{0} = 2$ kpc and $R_{0} = 10$ kpc, which\
+  are best-fitting values in the \textsc{galprop} model to reproduce the\
+  observed large-scale 408 MHz synchrotron radiation in the Galaxy.\
+  We choose $B_{0} = 50$ $\mu$G based on the observed field strength at the\
+  GC \citep{Crocker2010}.
 
    % The dispersion:
    %   2010-Comparing the statistics of interstellar turbulence in simulations and observations
@@ -521,7 +539,7 @@ follows out to a radius of 250 kpc the observed density profile of \citep{temper
 In the leptonic scenario, the gamma-rays originate from IC scattering of the ISRF by CRe.\
 The CRe spectrum follows a power law distribution\
 with a spectral index $p=2.4$ and ranges from\
-$m_{\text{e}}c^2$ ($0.5$ MeV) to $1.1\times10^{6}m_{\text{e}}c^2$ ($0.55$ TeV).\
+$m_{\text{e}}c^2$ ($0.5$ MeV) to $1.1\times10^{6}m_{\text{e}}c^2$ ($550$ GeV).\
 
 
 The emissivity of the upscattered photons at the energy $\epsilon_{1}$ is given by\
@@ -589,10 +607,10 @@ I = \frac{1}{\epsilon_{1}}\int \frac{dE}{dtd\epsilon_{1}dV} dl.
 \begin{figure}
   \includegraphics[width=\linewidth]{figures/fig__spectrum.png}
   \caption{
-      Simulated gamma-ray spectra (top) of the Fermi bubbles calculated for a longitude range of\
+      Simulated gamma-ray spectra (colored lines in top panel) of the Fermi bubbles calculated for a longitude range of\
       $|l|<10^{\circ}$ for different latitude bins.\
       The gray band represents the observational data of \citet{Ackermann2014}.\
-      Microwave spectra (bottom) averaged over $|l|<10^{\circ}$, $20^{\circ}<|b|<30^{\circ}$.\
+      Simulated microwave spectra (colored lines in bottom) averaged over $|l|<10^{\circ}$, $20^{\circ}<|b|<30^{\circ}$.\
       The data point represents the \textit{WMAP} data in the 23 GHz K band and the shaded area indicates the range\
       of synchrotron spectral indices allowed for the \textit{WMAP} haze \citep{Dobler_2008}.
   }
