@@ -1,20 +1,15 @@
 1. Explain the jet source parameters
 2. Explain the most inner bubbles ( reverse shock )
 3. Explain the injection time
-4. Making the time serious of close-up view of inner region,
-   and explain (1) the formation of inner bubbles (2) how disk let jet be vertical
-5. Making Gamma-ray spectrum
-6. Random seed and jet angle is little effect
-* The gradient of pressure along z-axis plays an important role to stretch the bubbles.
-* The heavy disk causes the inclined jets to form vertical bubbles.
+4. Predict inner bubbles , emitting OIII or OII spectrum.
+5. How to explain the lifespan of bubbles is too long.
+
+
 * What is the Mach number of the shock ?
   --> First, we assumed a Mach number of the shock of M ≈ 1.5,
       as follows from the Rankine–Hugoniot condition for the temperature increase from about
       0.2 keV outside the bubbles to around 0.3 keV inside.
-* Predict inner bubbles , emitting OIII or OII spectrum.
-* How to explain the lifespan of bubbles is too long.
 
-Rule out the hadronic process.
 How to explain why we assume e\_CR << e\_gas
 
 * Cyan-red map: X-ray (cyan), Gamma-ray (red)
