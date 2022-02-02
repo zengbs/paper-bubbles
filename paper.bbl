@@ -41,10 +41,19 @@ Blitz L.,  Robishaw T.,  2000, ] {10.1086/309457}, 541, 675
 Blumenthal G.~R.,  Gould R.~J.,  1970, \mn@doi [Reviews of Modern Physics]
   {10.1103/revmodphys.42.237}, 42, 237
 
+\bibitem[\protect\citeauthoryear{Carretti et~al.,}{Carretti
+  et~al.}{2013}]{Carretti2013}
+Carretti E.,  et~al., 2013, \mn@doi [Nature] {10.1038/nature11734}, 493, 66
+
 \bibitem[\protect\citeauthoryear{Cecil, Bland-Hawthorn, Veilleux  \&
   Filippenko}{Cecil et~al.}{2001}]{Cecil2001}
 Cecil G.,  Bland-Hawthorn J.,  Veilleux S.,   Filippenko A.~V.,  2001, \mn@doi
   [The Astrophysical Journal] {10.1086/321481}, 555, 338
+
+\bibitem[\protect\citeauthoryear{Crocker \& Aharonian}{Crocker \&
+  Aharonian}{2011}]{PhysRevLett.106.101102}
+Crocker R.~M.,  Aharonian F.,  2011, \mn@doi [Phys. Rev. Lett.]
+  {10.1103/PhysRevLett.106.101102}, 106, 101102
 
 \bibitem[\protect\citeauthoryear{Crocker, Jones, Melia, Ott  \&
   Protheroe}{Crocker et~al.}{2010}]{Crocker2010}
@@ -80,6 +89,11 @@ Gallimore J.~F.,  Axon D.~J.,  O{\textquotesingle}Dea C.~P.,  Baum S.~A.,
 \bibitem[\protect\citeauthoryear{Grcevich \& Putman}{Grcevich \&
   Putman}{2009}]{halo-radius-2}
 Grcevich J.,  Putman M.~E.,  2009, ] {10.1088/0004-637x/696/1/385}, 696, 385
+
+\bibitem[\protect\citeauthoryear{Guo \& Mathews}{Guo \&
+  Mathews}{2012}]{Guo2012}
+Guo F.,  Mathews W.~G.,  2012, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637x/756/2/181}, 756, 181
 
 \bibitem[\protect\citeauthoryear{Johnston, Spergel  \& Hernquist}{Johnston
   et~al.}{1995}]{Johnston1995}
@@ -194,6 +208,11 @@ Valenti E.,  et~al., 2018, \mn@doi [\aaps] {10.1051/0004-6361/201832905}, 616,
   et~al.}{2012}]{Wagner2012}
 Wagner A.~Y.,  Bicknell G.~V.,   Umemura M.,  2012, \mn@doi [The Astrophysical
   Journal] {10.1088/0004-637x/757/2/136}, 757, 136
+
+\bibitem[\protect\citeauthoryear{Yang \& Ruszkowski}{Yang \&
+  Ruszkowski}{2017}]{Yang2017}
+Yang H.-Y.~K.,  Ruszkowski M.,  2017, \mn@doi [The Astrophysical Journal]
+  {10.3847/1538-4357/aa9434}, 850, 2
 
 \bibitem[\protect\citeauthoryear{Yang, Ruszkowski, Ricker, Zweibel  \&
   Lee}{Yang et~al.}{2012}]{Yang2012}
