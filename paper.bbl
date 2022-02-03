@@ -155,6 +155,11 @@ Predehl P.,  et~al., 2020, \mn@doi [Nature] {10.1038/s41586-020-2979-0}, 588,
 Predehl P.,  et~al., 2021, \mn@doi [Astronomy {\&} Astrophysics]
   {10.1051/0004-6361/202039313}, 647, A1
 
+\bibitem[\protect\citeauthoryear{Sarkar, Nath  \& Sharma}{Sarkar
+  et~al.}{2015}]{Sarkar2015}
+Sarkar K.~C.,  Nath B.~B.,   Sharma P.,  2015, \mn@doi [Monthly Notices of the
+  Royal Astronomical Society] {10.1093/mnras/stv1806}, 453, 3828
+
 \bibitem[\protect\citeauthoryear{Schive, Tsai  \& Chiueh}{Schive
   et~al.}{2010}]{gamer-1}
 Schive H.-Y.,  Tsai Y.-C.,   Chiueh T.,  2010, \mn@doi [The Astrophysical
@@ -218,6 +223,10 @@ Yang H.-Y.~K.,  Ruszkowski M.,  2017, \mn@doi [The Astrophysical Journal]
   Lee}{Yang et~al.}{2012}]{Yang2012}
 Yang H.-Y.~K.,  Ruszkowski M.,  Ricker P.~M.,  Zweibel E.,   Lee D.,  2012,
   \mn@doi [The Astrophysical Journal] {10.1088/0004-637x/761/2/185}, 761, 185
+
+\bibitem[\protect\citeauthoryear{Zhang \& Guo}{Zhang \& Guo}{2020}]{Zhang2020}
+Zhang R.,  Guo F.,  2020, \mn@doi [The Astrophysical Journal]
+  {10.3847/1538-4357/ab8bd0}, 894, 117
 
 \makeatother
 \end{thebibliography}
