@@ -159,18 +159,26 @@ A number of galaxies in which the jets are tilted to the disc normal\
 (e.g. NGC 3079, \citealt{Cecil2001}; NGC 1052, \citealt{Dopita2015}),\
 including galaxies in which the jets lie in the plane of the disc (e.g. IC 5063, \citealt{Morganti2015}).
 
-To this end, this work consider a dense thin disk of interstellar medium\
+To this end, this work introduces a dense thin disk of interstellar medium\
 around a jet source, in an attempt to remedy the symmetry problem of the Galactic bubbles.\
+The thin disk contains a reservoir of dense molecular/atomic gas, resulting in\
+
+
+
 
 We perform three-dimensional special relativistic hydrodynamics simulations\
 of the formation of the Galactic bubbles by CR jet injections\
 from the central SMBH in the Galaxy.
 
-This paper is organized as follows. We introduce
-
+This paper is organized as follows.\
+In Section \ref{Methodology}, we describe the numerical techniques and initial conditions employed.\
+We directly compare the morphology of the Galactic bubbles with observation,\
+and also show the simulated gamma-ray and microwave spectra compared with observations\
+in Section \ref{Results}.
+Finally, we summarize our findings in Section \ref{Conclusions}.
 
 \section{Methodology}
-
+\label{Methodology}
   We used the GPU-accelerated special relativistic hydrodynamics AMR code (\textsc{gamer-sr}) developed at the\
   National Taiwan University\
   (Schive et al. \citeyear{gamer-1}, \citeyear{gamer-2}; \citeauthor{tseng2021} \citeyear{tseng2021})\
@@ -489,7 +497,7 @@ $\beta$                               & Power law index                         
 
 
 \section{Results}
-
+\label{Results}
   \begin{figure}
     \includegraphics[width=\columnwidth]{figures/fig__jetI5+ismSeed3-45deg_no-disk-stratified-ambient-Pres-Dens-Temp.png}
     \caption{
@@ -667,7 +675,9 @@ I = \frac{1}{\epsilon_{1}}\int \frac{dE}{dtd\epsilon_{1}dV} dl.
 
 
 
-\section{conclusions}
+\section{Conclusions}
+\label{Conclusions}
+
 
 \section*{Data Availability}
 The data underlying this article are available in the article and in its online supplementary material.
