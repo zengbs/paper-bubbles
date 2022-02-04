@@ -154,12 +154,12 @@ Early attempts \citep{Sarkar2015,Yang2017,Zhang2020}\
 to model the symmetric Fermi and eROSITA bubbles (collectively we call the Galactic bubbles)\
 assumed that the jet is vertical to the Galactic plane. However,\
 observation \citep{Gallimore2006} has proposed that\
-there is a lack of preferred orientation of jets with respect to the plane of the disc.\
+there is a lack of preferred orientation of jets with respect to a disc normal.\
 A number of galaxies in which the jets are tilted to the disc normal\
 (e.g. NGC 3079, \citealt{Cecil2001}; NGC 1052, \citealt{Dopita2015}),\
 including galaxies in which the jets lie in the plane of the disc (e.g. IC 5063, \citealt{Morganti2015}).
 
-To this end, this work introduces a dense thin disk of interstellar medium\
+To this end, this work introduces a dense thin disc of interstellar medium\
 around a jet source to deflects and decelerates the jets,\
 in an attempt to remedy the symmetry problem of the Galactic bubbles.\
 
@@ -209,7 +209,7 @@ Finally, we summarize our findings in Section \ref{Conclusions}.
   as a function of $\mathbf{r}$ and $t$.\
 
   Since the relativistic fluid ejected by the jet source\
-  is quickly stalled off and slowed down by a dense ISM disk in a short time,\
+  is quickly stalled off and slowed down by a dense ISM disc in a short time,\
   and the relativistic fluid\
   accounts for a little minority of total mass inside the simulation box,\
   we still use the Newtonian gravity to attack this problem.
@@ -279,36 +279,36 @@ Finally, we summarize our findings in Section \ref{Conclusions}.
   is a plane-parallel dark logarithmic halo potential.
 
   With the help of the isothermal and hydrostatic equilibrium conditions,\
-  and assuming the interfaces between isothermal disk and atmosphere are in thermal pressure equilibrium,\
+  and assuming the interfaces between isothermal disc and atmosphere are in thermal pressure equilibrium,\
   we can write the steady-state gaseous density distributions,\
-  confined in the total potential, of the disk and the Galactic atmosphere as\
+  confined in the total potential, of the disc and the Galactic atmosphere as\
   \begin{subequations}
   \begin{align}
      \displaystyle \rho_{\text{isoDisk}}(z) = \rho_{\text{isoDisk}}^{\text{peak}}
-     \exp\left[-\frac{\Phi_{\text{total}}(z)}{k_{B}T_{\text{isoDisk}}/m_{\text{p}}}\right]&\label{isothermal-disk-density}\\
+     \exp\left[-\frac{\Phi_{\text{total}}(z)}{k_{B}T_{\text{isoDisk}}/m_{\text{p}}}\right]&\label{isothermal-disc-density}\\
      \text{, if $|z| < z_{0}$}& \nonumber \\
      \nonumber\\
      \displaystyle \rho_{\text{atmp}}(z) = \rho_{\text{atmp}}^{\text{peak}}
      \exp\left[-\frac{\Phi_{\text{total}}(z)}{k_{B}T_{\text{atmp}}/m_{\text{p}}}\right]&\label{isothermal-atmp-density}\\
      \text{, otherwise,}& \nonumber
   \end{align}
-  \label{disk-atm-sys}
+  \label{disc-atm-sys}
   \end{subequations}
   where $m_{\text{p}}$ is the proton mass,\
-  $T_{\text{isoDisk}}$ and $T_{\text{atmp}}$ is the temperature of the isothermal disk and atmosphere,\
+  $T_{\text{isoDisk}}$ and $T_{\text{atmp}}$ is the temperature of the isothermal disc and atmosphere,\
   $\rho_{\text{isoDisk}}^{\text{peak}}$ and $\rho_{\text{atmp}}^{\text{peak}}$ is the peak mass density\
-  of the disk and atmosphere on the mid-plane $z=0$.
+  of the disc and atmosphere on the mid-plane $z=0$.
 
   We tabulate parameters in the first four\
   categories of \Cref{table-parameters},\
   except for $\rho_{\text{atmp}}^{\text{peak}}$ that\
   can be derived from the other known parameters and thermal pressure equilibrium condition\
-  on the interfaces $(z=\pm z_{0})$ between the disk and atmosphere.\
+  on the interfaces $(z=\pm z_{0})$ between the disc and atmosphere.\
 
-  The density profile of \Cref{disk-atm-sys} is shown in \Cref{fig__initial-density-profile}.\
+  The density profile of \Cref{disc-atm-sys} is shown in \Cref{fig__initial-density-profile}.\
   Beyond the core radius ($\sim 2 \text{ kpc}$) the gaseous density decreases rapidly as a power-law.
 
-%  The density profile of \Cref{disk-atm-sys} is shown in \Cref{fig__initial-density-profile}\
+%  The density profile of \Cref{disc-atm-sys} is shown in \Cref{fig__initial-density-profile}\
 %  and compared to the observed result \citep{Miller_2013} beyond 1 kpc.\
 %
 %  Note that there is an difficulty in disentangling the contribution\
@@ -319,10 +319,10 @@ Finally, we summarize our findings in Section \ref{Conclusions}.
 
   \begin{figure}
     \includegraphics[width=\columnwidth]{figures/fig__initial-density-profile.png}
-    \caption{The density profile of the isothermal disk (red pluses) and\
+    \caption{The density profile of the isothermal disc (red pluses) and\
              atmosphere (blue crosses) along the positive z-axis.\
              The density distribution is derived from hydrostatic equilibrium,\
-             the interface ($z=0.1$) between the isothermal disk\
+             the interface ($z=0.1$) between the isothermal disc\
              and the atmosphere is pressure balanced.}
     \label{fig__initial-density-profile}
   \end{figure}
@@ -355,7 +355,7 @@ Finally, we summarize our findings in Section \ref{Conclusions}.
 
   \subsection{The Clumpy Multiphase Interstellar Medium}
 
-  A crucial component in our work is the clumpy ISM disk initialized by\
+  A crucial component in our work is the clumpy ISM disc initialized by\
   the publicly available pyFC code
   \footnote{\url{https://pypi.python.org/pypi/pyFC}}.\
 
@@ -370,56 +370,56 @@ Finally, we summarize our findings in Section \ref{Conclusions}.
   where $\hat{f}(\bold{k})$ is the Fourier transform of $f(\bold{x})$.\
   The spectrum $D(\bold{k})$ in the Fourier space is characterized by the power law index $\beta=5/3$,\
   the Nyquist limit $k_{\text{max}}$, and the lower cutoff wave number $k_{\text{min}}$.
-  $k_{\text{max}}$ is one-half of the spatial resolution within disk,\
+  $k_{\text{max}}$ is one-half of the spatial resolution within disc,\
   and $k_{\text{min}}$ is 375.0, corresponding to the maximum size of an individual clump $\sim 20$ pc.\
   \citet{LA2002} and \citet{Wagner2012} have outlined a detailed procedure\
   for constructing a clumpy scalar field, and we do not repeat here.
 
-  The density of clumpy disk can thus be obtained by taking the scalar products of\
-  $f(\bold{x})$ with $\rho_{\text{isoDisk}}(z)$ over all cells within the disk, i.e.,\
+  The density of clumpy disc can thus be obtained by taking the scalar products of\
+  $f(\bold{x})$ with $\rho_{\text{isoDisk}}(z)$ over all cells within the disc, i.e.,\
   $\displaystyle\rho_{\text{ismDisk}}(\bold{x}) =\
   f(\bold{x}) \rho_{\text{isoDisk}}(z)$.\
-  Also, the thermal pressure equilibrium within the clumpy disk implies that the temperature of disk is
+  Also, the thermal pressure equilibrium within the clumpy disc implies that the temperature of disc is
   $\displaystyle T_{\text{ismDisk}}(\bold{x}) =\
   T_{\text{isoDisk}}(z)\rho_{\text{isoDisk}}(z)/\rho_{\text{ismDisk}}(\bold{x})$.
 
 
-  \Cref{table-parameters} summarize the parameters of the clumpy disk and their references.
+  \Cref{table-parameters} summarize the parameters of the clumpy disc and their references.
 
   On the basis of this setup, we cover the AMR base level with\
   $16\times16\times32$ root cells, refined progressively on the mid-plane $z=0$\
   based on the gradient of mass density.\
-  We also restrict the refinement level at 7 within the cold disk so that\
+  We also restrict the refinement level at 7 within the cold disc so that\
   a molecular cloud can be adequately resolved by approximately 30 cells along their diameter, 20 pc.
 
-  \Cref{fig__zoom-in-disk} shows a close-up view of the\
+  \Cref{fig__zoom-in-disc} shows a close-up view of the\
   pressure, temperature, and number density slices
-  in the y-z plane through the center of the disk.
+  in the y-z plane through the center of the disc.
 
   \Cref{fig__numberDensityHistogram} plots the volume filling factor as a function of\
-  initial number density within the disk without jet source.\
+  initial number density within the disc without jet source.\
 
   \begin{figure}
       \includegraphics[width=\columnwidth]{figures/fig__numberDensityHistogram.png}
     \caption{The volume filling factor as a function of\
-             initial number density within the disk without jet source.\
+             initial number density within the disc without jet source.\
              The vertical bands represent from left to right: the allowable number densities \citep{peak-ism-density} for\
              hot ionized, warm neutral (WNM), warm ionized (WIM), cold nuetral mediums (CNM), and molecular clouds.}
       \label{fig__numberDensityHistogram}
   \end{figure}
 
   \begin{figure}
-    \includegraphics[width=\columnwidth]{figures/fig__zoom-in-disk.png}
+    \includegraphics[width=\columnwidth]{figures/fig__zoom-in-disc.png}
     \caption{Close-up view of the initial\
              pressure (top), temperature (middle), and number density (bottom) slices\
-             in the y-z plane through the center of the disk.
+             in the y-z plane through the center of the disc.
              }
-    \label{fig__zoom-in-disk}
+    \label{fig__zoom-in-disc}
   \end{figure}
 
 \begin{table*}[t]
 \raggedright
-\caption{Parameters of the disk, atmosphere, and gravitational potential in the simulation.}
+\caption{Parameters of the disc, atmosphere, and gravitational potential in the simulation.}
 \label{table-parameters}
 \begin{tabular}{@{}llrc@{}}
 \toprule[1pt]\midrule[0.3pt]
@@ -432,11 +432,11 @@ $v_{\text{halo}}$                     &                                         
 $d_{\text{h}}$                        & Core radius                               & 12 kpc                               & \multicolumn{1}{c}{''}         \\ \hline
 {\bf Atmosphere }                     &                                           &                                      &                                \\
 $T_{\text{\text{atmp}}}$              & Temperature of atmosphere                 & $10^{6}$ K                           & \citep{temperature-MW}         \\ \hline
-{\bf Isothermal disk }                &                                           &                                      &                                \\
-$z_{0}$                               & Scale height of disk                      & 100 pc                               & \citep{peak-ism-density}       \\
-$T_{\text{\text{isoDisk}}}$           & Temperature of disk                       & $10^{3}$ K                           & \multicolumn{1}{c}{''}         \\
-$\rho_{\text{isoDisk}}^{\text{peak}}$ & Peak mass density of disk                 & $10^{-23}$ g$\cdot$cm$^{-3}$         & \multicolumn{1}{c}{''}         \\ \hline
-{\bf Clumpy disk }                    &                                           &                                      &                                \\
+{\bf Isothermal disc }                &                                           &                                      &                                \\
+$z_{0}$                               & Scale height of disc                      & 100 pc                               & \citep{peak-ism-density}       \\
+$T_{\text{\text{isoDisk}}}$           & Temperature of disc                       & $10^{3}$ K                           & \multicolumn{1}{c}{''}         \\
+$\rho_{\text{isoDisk}}^{\text{peak}}$ & Peak mass density of disc                 & $10^{-23}$ g$\cdot$cm$^{-3}$         & \multicolumn{1}{c}{''}         \\ \hline
+{\bf Clumpy disc }                    &                                           &                                      &                                \\
 $\dagger$  $k_{\text{min}}$           & Cutoff wave number                        & 375.0                                & \citep{peak-ism-density}       \\
 $\mu$                                 & Mean of scalar field                      & 1.0                                  &   N/A                          \\
 $\ddag$  $\sigma$                     & Dispersion of scalar field                & 5.0                                  & \citep{Federrath2010}          \\
@@ -454,7 +454,7 @@ $\beta$                               & Power law index                         
 
 
 % In addition to the gravitational interaction, we ignore other interactions between stars and gases.
-% We also ignore the self-gravity of the ISM disk and of the atmosphere.
+% We also ignore the self-gravity of the ISM disc and of the atmosphere.
 % We ignore the centrifugal force of Milky Way rotation acting on the bubbles.
 %
 
@@ -464,7 +464,7 @@ $\beta$                               & Power law index                         
   $45^{\circ}$ with respect to the Galactic plane\
   in order to release the caveat that\
   the jet direction must be perpendicular to the Galactic plane, and in particular to\
-  investigate the effect of the jet-disk misalignment on the symmetry of bubbles.
+  investigate the effect of the jet-disc misalignment on the symmetry of bubbles.
 
 
   A few additional quantities are used to characterize the jets:
@@ -476,9 +476,9 @@ $\beta$                               & Power law index                         
   along the symmetric axis of cylinder.\
   The jet power is thus $3.2\times 10^{42}$ erg/s, resulting in the Eddington ratio 0.008.
 
-  Note that as we inject the jets at the center of the clumpy disk,\
+  Note that as we inject the jets at the center of the clumpy disc,\
   we define the ambient gas density by the peak density of\
-  the isothermal disk on the mid-plane $z=0$ (i.e. $\rho^{\text{peak}}_{\text{isoDisk}}$),\
+  the isothermal disc on the mid-plane $z=0$ (i.e. $\rho^{\text{peak}}_{\text{isoDisk}}$),\
   as opposed to the \textit{clumpy} density around the jet source, to avoid ambiguous definition.
 
 
@@ -499,23 +499,23 @@ $\beta$                               & Power law index                         
 \section{Results}
 \label{Results}
   \begin{figure}
-    \includegraphics[width=\columnwidth]{figures/fig__jetI5+ismSeed3-45deg_no-disk-stratified-ambient-Pres-Dens-Temp.png}
+    \includegraphics[width=\columnwidth]{figures/fig__jetI5+ismSeed3-45deg_no-disc-stratified-ambient-Pres-Dens-Temp.png}
     \caption{
              The pressure (top), temperature (middle), and number density (bottom) slices\
              through a bipolar jet sources injecting along $z=-y$ direction from\
              the origin for a duration of 1.2 Myr under four different cases from left to right.\
              Comparison between the cases with a clumpy (first column from left)\
-             and with a smooth disk (second) in a stratified atmosphere\
-             shows that the initial density distribution of the dense disk has an insignificant effect\
-             on the overall dynamics of bubbles. However, the outer bubbles with the smooth disk\
+             and with a smooth disc (second) in a stratified atmosphere\
+             shows that the initial density distribution of the dense disc has an insignificant effect\
+             on the overall dynamics of bubbles. However, the outer bubbles with the smooth disc\
              in an uniform atmosphere (third) is spherical-shape,\
              suggesting the stratification facilitates the outer bubbles elongation significantly.\
              Also, the first three and the rightmost columns show that the most inner bubbles (dashed box)\
-             can only appear associated with the disk, and without the disk, the outer bubbles will be tilted,
-             indicating the dense disk is crucial for\
+             can only appear associated with the disc, and without the disc, the outer bubbles will be tilted,
+             indicating the dense disc is crucial for\
              the axis-symmetrically outer bubbles and of the most inner bubbles formation.
              }
-    \label{fig__jetI5+ismSeed3-45deg_no-disk-stratified-ambient-Pres-Dens-Temp}
+    \label{fig__jetI5+ismSeed3-45deg_no-disc-stratified-ambient-Pres-Dens-Temp}
   \end{figure}
 
 
@@ -541,7 +541,7 @@ follows out to a radius of 250 kpc the observed density profile of \citep{temper
                in Galactic coordinates centered on the Galactic center and observed by the solar position.\
                The red arrow at the center of the\
                top panel depicts the direction of the bipolar jet, constantly ejecting at an angle of $45^{\circ}$\
-               to the disk normal in 1.2 Myr.]
+               to the disc normal in 1.2 Myr.]
      {
       \includegraphics[width=0.8\linewidth]{figures/fig__xraymap.png}
       \label{fig__xray_0.8keV_angle_000}
