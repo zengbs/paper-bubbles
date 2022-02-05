@@ -521,7 +521,7 @@ $\beta$                               & Power law index                         
   \end{figure}
 
 
-\subsection{X-ray emission}
+\subsection{X-ray}
 
 
 Thermal bremsstrahlung: The X-ray emissivity in an energy range 1.4–1.6 keV is calculated\
@@ -560,7 +560,23 @@ follows out to a radius of 250 kpc the observed density profile of \citep{temper
     \label{fig_xray}
   \end{figure*}
 
-\subsection{Gamma-ray emission}
+\subsection{Microwave haze}
+
+
+  \begin{subequations}
+     \begin{align}
+        &I_{\nu} = \frac{4\pi\mathbb{C}e^{3}B^{0.5(p+1)}}{m_{\text{e}}c^{2}}\
+        \left(\frac{3e}{4\pi m_{\text{e}}c}\right)^{0.5(p-1)}\
+        a(p)\nu^{-0.5(p-1)}.\\
+        &a(p)=\nonumber\\
+             &\frac{2^{0.5(p-1)}\sqrt{3}\Gamma\left[\left(3p-1\right)/12\right]\
+                                        \Gamma\left[\left(3p+9\right)/12\right]\
+                                        \Gamma\left[\left(p+5\right)/4\right]}
+        {8\sqrt{\pi}(p+1)\Gamma\left[\left(p+7\right)/4\right]}
+     \end{align}
+  \end{subequations}
+
+\subsection{Gamma-ray}
 
   \begin{figure}
     \includegraphics[width=\columnwidth]{figures/fig__jetI5+ismSeed3-45deg-CR.png}
@@ -568,7 +584,7 @@ follows out to a radius of 250 kpc the observed density profile of \citep{temper
     \label{fig__jetI5+ismSeed3-45deg-CR}
   \end{figure}
 
-\subsubsection{Leptonic process}
+
 In the leptonic scenario, the gamma-rays originate from IC scattering of the ISRF by CRe.\
 The CRe spectrum follows a power law distribution\
 with a spectral index $p=2.4$ and ranges from\
