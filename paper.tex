@@ -12,7 +12,6 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{floatrow}
-%\usepackage[FIGTOPCAP]{subfigure}
 \usepackage{subfigure}
 \usepackage{float}
 \usepackage{amsmath}
@@ -31,7 +30,8 @@
 \pdfminorversion=5
 
 \newcommand{\MyDiamond}[1][fill=black]{
-\begin{tikzpicture}[x=1.2ex,y=1.2ex,line width=.1ex,line join=round, yshift=0.0ex] \draw  [#1]  (0,.5) -- (.5,1) -- (1,.5) -- (.5,0);
+\begin{tikzpicture}[x=1.2ex,y=1.2ex,line width=.1ex,line join=round, yshift=0.0ex]\
+\draw  [#1]  (0,.5) -- (.5,1) -- (1,.5) -- (.5,0);
 \end{tikzpicture}
 }
 
@@ -183,7 +183,7 @@ Finally, we summarize our findings in Section \ref{Conclusions}.
   We used the GPU-accelerated special relativistic hydrodynamics AMR code (\textsc{gamer-sr}) developed at the\
   National Taiwan University\
   (Schive et al. \citeyear{gamer-1}, \citeyear{gamer-2}; \citeauthor{tseng2021} \citeyear{tseng2021})\
-  to carry out the simulations of the \textit{Fermi} and eROSITA bubbles by CR and relativistic fluid injections from the GC.
+  to carry out the simulations of the Galactic bubbles by CR and relativistic fluid injections from the GC.
 
   The CRs are advected with the thermal gas, and in return the velocities of gas\
   can react to the gradients of the CR pressure via the source term\
