@@ -60,6 +60,10 @@ Crocker R.~M.,  Aharonian F.,  2011, \mn@doi [Phys. Rev. Lett.]
 Crocker R.~M.,  Jones D.~I.,  Melia F.,  Ott J.,   Protheroe R.~J.,  2010,
   \mn@doi [Nature] {10.1038/nature08635}, 463, 65
 
+\bibitem[\protect\citeauthoryear{Dobler}{Dobler}{2012}]{Dobler2012}
+Dobler G.,  2012, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637x/750/1/17}, 750, 17
+
 \bibitem[\protect\citeauthoryear{Dobler \& Finkbeiner}{Dobler \&
   Finkbeiner}{2008}]{Dobler_2008}
 Dobler G.,  Finkbeiner D.~P.,  2008, \mn@doi [The Astrophysical Journal]
@@ -186,6 +190,11 @@ Strong A.~W.,  Moskalenko I.~V.,   Ptuskin V.~S.,  2007, \mn@doi [Annual Review
   Finkbeiner}{2012}]{Su2012}
 Su M.,  Finkbeiner D.~P.,  2012, \mn@doi [The Astrophysical Journal]
   {10.1088/0004-637x/753/1/61}, 753, 61
+
+\bibitem[\protect\citeauthoryear{Su, Slatyer  \& Finkbeiner}{Su
+  et~al.}{2010}]{Su2010}
+Su M.,  Slatyer T.~R.,   Finkbeiner D.~P.,  2010, \mn@doi [The Astrophysical
+  Journal] {10.1088/0004-637x/724/2/1044}, 724, 1044
 
 \bibitem[\protect\citeauthoryear{Synge}{Synge}{1957}]{Synge}
 Synge J.~L.,  1957, North-Holland Pub. Co.; Interscience Publishers
