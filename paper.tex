@@ -608,7 +608,7 @@ and the microwave haze \citep{Dobler_2008}, respectively.\
 The simulated gamma-ray and microwave spectra is based on the\
 IC scattering and synchrotron from CRe, in which\
 the CRe spectrum follows a power-law distribution ranging from\
-$m_{\text{e}}c^2$ ($0.5$ MeV) to $1.1\times10^{6}m_{\text{e}}c^2$ ($550$ GeV),\
+$m_{\text{e}}c^2$ ($0.5$ MeV) to $1.1\times10^{6}m_{\text{e}}c^2$ ($562.1$ GeV),\
 where $m_{\text{e}}c^2$ is the rest mass energy of an electron.
 
 %The microwave haze at 23 GHz was first detected by the \textit{WMAP} \citep{Dobler_2008}\
@@ -634,7 +634,7 @@ to handle the scattering between ultra-relativistic CRe and ISRF:
   &\Gamma=\frac{4\epsilon \gamma}{m_{\text{e}}c^2},\\
   &\gamma_{\text{min}}(\epsilon)=\
    0.5\left(\frac{\epsilon_{1}}{m_{\text{e}}c^2}+\sqrt{\left(\frac{\epsilon_{1}}{m_{\text{e}}c^2}\right)^2+\
-   \frac{\epsilon_{1}}{\epsilon}}\right),
+   \frac{\epsilon_{1}}{\epsilon}}\right) \label{gamma-min},
   \end{align}
 \label{gammaray-emissivity}
 \end{subequations}
@@ -689,9 +689,14 @@ with CRe spectral index $2.2, 2.4$ and $2.6$, respectively.\
 
 
 We find that the simulated gamma-ray\
-spectra for all latitudes exhibit a spectral cutoff at\
-similar energies 400--500 GeV, consistent with\
-the observed cutoff energy.
+spectra for all latitudes exhibit a spectral cutoff around energies 400--500 GeV,\
+consistent with the observed cutoff energy.\
+This is expected since
+the upscattered high-energy photons ($\epsilon_{1}\sim450$ GeV) is mainly from\
+the scatterings between the high-energy CRe ($\gamma\gtrapprox0.8\times10^{6}$) and optical starlight ($\epsilon \sim 10$ eV),\
+and therefore \Cref{gamma-min} can be reduced to $\epsilon_{1}\sim\gamma m_{\text{e}}c^2$\
+in the Klein--Nishina limit $\left(\text{i.e. }\epsilon_{1}\epsilon \gg \left(m_{\text{e}}c^2\right)^2\right)$,\
+implying most of the CRe energy (562.1 GeV) is carried away by the upscattered photons ( $\sim$ 450 GeV ).
 
 \begin{figure*}
   \includegraphics[width=\linewidth]{figures/fig__spectrum.png}
