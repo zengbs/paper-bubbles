@@ -1,7 +1,7 @@
 1. Explain the jet source parameters
 2. Explain the most inner bubbles ( reverse shock )
 3. Explain the injection time
-4. Predict inner bubbles , emitting OIII or OII spectrum.
+4. Predict inner bubbles, emitting OIII or OII spectrum.
 5. How to explain the lifespan of bubbles is too long.
 
 
@@ -9,8 +9,3 @@
   --> First, we assumed a Mach number of the shock of M ≈ 1.5,
       as follows from the Rankine–Hugoniot condition for the temperature increase from about
       0.2 keV outside the bubbles to around 0.3 keV inside.
-
-How to explain why we assume e\_CR << e\_gas
-
-* Cyan-red map: X-ray (cyan), Gamma-ray (red)
-* Blue-yellow map: Close-up view of inner bubbles, pressure (blue), density (yellow)
