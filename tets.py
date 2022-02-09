@@ -16,8 +16,8 @@ random_state(1234)
 #Init models (make sure you init ONLY once if you integrate this to your code)
 parrot = Parrot(model_tag="prithivida/parrot_paraphraser_on_T5")
 
-phrases = ["Can you recommed some upscale restaurants in Newyork?",
-           "What are the famous places we should not miss in Russia?"
+phrases = [
+"as previously suggested by him"
 ]
 
 for phrase in phrases:
