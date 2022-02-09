@@ -548,7 +548,7 @@ $\beta$                               & Power law index                         
 
   \subsection{X-ray}
   \label{X-ray}
-  The X-ray emissivity in an energy range 0.6 -- 1.0 keV is computed\
+  The X-ray emissivity is computed\
   for each computational volume cell
   using the MEKAL model \citep{Xray-1,Xray-2,Xray-3}\
   implemented in the utility XSPEC \citep{XSPEC}, assuming solar metallicity.\
@@ -568,10 +568,20 @@ $\beta$                               & Power law index                         
   follows out to a radius of 250 kpc the observed density profile of \citep{temperature-MW}.
 
   \Cref{fig__xray_0.8keV_angle_000} shows\
-  the simulated photon count rate (top)\
-  in the 0.6--1.0 keV range at the present time,\
-  overlaid with the red arrow representing the direction of the bipolar jet,\
-  compared with the observed count rate (bottom) in the same energy bin.
+  the comparison between simulated (top) and observed (bottom) all-sky map\
+  in the range 0.6 -- 1.0 keV at the present time.\
+  In the simulated map, the red arrow at the center of map represents the direction of the bipolar jet,\
+  constantly ejecting at an angle of $45\circ$ to the disc normal in 1.2 Myr.
+
+% 1. The boundary of eROSITA bubbles is a shock
+% 2. North Polar Spur is not shown as it is a supernova remanent near us.
+% 3. Why the innermost bubbles does not appear?
+  The innermost bubbles, even though high density, is invisible in the simulated X-ray map as\
+  the temperature of innermost bubbles is around $1$ -- $10$ eV\
+  (see the temperature slice in \Cref{fig__jetI5+ismSeed3-45deg_no-disc-stratified-ambient-Pres-Dens-Temp}).\
+  Consequently, the X-ray emission within the innermost bubbles
+  is severely suppressed by the cutoff $\exp\left[-h\nu/k_{B}T\right]$ in thermal Bremsstrahlung emissivity.
+
 
   \begin{figure*}
     \subfigure[Simulated (top) and observed (bottom; \citealt{Predehl2020}) count rate\
@@ -698,7 +708,7 @@ nearly latitude independent, and characterized by a broad bump that roughly peak
 However, the high-latitude spectrum tends to be slightly dimmer than low-latitude\
 probably because the optical intensity in ISRF decays with increasing latitude.
 
-Third, the gamma-ray spectra for all latitudes indicate a spectral cutoff around energies 400--500 GeV,\
+Third, the gamma-ray spectra for all latitudes indicate a spectral cutoff around energies 400 -- 500 GeV,\
 consistent with the observed cutoff energy.\
 This is expected since
 the upscattered high-energy photons ($\epsilon_{1}\sim450$ GeV) mainly arise from\
