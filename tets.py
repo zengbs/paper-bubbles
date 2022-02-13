@@ -17,7 +17,7 @@ random_state(1234)
 parrot = Parrot(model_tag="prithivida/parrot_paraphraser_on_T5")
 
 phrases = [
-"as previously suggested by him"
+"To this end, this work introduces a thin disk of dense interstellar medium around the jet source to deflect and decelerate the tilted jet in an attempt to resolve the galactic bubble's symmetry."
 ]
 
 for phrase in phrases:

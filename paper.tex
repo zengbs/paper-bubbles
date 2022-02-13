@@ -154,14 +154,15 @@ Early attempts \citep{Sarkar2015,Yang2017,Zhang2020}\
 to model the symmetric \textit{Fermi} and eROSITA bubbles (collectively we call the Galactic bubbles)\
 assumed that the jet is vertical to the Galactic plane. However,\
 observation \citep{Gallimore2006} has proposed that\
-there is a lack of preferred orientation of jets with respect to a disc normal.\
+there is a lack of preferred orientation of jets with respect to\
+the rotation axis of a galatic plane (disc normal, hereafter).\
 In contrast, a number of galaxies in which the jets are tilted to the disc normal\
 (e.g. NGC 3079, \citealt{Cecil2001}; NGC 1052, \citealt{Dopita2015}),\
 including galaxies in which the jets lie in the plane of the disc (e.g. IC 5063, \citealt{Morganti2015}).
 
 To this end, this work introduces a dense thin disc of interstellar medium\
 around a jet source to deflects and decelerates the inclined jets,\
-in an attempt to remedy the symmetry problem of the Galactic bubbles.\
+in an attempt to resolve the symmetry problem of the Galactic bubbles.\
 
 The main purpose of this study is to use three-dimensional\
 special relativistic hydrodynamics simulations\
@@ -490,6 +491,9 @@ $\beta$                               & Power law index                         
   allowing the total ejected energy $1.2\times10^{56}$ erg is between\
   $8\times10^{55}$ -- $1.3\times10^{56}$ erg, estimated by \citet{Predehl2020}.\
 
+  %, and prevent the disk from destruction by .
+  % ablate
+
 
   The diameter and height of cylindrical source are 4 pc, leading to the source volume $\sim 50 \text{ pc}^{3}$ is\
   much smaller than that of an individual clump by a factor of about 83.\
@@ -505,7 +509,7 @@ $\beta$                               & Power law index                         
 
 \subsection{Morphology}
 
- \Cref{fig__jetI5+ismSeed3-45deg_no-disc-stratified-ambient-Pres-Dens-Temp} shows\
+ \Cref{fig__jetI5+ismSeed3-45deg} shows\
  the slices of pressure (top), temperature (middile), number density (bottom)\
  at the end of simulation $t=12.39$ Myr.\
  The slices pass through the bipolar jet source injecting along $z=-y$ direction\
@@ -527,7 +531,7 @@ $\beta$                               & Power law index                         
  % the forward shock
 
   \begin{figure}
-    \includegraphics[width=\columnwidth]{figures/fig__jetI5+ismSeed3-45deg_no-disc-stratified-ambient-Pres-Dens-Temp.png}
+    \includegraphics[width=\columnwidth]{figures/fig__jetI5+ismSeed3-45deg.png}
     \caption{
              The slices of pressure (top), temperature (middle), and number density (bottom)\
              at the end of simulation $t=12.39$ Myr.\
@@ -545,7 +549,7 @@ $\beta$                               & Power law index                         
              indicating the dense disc is crucial for\
              the symmetry of the Galactic bubbles and for the innermost bubbles formation.
              }
-    \label{fig__jetI5+ismSeed3-45deg_no-disc-stratified-ambient-Pres-Dens-Temp}
+    \label{fig__jetI5+ismSeed3-45deg}
   \end{figure}
 
 
@@ -581,26 +585,26 @@ $\beta$                               & Power law index                         
   cut at various galactic latitudes (as labelled), compared with the observation (black).\
   \Cref{fig_xray-map} is quite revealing in several ways.\
 
-  First, the broad agreement between simulated and observed X-ray maps hint that\
+  First, the broad agreement between simulated and observed X-ray maps hints that\
   the full vertical extent of the eROSITA bubbles can be properly formed by an inclined jet within a thin disk\
   of dense interstellar medium.\
 
 
-  Second, as shown in \Cref{fig__jetI5+ismSeed3-45deg_no-disc-stratified-ambient-Pres-Dens-Temp},\
+  Second, as shown in \Cref{fig__jetI5+ismSeed3-45deg},\
   the half-width of the outermost bubbles is around 7 kpc,\
   corresponding to an half angular width $\sin^{-1}(7 \text{ kpc}/R_{\odot})\sim122^{\circ}$,\
   which is as wide as the eROSITA bubbles in the simulated X-ray map (top panel in \Cref{fig__xray_0.8keV_angle_000}).\
-  We therefore suggest that the nature of eROSITA bubbles is indeed a forward shock\
-  propagating through the halo gas, as previously proposed by \citet{Predehl2020}.
-
+  We therefore suggest that the nature of eROSITA bubbles is indeed a forward shocks\
+  that have been driven into the northern and the southern Galactic halo,
+  as previously proposed by \citet{Predehl2020}.
 
 
 % 2. North Polar Spur is not shown as it is a supernova remanent near us.
   Third, the innermost bubbles\
-  shown in \Cref{fig__jetI5+ismSeed3-45deg_no-disc-stratified-ambient-Pres-Dens-Temp},\
+  shown in \Cref{fig__jetI5+ismSeed3-45deg},\
   even though with high column density, is invisible in the simulated X-ray map as\
   the temperature of innermost bubbles is around $1$ -- $10$ eV\
-  (see the temperature slice in \Cref{fig__jetI5+ismSeed3-45deg_no-disc-stratified-ambient-Pres-Dens-Temp}).\
+  (see the temperature slice in \Cref{fig__jetI5+ismSeed3-45deg}).\
   Consequently, the X-ray emission within the innermost bubbles
   is severely suppressed by the cutoff $\exp\left[-h\nu/k_{B}T\right]$ in the thermal Bremsstrahlung emissivity.\
   This is the reason why the innermost bubbles is unseen in the observation.
@@ -857,6 +861,52 @@ can also be realized by tilted jets as the eROSITA bubbles.\
 
 \section{Conclusions}
 \label{Conclusions}
+The symmetry of the Galactic bubbles is worth exploring since observations\
+show that there is no preference for the orientation of AGN jets relative to\
+the rotation axis of a galactic plane.
+
+
+In this work, we introduce a thin, dense disk composed of interstellar medium\
+to divert the inclined jet at an angle $45^{\circ}$\
+to the disk normal in the past energetic event of the central SMBH.
+
+The jet
+
+
+Also, We investigate the properties of the Galactic bubbles and the microwave\
+haze using 3D special relativistic hydrodynamic simulations of CR injection from\
+the SMBH assuming the leptonic model.
+
+
+Our findings are as follows.
+
+\begin{itemize}
+
+\item The Galactic bubbles are nearly symmetric about the Galactic plane even the jet is at an angle $45^{\circ}$\
+      with respect to the disc normal.
+\item The randomness of clumpy disk has a insignificant impact on the overall dynamic of the Galactic bubbles.\
+      The ambient stratification facilitates the eROSITA bubbles elongation significantly.
+      The development of the inverse shocks are always associated with the dense disc.
+\item The edge of the eROSITA bubbles is a forward shock,\
+      originally driven by an inclined bipolar jets that emanated from the GC 12.39 million years ago,\
+      and stretched by stratified ambient subsequently.
+\item The nature of the \textit{Fermi} bubbles are essentially a turbulent flows\
+      that can stochastically accelerate CRe. Associated with
+      contact discontinuity\
+\item
+
+\end{itemize}
+
+
+
+Over the past few years, there have been numerous efforts,\
+both observational and theoretical, to uncover the nature of the Galactic bubbles.
+
+
+Spektr-RG \citep{Sunyaev2021} and eROSITA \citep{Predehl2021}
+
+
+
 We have found qualitative similarities between the results our simulations\
 and the observed spectrum and morphological structure of the Galactic bubbles.
 
