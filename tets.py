@@ -17,7 +17,7 @@ random_state(1234)
 parrot = Parrot(model_tag="prithivida/parrot_paraphraser_on_T5")
 
 phrases = [
-"To this end, this work introduces a thin disk of dense interstellar medium around the jet source to deflect and decelerate the tilted jet in an attempt to resolve the galactic bubble's symmetry."
+"The same leptotonic CRe can simultaneously account for the Fermi bubbles and haze emission suggested that the magnetic fields within the bubbles are close to the exponentially distributed Galactic magnetic field. Moreover, the fact that the bubbles are symmetric across the Galactic plane and also centered on the GC endorsing the assumption that the bubbles, and the associated gamma-ray emissions, have their origin at the GC."
 ]
 
 for phrase in phrases:
