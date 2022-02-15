@@ -118,6 +118,11 @@ Jones F.~C.,  1968, \mn@doi [Physical Review] {10.1103/physrev.167.1159}, 167,
 {Kaastra} J.~S.,  {Mewe} R.,  1993, \aaps, \href
   {https://ui.adsabs.harvard.edu/abs/1993A&AS...97..443K} {97, 443}
 
+\bibitem[\protect\citeauthoryear{Kataoka, Sofue, Inoue, Akita, Nakashima  \&
+  Totani}{Kataoka et~al.}{2018}]{Kataoka2018}
+Kataoka J.,  Sofue Y.,  Inoue Y.,  Akita M.,  Nakashima S.,   Totani T.,  2018,
+  \mn@doi [Galaxies] {10.3390/galaxies6010027}, 6, 27
+
 \bibitem[\protect\citeauthoryear{Lewis \& Austin}{Lewis \&
   Austin}{2002}]{LA2002}
 Lewis G.~M.,  Austin P.~H.,  2002, 1th Conference on AtmosphericRadiation
@@ -137,6 +142,11 @@ Lewis G.~M.,  Austin P.~H.,  2002, 1th Conference on AtmosphericRadiation
 {Mewe} R.,  {Gronenschild} E.~H.~B.~M.,   {van den Oord} G.~H.~J.,  1985,
   \aaps, \href {https://ui.adsabs.harvard.edu/abs/1985A&AS...62..197M} {62,
   197}
+
+\bibitem[\protect\citeauthoryear{Miller \& Bregman}{Miller \&
+  Bregman}{2016}]{Miller2016}
+Miller M.~J.,  Bregman J.~N.,  2016, \mn@doi [The Astrophysical Journal]
+  {10.3847/0004-637x/829/1/9}, 829, 9
 
 \bibitem[\protect\citeauthoryear{Morganti, Oosterloo, Oonk, Frieswijk  \&
   Tadhunter}{Morganti et~al.}{2015}]{Morganti2015}
