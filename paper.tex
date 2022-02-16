@@ -631,16 +631,18 @@ $\beta$                               & Power law index                         
   in order to facilitate a reliable interpretation of simulated all-sky map,\
   and also that the observed X-ray emission is contributed by all the gas in the Milky Way halo,\
   which likely extends to a radius of $\sim$250 kpc \citep{halo-radius-1,halo-radius-2},\
-  much bigger than our simulation box. Therefore, we first compute the X-ray emissivity\
+  much bigger than our simulation box.
+
+  We first compute the X-ray emissivity\
   from the simulated gas within a radius of 25 kpc away from the GC.
   Then, beyond 25 kpc the gas is assumed to be isothermal with $T=10^6$ K and\
   follows out to a radius of 250 kpc the observed density profile of \citep{temperature-MW}.
 
   \Cref{fig__xray_0.8keV_angle_000} shows\
   the comparison between simulated (top) and observed (bottom) all-sky map\
-  in the range 0.6 -- 1.0 keV at the present time.\
+  in the range 0.6 -- 1.0 keV at 12.39 Myr and the present time, respectively.\
   In the simulated map, the red arrow at the center of map represents the direction of the bipolar jet,\
-  constantly ejecting at an angle of $45^{\circ}$ to the disc normal in 1.2 Myr.
+  constantly ejecting at an angle of $45^{\circ}$ to the disc normal between 0 -- 1.2 Myr.
 
   \Cref{fig__x-ray-profile-0.8keV-000} displays the simulated count rate profiles (red)\
   in the same energy band as \Cref{fig__xray_0.8keV_angle_000}\
@@ -666,7 +668,7 @@ $\beta$                               & Power law index                         
   shown in \Cref{fig__jetI5+ismSeed3-45deg},\
   even though with high column density, is invisible in the simulated X-ray map as\
   the temperature of innermost bubbles is around $1$ -- $10$ eV\
-  (see the temperature slice in \Cref{fig__jetI5+ismSeed3-45deg}).\
+  (see the temperature profile in \Cref{fig__profile}).\
   Consequently, the X-ray emission within the innermost bubbles
   is severely suppressed by the cutoff $\exp\left[-h\nu/k_{B}T\right]$ in the thermal Bremsstrahlung emissivity.\
   This is the reason why the innermost bubbles is unseen in the observation.
@@ -702,14 +704,13 @@ $\beta$                               & Power law index                         
 
 In this section, we give the constraint on the CRe spectral index by\
 comparing the simulated gamma-ray and microwave spectra\
-with the observed spectra of the Fermi bubbles \citet{Ackermann2014}\
+with the observed spectra of the Fermi bubbles \citep{Ackermann2014}\
 and the microwave haze \citep{Dobler_2008}, respectively.\
 
 The simulated gamma-ray and microwave spectra is based on the\
-IC scattering and synchrotron from CRe, in which\
+IC scattering and synchrotron from CRe, respectively, in which\
 the CRe spectrum follows a power-law distribution ranging from\
-$m_{\text{e}}c^2$ ($0.5$ MeV) to $1.1\times10^{6}m_{\text{e}}c^2$ ($562.1$ GeV),\
-where $m_{\text{e}}c^2$ is the rest mass energy of an electron.
+$0.5$ MeV to $562.1$ GeV.
 
 %The microwave haze at 23 GHz was first detected by the \textit{WMAP} \citep{Dobler_2008}\
 %within the region $|b|<30^{\circ}$ above and below the Galactic plane,\
@@ -740,6 +741,7 @@ to handle the scattering between ultra-relativistic CRe and photons in the ISRF:
 \end{subequations}
 
 where $\sigma_{T}$ is the Thomson cross section, $c$ speed of light,\
+$m_{\text{e}}$ electron mass,\
 $n(\epsilon)$ the energy distribution of the photon number density in ISRF given by \citet{Porter2017},\
 $\gamma$ the Lorentz factor of CRe,\
 $\mathbb{C}$ and $p$ are the normalization constant and spectral index of CRe power-law spectrum.
@@ -784,8 +786,7 @@ and then we average the spectra over all the sight lines within the region on sk
 
 \Cref{fig__gammaRaySynchtronSpectrum} shows the simulated microwave (left)\
 and gamma-ray (right) spectra averaged over the different patches (shown in the legends) of the sky.\
-The row from top to bottom shows the microwave (left) and gamma-ray (right) spectra\
-with CRe spectral index $2.2, 2.4$ and $2.6$, respectively.\
+The row from top to bottom shows the spectra with different CRe spectral index $2.2, 2.4$ and $2.6$.\
 Several points are worth specific comment.\
 
 First, we find that the simulated gamma-ray spectra are well fitted by\
