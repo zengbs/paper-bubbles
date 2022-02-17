@@ -184,7 +184,6 @@ and also present the simulated and observed multiwavelength spectra of\
 the \textit{Fermi} bubbles in Section \ref{sec:gamma-ray-microwave}.\
 Finally, the summary and implications of our findings are given in Section \ref{Conclusions}.
 
-% \ref{X-ray} \ref{sec:gamma-ray-microwave}
 
 \section{Methodology}
 \label{Methodology}
@@ -193,30 +192,31 @@ Finally, the summary and implications of our findings are given in Section \ref{
   (Schive et al. \citeyear{gamer-1}, \citeyear{gamer-2}; \citeauthor{tseng2021} \citeyear{tseng2021})\
   to carry out the simulations of the Galactic bubbles by CR and relativistic fluid injections from the GC.
 
-  The CRs are advected with the thermal gas, and in return the velocities of gas\
-  can react to the gradients of the CR pressure via the source term\
-  containing spatial divergence of fluid velocities.\
-
-  Although the high-energy CRe ($10$--$100$ GeV) plays a crucial role in reproducing the $\gamma$-ray map\
-  within the range of $1$--$100$ GeV, we assume the pressure of CRe is much less than that of gas\
-  throughout the simulation so that we , and the \textit{Fermi} bubbles can be outlined against the eROSITA bubbles.
-
   As stressed by \citet{Yang2012}, CR diffusion has an insignificant effect\
   on the overall morphology of the \textit{Fermi} bubbles,\
-  but only sharpens the edges of the simulated bubbles by the interplay between anisotropic CR diffusion\
-  and magnetic fields with suppressed perpendicular diffusion across the bubble surface. Moreover,\
-  the bubbles should be weak due to adiabatic expansion, and thus the magnetic fields has\
-  a little effect on the overall dynamics. For these two reasons,\
-  we have ignored the CR diffusion and the magnetic field throughout\
-  the simulation.
+  but only sharpens the edges of the simulated bubbles by the interplay between magnetic fields\
+  and anisotropic CR diffusion with suppressed perpendicular diffusion across the bubble surface. Moreover,\
+  the magnetic fields within the \textit{Fermi} bubbles should be weak due to\
+  adiabatic expansion, and thus the fields has\
+  a little effect on the overall dynamics.
 
-  We do not simulate the spectral evolution of the CR, and we neglected the cooling and heating processes of CRs,\
-  such as energy losses due to synchrotron and inverse Compton emission, and reacceleration in shocks/turbulences.\
+  For these two reasons,\
+  we have ignored the CR diffusion and the magnetic field throughout\
+  the simulation.\
+  Also, we do not simulate the spectral evolution of the CR\
+  and assume the CR pressure is much less than the gas pressure over the bubbles formation so that\
+  the contribution of CR pressure gradient to the momentum of the gas can be ignored.
+  In addition, we neglect the cooling and heating processes of CRs,\
+  such as energy losses due to synchrotron and inverse Compton emission,\
+  and CR reacceleration in shocks/turbulences.
 
   In this approach, we treat CRs as a single species without distinction between electrons and protons,\
-  that cannot react to the gas via the application of CRe pressure,\
-  and solve directly for the evolution of CR energy density $e_{\text{cr}}$\
+  and directly evolve the CR energy density $e_{\text{cr}}$\
   as a function of $\mathbf{r}$ and $t$.\
+  The CRs are advected with the thermal gas, and in return the velocities of gas\
+  can react to the gradients of the CR pressure via the source term\
+  containing spatial divergence of fluid velocities.
+
 
   Since the relativistic fluid ejected by the jet source\
   is quickly stalled off and slowed down by a dense ISM disc in a short time,\
@@ -1026,7 +1026,7 @@ emission.
 
 \section{Acknowledgements}
 The authors thank Mateusz Ruszkowski and Ellen G. Zweibel for insightful comments.\
-We thank Peter Predehl for providing the colorbar limits of \Cref{fig__xray_0.8keV_angle_000}.\
+We thank Peter Predehl for providing the range of observed X-ray intensity in \Cref{fig__xray_0.8keV_angle_000}.\
 A part of the simulations are performed and analyzed using computing facilities\
 operated by the national center for High Performance Computing.
 HYKY acknowledge support from\
