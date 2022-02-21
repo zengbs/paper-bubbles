@@ -188,7 +188,7 @@ In contrast, a number of galaxies in which the jets are oblique to the disc norm
 (e.g. NGC 3079, \citealt{Cecil2001}; NGC 1052, \citealt{Dopita2015}),\
 including galaxies in which the jets lie in the plane of the disc (e.g. IC 5063, \citealt{Morganti2015}).
 
-To this end, this work introduces a dense thin disc of ISM\
+To this end, this work introduces a dense, thin disc of ISM\
 around a jet source to deflects and decelerates the oblique jets,\
 in an attempt to resolve the symmetry problem of the Galactic bubbles.\
 
@@ -321,15 +321,15 @@ Finally, the summary and implications of our findings are given in Section \ref{
   $\Phi_{\text{halo}}(z)=v^2_{\text{halo}}\ln\left(z^2+d^2_{\text{h}}\right)$\
   is a plane-parallel dark logarithmic halo potential.
 
-  With the recourse to the isothermal and hydrostatic equilibrium conditions,\
-  and assuming the interfaces between isothermal disc and atmosphere are in thermal pressure equilibrium,\
+  With the help of the isothermal and hydrostatic equilibrium conditions,\
+  and assuming the interfaces between the disc and atmosphere are in thermal pressure equilibrium,\
   we can write the steady-state gaseous density distribution,\
-  confined in the total potential, of the disc and the Galactic atmosphere as\
+  confined in the total potential, of the disc and  Galactic atmosphere as\
   \begin{subequations}
   \begin{align}
      \displaystyle \rho_{\text{isoDisk}}(z) = \rho_{\text{isoDisk}}^{\text{peak}}
      \exp\left[-\frac{\Phi_{\text{total}}(z)}{k_{B}T_{\text{isoDisk}}/m_{\text{p}}}\right]&\label{isothermal-disc-density}\\
-     \text{, if $|z| < z_{0}$}& \nonumber \\
+     \text{, if $|z| < z_{0}$,}& \nonumber \\
      \nonumber\\
      \displaystyle \rho_{\text{atmp}}(z) = \rho_{\text{atmp}}^{\text{peak}}
      \exp\left[-\frac{\Phi_{\text{total}}(z)}{k_{B}T_{\text{atmp}}/m_{\text{p}}}\right]&\label{isothermal-atmp-density}\\
@@ -338,7 +338,7 @@ Finally, the summary and implications of our findings are given in Section \ref{
   \label{disc-atm-sys}
   \end{subequations}
   where $m_{\text{p}}$ is the proton mass,\
-  $T_{\text{isoDisk}}$ and $T_{\text{atmp}}$ is the temperature of the isothermal disc and atmosphere,\
+  $T_{\text{isoDisk}}$ and $T_{\text{atmp}}$ is the temperature of the disc and atmosphere,\
   $\rho_{\text{isoDisk}}^{\text{peak}}$ and $\rho_{\text{atmp}}^{\text{peak}}$ is the peak mass density\
   of the disc and atmosphere on the mid-plane $z=0$.
 
@@ -362,7 +362,7 @@ Finally, the summary and implications of our findings are given in Section \ref{
 
   \begin{figure}
     \includegraphics[width=\columnwidth]{figures/fig__initial-density-profile.png}
-    \caption{The density profile of the isothermal disc (red pluses) and\
+    \caption{The density profile of the disc (red pluses) and\
              atmosphere (blue crosses) along the positive z-axis.\
              The density distribution is derived from hydrostatic equilibrium,\
              the interface ($z=0.1$) between the isothermal disc\
@@ -413,16 +413,16 @@ Finally, the summary and implications of our findings are given in Section \ref{
   where $\hat{f}(\bold{k})$ is the Fourier transform of $f(\bold{x})$.\
   The spectrum $D(\bold{k})$ in the Fourier space is characterized by the power-law index $\beta=5/3$,\
   the Nyquist limit $k_{\text{max}}$, and the lower cutoff wave number $k_{\text{min}}$.
-  $k_{\text{max}}$ is one-half of the spatial resolution within disc,\
+  $k_{\text{max}}$ is one-half of the spatial resolution within the disc,\
   and $k_{\text{min}}$ is 375.0, corresponding to the maximum size of an individual clump $\sim 20$ pc.\
   \citet{LA2002} and \citet{Wagner2012} have outlined a detailed procedure\
   for constructing a clumpy scalar field, and we do not repeat here.
 
-  The density of clumpy disc can thus be obtained by taking the scalar products of\
+  The density of the clumpy disc can thus be obtained by taking the scalar products of\
   $f(\bold{x})$ with $\rho_{\text{isoDisk}}(z)$ over all cells within the disc, i.e.,\
   $\displaystyle\rho_{\text{ismDisk}}(\bold{x}) =\
   f(\bold{x}) \rho_{\text{isoDisk}}(z)$.\
-  Also, the thermal pressure equilibrium within the clumpy disc implies that the temperature of disc is
+  Also, the thermal pressure equilibrium within the clumpy disc implies that the temperature of the disc is
   $\displaystyle T_{\text{ismDisk}}(\bold{x}) =\
   T_{\text{isoDisk}}(z)\rho_{\text{isoDisk}}(z)/\rho_{\text{ismDisk}}(\bold{x})$.
 
@@ -432,7 +432,7 @@ Finally, the summary and implications of our findings are given in Section \ref{
   On the basis of this setup, we cover the AMR base level with\
   $16\times16\times32$ root cells, refined progressively on the mid-plane $z=0$\
   based on the gradient of mass density.\
-  We also restrict the refinement level at 7 within the cold disc so that\
+  We also restrict the refinement level at 7 within the disc so that\
   a molecular cloud can be adequately resolved by approximately 30 cells along their diameter, 20 pc.
 
   \Cref{fig__numberDensityHistogram} plots the volume filling factor as a function of\
@@ -521,7 +521,7 @@ $\beta$                               & Power law index                         
 
   Note that as we inject the jets at the center of the clumpy disc,\
   we define the atmosphere gas density by the peak density of\
-  the isothermal disc on the mid-plane $z=0$ (i.e. $\rho^{\text{peak}}_{\text{isoDisk}}$),\
+  the smooth disc on the mid-plane $z=0$ (i.e. $\rho^{\text{peak}}_{\text{isoDisk}}$),\
   as opposed to the \textit{clumpy} density around the jet source, to avoid ambiguous definition.
 
 
