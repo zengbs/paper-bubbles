@@ -469,7 +469,7 @@ Parameter                             & Description                             
 $\sigma_{\text{bulge}}$               & Velocity dispersion of bulge              & 100 km$\cdot$s$^{-1}$                & \citep{velocity-dispersion-MW} \\
 $\rho_{\text{bulge}}^{\text{peak}}$   & Peak average density of bulge             & $4\times 10^{-24}$ g$\cdot$cm$^{-3}$ &   N/A                          \\ \hline
 {\bf Static dark halo potential }     &                                           &                                      &                                \\
-$v_{\text{halo}}$                     &                                           & 131.5 km$\cdot$s$^{-1}$              & \citep{Johnston1995}           \\
+$v_{\text{halo}}$                     & Characteristic velocity                   & 131.5 km$\cdot$s$^{-1}$              & \citep{Johnston1995}           \\
 $d_{\text{h}}$                        & Core radius                               & 12 kpc                               & \multicolumn{1}{c}{''}         \\ \hline
 {\bf Atmosphere }                     &                                           &                                      &                                \\
 $T_{\text{\text{atmp}}}$              & Temperature of atmosphere                 & $10^{6}$ K                           & \citep{temperature-MW}         \\ \hline
@@ -677,10 +677,14 @@ $\beta$                               & Power law index                         
   cut at various galactic latitudes (as labelled), compared with the observation (black).\
   \Cref{fig_xray-map} is quite revealing in several ways.\
 
-  First, the broad agreement between simulated and observed X-ray maps hints that\
+  First, we observe that\
+  The simulated eROSITA bubbles are not as limb-brightened as the observation.\
+  A possibility to enhance the X-ray emission is to include shock-accelerated CRs near the shock,\
+  in which CRs could increase the compressibility of the fluid,\
+  resulting in the enhanced thermal Bremsstrahlung emissivity that is proportional to density.
+  The broad agreement between simulated and observed X-ray maps hints that\
   the full vertical extent of the eROSITA bubbles can be properly formed by an oblique jet within a thin disk\
-  of dense ISM.\
-
+  of dense ISM.
 
   Second, as shown in \Cref{fig__jetI5+ismSeed3-45deg},\
   the half-width of the outermost bubbles is around 7 kpc,\
@@ -998,9 +1002,10 @@ Our findings are as follows.
 \item The edge of the eROSITA bubbles is a forward shock,\
       originally driven by oblique bipolar jets emanating from the GC 12.39 million years ago,\
       and significantly stretched by the stratified atmosphere afterwards.\
-      The simulated eROSITA bubbles are not as limb-brightened as the observed one.\
+      The simulated eROSITA bubbles are not as limb-brightened as the observation.\
       A possibility to enhance the X-ray emission is to include shock-accelerated CRs near the shock,\
-      in which CRs could increase the compressibility of the fluid.\
+      in which CRs could increase the compressibility of the fluid,\
+      resulting in the enhanced thermal Bremsstrahlung emissivity that is proportional to density.
 \item Followed by the forward shock is a tangling contact discontinuity,\
       which we interpret as the edge of the \textit{Fermi} bubbles.\
       The nature of the \textit{Fermi} bubbles is essentially a turbulent and high-temperature ($\sim2$ keV)\
