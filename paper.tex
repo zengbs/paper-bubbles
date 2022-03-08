@@ -1,5 +1,7 @@
 \documentclass[twocolumn]{aastex631}
 \usepackage{mathtools}
+%\usepackage{caption}
+%\usepackage{subcaption}
 \usepackage{natbib}
 \bibliographystyle{abbrvnat}
 \setcitestyle{authoryear,open={(},close={)}}
@@ -12,7 +14,7 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{floatrow}
-\usepackage{subfigure}
+\usepackage[]{subfigure}
 \usepackage{float}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -605,13 +607,19 @@ $\beta$                               & Power law index                         
  are symmetric about the Galactic plane despite the jet is tilted to the disk normal\
  at an angle $45^{\circ}$.
 
- To explore how the disk affects the formation of the Galactic bubbles,\
- we compare the fiducial run (panels a1-a3 in \Cref{fig__jetI5+ismSeed3-45deg})\
+ \Cref{fig__jetI5+ismSeed3-45deg} shows the slices of various gas properties at $t=12.39$ Myr,
+ including pressure (top), temperature (middle), density (bottom) with the same jet source as the fiducial run\
+ but in different Galactic environments.
+
+
+ %To explore how the disk affects the formation of the Galactic bubbles,\
+ We compare the fiducial run (a1-a3)\
  with the case adopting the smooth disc\
- (panels b1-b3; \Cref{fig__initial-density-profile} shows the density profile) in a stratified atmosphere.\
+ (b1-b3), specified by the initial density profile shown in
+ \Cref{fig__initial-density-profile}, in a stratified atmosphere.\
  The results show that the initial density distribution of the dense disc has an insignificant effect\
  on the overall dynamics of bubbles. However, the outermost bubbles arising from the smooth disc\
- in an uniform atmosphere (panels c1-c3) is spherical-shape,\
+ in an uniform atmosphere (c1-c3) is spherical-shape,\
  suggesting the stratification facilitates the outermost bubbles elongation significantly.\
  Also, the two rightmost columns reveal that the development of the innermost bubbles\
  is always associated with the disc, without the disc,\
@@ -634,14 +642,43 @@ $\beta$                               & Power law index                         
              in an uniform atmosphere (c1-c3) is spherical-shape,\
              suggesting the stratification facilitates the outermost bubbles elongation significantly.\
              Also, the two rightmost columns reveal that the development of the innermost bubbles\
-             (a1)\
-             is always associated with the disc, without the disc,\
+             is always associated with the disc, without the disc (d1-d3),\
              the outermost bubbles and the turbulent plasma will be oblique,
              indicating the dense disc is crucial for\
              the symmetry of the Galactic bubbles and for the innermost bubbles formation.
              }
     \label{fig__jetI5+ismSeed3-45deg}
   \end{figure}
+
+\begin{figure}%
+  \centering%
+  \subfigure[][]%
+    {%
+      \includegraphics[height=10.1cm]{figures/fig__jetI5+ismSeed3-45deg-a}%
+      \label{fig__jetI5+ismSeed3-45deg-a}% A
+    }%
+  \hspace{2pt}%
+  \subfigure[][]%
+    {%
+      \includegraphics[height=10.1cm]{figures/fig__jetI5+ismSeed3-45deg-b}%
+      \label{fig__jetI5+ismSeed3-45deg-b}%
+    }%
+  \hspace{2pt}%
+  \subfigure[][]%
+    {%
+      \includegraphics[height=10.1cm]{figures/fig__jetI5+ismSeed3-45deg-c}%
+      \label{fig__jetI5+ismSeed3-45deg-c}%
+    }%
+  \hspace{2pt}%
+  \subfigure[][]%
+    {%
+      \includegraphics[height=10.1cm]{figures/fig__jetI5+ismSeed3-45deg-d}
+      \label{fig__jetI5+ismSeed3-45deg-d} %D
+    }%
+  \caption{}%
+  \label{fig__jetI5+ismSeed3-45deg}%
+\end{figure}%
+
 
   \begin{figure}
     \includegraphics[width=\columnwidth]{figures/fig__profile.png}
