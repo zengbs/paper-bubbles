@@ -186,7 +186,7 @@ Finally, the summary and implications of our findings are given in Section \ref{
   We used the GPU-accelerated special relativistic\
   hydrodynamics AMR code (\textsc{gamer-sr}) developed at the\
   National Taiwan University\
-  (Schive et al. \citeyear{gamer-1}, \citeyear{gamer-2}; \citeauthor{tseng2021} \citeyear{tseng2021})\
+  (\citeauthor{gamer-1} \citeyear{gamer-1}, \citeyear{gamer-2}; \citeauthor{tseng2021} \citeyear{tseng2021})\
   to carry out the simulations of the Galactic bubbles by CR and relativistic fluid injections from the GC.
 
   As stressed by \citet{Yang2012}, CR diffusion has an insignificant effect\
@@ -256,7 +256,7 @@ Finally, the summary and implications of our findings are given in Section \ref{
   $c$ is the speed of light, and $\delta^{ij}$ is the Kronecker delta notation.\
   Throughout this paper, Latin indices run from 1 to 3, except when stated otherwise.\
 
-  The set of \Cref{governing-eq} is closed by using the Taub-Mathews equation of state \citep{Taub,TM_EOS}\
+  The set of Eq. \ref{governing-eq} is closed by using the Taub-Mathews equation of state \citep{Taub,TM_EOS}\
   that approximates the exact EoS \citep{Synge} for ultra-relativistically\
   hot gases coexisting with non-relativistically cold gases.
 
@@ -318,7 +318,7 @@ Finally, the summary and implications of our findings are given in Section \ref{
   can be derived from the other known parameters and thermal pressure equilibrium condition\
   on the interfaces $(z=\pm z_{0})$ between the disc and atmosphere.\
 
-  The density profile of \Cref{disc-atm-sys} is shown in Fig. \ref{fig__initial-density-profile}.\
+  The density profile of Eq. \ref{disc-atm-sys} is shown in Fig. \ref{fig__initial-density-profile}.\
   Beyond the core radius ($\sim 2 \text{ kpc}$) the gaseous density decreases rapidly as a power-law.
 
 %  The density profile of \Cref{disc-atm-sys} is shown in Fig. \ref{fig__initial-density-profile}\
@@ -428,7 +428,7 @@ Finally, the summary and implications of our findings are given in Section \ref{
     \label{fig__zoom-in-disc}
   \end{figure}
 
-\begin{table*}[t]
+\begin{table*}
 \raggedright
 \caption{Parameters of the disc, atmosphere, and gravitational potential in the simulations.}
 \label{table-parameters}
@@ -531,7 +531,7 @@ $\beta$                               & Power law index                & -5/3   
 
  The temperature profile (left middle panel in Fig. \ref{fig__profile}) along the positive z-axis in\
  Fig. \ref{fig__jetI5+ismSeed3-45deg} indicates that\
- the smooth region (purple band in Fig. \ref{fig__profile}) emitting X-ray\
+ the temperature of the smooth region (purple band in Fig. \ref{fig__profile}) emitting X-ray\
  is around 0.3-0.5 keV, similar to that observed by \citet{Miller2016} and \citet{Kataoka2018}.
 
  Followed by the forward shock is a turbulent and hot plasma\
@@ -589,9 +589,9 @@ $\beta$                               & Power law index                & -5/3   
  on the overall dynamics of bubbles. However, the outermost bubbles arising from the smooth disc\
  in an uniform atmosphere (Fig. \ref{fig__jetI5+ismSeed3-45deg-c}) is spherical-shape,\
  suggesting the stratification facilitates the outermost bubbles elongation significantly.\
- Also, Fig. \ref{fig__jetI5+ismSeed3-45deg-c,fig__jetI5+ismSeed3-45deg-d}\
+ Also, Fig. \ref{fig__jetI5+ismSeed3-45deg-c} and \ref{fig__jetI5+ismSeed3-45deg-d}\
  reveal that the development of the innermost bubbles\
- is always associated with the disc, without the disc,\
+ is always associated with the disc, without the disc (Fig. \ref{fig__jetI5+ismSeed3-45deg-d}),\
  the outermost bubbles and the turbulent plasma will be oblique,\
  indicating the dense disc is crucial for\
  the symmetry of the Galactic bubbles and for the innermost bubbles formation.
@@ -627,14 +627,15 @@ $\beta$                               & Power law index                & -5/3   
              at the end of simulation $t=12.39$ Myr.\
              The slices pass through a bipolar jet source injecting along $z=-y$ direction\
              for a duration $t=0$--$1.2$ Myr.\
-             Comparison between the clumpy (column a)\
-             and the smooth disc (column b) in a stratified atmosphere\
+             Comparison between the clumpy (Fig. \ref{fig__jetI5+ismSeed3-45deg-a})\
+             and the smooth disc (Fig. \ref{fig__jetI5+ismSeed3-45deg-b}) in a stratified atmosphere\
              shows that the initial density distribution of the dense disc has an insignificant effect\
              on the overall dynamics of bubbles. However, the outermost bubbles arising from the smooth disc\
-             in an uniform atmosphere (column c) is spherical-shape,\
+             in an uniform atmosphere (Fig. \ref{fig__jetI5+ismSeed3-45deg-c}) is spherical-shape,\
              suggesting the stratification facilitates the outermost bubbles elongation significantly.\
-             Also, the two rightmost columns reveal that the development of the innermost bubbles\
-             is always associated with the disc, without the disc (column d),\
+             Also, Fig. \ref{fig__jetI5+ismSeed3-45deg-c} and \ref{fig__jetI5+ismSeed3-45deg-d}\
+             reveal that the development of the innermost bubbles\
+             is always associated with the disc, without the disc (Fig. \ref{fig__jetI5+ismSeed3-45deg-d}),\
              the outermost bubbles and the turbulent plasma will be oblique,
              indicating the dense disc is crucial for\
              the symmetry of the Galactic bubbles and for the innermost bubbles formation.
@@ -656,11 +657,11 @@ $\beta$                               & Power law index                & -5/3   
       \caption{
              Left: the profiles of pressure (top), temperature (middle),\
              and number density (bottom)\
-             along the positive z-axis in \Cref{fig__jetI5+ismSeed3-45deg}.
+             along the positive z-axis in Fig. \ref{fig__jetI5+ismSeed3-45deg}.
              Right: the close-up view of the profiles in the yellow band.\
              The sharp pressure jump at $z=3.62$ kpc\
              indicates that the innermost bubbles\
-             (dashed box in the top panel in \Cref{fig__jetI5+ismSeed3-45deg-a})\
+             (dashed box in the top panel in Fig. \ref{fig__jetI5+ismSeed3-45deg-a})\
              are an expanding reverse shock.
       }%
       \label{fig__profile}%
@@ -715,7 +716,7 @@ $\beta$                               & Power law index                & -5/3   
   Fig. \ref{fig_xray-map} is quite revealing in several ways.\
 
   First, we observe that\
-  The simulated eROSITA bubbles are not as limb-brightened as the observation.\
+  the simulated eROSITA bubbles are not as limb-brightened as the observation.\
   A possibility to enhance the X-ray emission is to include shock-accelerated CRs near the shock,\
   in which CRs could increase the compressibility of the fluid,\
   resulting in the enhanced thermal Bremsstrahlung emissivity that is proportional to density squared.
@@ -723,7 +724,7 @@ $\beta$                               & Power law index                & -5/3   
   the full vertical extent of the eROSITA bubbles can be properly formed by an oblique jet within a thin disk\
   of dense ISM.
 
-  Second, as shown in Fig. \ref{fig__jetI5+ismSeed3-45deg},\
+  Second, as shown in Fig. \ref{fig__jetI5+ismSeed3-45deg-a},\
   the half-width of the outermost bubbles is around 7 kpc,\
   corresponding to an half angular width $\sin^{-1}(7 \text{ kpc}/R_{\odot})\sim122^{\circ}$,\
   which is as wide as the eROSITA bubbles in the simulated X-ray map\
@@ -827,7 +828,7 @@ $\gamma_{\text{min}}(\epsilon)$ is the minimum Lorentz factor of CRe\
 that allows incident photons to scatter from energy $\epsilon$ to $\epsilon_{1}$.
 $\gamma_{\text{max}}$ is the maximum CRe Lorentz factor in the spectrum.
 
-We perform the double integration in \Cref{gammaray-emissivity} on each cell\
+We perform the double integration in Eq. \ref{gammaray-emissivity} on each cell\
 over the range of CRe Lorentz factor, and\
 the range of incident photon energy between\
 $\epsilon_{\text{min}}=1.13\times10^{-4}$ eV (cosmic microwave background) and\
@@ -854,7 +855,7 @@ is given by \citet{BLUMENTHAL1970}:
 \end{subequations}
 
 where $\Gamma$ is the gamma function, $B$ is the magnetic field strength defined in\
-\Cref{magnetic-field}.
+Eq. \ref{magnetic-field}.
 
 For a given longitude and latitude range, the simulated spectra are\
 computed by projecting emissivities\
@@ -882,7 +883,7 @@ This is expected since\
 the upscattered high-energy photons ($\epsilon_{1}\sim450$ GeV) mainly arise from\
 the scatterings between the relativistic CRe ($\gtrapprox 408$ GeV)\
 and optical starlight ($\epsilon \sim 10$ eV).\
-Thus, \Cref{gamma-min} can be reduced to $\epsilon_{1}\sim\gamma m_{\text{e}}c^2$\
+Thus, Eq. \ref{gamma-min} can be reduced to $\epsilon_{1}\sim\gamma m_{\text{e}}c^2$\
 in the Klein--Nishina limit\
 $\left(\text{i.e. }\epsilon_{1}\epsilon \gg \left(m_{\text{e}}c^2\right)^2\right)$,\
 implying most of the CRe energy is carried away by the upscattered photons.
@@ -930,7 +931,7 @@ as previously suggested \citep{Su2010,Dobler2012}.
  similar to 0.18 at the beginning of the simulation.
  We therefore stress that\
  ignoring the contribution of CR pressure gradient to the momentum of the gas\
- in \Cref{governing-eq} is reasonable.
+ in Eq. \ref{governing-eq} is reasonable.
 
 
 
@@ -982,7 +983,7 @@ as previously suggested \citep{Su2010,Dobler2012}.
      similar to 0.18 at the beginning of the simulation.
      We therefore stress that\
      ignoring the contribution of CR pressure gradient to the momentum of the gas\
-     in \Cref{governing-eq} is reasonable.
+     in Eq. \ref{governing-eq} is reasonable.
      }
     \label{fig__jetI5+ismSeed3-45deg-CR}
   \end{figure}
