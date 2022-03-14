@@ -10,6 +10,7 @@
 \usepackage{bm}		% Bold maths symbols, including upright Greek
 \usepackage{pdflscape}	% Landscape pages
 \usepackage{orcidlink}
+\usepackage{url}
 \usepackage{cleveref}
 \usepackage{booktabs}
 \usepackage[flushleft]{threeparttable}
@@ -317,10 +318,10 @@ Finally, the summary and implications of our findings are given in Section \ref{
   can be derived from the other known parameters and thermal pressure equilibrium condition\
   on the interfaces $(z=\pm z_{0})$ between the disc and atmosphere.\
 
-  The density profile of \Cref{disc-atm-sys} is shown in \Cref{fig__initial-density-profile}.\
+  The density profile of \Cref{disc-atm-sys} is shown in Fig. \ref{fig__initial-density-profile}.\
   Beyond the core radius ($\sim 2 \text{ kpc}$) the gaseous density decreases rapidly as a power-law.
 
-  The density profile of \Cref{disc-atm-sys} is shown in \Cref{fig__initial-density-profile}\
+  The density profile of \Cref{disc-atm-sys} is shown in Fig. \ref{fig__initial-density-profile}\
   and compared to the observed result \citep{Miller_2013} beyond 1 kpc.\
 
   Note that there is an difficulty in disentangling the contribution\
@@ -404,10 +405,10 @@ Finally, the summary and implications of our findings are given in Section \ref{
   a molecular cloud can be adequately resolved by approximately 30 cells along their diameter, 20 pc.
 
   In this way, we plot the volume filling factor as a function of\
-  initial number density within the disc without the jet source in \Cref{fig__numberDensityHistogram},\
+  initial number density within the disc without the jet source in Fig. \ref{fig__numberDensityHistogram},\
   and show a close-up view of the\
   pressure, temperature, and number density slices
-  in the y-z plane through the center of the disc in \Cref{fig__zoom-in-disc} .
+  in the y-z plane through the center of the disc in Fig. \ref{fig__zoom-in-disc} .
 
   \begin{figure}
       \includegraphics[width=\columnwidth]{figures/fig__numberDensityHistogram.png}
@@ -433,24 +434,24 @@ Finally, the summary and implications of our findings are given in Section \ref{
 \label{table-parameters}
 \begin{tabular}{@{}llrc@{}}
 \toprule[1pt]\midrule[0.3pt]
-Parameter                             & Description                               & Value                                &  Reference                     \\ \midrule
-{\bf Static stellar potential }       &                                           &                                      &                                \\
-$\sigma_{\text{bulge}}$               & Velocity dispersion of bulge              & 100 km$\cdot$s$^{-1}$                & \citep{velocity-dispersion-MW} \\
-$\rho_{\text{bulge}}^{\text{peak}}$   & Peak average density of bulge             & $4\times 10^{-24}$ g$\cdot$cm$^{-3}$ &   N/A                          \\ \hline
-{\bf Static dark halo potential }     &                                           &                                      &                                \\
-$v_{\text{halo}}$                     & Characteristic velocity                   & 131.5 km$\cdot$s$^{-1}$              & \citep{Johnston1995}           \\
-$d_{\text{h}}$                        & Core radius                               & 12 kpc                               & \multicolumn{1}{c}{''}         \\ \hline
-{\bf Atmosphere }                     &                                           &                                      &                                \\
-$T_{\text{\text{atmp}}}$              & Temperature of atmosphere                 & $10^{6}$ K                           & \citep{temperature-MW}         \\ \hline
-{\bf Isothermal disc }                &                                           &                                      &                                \\
-$z_{0}$                               & Scale height of disc                      & 100 pc                               & \citep{peak-ism-density}       \\
-$T_{\text{\text{isoDisk}}}$           & Temperature of disc                       & $10^{3}$ K                           & \multicolumn{1}{c}{''}         \\
-$\rho_{\text{isoDisk}}^{\text{peak}}$ & Peak mass density of disc                 & $10^{-23}$ g$\cdot$cm$^{-3}$         & \multicolumn{1}{c}{''}         \\ \hline
-{\bf Clumpy disc }                    &                                           &                                      &                                \\
-$\dagger$  $k_{\text{min}}$           & Cutoff wave number                        & 375.0                                & \citep{peak-ism-density}       \\
-$\mu$                                 & Mean of scalar field                      & 1.0                                  &   N/A                          \\
-$\ddag$  $\sigma$                     & Dispersion of scalar field                & 5.0                                  & \citep{Federrath2010}          \\
-$\beta$                               & Power law index                           & -5/3                                 &   N/A                          \\ \midrule
+Parameter                             & Description                    & Value                                &  Reference                     \\ \midrule
+{\bf Static stellar potential }       &                                &                                      &                                \\
+$\sigma_{\text{bulge}}$               & Velocity dispersion of bulge   & 100 km$\cdot$s$^{-1}$                & \citep{velocity-dispersion-MW} \\
+$\rho_{\text{bulge}}^{\text{peak}}$   & Peak average density of bulge  & $4\times 10^{-24}$ g$\cdot$cm$^{-3}$ &   N/A                          \\ \hline
+{\bf Static dark halo potential }     &                                &                                      &                                \\
+$v_{\text{halo}}$                     & Characteristic velocity        & 131.5 km$\cdot$s$^{-1}$              & \citep{Johnston1995}           \\
+$d_{\text{h}}$                        & Core radius                    & 12 kpc                               & \multicolumn{1}{c}{''}         \\ \hline
+{\bf Atmosphere }                     &                                &                                      &                                \\
+$T_{\text{\text{atmp}}}$              & Temperature of atmosphere      & $10^{6}$ K                           & \citep{temperature-MW}         \\ \hline
+{\bf Isothermal disc }                &                                &                                      &                                \\
+$z_{0}$                               & Scale height of disc           & 100 pc                               & \citep{peak-ism-density}       \\
+$T_{\text{\text{isoDisk}}}$           & Temperature of disc            & $10^{3}$ K                           & \multicolumn{1}{c}{''}         \\
+$\rho_{\text{isoDisk}}^{\text{peak}}$ & Peak mass density of disc      & $10^{-23}$ g$\cdot$cm$^{-3}$         & \multicolumn{1}{c}{''}         \\ \hline
+{\bf Clumpy disc }                    &                                &                                      &                                \\
+$\dagger$  $k_{\text{min}}$           & Cutoff wave number             & 375.0                                & \citep{peak-ism-density}       \\
+$\mu$                                 & Mean of scalar field           & 1.0                                  &   N/A                          \\
+$\ddag$  $\sigma$                     & Dispersion of scalar field     & 5.0                                  & \citep{Federrath2010}          \\
+$\beta$                               & Power law index                & -5/3                                 &   N/A                          \\ \midrule
 \end{tabular}
 \begin{tablenotes}
       \raggedright
@@ -513,12 +514,12 @@ $\beta$                               & Power law index                         
 
 \subsection{Morphology and properties of Galactic bubbles}
 
- \Cref{fig__jetI5+ismSeed3-45deg} shows\
+ Fig. \ref{fig__jetI5+ismSeed3-45deg} shows\
  the slices of pressure (top), temperature (middle), number density (bottom)\
  at the end of simulation $t=12.39$ Myr.\
  The slices pass through the bipolar jet source injecting along $z=-y$ direction.
 
- The fiducial run (\Cref{fig__jetI5+ismSeed3-45deg-a})\
+ The fiducial run (Fig. \ref{fig__jetI5+ismSeed3-45deg-a})\
  with the initial condition specified in Section \ref{Methodology}\
  shows that the edge of the outermost bubbles is indeed a forward shock,\
  expanding 12.5 kpc above and below the Galactic plane,\
@@ -528,9 +529,9 @@ $\beta$                               & Power law index                         
  for modeling the eROSITA bubbles\
  based on X-ray emissions.
 
- The temperature profile (left middle panel in \Cref{fig__profile}) along the positive z-axis in\
- \Cref{fig__jetI5+ismSeed3-45deg} indicates that\
- the smooth region (purple band in \Cref{fig__profile}) emitting X-ray\
+ The temperature profile (left middle panel in Fig. \ref{fig__profile}) along the positive z-axis in\
+ Fig. \ref{fig__jetI5+ismSeed3-45deg} indicates that\
+ the smooth region (purple band in Fig. \ref{fig__profile}) emitting X-ray\
  is around 0.3-0.5 keV, similar to that observed by \citet{Miller2016} and \citet{Kataoka2018}.
 
  Followed by the forward shock is a turbulent and hot plasma\
@@ -547,14 +548,14 @@ $\beta$                               & Power law index                         
  is essentially a turbulence rather than a smooth shock \citep{Zhang2020}.
 
  The most interesting finding is that there are innermost bubbles\
- (dashed box in the top panel of \Cref{fig__jetI5+ismSeed3-45deg-a})\
+ (dashed box in the top panel of Fig. \ref{fig__jetI5+ismSeed3-45deg-a})\
  extending out from the GC on either side of the thin disk.\
  The innermost bubbles are cold (1-10 eV), dense ($10^{-4}$--$10^{-2}$ cm$^{-3}$),\
  and underpressured with respect to the turbulent plasma.\
 
 
- Moreover, the close-up view (right column in \Cref{fig__profile})\
- of profiles and slices (\Cref{fig__innerbubbles})\
+ Moreover, the close-up view (right column in Fig. \ref{fig__profile})\
+ of profiles and slices (Fig. \ref{fig__innerbubbles})\
  demonstrates that the pressure rises dramatically outward across\
  the edge of the innermost bubbles,\
  indicating that the innermost bubbles are an expanding reverse shock.\
@@ -571,7 +572,7 @@ $\beta$                               & Power law index                         
  are symmetric about the Galactic plane despite the jet is tilted to the disk normal\
  at an angle $45^{\circ}$.
 
- \Cref{fig__jetI5+ismSeed3-45deg} shows the slices of various gas properties at $t=12.39$ Myr,\
+ Fig. \ref{fig__jetI5+ismSeed3-45deg} shows the slices of various gas properties at $t=12.39$ Myr,\
  including pressure (top), temperature (middle),\
  density (bottom) with the same jet source as the fiducial run\
  but in different Galactic environments.
@@ -579,16 +580,16 @@ $\beta$                               & Power law index                         
 
 
  %To explore how the disk affects the formation of the Galactic bubbles,\
- We compare the clumpy disk (\Cref{fig__jetI5+ismSeed3-45deg-a})\
- with the smooth disc (\Cref{fig__jetI5+ismSeed3-45deg-b}),\
- specified by the initial density profile shown in \Cref{fig__initial-density-profile},\
+ We compare the clumpy disk (Fig. \ref{fig__jetI5+ismSeed3-45deg-a})\
+ with the smooth disc (Fig. \ref{fig__jetI5+ismSeed3-45deg-b}),\
+ specified by the initial density profile shown in Fig. \ref{fig__initial-density-profile},\
  in a stratified atmosphere.\
  The results show that the initial density distribution of\
  the dense disc has an insignificant effect\
  on the overall dynamics of bubbles. However, the outermost bubbles arising from the smooth disc\
- in an uniform atmosphere (\Cref{fig__jetI5+ismSeed3-45deg-c}) is spherical-shape,\
+ in an uniform atmosphere (Fig. \ref{fig__jetI5+ismSeed3-45deg-c}) is spherical-shape,\
  suggesting the stratification facilitates the outermost bubbles elongation significantly.\
- Also, \Cref{fig__jetI5+ismSeed3-45deg-c,fig__jetI5+ismSeed3-45deg-d}\
+ Also, Fig. \ref{fig__jetI5+ismSeed3-45deg-c,fig__jetI5+ismSeed3-45deg-d}\
  reveal that the development of the innermost bubbles\
  is always associated with the disc, without the disc,\
  the outermost bubbles and the turbulent plasma will be oblique,\
@@ -596,104 +597,75 @@ $\beta$                               & Power law index                         
  the symmetry of the Galactic bubbles and for the innermost bubbles formation.
 
 
- \begin{figure}
+ \begin{figure}%
+      \captionsetup[subfigure]{labelformat=simple}
       \begin{subfigure}[b]{0.2\linewidth}%
-         \centering%
          \includegraphics[height=10cm]{figures/fig__jetI5+ismSeed3-45deg-a}%
+         \caption{}%
          \label{fig__jetI5+ismSeed3-45deg-a}%
-         \hspace{2pt}%
       \end{subfigure}%
+      \hspace{10pt}%
       \begin{subfigure}[b]{0.2\linewidth}%
-         \centering%
          \includegraphics[height=10cm]{figures/fig__jetI5+ismSeed3-45deg-b}%
+         \caption{}%
          \label{fig__jetI5+ismSeed3-45deg-b}%
-         \hspace{2pt}%
       \end{subfigure}%
+      \hspace{-2pt}%
       \begin{subfigure}[b]{0.2\linewidth}%
-         \centering%
          \includegraphics[height=10cm]{figures/fig__jetI5+ismSeed3-45deg-c}%
+         \caption{}%
          \label{fig__jetI5+ismSeed3-45deg-c}%
-         \hspace{2pt}%
       \end{subfigure}%
+      \hspace{-2pt}%
       \begin{subfigure}[b]{0.2\linewidth}%
-         \centering%
          \includegraphics[height=10cm]{figures/fig__jetI5+ismSeed3-45deg-d}%
+         \caption{}%
          \label{fig__jetI5+ismSeed3-45deg-d}%
      \end{subfigure}%
- \end{figure}
+      \caption{
+             The slices of pressure (top), temperature (middle), and number density (bottom)\
+             at the end of simulation $t=12.39$ Myr.\
+             The slices pass through a bipolar jet source injecting along $z=-y$ direction\
+             for a duration $t=0$--$1.2$ Myr.\
+             Comparison between the clumpy (column a)\
+             and the smooth disc (column b) in a stratified atmosphere\
+             shows that the initial density distribution of the dense disc has an insignificant effect\
+             on the overall dynamics of bubbles. However, the outermost bubbles arising from the smooth disc\
+             in an uniform atmosphere (column c) is spherical-shape,\
+             suggesting the stratification facilitates the outermost bubbles elongation significantly.\
+             Also, the two rightmost columns reveal that the development of the innermost bubbles\
+             is always associated with the disc, without the disc (column d),\
+             the outermost bubbles and the turbulent plasma will be oblique,
+             indicating the dense disc is crucial for\
+             the symmetry of the Galactic bubbles and for the innermost bubbles formation.
+      }
+      \label{fig__jetI5+ismSeed3-45deg}
+ \end{figure}%
 
 
+ \begin{figure}%
+      \begin{subfigure}[t]{0.5\linewidth}%
+         \includegraphics[height=8cm]{figures/fig__profile-1.png}%
+         \label{fig__profile-1}%
+      \end{subfigure}%
+      \hspace{4pt}
+      \begin{subfigure}[t]{0.5\linewidth}%
+         \includegraphics[height=8cm]{figures/fig__profile-2.png}%
+         \label{fig__profile-2}%
+      \end{subfigure}%
+      \caption{
+             Left: the profiles of pressure (top), temperature (middle),\
+             and number density (bottom)\
+             along the positive z-axis in \Cref{fig__jetI5+ismSeed3-45deg}.
+             Right: the close-up view of the profiles in the yellow band.\
+             The sharp pressure jump at $z=3.62$ kpc\
+             indicates that the innermost bubbles\
+             (dashed box in the top panel in \Cref{fig__jetI5+ismSeed3-45deg-a})\
+             are an expanding reverse shock.
+      }%
+      \label{fig__profile}%
+ \end{figure}%
 
-%\begin{figure}%
-%  \centering%
-%  \subfigure[][]%
-%    {%
-%      \includegraphics[height=10.1cm]{figures/fig__jetI5+ismSeed3-45deg-a}%
-%      \label{fig__jetI5+ismSeed3-45deg-a}%
-%    }%
-%  \hspace{2pt}%
-%  \subfigure[][]%
-%    {%
-%      \includegraphics[height=10.1cm]{figures/fig__jetI5+ismSeed3-45deg-b}%
-%      \label{fig__jetI5+ismSeed3-45deg-b}%
-%    }%
-%  \hspace{2pt}%
-%  \subfigure[][]%
-%    {%
-%      \includegraphics[height=10.1cm]{figures/fig__jetI5+ismSeed3-45deg-c}%
-%      \label{fig__jetI5+ismSeed3-45deg-c}%
-%    }%
-%  \hspace{2pt}%
-%  \subfigure[][]%
-%    {%
-%      \includegraphics[height=10.1cm]{figures/fig__jetI5+ismSeed3-45deg-d}%
-%      \label{fig__jetI5+ismSeed3-45deg-d}%
-%    }%
-%  \caption{
-%             The slices of pressure (top), temperature (middle), and number density (bottom)\
-%             at the end of simulation $t=12.39$ Myr.\
-%             The slices pass through a bipolar jet source injecting along $z=-y$ direction\
-%             for a duration $t=0$--$1.2$ Myr.\
-%             Comparison between the clumpy (column a)\
-%             and the smooth disc (column b) in a stratified atmosphere\
-%             shows that the initial density distribution of the dense disc has an insignificant effect\
-%             on the overall dynamics of bubbles. However, the outermost bubbles arising from the smooth disc\
-%             in an uniform atmosphere (column c) is spherical-shape,\
-%             suggesting the stratification facilitates the outermost bubbles elongation significantly.\
-%             Also, the two rightmost columns reveal that the development of the innermost bubbles\
-%             is always associated with the disc, without the disc (column d),\
-%             the outermost bubbles and the turbulent plasma will be oblique,
-%             indicating the dense disc is crucial for\
-%             the symmetry of the Galactic bubbles and for the innermost bubbles formation.
-%  }%
-%  \label{fig__jetI5+ismSeed3-45deg}%
-%\end{figure}%
-
-%\begin{figure}%
-%  \centering%
-%  \subfigure[][]%
-%    {%
-%      \includegraphics[height=7cm]{figures/fig__profile-1.png}%
-%      \label{fig__profile-1}%
-%    }%
-%  \hspace{2pt}%
-%  \subfigure[][]%
-%    {%
-%      \includegraphics[height=7cm]{figures/fig__profile-2.png}%
-%      \label{fig__profile-2}%
-%    }%
-%    \caption{
-%             Left: the profiles of pressure (top), temperature (middle),\
-%             and number density (bottom)\
-%             along the positive z-axis in \Cref{fig__jetI5+ismSeed3-45deg}.
-%             Right: the close-up view of the profiles in the yellow band.\
-%             The sharp pressure jump at $z=3.62$ kpc\
-%             indicates that the innermost bubbles\
-%             (dashed box in the top panel in \Cref{fig__jetI5+ismSeed3-45deg-a})\
-%             are an expanding reverse shock.
-%     }
-%    \label{fig__profile}
-%  \end{figure}
 
   \begin{figure}
     \includegraphics[width=\columnwidth]{figures/fig__innerbubbles.png}
@@ -731,16 +703,16 @@ $\beta$                               & Power law index                         
   Then, beyond 25 kpc the gas is assumed to be isothermal with $T=10^6$ K and\
   follows out to a radius of 250 kpc the observed density profile of \citep{temperature-MW}.
 
-  \Cref{fig__xray_0.8keV_angle_000} shows\
+  Fig. \ref{fig__xray_0.8keV_angle_000} shows\
   the comparison between simulated (top) and observed (bottom) all-sky map\
   in the range 0.6--1.0 keV at 12.39 Myr and the present time, respectively.\
   In the simulated map, the red arrow at the center of map represents the direction of the bipolar jet,\
   constantly ejecting at an angle of $45^{\circ}$ to the disc normal between 0--1.2 Myr.
 
-  \Cref{fig__x-ray-profile-0.8keV-000} displays the simulated count rate profiles (red)\
-  in the same energy band as \Cref{fig__xray_0.8keV_angle_000}\
+  Fig. \ref{fig__x-ray-profile-0.8keV-000} displays the simulated count rate profiles (red)\
+  in the same energy band as Fig. \ref{fig__xray_0.8keV_angle_000}\
   cut at various galactic latitudes (as labelled), compared with the observation (black).\
-  \Cref{fig_xray-map} is quite revealing in several ways.\
+  Fig. \ref{fig_xray-map} is quite revealing in several ways.\
 
   First, we observe that\
   The simulated eROSITA bubbles are not as limb-brightened as the observation.\
@@ -751,10 +723,11 @@ $\beta$                               & Power law index                         
   the full vertical extent of the eROSITA bubbles can be properly formed by an oblique jet within a thin disk\
   of dense ISM.
 
-  Second, as shown in \Cref{fig__jetI5+ismSeed3-45deg},\
+  Second, as shown in Fig. \ref{fig__jetI5+ismSeed3-45deg},\
   the half-width of the outermost bubbles is around 7 kpc,\
   corresponding to an half angular width $\sin^{-1}(7 \text{ kpc}/R_{\odot})\sim122^{\circ}$,\
-  which is as wide as the eROSITA bubbles in the simulated X-ray map (top panel in \Cref{fig__xray_0.8keV_angle_000}).\
+  which is as wide as the eROSITA bubbles in the simulated X-ray map\
+  (top panel in Fig. \ref{fig__xray_0.8keV_angle_000}).\
   We therefore suggest that the eROSITA bubble shells are a signature of compressed forward shocks\
   that have been driven into the northern and the southern Galactic halo,
   as previously proposed by \citet{Predehl2020}.
@@ -762,10 +735,10 @@ $\beta$                               & Power law index                         
 
 % 2. North Polar Spur is not shown as it is a supernova remanent near us.
   Third, the innermost bubbles\
-  shown in \Cref{fig__jetI5+ismSeed3-45deg},\
+  shown in Fig. \ref{fig__jetI5+ismSeed3-45deg},\
   even though with high column density, are invisible in the simulated X-ray map as\
   the temperature of the innermost bubbles is around $1$--$10$ eV\
-  (see the temperature profile in \Cref{fig__profile}).\
+  (see the temperature profile in Fig. \ref{fig__profile}).\
   Consequently, the X-ray emission within the innermost bubbles
   is severely suppressed by the cutoff $\exp\left[-h\nu/k_{B}T\right]$ in the thermal Bremsstrahlung emissivity.\
   This is the reason why the innermost bubbles are unseen in the X-ray observation.
@@ -794,6 +767,37 @@ $\beta$                               & Power law index                         
 %    \caption{}
 %    \label{fig_xray-map}
 %  \end{figure*}
+
+ \begin{figure*}%
+      \begin{subfigure}[t]{\textwidth}%
+         \centering%
+         \includegraphics[width=0.9\textwidth]{figures/fig__xraymap.png}%
+         \caption{
+               (A) Simulated (top) and observed (bottom; \citealt{Predehl2020}) count rate\
+               (photons s$^{-1}$ deg$^{-2}$) in the 0.6--1.0 keV range.\
+               Throughout this paper we show sky maps\
+               in Galactic coordinates centered on the Galactic center using a Hammer-Aitoff projection,\
+               and observed from the solar system.\
+               The red arrow at the center of the\
+               top panel depicts the direction of the bipolar jet, constantly ejecting at an angle of $45^{\circ}$\
+               to the disc normal in 1.2 Myr.
+         }%
+         \label{fig__xray_0.8keV_angle_000}%
+         \end{subfigure}%
+         \hspace{4pt}%
+      \begin{subfigure}[t]{\textwidth}%
+         \centering%
+         \includegraphics[width=0.9\textwidth]{figures/fig__xray-profile-0.8keV-000.png}%
+         \caption{
+               (B) Comparison of simulated (red) and observed (black; \citealt{Predehl2020}) one-dimensional\
+               count rate profiles in the same energy band as Fig. \ref{fig__xray_0.8keV_angle_000},\
+               cut at various galactic latitudes (as labelled).]
+         }%
+         \label{fig__x-ray-profile-0.8keV-000}%
+      \end{subfigure}%
+      \caption{}%
+      \label{fig_xray-map}
+ \end{figure*}%
 
 
 
@@ -881,7 +885,7 @@ as we project X-ray emissivities in Section \ref{X-ray},\
 and then we average the spectra over all the sight lines within the region on sky.
 
 
-\Cref{fig__gammaRaySynchtronSpectrum} shows the simulated microwave (left)\
+Fig. \ref{fig__gammaRaySynchtronSpectrum} shows the simulated microwave (left)\
 and gamma-ray (right) spectra averaged over the different patches (shown in the legends) of the sky.\
 The row from top to bottom shows the spectra with different CRe spectral index $2.2, 2.4$ and $2.6$.\
 Several points are worth specific comment.\
@@ -931,7 +935,7 @@ as previously suggested \citep{Su2010,Dobler2012}.
   \label{fig__gammaRaySynchtronSpectrum}
 \end{figure*}
 
- \Cref{fig__gammaRay-map} shows the simulated gamma-ray photon flux with a CRe power-law index 2.4\
+ Fig. \ref{fig__gammaRay-map} shows the simulated gamma-ray photon flux with a CRe power-law index 2.4\
  compared with the observed one\
  in the energy bin $76.8-153.6$ GeV.\
  As the eROSITA bubbles,\
@@ -940,9 +944,9 @@ as previously suggested \citep{Su2010,Dobler2012}.
 
 
  Finally, the comparison between\
- \Cref{fig__jetI5+ismSeed3-45deg}\
+ Fig. \ref{fig__jetI5+ismSeed3-45deg}\
  and\
- \Cref{fig__jetI5+ismSeed3-45deg-CR}\
+ Fig. \ref{fig__jetI5+ismSeed3-45deg-CR}\
  shows that the CR pressure\
  is around 5$\times10^{-15}$--8$\times10^{-15}$ erg/cm$^{3}$,\
  bringing the pressure ratio of CR to gas is 0.1--0.2,
@@ -993,7 +997,7 @@ as previously suggested \citep{Su2010,Dobler2012}.
     \caption{
      The CR pressure slice passing through the jet source at 12.39 Myr.\
      Comparison between\
-     gas pressure (\Cref{fig__jetI5+ismSeed3-45deg}) and cosmic ray pressure\
+     gas pressure (Fig. \ref{fig__jetI5+ismSeed3-45deg}) and cosmic ray pressure\
      shows that
      the CR pressure\
      is around 5$\times10^{-15}$--8$\times10^{-15}$ erg/cm$^{3}$,\
@@ -1091,7 +1095,7 @@ Our findings are as follows.
 
 \section{Acknowledgements}
 The authors thank Mateusz Ruszkowski and Ellen G. Zweibel for insightful comments.\
-We thank Peter Predehl for providing the range of observed X-ray intensity in \Cref{fig__xray_0.8keV_angle_000}.\
+We thank Peter Predehl for providing the range of observed X-ray intensity in Fig. \ref{fig__xray_0.8keV_angle_000}.\
 A part of the simulations are performed and analyzed using computing resources\
 operated by the National Center for High-Performance Computing (NCHC).
 HYKY acknowledges support from\
