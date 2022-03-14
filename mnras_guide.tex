@@ -39,7 +39,7 @@ Po-Hsun Tseng$^{1}$%
 \quad Hsi-Yu Schive$^{1,5,6,7}$%
 \thanks{\href{mailto:hyschive@phys.ntu.edu.tw}{hyschive@phys.ntu.edu.tw}}%
 \orcidlink{https://orcid.org/0000-0002-1249-279X}%
-\quad Chun-Yen Chen$^{8}$
+\quad Chun-Yen Chen$^{8}, $
 \quad Tzihong Chiueh$^{1,5,6}$%
 \thanks{\href{mailto:chiuehth@phys.ntu.edu.tw}{chiuehth@phys.ntu.edu.tw}}%
 \orcidlink{https://orcid.org/0000-0003-2654-8763}%
@@ -74,14 +74,13 @@ $^{8}$Institute of physics, National Taiwan University, Taipei 10617, Taiwan\\
 % Abstract of the paper
 \begin{abstract}
 The \textit{Fermi Gamma-Ray Space Telescope} reveals two large bubbles in the Galaxy,\
-which extend nearly symmetrically $\sim50^{\circ}$ on either side of the Galactic center (GC).\
-The recent discovery of giant eROSITA bubbles also shows a symmetrically enhanced X-ray\
-emission from the shells around the eROSITA bubbles.\
-To this end, previous simulation-based works based on active galactic nucleus (AGN) jets model\
-assumed that the jets are vertical to the Galactic disk;\
-however, there is a lack of preferred orientation of jets with respect to the Galactic disk.\
+which extend nearly symmetrically $\sim50^{\circ}$ above and below the Galactic center (GC).\
+The recent discovery of giant eROSITA bubbles also shows such a symmetry about the GC, suggesting that they may originate from a single GC activity.\
+Previous simulations of bubble formation that invoke active galactic nucleus (AGN) jets\
+have assumed that the jets are vertical to the Galactic plane;\
+however, in general there does not need to be a correlation between the jet orientation and the rotational axis of the Galactic disk.\
 Using three-dimensional (3D) special relativistic hydrodynamic (SRHD) simulations that\
-include cosmic rays (CRs) and thermal gas, we show that a thin interstellar medium (ISM) disk is a substantial\
+include cosmic rays (CRs) and thermal gas, we show that a thin interstellar medium (ISM) disk is an essential\
 component for the symmetric \textit{Fermi} and eROSITA bubbles (collectively, Galactic bubbles).\
 We also produce simulated gamma-ray and\
 microwave spectra from the inverse Compton (IC) scattering and synchrotron,\
@@ -93,16 +92,13 @@ the rotation axis of the Galatic plane (disc normal hereafter).\
 (2) The edge of the eROSITA bubbles is a forward shock,\
 originally driven by oblique bipolar jets emanating from the GC 12.39 million years ago,\
 and significantly stretched by the stratified atmosphere afterwards.\
-(3) Followed by the forward shock is a\
-hot ($\sim2$ keV), turbulent, and pressure-balanced plasma,\
-which we interpret as the \textit{Fermi} bubbles.\
-Inside the simulated \textit{Fermi} bubbles,\
-there are two additional innermost bubbles we have not detected yet.\
-The innermost bubbles are essentially a reverse shock permanently associated with the disk.\
+(3) Followed by the forward shock is a tangling contact discontinuity,\
+which we interpret as the edge of the \textit{Fermi} bubbles\
+composed of turbulent and high-temperature ($\sim2$ keV)\
+plasma in pressure balance with the external medium.
 (4) According to the microwave and leptonic gamma-ray spectra, the best-fitting\
 CRe power-law index is found to be 2.4.\
-The broad agreement between the simulations and observations\
-, either from the point of view of their morphology or multiwavelength features,\
+The broad agreement between simulated and observed multiwavelength features\
 has thus released a caveat:\
 the jets shall be vertical to the disc normal.
 \end{abstract}
@@ -148,7 +144,7 @@ and displays morphological symmetry about the Galactic plane as the \textit{Ferm
 Their symmetry about the GC suggests that they originate\
 from powerful energy injections from the GC, possibly related to nuclear star formation\
 \citep{PhysRevLett.106.101102,Carretti2013}
-or past AGN activity \citep{Guo2012,Yang2017}.
+or past AGN activity \citep{Guo2012,Li,Yang2017,Zhu}.
 
 Early attempts \citep{Sarkar2015,Yang2017,Zhang2020}\
 to model the symmetric Galactic bubbles\
@@ -535,18 +531,18 @@ $\beta$                               & Power law index                & -5/3   
  the temperature of the smooth region (purple band in Fig. \ref{fig__profile}) emitting X-ray\
  is around 0.3-0.5 keV, similar to that observed by \citet{Miller2016} and \citet{Kataoka2018}.
 
- Followed by the forward shock is a turbulent and hot plasma\
- in pressure balance with the external medium.\
+ Followed by the forward shock is a turbulent and hot plasma.\
  As shown in the temperature or density slices of the fiducial run,\
- the full extent of the turbulent plasma is 9 kpc, fairly close to\
+ the full extent of the turbulent plasma is approximately agree with\
  that of the observed \textit{Fermi} bubbles \citep{Su2010}.
  Also, the temperature of the plasma is as high as 2 keV,\
  comparable to few keV inside the \textit{Fermi} bubbles\
- by observing X-ray absorption lines through the hot\
+ obtained by observing X-ray absorption lines through the hot\
  gaseous halo along many different sight lines in the sky \citep{Miller_2013}.\
- The general agreement of extent and temperature\
- suggests that the \textit{Fermi} bubbles\
- is essentially a turbulence rather than a smooth shock \citep{Zhang2020}.
+ We also note that the turbulence within the hot plasma is in pressure balance with the external medium,\
+ suggesting the outer edge of the \textit{Fermi} bubbles\
+ is a turbulence rather than a smooth shock \citep{Zhang2020}.
+
 
  The most interesting finding is that there are innermost bubbles\
  (dashed box in the top panel of Fig. \ref{fig__jetI5+ismSeed3-45deg-a})\
@@ -555,10 +551,9 @@ $\beta$                               & Power law index                & -5/3   
  and underpressured with respect to the turbulent plasma.\
 
 
- Moreover, the close-up view (right column in Fig. \ref{fig__profile})\
- of profiles and slices (Fig. \ref{fig__innerbubbles})\
- demonstrates that the pressure rises dramatically outward across\
- the edge of the innermost bubbles,\
+ Moreover, the close-up view (right column in Fig. \ref{fig__profile}) of profiles\
+ and slices (Fig. \ref{fig__innerbubbles})\
+ demonstrate that there is a sharp pressure jump on the edge of the innermost bubbles ($z=3.62$ kpc),\
  indicating that the innermost bubbles are an expanding reverse shock.\
  The high density upstream of the reverse shock requires\
  an even higher density downstream.\
