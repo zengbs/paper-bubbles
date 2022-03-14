@@ -1,644 +1,271 @@
-\begin{thebibliography}{51}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\begin{thebibliography}{}
+\makeatletter
+\relax
+\def\mn@urlcharsother{\let\do\@makeother \do\$\do\&\do\#\do\^\do\_\do\%\do\~}
+\def\mn@doi{\begingroup\mn@urlcharsother \@ifnextchar [ {\mn@doi@}
+  {\mn@doi@[]}}
+\def\mn@doi@[#1]#2{\def\@tempa{#1}\ifx\@tempa\@empty \href
+  {http://dx.doi.org/#2} {doi:#2}\else \href {http://dx.doi.org/#2} {#1}\fi
+  \endgroup}
+\def\mn@eprint#1#2{\mn@eprint@#1:#2::\@nil}
+\def\mn@eprint@arXiv#1{\href {http://arxiv.org/abs/#1} {{\tt arXiv:#1}}}
+\def\mn@eprint@dblp#1{\href {http://dblp.uni-trier.de/rec/bibtex/#1.xml}
+  {dblp:#1}}
+\def\mn@eprint@#1:#2:#3:#4\@nil{\def\@tempa {#1}\def\@tempb {#2}\def\@tempc
+  {#3}\ifx \@tempc \@empty \let \@tempc \@tempb \let \@tempb \@tempa \fi \ifx
+  \@tempb \@empty \def\@tempb {arXiv}\fi \@ifundefined
+  {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
+  mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
-\bibitem[Ackermann et~al.(2014)Ackermann, Albert, Atwood, Baldini, Ballet,
-  Barbiellini, Bastieri, Bellazzini, Bissaldi, Blandford, Bloom, Bottacini,
-  Brandt, Bregeon, Bruel, Buehler, Buson, Caliandro, Cameron, Caragiulo,
-  Caraveo, Cavazzuti, Cecchi, Charles, Chekhtman, Chiang, Chiaro, Ciprini,
-  Claus, Cohen-Tanugi, Conrad, Cutini, D{\textquotesingle}Ammando, de~Angelis,
-  de~Palma, Dermer, Digel, Venere, do~Couto~e Silva, Drell, Favuzzi, Ferrara,
-  Focke, Franckowiak, Fukazawa, Funk, Fusco, Gargano, Gasparrini, Germani,
-  Giglietto, Giordano, Giroletti, Godfrey, Gomez-Vargas, Grenier, Guiriec,
-  Hadasch, Harding, Hays, Hewitt, Hou, Jogler, J{\'{o}}hannesson, Johnson,
-  Johnson, Kamae, Kataoka, Kn\"{o}dlseder, Kocevski, Kuss, Larsson, Latronico,
-  Longo, Loparco, Lovellette, Lubrano, Malyshev, Manfreda, Massaro, Mayer,
-  Mazziotta, McEnery, Michelson, Mitthumsiri, Mizuno, Monzani, Morselli,
-  Moskalenko, Murgia, Nemmen, Nuss, Ohsugi, Omodei, Orienti, Orlando, Ormes,
-  Paneque, Panetta, Perkins, Pesce-Rollins, Petrosian, Piron, Pivato,
-  Rain{\`{o}}, Rando, Razzano, Razzaque, Reimer, Reimer, S{\'{a}}nchez-Conde,
-  Schaal, Schulz, Sgr{\`{o}}, Siskind, Spandre, Spinelli, Stawarz, Strong,
-  Suson, Tahara, Takahashi, Thayer, Tibaldo, Tinivella, Torres, Tosti, Troja,
-  Uchiyama, Vianello, Werner, Winer, Wood, Wood, and Zaharijas]{Ackermann2014}
-M.~Ackermann, A.~Albert, W.~B. Atwood, L.~Baldini, J.~Ballet, G.~Barbiellini,
-  D.~Bastieri, R.~Bellazzini, E.~Bissaldi, R.~D. Blandford, E.~D. Bloom,
-  E.~Bottacini, T.~J. Brandt, J.~Bregeon, P.~Bruel, R.~Buehler, S.~Buson, G.~A.
-  Caliandro, R.~A. Cameron, M.~Caragiulo, P.~A. Caraveo, E.~Cavazzuti,
-  C.~Cecchi, E.~Charles, A.~Chekhtman, J.~Chiang, G.~Chiaro, S.~Ciprini,
-  R.~Claus, J.~Cohen-Tanugi, J.~Conrad, S.~Cutini,
-  F.~D{\textquotesingle}Ammando, A.~de~Angelis, F.~de~Palma, C.~D. Dermer,
-  S.~W. Digel, L.~D. Venere, E.~do~Couto~e Silva, P.~S. Drell, C.~Favuzzi,
-  E.~C. Ferrara, W.~B. Focke, A.~Franckowiak, Y.~Fukazawa, S.~Funk, P.~Fusco,
-  F.~Gargano, D.~Gasparrini, S.~Germani, N.~Giglietto, F.~Giordano,
-  M.~Giroletti, G.~Godfrey, G.~A. Gomez-Vargas, I.~A. Grenier, S.~Guiriec,
-  D.~Hadasch, A.~K. Harding, E.~Hays, J.~W. Hewitt, X.~Hou, T.~Jogler,
-  G.~J{\'{o}}hannesson, A.~S. Johnson, W.~N. Johnson, T.~Kamae, J.~Kataoka,
-  J.~Kn\"{o}dlseder, D.~Kocevski, M.~Kuss, S.~Larsson, L.~Latronico, F.~Longo,
-  F.~Loparco, M.~N. Lovellette, P.~Lubrano, D.~Malyshev, A.~Manfreda,
-  F.~Massaro, M.~Mayer, M.~N. Mazziotta, J.~E. McEnery, P.~F. Michelson,
-  W.~Mitthumsiri, T.~Mizuno, M.~E. Monzani, A.~Morselli, I.~V. Moskalenko,
-  S.~Murgia, R.~Nemmen, E.~Nuss, T.~Ohsugi, N.~Omodei, M.~Orienti, E.~Orlando,
-  J.~F. Ormes, D.~Paneque, J.~H. Panetta, J.~S. Perkins, M.~Pesce-Rollins,
-  V.~Petrosian, F.~Piron, G.~Pivato, S.~Rain{\`{o}}, R.~Rando, M.~Razzano,
-  S.~Razzaque, A.~Reimer, O.~Reimer, M.~S{\'{a}}nchez-Conde, M.~Schaal,
-  A.~Schulz, C.~Sgr{\`{o}}, E.~J. Siskind, G.~Spandre, P.~Spinelli,
-  {\L}.~Stawarz, A.~W. Strong, D.~J. Suson, M.~Tahara, H.~Takahashi, J.~B.
-  Thayer, L.~Tibaldo, M.~Tinivella, D.~F. Torres, G.~Tosti, E.~Troja,
-  Y.~Uchiyama, G.~Vianello, M.~Werner, B.~L. Winer, K.~S. Wood, M.~Wood, and
-  G.~Zaharijas.
-\newblock {THE} {SPECTRUM} {AND} {MORPHOLOGY} {OF} {THEFERMIBUBBLES}.
-\newblock \emph{The Astrophysical Journal}, 793\penalty0 (1):\penalty0 64,
-  Sept. 2014.
-\newblock \doi{10.1088/0004-637x/793/1/64}.
-\newblock URL \url{https://doi.org/10.1088/0004-637x/793/1/64}.
+\bibitem[\protect\citeauthoryear{Ackermann et~al.,}{Ackermann
+  et~al.}{2014}]{Ackermann2014}
+Ackermann M.,  et~al., 2014, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637x/793/1/64}, 793, 64
 
-\bibitem[Ade et~al.(2013)Ade, Aghanim, Arnaud, Ashdown, Atrio-Barandela,
-  Aumont, Baccigalupi, Balbi, Banday, Barreiro, Bartlett, Battaner, Benabed,
-  Beno{\^{\i}}t, Bernard, Bersanelli, Bonaldi, Bond, Borrill, Bouchet,
-  Burigana, Cabella, Cardoso, Catalano, Cay{\'{o}}n, Chary, Chiang,
-  Christensen, Clements, Colombo, Coulais, Crill, Cuttaia, Danese, D'Arcangelo,
-  Davis, de~Bernardis, de~Gasperis, de~Rosa, de~Zotti, Delabrouille, Dickinson,
-  Diego, Dobler, Dole, Donzelli, Dor{\'{e}}, D\"{o}rl, Douspis, Dupac,
-  Efstathiou, En{\ss}lin, Eriksen, Finelli, Forni, Frailis, Franceschi,
-  Galeotta, Ganga, Giard, Giardino, Gonz{\'{a}}lez-Nuevo, G{\'{o}}rski,
-  Gratton, Gregorio, Gruppuso, Hansen, Harrison, Helou, Henrot-Versill{\'{e}},
-  Hern{\'{a}}ndez-Monteagudo, Hildebrandt, Hivon, Hobson, Holmes, Hornstrup,
-  Hovest, Huffenberger, Jaffe, Jagemann, Jewell, Jones, Juvela, Keih\"{a}nen,
-  Knoche, Knox, Kunz, Kurki-Suonio, Lagache, L\"{a}hteenm\"{a}ki, Lamarre,
-  Lasenby, Lawrence, Leach, Leonardi, Lilje, Linden-V{\o}rnle,
-  L{\'{o}}pez-Caniego, Lubin, Mac{\'{\i}}as-P{\'{e}}rez, Maffei, Maino,
-  Mandolesi, Maris, Marshall, Martin, Mart{\'{\i}}nez-Gonz{\'{a}}lez, Masi,
-  Massardi, Matarrese, Matthai, Mazzotta, Meinhold, Melchiorri, Mendes,
-  Mennella, Mitra, Moneti, Montier, Morgante, Munshi, Murphy, Naselsky, Natoli,
-  N{\o}rgaard-Nielsen, Noviello, Novikov, Novikov, Osborne, Pajot, Paladini,
-  Paoletti, Partridge, Pearson, Perdereau, Perrotta, Piacentini, Piat,
-  Pierpaoli, Pietrobon, Plaszczynski, Pointecouteau, Polenta, Ponthieu, Popa,
-  Poutanen, Pratt, Prunet, Puget, Rachen, Rebolo, Reinecke, Renault, Ricciardi,
-  Riller, Ristorcelli, Rocha, Rosset, Rubi{\~{n}}o-Mart{\'{\i}}n, Rusholme,
-  Sandri, Savini, Schaefer, Scott, Smoot, Spencer, Stivoli, Sudiwala,
-  Suur-Uski, Sygnet, Tauber, Terenzi, Toffolatti, Tomasi, Tristram, T\"{u}rler,
-  Umana, Valenziano, Tent, Vielva, Villa, Vittorio, Wade, Wandelt, White, Yvon,
-  Zacchei, and Zonca]{PlanckCollaborationIX2013}
-P.~A.~R. Ade, N.~Aghanim, M.~Arnaud, M.~Ashdown, F.~Atrio-Barandela, J.~Aumont,
-  C.~Baccigalupi, A.~Balbi, A.~J. Banday, R.~B. Barreiro, J.~G. Bartlett,
-  E.~Battaner, K.~Benabed, A.~Beno{\^{\i}}t, J.-P. Bernard, M.~Bersanelli,
-  A.~Bonaldi, J.~R. Bond, J.~Borrill, F.~R. Bouchet, C.~Burigana, P.~Cabella,
-  J.-F. Cardoso, A.~Catalano, L.~Cay{\'{o}}n, R.-R. Chary, L.-Y. Chiang, P.~R.
-  Christensen, D.~L. Clements, L.~P.~L. Colombo, A.~Coulais, B.~P. Crill,
-  F.~Cuttaia, L.~Danese, O.~D'Arcangelo, R.~J. Davis, P.~de~Bernardis,
-  G.~de~Gasperis, A.~de~Rosa, G.~de~Zotti, J.~Delabrouille, C.~Dickinson, J.~M.
-  Diego, G.~Dobler, H.~Dole, S.~Donzelli, O.~Dor{\'{e}}, U.~D\"{o}rl,
-  M.~Douspis, X.~Dupac, G.~Efstathiou, T.~A. En{\ss}lin, H.~K. Eriksen,
-  F.~Finelli, O.~Forni, M.~Frailis, E.~Franceschi, S.~Galeotta, K.~Ganga,
-  M.~Giard, G.~Giardino, J.~Gonz{\'{a}}lez-Nuevo, K.~M. G{\'{o}}rski,
-  S.~Gratton, A.~Gregorio, A.~Gruppuso, F.~K. Hansen, D.~Harrison, G.~Helou,
-  S.~Henrot-Versill{\'{e}}, C.~Hern{\'{a}}ndez-Monteagudo, S.~R. Hildebrandt,
-  E.~Hivon, M.~Hobson, W.~A. Holmes, A.~Hornstrup, W.~Hovest, K.~M.
-  Huffenberger, T.~R. Jaffe, T.~Jagemann, J.~Jewell, W.~C. Jones, M.~Juvela,
-  E.~Keih\"{a}nen, J.~Knoche, L.~Knox, M.~Kunz, H.~Kurki-Suonio, G.~Lagache,
-  A.~L\"{a}hteenm\"{a}ki, J.-M. Lamarre, A.~Lasenby, C.~R. Lawrence, S.~Leach,
-  R.~Leonardi, P.~B. Lilje, M.~Linden-V{\o}rnle, M.~L{\'{o}}pez-Caniego, P.~M.
-  Lubin, J.~F. Mac{\'{\i}}as-P{\'{e}}rez, B.~Maffei, D.~Maino, N.~Mandolesi,
-  M.~Maris, D.~J. Marshall, P.~G. Martin, E.~Mart{\'{\i}}nez-Gonz{\'{a}}lez,
-  S.~Masi, M.~Massardi, S.~Matarrese, F.~Matthai, P.~Mazzotta, P.~R. Meinhold,
-  A.~Melchiorri, L.~Mendes, A.~Mennella, S.~Mitra, A.~Moneti, L.~Montier,
-  G.~Morgante, D.~Munshi, J.~A. Murphy, P.~Naselsky, P.~Natoli, H.~U.
-  N{\o}rgaard-Nielsen, F.~Noviello, D.~Novikov, I.~Novikov, S.~Osborne,
-  F.~Pajot, R.~Paladini, D.~Paoletti, B.~Partridge, T.~J. Pearson,
-  O.~Perdereau, F.~Perrotta, F.~Piacentini, M.~Piat, E.~Pierpaoli,
-  D.~Pietrobon, S.~Plaszczynski, E.~Pointecouteau, G.~Polenta, N.~Ponthieu,
-  L.~Popa, T.~Poutanen, G.~W. Pratt, S.~Prunet, J.-L. Puget, J.~P. Rachen,
-  R.~Rebolo, M.~Reinecke, C.~Renault, S.~Ricciardi, T.~Riller, I.~Ristorcelli,
-  G.~Rocha, C.~Rosset, J.~A. Rubi{\~{n}}o-Mart{\'{\i}}n, B.~Rusholme,
-  M.~Sandri, G.~Savini, B.~M. Schaefer, D.~Scott, G.~F. Smoot, L.~Spencer,
-  F.~Stivoli, R.~Sudiwala, A.-S. Suur-Uski, J.-F. Sygnet, J.~A. Tauber,
-  L.~Terenzi, L.~Toffolatti, M.~Tomasi, M.~Tristram, M.~T\"{u}rler, G.~Umana,
-  L.~Valenziano, B.~V. Tent, P.~Vielva, F.~Villa, N.~Vittorio, L.~A. Wade,
-  B.~D. Wandelt, M.~White, D.~Yvon, A.~Zacchei, and A.~Zonca.
-\newblock Planckintermediate results.
-\newblock \emph{Astronomy {\&} Astrophysics}, 554:\penalty0 A139, June 2013.
-\newblock \doi{10.1051/0004-6361/201220271}.
-\newblock URL \url{https://doi.org/10.1051/0004-6361/201220271}.
+\bibitem[\protect\citeauthoryear{Ade et~al.,}{Ade
+  et~al.}{2013}]{PlanckCollaborationIX2013}
+Ade P. A.~R.,  et~al., 2013, \mn@doi [Astronomy {\&} Astrophysics]
+  {10.1051/0004-6361/201220271}, 554, A139
 
-\bibitem[{Arnaud}(1996)]{XSPEC}
-K.~A. {Arnaud}.
-\newblock {XSPEC: The First Ten Years}.
-\newblock In G.~H. {Jacoby} and J.~{Barnes}, editors, \emph{Astronomical Data
-  Analysis Software and Systems V}, volume 101 of \emph{Astronomical Society of
-  the Pacific Conference Series}, page~17, Jan. 1996.
+\bibitem[\protect\citeauthoryear{{Arnaud}}{{Arnaud}}{1996}]{XSPEC}
+{Arnaud} K.~A.,  1996, in {Jacoby} G.~H.,  {Barnes} J.,  eds,  Astronomical
+  Society of the Pacific Conference Series Vol. 101, Astronomical Data Analysis
+  Software and Systems V. p.~17
 
-\bibitem[Atwood et~al.(2009)Atwood, Abdo, Ackermann, Althouse, Anderson,
-  Axelsson, Baldini, Ballet, Band, Barbiellini, Bartelt, Bastieri, Baughman,
-  Bechtol, B{\'{e}}d{\'{e}}r{\`{e}}de, Bellardi, Bellazzini, Berenji, Bignami,
-  Bisello, Bissaldi, Blandford, Bloom, Bogart, Bonamente, Bonnell, Borgland,
-  Bouvier, Bregeon, Brez, Brigida, Bruel, Burnett, Busetto, Caliandro, Cameron,
-  Caraveo, Carius, Carlson, Casandjian, Cavazzuti, Ceccanti, Cecchi, Charles,
-  Chekhtman, Cheung, Chiang, Chipaux, Cillis, Ciprini, Claus, Cohen-Tanugi,
-  Condamoor, Conrad, Corbet, Corucci, Costamante, Cutini, Davis, Decotigny,
-  DeKlotz, Dermer, de~Angelis, Digel, do~Couto~e Silva, Drell, Dubois, Dumora,
-  Edmonds, Fabiani, Farnier, Favuzzi, Flath, Fleury, Focke, Funk, Fusco,
-  Gargano, Gasparrini, Gehrels, Gentit, Germani, Giebels, Giglietto, Giommi,
-  Giordano, Glanzman, Godfrey, Grenier, Grondin, Grove, Guillemot, Guiriec,
-  Haller, Harding, Hart, Hays, Healey, Hirayama, Hjalmarsdotter, Horn, Hughes,
-  J{\'{o}}hannesson, Johansson, Johnson, Johnson, Johnson, Johnson, Kamae,
-  Katagiri, Kataoka, Kavelaars, Kawai, Kelly, Kerr, Klamra, Kn\"{o}dlseder,
-  Kocian, Komin, Kuehn, Kuss, Landriu, Latronico, Lee, Lee, Lemoine-Goumard,
-  Lionetto, Longo, Loparco, Lott, Lovellette, Lubrano, Madejski, Makeev,
-  Marangelli, Massai, Mazziotta, McEnery, Menon, Meurer, Michelson, Minuti,
-  Mirizzi, Mitthumsiri, Mizuno, Moiseev, Monte, Monzani, Moretti, Morselli,
-  Moskalenko, Murgia, Nakamori, Nishino, Nolan, Norris, Nuss, Ohno, Ohsugi,
-  Omodei, Orlando, Ormes, Paccagnella, Paneque, Panetta, Parent, Pearce, Pepe,
-  Perazzo, Pesce-Rollins, Picozza, Pieri, Pinchera, Piron, Porter, Poupard,
-  Rain{\`{o}}, Rando, Rapposelli, Razzano, Reimer, Reimer, Reposeur, Reyes,
-  Ritz, Rochester, Rodriguez, Romani, Roth, Russell, Ryde, Sabatini,
-  Sadrozinski, Sanchez, Sander, Sapozhnikov, Parkinson, Scargle, Schalk,
-  Scolieri, Sgr{\`{o}}, Share, Shaw, Shimokawabe, Shrader, Sierpowska-Bartosik,
-  Siskind, Smith, Smith, Spandre, Spinelli, Starck, Stephens, Strickman,
-  Strong, Suson, Tajima, Takahashi, Takahashi, Tanaka, Tenze, Tether, Thayer,
-  Thayer, Thompson, Tibaldo, Tibolla, Torres, Tosti, Tramacere, Turri, Usher,
-  Vilchez, Vitale, Wang, Watters, Winer, Wood, Ylinen, and Ziegler]{Atwood2009}
-W.~B. Atwood, A.~A. Abdo, M.~Ackermann, W.~Althouse, B.~Anderson, M.~Axelsson,
-  L.~Baldini, J.~Ballet, D.~L. Band, G.~Barbiellini, J.~Bartelt, D.~Bastieri,
-  B.~M. Baughman, K.~Bechtol, D.~B{\'{e}}d{\'{e}}r{\`{e}}de, F.~Bellardi,
-  R.~Bellazzini, B.~Berenji, G.~F. Bignami, D.~Bisello, E.~Bissaldi, R.~D.
-  Blandford, E.~D. Bloom, J.~R. Bogart, E.~Bonamente, J.~Bonnell, A.~W.
-  Borgland, A.~Bouvier, J.~Bregeon, A.~Brez, M.~Brigida, P.~Bruel, T.~H.
-  Burnett, G.~Busetto, G.~A. Caliandro, R.~A. Cameron, P.~A. Caraveo,
-  S.~Carius, P.~Carlson, J.~M. Casandjian, E.~Cavazzuti, M.~Ceccanti,
-  C.~Cecchi, E.~Charles, A.~Chekhtman, C.~C. Cheung, J.~Chiang, R.~Chipaux,
-  A.~N. Cillis, S.~Ciprini, R.~Claus, J.~Cohen-Tanugi, S.~Condamoor, J.~Conrad,
-  R.~Corbet, L.~Corucci, L.~Costamante, S.~Cutini, D.~S. Davis, D.~Decotigny,
-  M.~DeKlotz, C.~D. Dermer, A.~de~Angelis, S.~W. Digel, E.~do~Couto~e Silva,
-  P.~S. Drell, R.~Dubois, D.~Dumora, Y.~Edmonds, D.~Fabiani, C.~Farnier,
-  C.~Favuzzi, D.~L. Flath, P.~Fleury, W.~B. Focke, S.~Funk, P.~Fusco,
-  F.~Gargano, D.~Gasparrini, N.~Gehrels, F.-X. Gentit, S.~Germani, B.~Giebels,
-  N.~Giglietto, P.~Giommi, F.~Giordano, T.~Glanzman, G.~Godfrey, I.~A. Grenier,
-  M.-H. Grondin, J.~E. Grove, L.~Guillemot, S.~Guiriec, G.~Haller, A.~K.
-  Harding, P.~A. Hart, E.~Hays, S.~E. Healey, M.~Hirayama, L.~Hjalmarsdotter,
-  R.~Horn, R.~E. Hughes, G.~J{\'{o}}hannesson, G.~Johansson, A.~S. Johnson,
-  R.~P. Johnson, T.~J. Johnson, W.~N. Johnson, T.~Kamae, H.~Katagiri,
-  J.~Kataoka, A.~Kavelaars, N.~Kawai, H.~Kelly, M.~Kerr, W.~Klamra,
-  J.~Kn\"{o}dlseder, M.~L. Kocian, N.~Komin, F.~Kuehn, M.~Kuss, D.~Landriu,
-  L.~Latronico, B.~Lee, S.-H. Lee, M.~Lemoine-Goumard, A.~M. Lionetto,
-  F.~Longo, F.~Loparco, B.~Lott, M.~N. Lovellette, P.~Lubrano, G.~M. Madejski,
-  A.~Makeev, B.~Marangelli, M.~M. Massai, M.~N. Mazziotta, J.~E. McEnery,
-  N.~Menon, C.~Meurer, P.~F. Michelson, M.~Minuti, N.~Mirizzi, W.~Mitthumsiri,
-  T.~Mizuno, A.~A. Moiseev, C.~Monte, M.~E. Monzani, E.~Moretti, A.~Morselli,
-  I.~V. Moskalenko, S.~Murgia, T.~Nakamori, S.~Nishino, P.~L. Nolan, J.~P.
-  Norris, E.~Nuss, M.~Ohno, T.~Ohsugi, N.~Omodei, E.~Orlando, J.~F. Ormes,
-  A.~Paccagnella, D.~Paneque, J.~H. Panetta, D.~Parent, M.~Pearce, M.~Pepe,
-  A.~Perazzo, M.~Pesce-Rollins, P.~Picozza, L.~Pieri, M.~Pinchera, F.~Piron,
-  T.~A. Porter, L.~Poupard, S.~Rain{\`{o}}, R.~Rando, E.~Rapposelli,
-  M.~Razzano, A.~Reimer, O.~Reimer, T.~Reposeur, L.~C. Reyes, S.~Ritz, L.~S.
-  Rochester, A.~Y. Rodriguez, R.~W. Romani, M.~Roth, J.~J. Russell, F.~Ryde,
-  S.~Sabatini, H.~F.-W. Sadrozinski, D.~Sanchez, A.~Sander, L.~Sapozhnikov,
-  P.~M.~S. Parkinson, J.~D. Scargle, T.~L. Schalk, G.~Scolieri, C.~Sgr{\`{o}},
-  G.~H. Share, M.~Shaw, T.~Shimokawabe, C.~Shrader, A.~Sierpowska-Bartosik,
-  E.~J. Siskind, D.~A. Smith, P.~D. Smith, G.~Spandre, P.~Spinelli, J.-L.
-  Starck, T.~E. Stephens, M.~S. Strickman, A.~W. Strong, D.~J. Suson,
-  H.~Tajima, H.~Takahashi, T.~Takahashi, T.~Tanaka, A.~Tenze, S.~Tether, J.~B.
-  Thayer, J.~G. Thayer, D.~J. Thompson, L.~Tibaldo, O.~Tibolla, D.~F. Torres,
-  G.~Tosti, A.~Tramacere, M.~Turri, T.~L. Usher, N.~Vilchez, V.~Vitale,
-  P.~Wang, K.~Watters, B.~L. Winer, K.~S. Wood, T.~Ylinen, and M.~Ziegler.
-\newblock {THE} {LARGE} {AREA} {TELESCOPE} {ON} {THEFERMI} {GAMMA}-{RAY}
-  {SPACE} {TELESCOPEMISSION}.
-\newblock \emph{The Astrophysical Journal}, 697\penalty0 (2):\penalty0
-  1071--1102, May 2009.
-\newblock \doi{10.1088/0004-637x/697/2/1071}.
-\newblock URL \url{https://doi.org/10.1088/0004-637x/697/2/1071}.
+\bibitem[\protect\citeauthoryear{Atwood et~al.,}{Atwood
+  et~al.}{2009}]{Atwood2009}
+Atwood W.~B.,  et~al., 2009, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637x/697/2/1071}, 697, 1071
 
-\bibitem[Bland-Hawthorn and Gerhard(2016)]{BlandHawthorn2016}
-J.~Bland-Hawthorn and O.~Gerhard.
-\newblock The galaxy in context: Structural, kinematic, and integrated
-  properties.
-\newblock \emph{Annual Review of Astronomy and Astrophysics}, 54\penalty0
-  (1):\penalty0 529--596, Sept. 2016.
-\newblock \doi{10.1146/annurev-astro-081915-023441}.
-\newblock URL \url{https://doi.org/10.1146/annurev-astro-081915-023441}.
+\bibitem[\protect\citeauthoryear{Bland-Hawthorn \& Gerhard}{Bland-Hawthorn \&
+  Gerhard}{2016}]{BlandHawthorn2016}
+Bland-Hawthorn J.,  Gerhard O.,  2016, \mn@doi [Annual Review of Astronomy and
+  Astrophysics] {10.1146/annurev-astro-081915-023441}, 54, 529
 
-\bibitem[Blitz and Robishaw(2000)]{halo-radius-1}
-L.~Blitz and T.~Robishaw.
-\newblock Gas-rich dwarf spheroidals.
-\newblock 541\penalty0 (2):\penalty0 675--687, Oct. 2000.
-\newblock \doi{10.1086/309457}.
-\newblock URL \url{https://doi.org/10.1086/309457}.
+\bibitem[\protect\citeauthoryear{Blitz \& Robishaw}{Blitz \&
+  Robishaw}{2000}]{halo-radius-1}
+Blitz L.,  Robishaw T.,  2000, ] {10.1086/309457}, 541, 675
 
-\bibitem[Blumenthal and Gould(1970)]{BLUMENTHAL1970}
-G.~R. Blumenthal and R.~J. Gould.
-\newblock Bremsstrahlung, synchrotron radiation, and compton scattering of
-  high-energy electrons traversing dilute gases.
-\newblock \emph{Reviews of Modern Physics}, 42\penalty0 (2):\penalty0 237--270,
-  Apr. 1970.
-\newblock \doi{10.1103/revmodphys.42.237}.
-\newblock URL \url{https://doi.org/10.1103/revmodphys.42.237}.
+\bibitem[\protect\citeauthoryear{Blumenthal \& Gould}{Blumenthal \&
+  Gould}{1970}]{BLUMENTHAL1970}
+Blumenthal G.~R.,  Gould R.~J.,  1970, \mn@doi [Reviews of Modern Physics]
+  {10.1103/revmodphys.42.237}, 42, 237
 
-\bibitem[Carretti et~al.(2013)Carretti, Crocker, Staveley-Smith, Haverkorn,
-  Purcell, Gaensler, Bernardi, Kesteven, and Poppi]{Carretti2013}
-E.~Carretti, R.~M. Crocker, L.~Staveley-Smith, M.~Haverkorn, C.~Purcell, B.~M.
-  Gaensler, G.~Bernardi, M.~J. Kesteven, and S.~Poppi.
-\newblock Giant magnetized outflows from the centre of the milky way.
-\newblock \emph{Nature}, 493\penalty0 (7430):\penalty0 66--69, Jan. 2013.
-\newblock \doi{10.1038/nature11734}.
-\newblock URL \url{https://doi.org/10.1038/nature11734}.
+\bibitem[\protect\citeauthoryear{Carretti et~al.,}{Carretti
+  et~al.}{2013}]{Carretti2013}
+Carretti E.,  et~al., 2013, \mn@doi [Nature] {10.1038/nature11734}, 493, 66
 
-\bibitem[Cecil et~al.(2001)Cecil, Bland-Hawthorn, Veilleux, and
-  Filippenko]{Cecil2001}
-G.~Cecil, J.~Bland-Hawthorn, S.~Veilleux, and A.~V. Filippenko.
-\newblock Jet- and wind-driven ionized outflows in the superbubble and
-  star-forming disk of {NGC} 3079.
-\newblock \emph{The Astrophysical Journal}, 555\penalty0 (1):\penalty0
-  338--355, July 2001.
-\newblock \doi{10.1086/321481}.
-\newblock URL \url{https://doi.org/10.1086/321481}.
+\bibitem[\protect\citeauthoryear{Cecil, Bland-Hawthorn, Veilleux  \&
+  Filippenko}{Cecil et~al.}{2001}]{Cecil2001}
+Cecil G.,  Bland-Hawthorn J.,  Veilleux S.,   Filippenko A.~V.,  2001, \mn@doi
+  [The Astrophysical Journal] {10.1086/321481}, 555, 338
 
-\bibitem[Crocker and Aharonian(2011)]{PhysRevLett.106.101102}
-R.~M. Crocker and F.~Aharonian.
-\newblock Fermi bubbles: Giant, multibillion-year-old reservoirs of galactic
-  center cosmic rays.
-\newblock \emph{Phys. Rev. Lett.}, 106:\penalty0 101102, Mar 2011.
-\newblock \doi{10.1103/PhysRevLett.106.101102}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.106.101102}.
+\bibitem[\protect\citeauthoryear{Crocker \& Aharonian}{Crocker \&
+  Aharonian}{2011}]{PhysRevLett.106.101102}
+Crocker R.~M.,  Aharonian F.,  2011, \mn@doi [Phys. Rev. Lett.]
+  {10.1103/PhysRevLett.106.101102}, 106, 101102
 
-\bibitem[Crocker et~al.(2010)Crocker, Jones, Melia, Ott, and
-  Protheroe]{Crocker2010}
-R.~M. Crocker, D.~I. Jones, F.~Melia, J.~Ott, and R.~J. Protheroe.
-\newblock A lower limit of 50 microgauss for the magnetic field near the
-  galactic centre.
-\newblock \emph{Nature}, 463\penalty0 (7277):\penalty0 65--67, Jan 2010.
-\newblock ISSN 1476-4687.
-\newblock \doi{10.1038/nature08635}.
-\newblock URL \url{https://doi.org/10.1038/nature08635}.
+\bibitem[\protect\citeauthoryear{Crocker, Jones, Melia, Ott  \&
+  Protheroe}{Crocker et~al.}{2010}]{Crocker2010}
+Crocker R.~M.,  Jones D.~I.,  Melia F.,  Ott J.,   Protheroe R.~J.,  2010,
+  \mn@doi [Nature] {10.1038/nature08635}, 463, 65
 
-\bibitem[Dobler(2012)]{Dobler2012}
-G.~Dobler.
-\newblock A {LAST} {LOOK} {AT} {THE} {MICROWAVE} {HAZE}/{BUBBLES} {WITHWMAP}.
-\newblock \emph{The Astrophysical Journal}, 750\penalty0 (1):\penalty0 17, Apr.
-  2012.
-\newblock \doi{10.1088/0004-637x/750/1/17}.
-\newblock URL \url{https://doi.org/10.1088/0004-637x/750/1/17}.
+\bibitem[\protect\citeauthoryear{Dobler}{Dobler}{2012}]{Dobler2012}
+Dobler G.,  2012, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637x/750/1/17}, 750, 17
 
-\bibitem[Dobler and Finkbeiner(2008)]{Dobler_2008}
-G.~Dobler and D.~P. Finkbeiner.
-\newblock Extended anomalous foreground emission in {theWMAPThree}-year data.
-\newblock \emph{The Astrophysical Journal}, 680\penalty0 (2):\penalty0
-  1222--1234, jun 2008.
-\newblock \doi{10.1086/587862}.
-\newblock URL \url{https://doi.org/10.1086/587862}.
+\bibitem[\protect\citeauthoryear{Dobler \& Finkbeiner}{Dobler \&
+  Finkbeiner}{2008}]{Dobler_2008}
+Dobler G.,  Finkbeiner D.~P.,  2008, \mn@doi [The Astrophysical Journal]
+  {10.1086/587862}, 680, 1222
 
-\bibitem[Dopita et~al.(2015)Dopita, Shastri, Davies, Kewley, Hampton,
-  Scharw\"{a}chter, Sutherland, Kharb, Jose, Bhatt, Ramya, Jin, Banfield, Zaw,
-  Juneau, James, and Srivastava]{Dopita2015}
-M.~A. Dopita, P.~Shastri, R.~Davies, L.~Kewley, E.~Hampton,
-  J.~Scharw\"{a}chter, R.~Sutherland, P.~Kharb, J.~Jose, H.~Bhatt, S.~Ramya,
-  C.~Jin, J.~Banfield, I.~Zaw, S.~Juneau, B.~James, and S.~Srivastava.
-\newblock {PROBING} {THE} {PHYSICS} {OF} {NARROW} {LINE} {REGIONS} {IN}
-  {ACTIVE} {GALAXIES}. {II}. {THE} {SIDING} {SPRING} {SOUTHERN} {SEYFERT}
-  {SPECTROSCOPIC} {SNAPSHOT} {SURVEY} (s7).
-\newblock \emph{The Astrophysical Journal Supplement Series}, 217\penalty0
-  (1):\penalty0 12, Mar. 2015.
-\newblock \doi{10.1088/0067-0049/217/1/12}.
-\newblock URL \url{https://doi.org/10.1088/0067-0049/217/1/12}.
+\bibitem[\protect\citeauthoryear{Dopita et~al.,}{Dopita
+  et~al.}{2015}]{Dopita2015}
+Dopita M.~A.,  et~al., 2015, \mn@doi [The Astrophysical Journal Supplement
+  Series] {10.1088/0067-0049/217/1/12}, 217, 12
 
-\bibitem[Federrath et~al.(2010)Federrath, Roman-Duval, Klessen, Schmidt, and
-  Low]{Federrath2010}
-C.~Federrath, J.~Roman-Duval, R.~S. Klessen, W.~Schmidt, and M.-M.~M. Low.
-\newblock Comparing the statistics of interstellar turbulence in simulations
-  and observations.
-\newblock \emph{Astronomy and Astrophysics}, 512:\penalty0 A81, Mar. 2010.
-\newblock \doi{10.1051/0004-6361/200912437}.
-\newblock URL \url{https://doi.org/10.1051/0004-6361/200912437}.
+\bibitem[\protect\citeauthoryear{Federrath, Roman-Duval, Klessen, Schmidt  \&
+  Low}{Federrath et~al.}{2010}]{Federrath2010}
+Federrath C.,  Roman-Duval J.,  Klessen R.~S.,  Schmidt W.,   Low M.-M.~M.,
+  2010, \mn@doi [Astronomy and Astrophysics] {10.1051/0004-6361/200912437},
+  512, A81
 
-\bibitem[Ferri{\`{e}}re(2001)]{peak-ism-density}
-K.~M. Ferri{\`{e}}re.
-\newblock The interstellar environment of our galaxy.
-\newblock \emph{Rev. Mod. Phys.}, 73\penalty0 (4):\penalty0 1031--1066, Dec.
-  2001.
-\newblock \doi{10.1103/revmodphys.73.1031}.
-\newblock URL \url{https://doi.org/10.1103/revmodphys.73.1031}.
+\bibitem[\protect\citeauthoryear{Ferri{\`{e}}re}{Ferri{\`{e}}re}{2001}]{peak-ism-density}
+Ferri{\`{e}}re K.~M.,  2001, \mn@doi [Rev. Mod. Phys.]
+  {10.1103/revmodphys.73.1031}, 73, 1031
 
-\bibitem[Gallimore et~al.(2006)Gallimore, Axon, O{\textquotesingle}Dea, Baum,
-  and Pedlar]{Gallimore2006}
-J.~F. Gallimore, D.~J. Axon, C.~P. O{\textquotesingle}Dea, S.~A. Baum, and
-  A.~Pedlar.
-\newblock A survey of kiloparsec-scale radio outflows in radio-quiet active
-  galactic nuclei.
-\newblock \emph{The Astronomical Journal}, 132\penalty0 (2):\penalty0 546--569,
-  June 2006.
-\newblock \doi{10.1086/504593}.
-\newblock URL \url{https://doi.org/10.1086/504593}.
+\bibitem[\protect\citeauthoryear{Gallimore, Axon, O{\textquotesingle}Dea, Baum
+  \& Pedlar}{Gallimore et~al.}{2006}]{Gallimore2006}
+Gallimore J.~F.,  Axon D.~J.,  O{\textquotesingle}Dea C.~P.,  Baum S.~A.,
+  Pedlar A.,  2006, \mn@doi [The Astronomical Journal] {10.1086/504593}, 132,
+  546
 
-\bibitem[Grcevich and Putman(2009)]{halo-radius-2}
-J.~Grcevich and M.~E. Putman.
-\newblock H i {IN} {LOCAL} {GROUP} {DWARF} {GALAXIES} {AND} {STRIPPING} {BY}
-  {THE} {GALACTIC} {HALO}.
-\newblock 696\penalty0 (1):\penalty0 385--395, Apr. 2009.
-\newblock \doi{10.1088/0004-637x/696/1/385}.
-\newblock URL \url{https://doi.org/10.1088/0004-637x/696/1/385}.
+\bibitem[\protect\citeauthoryear{Grcevich \& Putman}{Grcevich \&
+  Putman}{2009}]{halo-radius-2}
+Grcevich J.,  Putman M.~E.,  2009, ] {10.1088/0004-637x/696/1/385}, 696, 385
 
-\bibitem[Guo and Mathews(2012)]{Guo2012}
-F.~Guo and W.~G. Mathews.
-\newblock {THEFERMIBUBBLES}. i. {POSSIBLE} {EVIDENCE} {FOR} {RECENT} {AGN}
-  {JET} {ACTIVITY} {IN} {THE} {GALAXY}.
-\newblock \emph{The Astrophysical Journal}, 756\penalty0 (2):\penalty0 181,
-  Aug. 2012.
-\newblock \doi{10.1088/0004-637x/756/2/181}.
-\newblock URL \url{https://doi.org/10.1088/0004-637x/756/2/181}.
+\bibitem[\protect\citeauthoryear{Guo \& Mathews}{Guo \&
+  Mathews}{2012}]{Guo2012}
+Guo F.,  Mathews W.~G.,  2012, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637x/756/2/181}, 756, 181
 
-\bibitem[Johnston et~al.(1995)Johnston, Spergel, and Hernquist]{Johnston1995}
-K.~V. Johnston, D.~N. Spergel, and L.~Hernquist.
-\newblock The disruption of the sagittarius dwarf galaxy.
-\newblock \emph{The Astrophysical Journal}, 451:\penalty0 598, Oct. 1995.
-\newblock \doi{10.1086/176247}.
-\newblock URL \url{https://doi.org/10.1086/176247}.
+\bibitem[\protect\citeauthoryear{Johnston, Spergel  \& Hernquist}{Johnston
+  et~al.}{1995}]{Johnston1995}
+Johnston K.~V.,  Spergel D.~N.,   Hernquist L.,  1995, \mn@doi [The
+  Astrophysical Journal] {10.1086/176247}, 451, 598
 
-\bibitem[Jones(1968)]{Jones1968}
-F.~C. Jones.
-\newblock Calculated spectrum of inverse-compton-scattered photons.
-\newblock \emph{Physical Review}, 167\penalty0 (5):\penalty0 1159--1169, Mar.
-  1968.
-\newblock \doi{10.1103/physrev.167.1159}.
-\newblock URL \url{https://doi.org/10.1103/physrev.167.1159}.
+\bibitem[\protect\citeauthoryear{Jones}{Jones}{1968}]{Jones1968}
+Jones F.~C.,  1968, \mn@doi [Physical Review] {10.1103/physrev.167.1159}, 167,
+  1159
 
-\bibitem[{Kaastra} and {Mewe}(1993)]{Xray-2}
-J.~S. {Kaastra} and R.~{Mewe}.
-\newblock {X-ray emission from thin plasmas. I - Multiple Auger ionisation and
-  fluorescence processes for Be to Zn}.
-\newblock \emph{\aaps}, 97\penalty0 (2):\penalty0 443--482, Jan. 1993.
+\bibitem[\protect\citeauthoryear{{Kaastra} \& {Mewe}}{{Kaastra} \&
+  {Mewe}}{1993}]{Xray-2}
+{Kaastra} J.~S.,  {Mewe} R.,  1993, \aaps, \href
+  {https://ui.adsabs.harvard.edu/abs/1993A&AS...97..443K} {97, 443}
 
-\bibitem[Kataoka et~al.(2018)Kataoka, Sofue, Inoue, Akita, Nakashima, and
-  Totani]{Kataoka2018}
-J.~Kataoka, Y.~Sofue, Y.~Inoue, M.~Akita, S.~Nakashima, and T.~Totani.
-\newblock X-ray and gamma-ray observations of the fermi bubbles and {NPS}/loop
-  i structures.
-\newblock \emph{Galaxies}, 6\penalty0 (1):\penalty0 27, Feb. 2018.
-\newblock \doi{10.3390/galaxies6010027}.
-\newblock URL \url{https://doi.org/10.3390/galaxies6010027}.
+\bibitem[\protect\citeauthoryear{Kataoka, Sofue, Inoue, Akita, Nakashima  \&
+  Totani}{Kataoka et~al.}{2018}]{Kataoka2018}
+Kataoka J.,  Sofue Y.,  Inoue Y.,  Akita M.,  Nakashima S.,   Totani T.,  2018,
+  \mn@doi [Galaxies] {10.3390/galaxies6010027}, 6, 27
 
-\bibitem[Lewis and Austin(2002)]{LA2002}
-G.~M. Lewis and P.~H. Austin.
-\newblock \emph{1th Conference on AtmosphericRadiation}, 2002.
+\bibitem[\protect\citeauthoryear{Lewis \& Austin}{Lewis \&
+  Austin}{2002}]{LA2002}
+Lewis G.~M.,  Austin P.~H.,  2002, 1th Conference on AtmosphericRadiation
 
-\bibitem[{Liedahl} et~al.(1995){Liedahl}, {Osterheld}, and {Goldstein}]{Xray-3}
-D.~A. {Liedahl}, A.~L. {Osterheld}, and W.~H. {Goldstein}.
-\newblock {New Calculations of Fe L-Shell X-Ray Spectra in High-Temperature
-  Plasmas}.
-\newblock \emph{\apjl}, 438:\penalty0 L115, Jan. 1995.
-\newblock \doi{10.1086/187729}.
+\bibitem[\protect\citeauthoryear{{Liedahl}, {Osterheld}  \&
+  {Goldstein}}{{Liedahl} et~al.}{1995}]{Xray-3}
+{Liedahl} D.~A.,  {Osterheld} A.~L.,   {Goldstein} W.~H.,  1995, \mn@doi
+  [\apjl] {10.1086/187729}, \href
+  {https://ui.adsabs.harvard.edu/abs/1995ApJ...438L.115L} {438, L115}
 
-\bibitem[{Mathews}(1971)]{TM_EOS}
-W.~G. {Mathews}.
-\newblock {The Hydromagnetic Free Expansion of a Relativistic Gas}.
-\newblock \emph{\apj}, 165:\penalty0 147, Apr 1971.
-\newblock \doi{10.1086/150883}.
+\bibitem[\protect\citeauthoryear{{Mathews}}{{Mathews}}{1971}]{TM_EOS}
+{Mathews} W.~G.,  1971, \mn@doi [\apj] {10.1086/150883}, \href
+  {https://ui.adsabs.harvard.edu/abs/1971ApJ...165..147M} {165, 147}
 
-\bibitem[{Mewe} et~al.(1985){Mewe}, {Gronenschild}, and {van den Oord}]{Xray-1}
-R.~{Mewe}, E.~H.~B.~M. {Gronenschild}, and G.~H.~J. {van den Oord}.
-\newblock {Calculated X-radiation from optically thin plasmas. V.}
-\newblock \emph{\aaps}, 62:\penalty0 197--254, Nov. 1985.
+\bibitem[\protect\citeauthoryear{{Mewe}, {Gronenschild}  \& {van den
+  Oord}}{{Mewe} et~al.}{1985}]{Xray-1}
+{Mewe} R.,  {Gronenschild} E.~H.~B.~M.,   {van den Oord} G.~H.~J.,  1985,
+  \aaps, \href {https://ui.adsabs.harvard.edu/abs/1985A&AS...62..197M} {62,
+  197}
 
-\bibitem[Miller and Bregman(2013)]{Miller_2013}
-M.~J. Miller and J.~N. Bregman.
-\newblock {THE} {STRUCTURE} {OF} {THE} {MILKY} {WAY}{\textquotesingle}s {HOT}
-  {GAS} {HALO}.
-\newblock \emph{The Astrophysical Journal}, 770\penalty0 (2):\penalty0 118, jun
-  2013.
-\newblock \doi{10.1088/0004-637x/770/2/118}.
-\newblock URL \url{https://doi.org/10.1088/0004-637x/770/2/118}.
+\bibitem[\protect\citeauthoryear{Miller \& Bregman}{Miller \&
+  Bregman}{2013}]{Miller_2013}
+Miller M.~J.,  Bregman J.~N.,  2013, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637x/770/2/118}, 770, 118
 
-\bibitem[Miller and Bregman(2016)]{Miller2016}
-M.~J. Miller and J.~N. Bregman.
-\newblock {THE} {INTERACTION} {OF} {THE} {FERMI} {BUBBLES} {WITH} {THE} {MILKY}
-  {WAY}'s {HOT} {GAS} {HALO}.
-\newblock \emph{The Astrophysical Journal}, 829\penalty0 (1):\penalty0 9, Sept.
-  2016.
-\newblock \doi{10.3847/0004-637x/829/1/9}.
-\newblock URL \url{https://doi.org/10.3847/0004-637x/829/1/9}.
+\bibitem[\protect\citeauthoryear{Miller \& Bregman}{Miller \&
+  Bregman}{2016}]{Miller2016}
+Miller M.~J.,  Bregman J.~N.,  2016, \mn@doi [The Astrophysical Journal]
+  {10.3847/0004-637x/829/1/9}, 829, 9
 
-\bibitem[Morganti et~al.(2015)Morganti, Oosterloo, Oonk, Frieswijk, and
-  Tadhunter]{Morganti2015}
-R.~Morganti, T.~Oosterloo, J.~B.~R. Oonk, W.~Frieswijk, and C.~Tadhunter.
-\newblock The fast molecular outflow in the seyfert galaxy {IC} 5063 as seen by
-  {ALMA}.
-\newblock \emph{Astronomy {\&} Astrophysics}, 580:\penalty0 A1, July 2015.
-\newblock \doi{10.1051/0004-6361/201525860}.
-\newblock URL \url{https://doi.org/10.1051/0004-6361/201525860}.
+\bibitem[\protect\citeauthoryear{Morganti, Oosterloo, Oonk, Frieswijk  \&
+  Tadhunter}{Morganti et~al.}{2015}]{Morganti2015}
+Morganti R.,  Oosterloo T.,  Oonk J. B.~R.,  Frieswijk W.,   Tadhunter C.,
+  2015, \mn@doi [Astronomy {\&} Astrophysics] {10.1051/0004-6361/201525860},
+  580, A1
 
-\bibitem[Narayanan and Slatyer(2017)]{Narayanan2017}
-S.~A. Narayanan and T.~R. Slatyer.
-\newblock A latitude-dependent analysis of the leptonic hypothesis for the
-  fermi bubbles.
-\newblock \emph{Monthly Notices of the Royal Astronomical Society},
-  468\penalty0 (3):\penalty0 3051--3070, Mar. 2017.
-\newblock \doi{10.1093/mnras/stx577}.
-\newblock URL \url{https://doi.org/10.1093/mnras/stx577}.
+\bibitem[\protect\citeauthoryear{Narayanan \& Slatyer}{Narayanan \&
+  Slatyer}{2017}]{Narayanan2017}
+Narayanan S.~A.,  Slatyer T.~R.,  2017, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1093/mnras/stx577}, 468, 3051
 
-\bibitem[Porter et~al.(2017)Porter, J{\'{o}}hannesson, and
-  Moskalenko]{Porter2017}
-T.~A. Porter, G.~J{\'{o}}hannesson, and I.~V. Moskalenko.
-\newblock High-energy gamma rays from the milky way: Three-dimensional spatial
-  models for the cosmic-ray and radiation field densities in the interstellar
-  medium.
-\newblock \emph{The Astrophysical Journal}, 846\penalty0 (1):\penalty0 67, Aug.
-  2017.
-\newblock \doi{10.3847/1538-4357/aa844d}.
-\newblock URL \url{https://doi.org/10.3847/1538-4357/aa844d}.
+\bibitem[\protect\citeauthoryear{Porter, J{\'{o}}hannesson  \&
+  Moskalenko}{Porter et~al.}{2017}]{Porter2017}
+Porter T.~A.,  J{\'{o}}hannesson G.,   Moskalenko I.~V.,  2017, \mn@doi [The
+  Astrophysical Journal] {10.3847/1538-4357/aa844d}, 846, 67
 
-\bibitem[Predehl et~al.(2020)Predehl, Sunyaev, Becker, Brunner, Burenin, Bykov,
-  Cherepashchuk, Chugai, Churazov, Doroshenko, Eismont, Freyberg, Gilfanov,
-  Haberl, Khabibullin, Krivonos, Maitra, Medvedev, Merloni, Nandra, Nazarov,
-  Pavlinsky, Ponti, Sanders, Sasaki, Sazonov, Strong, and Wilms]{Predehl2020}
-P.~Predehl, R.~A. Sunyaev, W.~Becker, H.~Brunner, R.~Burenin, A.~Bykov,
-  A.~Cherepashchuk, N.~Chugai, E.~Churazov, V.~Doroshenko, N.~Eismont,
-  M.~Freyberg, M.~Gilfanov, F.~Haberl, I.~Khabibullin, R.~Krivonos, C.~Maitra,
-  P.~Medvedev, A.~Merloni, K.~Nandra, V.~Nazarov, M.~Pavlinsky, G.~Ponti, J.~S.
-  Sanders, M.~Sasaki, S.~Sazonov, A.~W. Strong, and J.~Wilms.
-\newblock Detection of large-scale x-ray bubbles in the milky way halo.
-\newblock \emph{Nature}, 588\penalty0 (7837):\penalty0 227--231, Dec. 2020.
-\newblock \doi{10.1038/s41586-020-2979-0}.
-\newblock URL \url{https://doi.org/10.1038/s41586-020-2979-0}.
+\bibitem[\protect\citeauthoryear{Predehl et~al.,}{Predehl
+  et~al.}{2020}]{Predehl2020}
+Predehl P.,  et~al., 2020, \mn@doi [Nature] {10.1038/s41586-020-2979-0}, 588,
+  227
 
-\bibitem[Predehl et~al.(2021)Predehl, Andritschke, Arefiev, Babyshkin, Batanov,
-  Becker, B\"{o}hringer, Bogomolov, Boller, Borm, Bornemann, Br\"{a}uninger,
-  Br\"{u}ggen, Brunner, Brusa, Bulbul, Buntov, Burwitz, Burkert, Clerc,
-  Churazov, Coutinho, Dauser, Dennerl, Doroshenko, Eder, Emberger, Eraerds,
-  Finoguenov, Freyberg, Friedrich, Friedrich, F\"{u}rmetz, Georgakakis,
-  Gilfanov, Granato, Grossberger, Gueguen, Gureev, Haberl, H\"{a}lker, Hartner,
-  Hasinger, Huber, Ji, v.~Kienlin, Kink, Korotkov, Kreykenbohm, Lamer, Lomakin,
-  Lapshov, Liu, Maitra, Meidinger, Menz, Merloni, Mernik, Mican, Mohr,
-  M\"{u}ller, Nandra, Nazarov, Pacaud, Pavlinsky, Perinati, Pfeffermann,
-  Pietschner, Ramos-Ceja, Rau, Reiffers, Reiprich, Robrade, Salvato, Sanders,
-  Santangelo, Sasaki, Scheuerle, Schmid, Schmitt, Schwope, Shirshakov,
-  Steinmetz, Stewart, Str\"{u}der, Sunyaev, Tenzer, Tiedemann, Tr\"{u}mper,
-  Voron, Weber, Wilms, and Yaroshenko]{Predehl2021}
-P.~Predehl, R.~Andritschke, V.~Arefiev, V.~Babyshkin, O.~Batanov, W.~Becker,
-  H.~B\"{o}hringer, A.~Bogomolov, T.~Boller, K.~Borm, W.~Bornemann,
-  H.~Br\"{a}uninger, M.~Br\"{u}ggen, H.~Brunner, M.~Brusa, E.~Bulbul,
-  M.~Buntov, V.~Burwitz, W.~Burkert, N.~Clerc, E.~Churazov, D.~Coutinho,
-  T.~Dauser, K.~Dennerl, V.~Doroshenko, J.~Eder, V.~Emberger, T.~Eraerds,
-  A.~Finoguenov, M.~Freyberg, P.~Friedrich, S.~Friedrich, M.~F\"{u}rmetz,
-  A.~Georgakakis, M.~Gilfanov, S.~Granato, C.~Grossberger, A.~Gueguen,
-  P.~Gureev, F.~Haberl, O.~H\"{a}lker, G.~Hartner, G.~Hasinger, H.~Huber,
-  L.~Ji, A.~v.~Kienlin, W.~Kink, F.~Korotkov, I.~Kreykenbohm, G.~Lamer,
-  I.~Lomakin, I.~Lapshov, T.~Liu, C.~Maitra, N.~Meidinger, B.~Menz, A.~Merloni,
-  T.~Mernik, B.~Mican, J.~Mohr, S.~M\"{u}ller, K.~Nandra, V.~Nazarov,
-  F.~Pacaud, M.~Pavlinsky, E.~Perinati, E.~Pfeffermann, D.~Pietschner, M.~E.
-  Ramos-Ceja, A.~Rau, J.~Reiffers, T.~H. Reiprich, J.~Robrade, M.~Salvato,
-  J.~Sanders, A.~Santangelo, M.~Sasaki, H.~Scheuerle, C.~Schmid, J.~Schmitt,
-  A.~Schwope, A.~Shirshakov, M.~Steinmetz, I.~Stewart, L.~Str\"{u}der,
-  R.~Sunyaev, C.~Tenzer, L.~Tiedemann, J.~Tr\"{u}mper, V.~Voron, P.~Weber,
-  J.~Wilms, and V.~Yaroshenko.
-\newblock The {eROSITA} x-ray telescope on {SRG}.
-\newblock \emph{Astronomy {\&} Astrophysics}, 647:\penalty0 A1, Feb. 2021.
-\newblock \doi{10.1051/0004-6361/202039313}.
-\newblock URL \url{https://doi.org/10.1051/0004-6361/202039313}.
+\bibitem[\protect\citeauthoryear{Predehl et~al.,}{Predehl
+  et~al.}{2021}]{Predehl2021}
+Predehl P.,  et~al., 2021, \mn@doi [Astronomy {\&} Astrophysics]
+  {10.1051/0004-6361/202039313}, 647, A1
 
-\bibitem[Sarkar et~al.(2015)Sarkar, Nath, and Sharma]{Sarkar2015}
-K.~C. Sarkar, B.~B. Nath, and P.~Sharma.
-\newblock Multiwavelength features of fermi bubbles as signatures of a galactic
-  wind.
-\newblock \emph{Monthly Notices of the Royal Astronomical Society},
-  453\penalty0 (4):\penalty0 3828--3839, Sept. 2015.
-\newblock \doi{10.1093/mnras/stv1806}.
-\newblock URL \url{https://doi.org/10.1093/mnras/stv1806}.
+\bibitem[\protect\citeauthoryear{Sarkar, Nath  \& Sharma}{Sarkar
+  et~al.}{2015}]{Sarkar2015}
+Sarkar K.~C.,  Nath B.~B.,   Sharma P.,  2015, \mn@doi [Monthly Notices of the
+  Royal Astronomical Society] {10.1093/mnras/stv1806}, 453, 3828
 
-\bibitem[Schive et~al.(2010)Schive, Tsai, and Chiueh]{gamer-1}
-H.-Y. Schive, Y.-C. Tsai, and T.~Chiueh.
-\newblock {GAMER}: A {GRAPHIC} {PROCESSING} {UNIT} {ACCELERATED}
-  {ADAPTIVE}-{MESH}-{REFINEMENT} {CODE} {FOR} {ASTROPHYSICS}.
-\newblock \emph{The Astrophysical Journal Supplement Series}, 186\penalty0
-  (2):\penalty0 457--484, feb 2010.
-\newblock \doi{10.1088/0067-0049/186/2/457}.
-\newblock URL \url{https://doi.org/10.1088%2F0067-0049%2F186%2F2%2F457}.
+\bibitem[\protect\citeauthoryear{Schive, Tsai  \& Chiueh}{Schive
+  et~al.}{2010}]{gamer-1}
+Schive H.-Y.,  Tsai Y.-C.,   Chiueh T.,  2010, \mn@doi [The Astrophysical
+  Journal Supplement Series] {10.1088/0067-0049/186/2/457}, 186, 457
 
-\bibitem[Schive et~al.(2018)Schive, ZuHone, Goldbaum, Turk, Gaspari, and
-  Cheng]{gamer-2}
-H.-Y. Schive, J.~A. ZuHone, N.~J. Goldbaum, M.~J. Turk, M.~Gaspari, and C.-Y.
-  Cheng.
-\newblock {gamer-2: a GPU-accelerated adaptive mesh refinement code –
-  accuracy, performance, and scalability}.
-\newblock \emph{Monthly Notices of the Royal Astronomical Society},
-  481\penalty0 (4):\penalty0 4815--4840, 09 2018.
-\newblock ISSN 0035-8711.
-\newblock \doi{10.1093/mnras/sty2586}.
-\newblock URL \url{https://doi.org/10.1093/mnras/sty2586}.
+\bibitem[\protect\citeauthoryear{Schive, ZuHone, Goldbaum, Turk, Gaspari  \&
+  Cheng}{Schive et~al.}{2018}]{gamer-2}
+Schive H.-Y.,  ZuHone J.~A.,  Goldbaum N.~J.,  Turk M.~J.,  Gaspari M.,   Cheng
+  C.-Y.,  2018, \mn@doi [Monthly Notices of the Royal Astronomical Society]
+  {10.1093/mnras/sty2586}, 481, 4815
 
-\bibitem[Selig et~al.(2015)Selig, Vacca, Oppermann, and En{\ss}lin]{Selig2015}
-M.~Selig, V.~Vacca, N.~Oppermann, and T.~A. En{\ss}lin.
-\newblock The denoised, deconvolved, and {decomposedFermi}$\gamma$-ray sky.
-\newblock \emph{Astronomy {\&} Astrophysics}, 581:\penalty0 A126, Sept. 2015.
-\newblock \doi{10.1051/0004-6361/201425172}.
-\newblock URL \url{https://doi.org/10.1051/0004-6361/201425172}.
+\bibitem[\protect\citeauthoryear{Selig, Vacca, Oppermann  \& En{\ss}lin}{Selig
+  et~al.}{2015}]{Selig2015}
+Selig M.,  Vacca V.,  Oppermann N.,   En{\ss}lin T.~A.,  2015, \mn@doi
+  [Astronomy {\&} Astrophysics] {10.1051/0004-6361/201425172}, 581, A126
 
-\bibitem[Snowden et~al.(1990)Snowden, Cox, McCammon, and Sanders]{Snowden1990}
-S.~L. Snowden, D.~P. Cox, D.~McCammon, and W.~T. Sanders.
-\newblock A model for the distribution of material generating the soft x-ray
-  background.
-\newblock \emph{The Astrophysical Journal}, 354:\penalty0 211, May 1990.
-\newblock \doi{10.1086/168680}.
-\newblock URL \url{https://doi.org/10.1086/168680}.
+\bibitem[\protect\citeauthoryear{Snowden, Cox, McCammon  \& Sanders}{Snowden
+  et~al.}{1990}]{Snowden1990}
+Snowden S.~L.,  Cox D.~P.,  McCammon D.,   Sanders W.~T.,  1990, \mn@doi [The
+  Astrophysical Journal] {10.1086/168680}, 354, 211
 
-\bibitem[Strong et~al.(2007)Strong, Moskalenko, and Ptuskin]{Strong2007}
-A.~W. Strong, I.~V. Moskalenko, and V.~S. Ptuskin.
-\newblock Cosmic-ray propagation and interactions in the galaxy.
-\newblock \emph{Annual Review of Nuclear and Particle Science}, 57\penalty0
-  (1):\penalty0 285--327, 2007.
-\newblock \doi{10.1146/annurev.nucl.57.090506.123011}.
-\newblock URL \url{https://doi.org/10.1146/annurev.nucl.57.090506.123011}.
+\bibitem[\protect\citeauthoryear{Strong, Moskalenko  \& Ptuskin}{Strong
+  et~al.}{2007}]{Strong2007}
+Strong A.~W.,  Moskalenko I.~V.,   Ptuskin V.~S.,  2007, \mn@doi [Annual Review
+  of Nuclear and Particle Science] {10.1146/annurev.nucl.57.090506.123011}, 57,
+  285
 
-\bibitem[Su and Finkbeiner(2012)]{Su2012}
-M.~Su and D.~P. Finkbeiner.
-\newblock {EVIDENCE} {FOR} {GAMMA}-{RAY} {JETS} {IN} {THE} {MILKY} {WAY}.
-\newblock \emph{The Astrophysical Journal}, 753\penalty0 (1):\penalty0 61, June
-  2012.
-\newblock \doi{10.1088/0004-637x/753/1/61}.
-\newblock URL \url{https://doi.org/10.1088/0004-637x/753/1/61}.
+\bibitem[\protect\citeauthoryear{Su \& Finkbeiner}{Su \&
+  Finkbeiner}{2012}]{Su2012}
+Su M.,  Finkbeiner D.~P.,  2012, \mn@doi [The Astrophysical Journal]
+  {10.1088/0004-637x/753/1/61}, 753, 61
 
-\bibitem[Su et~al.(2010)Su, Slatyer, and Finkbeiner]{Su2010}
-M.~Su, T.~R. Slatyer, and D.~P. Finkbeiner.
-\newblock {GIANT} {GAMMA}-{RAY} {BUBBLES} {FROMFERMI}-{LAT}: {ACTIVE}
-  {GALACTIC} {NUCLEUS} {ACTIVITY} {OR} {BIPOLAR} {GALACTIC} {WIND}?
-\newblock \emph{The Astrophysical Journal}, 724\penalty0 (2):\penalty0
-  1044--1082, Nov. 2010.
-\newblock \doi{10.1088/0004-637x/724/2/1044}.
-\newblock URL \url{https://doi.org/10.1088/0004-637x/724/2/1044}.
+\bibitem[\protect\citeauthoryear{Su, Slatyer  \& Finkbeiner}{Su
+  et~al.}{2010}]{Su2010}
+Su M.,  Slatyer T.~R.,   Finkbeiner D.~P.,  2010, \mn@doi [The Astrophysical
+  Journal] {10.1088/0004-637x/724/2/1044}, 724, 1044
 
-\bibitem[Synge(1957)]{Synge}
-J.~L. Synge.
-\newblock {The Relativistic Gas}.
-\newblock \emph{North-Holland Pub. Co.; Interscience Publishers}, 1957.
+\bibitem[\protect\citeauthoryear{Synge}{Synge}{1957}]{Synge}
+Synge J.~L.,  1957, North-Holland Pub. Co.; Interscience Publishers
 
-\bibitem[{Taub}(1948)]{Taub}
-A.~H. {Taub}.
-\newblock {Relativistic Rankine-Hugoniot Equations}.
-\newblock \emph{Physical Review}, 74\penalty0 (3):\penalty0 328--334, Aug 1948.
-\newblock \doi{10.1103/PhysRev.74.328}.
+\bibitem[\protect\citeauthoryear{{Taub}}{{Taub}}{1948}]{Taub}
+{Taub} A.~H.,  1948, \mn@doi [Physical Review] {10.1103/PhysRev.74.328}, \href
+  {https://ui.adsabs.harvard.edu/abs/1948PhRv...74..328T} {74, 328}
 
-\bibitem[Tepper-Garc{\'{\i}}a et~al.(2015)Tepper-Garc{\'{\i}}a, Bland-Hawthorn,
-  and Sutherland]{temperature-MW}
-T.~Tepper-Garc{\'{\i}}a, J.~Bland-Hawthorn, and R.~S. Sutherland.
-\newblock {THE} {MAGELLANIC} {STREAM}: {BREAK}-{UP} {AND} {ACCRETION} {ONTO}
-  {THE} {HOT} {GALACTIC} {CORONA}.
-\newblock \emph{The Astrophysical Journal}, 813\penalty0 (2):\penalty0 94, Nov.
-  2015.
-\newblock \doi{10.1088/0004-637x/813/2/94}.
-\newblock URL \url{https://doi.org/10.1088/0004-637x/813/2/94}.
+\bibitem[\protect\citeauthoryear{Tepper-Garc{\'{\i}}a, Bland-Hawthorn  \&
+  Sutherland}{Tepper-Garc{\'{\i}}a et~al.}{2015}]{temperature-MW}
+Tepper-Garc{\'{\i}}a T.,  Bland-Hawthorn J.,   Sutherland R.~S.,  2015, \mn@doi
+  [The Astrophysical Journal] {10.1088/0004-637x/813/2/94}, 813, 94
 
-\bibitem[Tseng et~al.(2021)Tseng, Schive, and Chiueh]{tseng2021}
-P.-H. Tseng, H.-Y. Schive, and T.~Chiueh.
-\newblock An adaptive mesh, {GPU}-accelerated, and error minimized special
-  relativistic hydrodynamics code.
-\newblock \emph{Monthly Notices of the Royal Astronomical Society},
-  504\penalty0 (3):\penalty0 3298--3315, Apr. 2021.
-\newblock \doi{10.1093/mnras/stab1006}.
-\newblock URL \url{https://doi.org/10.1093/mnras/stab1006}.
+\bibitem[\protect\citeauthoryear{Tseng, Schive  \& Chiueh}{Tseng
+  et~al.}{2021}]{tseng2021}
+Tseng P.-H.,  Schive H.-Y.,   Chiueh T.,  2021, \mn@doi [Monthly Notices of the
+  Royal Astronomical Society] {10.1093/mnras/stab1006}, 504, 3298
 
-\bibitem[Valenti et~al.(2018)Valenti, Zoccali, Mucciarelli, Gonzalez, Surot,
-  Minniti, Rejkuba, Pasquini, Fiorentino, Bono, Rich, and
-  Soto]{velocity-dispersion-MW}
-E.~Valenti, M.~Zoccali, A.~Mucciarelli, O.~A. Gonzalez, F.~Surot, D.~Minniti,
-  M.~Rejkuba, L.~Pasquini, G.~Fiorentino, G.~Bono, R.~M. Rich, and M.~Soto.
-\newblock The central velocity dispersion of the milky way bulge.
-\newblock \emph{\aaps}, 616:\penalty0 A83, Aug. 2018.
-\newblock \doi{10.1051/0004-6361/201832905}.
-\newblock URL \url{https://doi.org/10.1051/0004-6361/201832905}.
+\bibitem[\protect\citeauthoryear{Valenti et~al.,}{Valenti
+  et~al.}{2018}]{velocity-dispersion-MW}
+Valenti E.,  et~al., 2018, \mn@doi [\aaps] {10.1051/0004-6361/201832905}, 616,
+  A83
 
-\bibitem[Wagner et~al.(2012)Wagner, Bicknell, and Umemura]{Wagner2012}
-A.~Y. Wagner, G.~V. Bicknell, and M.~Umemura.
-\newblock {DRIVING} {OUTFLOWS} {WITH} {RELATIVISTIC} {JETS} {AND} {THE}
-  {DEPENDENCE} {OF} {ACTIVE} {GALACTIC} {NUCLEUS} {FEEDBACK} {EFFICIENCY} {ON}
-  {INTERSTELLAR} {MEDIUM} {INHOMOGENEITY}.
-\newblock \emph{The Astrophysical Journal}, 757\penalty0 (2):\penalty0 136,
-  Sept. 2012.
-\newblock \doi{10.1088/0004-637x/757/2/136}.
-\newblock URL \url{https://doi.org/10.1088/0004-637x/757/2/136}.
+\bibitem[\protect\citeauthoryear{Wagner, Bicknell  \& Umemura}{Wagner
+  et~al.}{2012}]{Wagner2012}
+Wagner A.~Y.,  Bicknell G.~V.,   Umemura M.,  2012, \mn@doi [The Astrophysical
+  Journal] {10.1088/0004-637x/757/2/136}, 757, 136
 
-\bibitem[Yang and Ruszkowski(2017)]{Yang2017}
-H.-Y.~K. Yang and M.~Ruszkowski.
-\newblock The spatially uniform spectrum of {theFermiBubbles}: The leptonic
-  active galactic nucleus jet scenario.
-\newblock \emph{The Astrophysical Journal}, 850\penalty0 (1):\penalty0 2, Nov.
-  2017.
-\newblock \doi{10.3847/1538-4357/aa9434}.
-\newblock URL \url{https://doi.org/10.3847/1538-4357/aa9434}.
+\bibitem[\protect\citeauthoryear{Yang \& Ruszkowski}{Yang \&
+  Ruszkowski}{2017}]{Yang2017}
+Yang H.-Y.~K.,  Ruszkowski M.,  2017, \mn@doi [The Astrophysical Journal]
+  {10.3847/1538-4357/aa9434}, 850, 2
 
-\bibitem[Yang et~al.(2012)Yang, Ruszkowski, Ricker, Zweibel, and Lee]{Yang2012}
-H.-Y.~K. Yang, M.~Ruszkowski, P.~M. Ricker, E.~Zweibel, and D.~Lee.
-\newblock {THE} {FERMI} {BUBBLES}: {SUPERSONIC} {ACTIVE} {GALACTIC} {NUCLEUS}
-  {JETS} {WITH} {ANISOTROPIC} {COSMIC}-{RAY} {DIFFUSION}.
-\newblock \emph{The Astrophysical Journal}, 761\penalty0 (2):\penalty0 185,
-  Dec. 2012.
-\newblock \doi{10.1088/0004-637x/761/2/185}.
-\newblock URL \url{https://doi.org/10.1088/0004-637x/761/2/185}.
+\bibitem[\protect\citeauthoryear{Yang, Ruszkowski, Ricker, Zweibel  \&
+  Lee}{Yang et~al.}{2012}]{Yang2012}
+Yang H.-Y.~K.,  Ruszkowski M.,  Ricker P.~M.,  Zweibel E.,   Lee D.,  2012,
+  \mn@doi [The Astrophysical Journal] {10.1088/0004-637x/761/2/185}, 761, 185
 
-\bibitem[Zhang and Guo(2020)]{Zhang2020}
-R.~Zhang and F.~Guo.
-\newblock Simulating the fermi bubbles as forward shocks driven by {AGN} jets.
-\newblock \emph{The Astrophysical Journal}, 894\penalty0 (2):\penalty0 117, May
-  2020.
-\newblock \doi{10.3847/1538-4357/ab8bd0}.
-\newblock URL \url{https://doi.org/10.3847/1538-4357/ab8bd0}.
+\bibitem[\protect\citeauthoryear{Zhang \& Guo}{Zhang \& Guo}{2020}]{Zhang2020}
+Zhang R.,  Guo F.,  2020, \mn@doi [The Astrophysical Journal]
+  {10.3847/1538-4357/ab8bd0}, 894, 117
 
+\makeatother
 \end{thebibliography}
