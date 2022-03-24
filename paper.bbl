@@ -65,9 +65,11 @@ Crocker R.~M.,  Aharonian F.,  2011, \mn@doi [Phys. Rev. Lett.]
 Crocker R.~M.,  Jones D.~I.,  Melia F.,  Ott J.,   Protheroe R.~J.,  2010,
   \mn@doi [Nature] {10.1038/nature08635}, 463, 65
 
-\bibitem[\protect\citeauthoryear{Dobler}{Dobler}{2012}]{Dobler2012}
-Dobler G.,  2012, \mn@doi [The Astrophysical Journal]
-  {10.1088/0004-637x/750/1/17}, 750, 17
+\bibitem[\protect\citeauthoryear{{Crocker}, {Bicknell}, {Taylor}  \&
+  {Carretti}}{{Crocker} et~al.}{2015}]{Crocker2015}
+{Crocker} R.~M.,  {Bicknell} G.~V.,  {Taylor} A.~M.,   {Carretti} E.,  2015,
+  \mn@doi [\apj] {10.1088/0004-637X/808/2/107}, \href
+  {http://adsabs.harvard.edu/abs/2015ApJ...808..107C} {808, 107}
 
 \bibitem[\protect\citeauthoryear{Dobler \& Finkbeiner}{Dobler \&
   Finkbeiner}{2008}]{Dobler_2008}
@@ -103,6 +105,12 @@ Grcevich J.,  Putman M.~E.,  2009, ] {10.1088/0004-637x/696/1/385}, 696, 385
   Mathews}{2012}]{Guo2012}
 Guo F.,  Mathews W.~G.,  2012, \mn@doi [The Astrophysical Journal]
   {10.1088/0004-637x/756/2/181}, 756, 181
+
+\bibitem[\protect\citeauthoryear{{Guo}, {Mathews}, {Dobler}  \& {Oh}}{{Guo}
+  et~al.}{2012}]{Guo2012b}
+{Guo} F.,  {Mathews} W.~G.,  {Dobler} G.,   {Oh} S.~P.,  2012, \mn@doi [\apj]
+  {10.1088/0004-637X/756/2/182}, \href
+  {http://adsabs.harvard.edu/abs/2012ApJ...756..182G} {756, 182}
 
 \bibitem[\protect\citeauthoryear{Johnston, Spergel  \& Hernquist}{Johnston
   et~al.}{1995}]{Johnston1995}
@@ -168,6 +176,12 @@ Miller M.~J.,  Bregman J.~N.,  2016, \mn@doi [The Astrophysical Journal]
 Morganti R.,  Oosterloo T.,  Oonk J. B.~R.,  Frieswijk W.,   Tadhunter C.,
   2015, \mn@doi [Astronomy {\&} Astrophysics] {10.1051/0004-6361/201525860},
   580, A1
+
+\bibitem[\protect\citeauthoryear{{Mou}, {Yuan}, {Bu}, {Sun}  \& {Su}}{{Mou}
+  et~al.}{2014}]{Mou2014}
+{Mou} G.,  {Yuan} F.,  {Bu} D.,  {Sun} M.,   {Su} M.,  2014, \mn@doi [\apj]
+  {10.1088/0004-637X/790/2/109}, \href
+  {http://adsabs.harvard.edu/abs/2014ApJ...790..109M} {790, 109}
 
 \bibitem[\protect\citeauthoryear{Narayanan \& Slatyer}{Narayanan \&
   Slatyer}{2017}]{Narayanan2017}
@@ -263,6 +277,21 @@ Yang H.-Y.~K.,  Ruszkowski M.,  2017, \mn@doi [The Astrophysical Journal]
 Yang H.-Y.~K.,  Ruszkowski M.,  Ricker P.~M.,  Zweibel E.,   Lee D.,  2012,
   \mn@doi [The Astrophysical Journal] {10.1088/0004-637x/761/2/185}, 761, 185
 
+\bibitem[\protect\citeauthoryear{Yang, Ruszkowski  \& Zweibel}{Yang
+  et~al.}{2013}]{Yang2013}
+Yang H.-Y.~K.,  Ruszkowski M.,   Zweibel E.,  2013, \mn@doi [Monthly Notices of
+  the Royal Astronomical Society] {10.1093/mnras/stt1772}, 436, 2734
+
+\bibitem[\protect\citeauthoryear{Yang, Ruszkowski  \& Zweibel}{Yang
+  et~al.}{2018}]{Yang2018}
+Yang H.-Y.,  Ruszkowski M.,   Zweibel E.,  2018, \mn@doi [Galaxies]
+  {10.3390/galaxies6010029}, 6, 29
+
+\bibitem[\protect\citeauthoryear{Yang, Ruszkowski  \& Zweibel}{Yang
+  et~al.}{2022}]{Yang2022}
+Yang H.-Y.~K.,  Ruszkowski M.,   Zweibel E.~G.,  2022, \mn@doi [Nature
+  Astronomy] {10.1038/s41550-022-01618-x}
+
 \bibitem[\protect\citeauthoryear{Zhang \& Guo}{Zhang \& Guo}{2020}]{Zhang2020}
 Zhang R.,  Guo F.,  2020, \mn@doi [The Astrophysical Journal]
   {10.3847/1538-4357/ab8bd0}, 894, 117
@@ -272,6 +301,10 @@ Zhang R.,  Guo F.,  2020, \mn@doi [The Astrophysical Journal]
 {Zhu} Z.,  {Li} Z.,  {Morris} M.~R.,  {Zhang} S.,   {Liu} S.,  2019, \mn@doi
   [\apj] {10.3847/1538-4357/ab0e05}, \href
   {https://ui.adsabs.harvard.edu/abs/2019ApJ...875...44Z} {875, 44}
+
+\bibitem[\protect\citeauthoryear{{Zweibel}}{{Zweibel}}{2013}]{Zweibel2013}
+{Zweibel} E.~G.,  2013, \mn@doi [Physics of Plasmas] {10.1063/1.4807033}, \href
+  {http://adsabs.harvard.edu/abs/2013PhPl...20e5501Z} {20, 055501}
 
 \makeatother
 \end{thebibliography}
