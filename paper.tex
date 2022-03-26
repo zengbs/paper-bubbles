@@ -327,11 +327,11 @@ Therefore, in the simulations we have neglected the cooling of CRs because it sh
   with mean $\mu$ and dispersion $\sigma$,\
   and follows the power-law Kolmogorov spectrum
   \begin{equation}
-    D(\bold{k})=\int k^{2} \hat{f}(\bold{k})\hat{f}^{*}(\bold{k})d\Omega \propto k^{-\beta},
+    D(\bold{k})=\int k^{2} \hat{f}(\bold{k})\hat{f}^{*}(\bold{k})d\Omega \propto k^{-\delta},
     \label{Kolmogorov-spectrum}
   \end{equation}
   where $\hat{f}(\bold{k})$ is the Fourier transform of $f(\bold{x})$.\
-  The spectrum $D(\bold{k})$ in the Fourier space is characterized by a power-law index $\beta=5/3$,\
+  The spectrum $D(\bold{k})$ in the Fourier space is characterized by a power-law index $\delta=5/3$,\
   a Nyquist limit $k_{\text{max}}$, and a lower cutoff wave number $k_{\text{min}}$.
   $k_{\text{max}}$ is one-half of the spatial resolution within the disk,\
   and $k_{\text{min}}$ is 375.0, corresponding to the maximum size of an individual clump of $\sim 20$ pc.\
@@ -382,22 +382,22 @@ Therefore, in the simulations we have neglected the cooling of CRs because it sh
 \toprule[1pt]\midrule[0.3pt]
 Parameter                             & Description                    & Value                                &  Reference                     \\ \midrule
 {\bf Static stellar potential }       &                                &                                      &                                \\
-$\sigma_{\text{bulge}}$               & Velocity dispersion of bulge   & 100 km s$^{-1}$                & \citep{velocity-dispersion-MW} \\
-$\rho_{\text{bulge}}^{\text{peak}}$   & Peak average density of bulge  & $4\times 10^{-24}$ g cm$^{-3}$ &   N/A                          \\ \hline
+$\sigma_{\text{bulge}}$               & Velocity dispersion of bulge   & 100 km s$^{-1}$                      & \citep{velocity-dispersion-MW} \\
+$\rho_{\text{bulge}}^{\text{peak}}$   & Peak average density of bulge  & $4\times 10^{-24}$ g cm$^{-3}$       &   N/A                          \\ \hline
 {\bf Static dark halo potential }     &                                &                                      &                                \\
-$v_{\text{halo}}$                     & Characteristic velocity        & 131.5 km s$^{-1}$              & \citep{Johnston1995}           \\
+$v_{\text{halo}}$                     & Characteristic velocity        & 131.5 km s$^{-1}$                    & \citep{Johnston1995}           \\
 $d_{\text{h}}$                        & Core radius                    & 12 kpc                               & \multicolumn{1}{c}{''}         \\ \hline
 {\bf Atmosphere }                     &                                &                                      &                                \\
 $T_{\text{\text{atmp}}}$              & Temperature of atmosphere      & $10^{6}$ K                           & \citep{temperature-MW}         \\ \hline
 {\bf Isothermal disk }                &                                &                                      &                                \\
 $z_{0}$                               & Scale height of disk           & 100 pc                               & \citep{peak-ism-density}       \\
 $T_{\text{\text{isoDisk}}}$           & Temperature of disk            & $10^{3}$ K                           & \multicolumn{1}{c}{''}         \\
-$\rho_{\text{isoDisk}}^{\text{peak}}$ & Peak density of disk      & $10^{-23}$ g cm$^{-3}$         & \multicolumn{1}{c}{''}         \\ \hline
+$\rho_{\text{isoDisk}}^{\text{peak}}$ & Peak density of disk           & $10^{-23}$ g cm$^{-3}$               & \multicolumn{1}{c}{''}         \\ \hline
 {\bf Clumpy disk }                    &                                &                                      &                                \\
-$k_{\text{min}}^\dagger$            & Cutoff wave number             & 375.0                                & \citep{peak-ism-density}       \\
+$k_{\text{min}}^\dagger$              & Cutoff wave number             & 375.0                                & \citep{peak-ism-density}       \\
 $\mu$                                 & Mean of scalar field           & 1.0                                  &   N/A                          \\
-$\sigma^\ddag$                 & Dispersion of scalar field     & 5.0                                  & \citep{Federrath2010}          \\
-$\beta$                               & Power law index                & -5/3                                 &   N/A                          \\ \midrule
+$\sigma^\ddag$                        & Dispersion of scalar field     & 5.0                                  & \citep{Federrath2010}          \\
+$\delta$                              & Power law index                & -5/3                                 &   N/A                          \\ \midrule
 \end{tabular}
 \begin{tablenotes}
       \raggedright
@@ -425,7 +425,7 @@ $\beta$                               & Power law index                & -5/3   
   $\rho_{\text{jet}}/\rho_{\text{amb}}=10^{-3}$,\
   the temperature contrast, $T_{\text{jet}}/T_{\text{amb}}=2\times10^{4}$,\
   the CR-to-gas pressure ratio of 0.18,\
-  and the flow 4-velocity inside the jet source along the jet axis, $\beta\gamma = 0.6$.\
+  and the flow 4-velocity ($\beta\gamma = 0.6$) inside the jet source along the jet axis.\
   The jet power is thus $3.2\times 10^{42}$ erg s$^{-1}$, resulting in an Eddington ratio of 0.008.\
   Note that since we inject the jets at the center of the clumpy disk,\
   we define the atmosphere gas density by the peak density of\
@@ -437,7 +437,7 @@ $\beta$                               & Power law index                & -5/3   
   and suddenly quenched at $t=1.2$ Myr before fully breaking out the disk.\
   Without quenching, the Galactic bubbles at the present time would be asymmetric about the Galactic plane.
   The jet duration allows the total ejected energy to be $1.2\times10^{56}$ erg, \
-  within the range of estimates obtained by \citet{Predehl2020} between\
+  within the range of enclosed energy estimated by \citet{Predehl2020} between\
   $8\times10^{55}$ erg and $1.3\times10^{56}$ erg.
 
 
@@ -926,7 +926,7 @@ the SMBH assuming the leptonic model. The important findings are summarized as f
 %      without the disc, the outermost bubbles and the turbulent plasma will be oblique,\
 %      indicating the dense disc is crucial for\
 %      the symmetry of the Galactic bubbles and for the innermost bubbles formation.
-      {\color{red} KY: I removed the second point about the innermost bubbles for now, because I think the following two points should be separated: (1) inclusion of the disk is critical for forming symmetric Galactic bubbles, (2) we found a pair of innermost bubbles which are reverse shocks (and perhaps comment on their properties and/or observable signatures).}
+      {\color{red} KY: I removed the second point about the innermost bubbles for now, because I think the following two points should be separated: (1) inclusion of the disk is critical for forming symmetric Galactic bubbles, (2) we found a pair of innermost bubbles which are reverse shocks (and perhaps comment on their properties and/or observable signatures). PH: done! }
 \item The development of the expanding forward-reverse shock pair is always associated with the dense disk. Also, without the thin disk, only forward shocks exist. The forward-reverse shock pair heats the turbulent plasma up considerably ($\sim2$ keV) as the plasma is bracketed between their downstream. There exists a dense shell that fits closely to the reverse shock because the gas is immediately compressed as it passes outward through the reverse shock while coinciding with the low gas density further downstream.
 
 \item In the oblique jet scenario, the edge of the eROSITA bubbles is a forward shock,\
@@ -953,6 +953,8 @@ the SMBH assuming the leptonic model. The important findings are summarized as f
 
 \section{Acknowledgements}
 The authors thank Mateusz Ruszkowski and Ellen G. Zweibel for insightful comments.\
+We thank Henry Zovaro for discussions about the innermost bubbles\
+during the final stages of this work.\
 We thank Peter Predehl for providing the range of observed X-ray intensity in Fig. \ref{fig__xray_0.8keV_angle_000}.\
 A part of the simulations are performed and analyzed using computing resources\
 operated by the National Center for High-Performance Computing (NCHC).
@@ -987,6 +989,40 @@ or Appendix) to discuss about the parameter variations.
 I think the figures you showed me are very important
 and informative.}
 
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table*}
+\raggedright
+\caption{Jet parameters.}
+\label{tablb-jet-parameters}
+\begin{tabular}{@{}llllllll@{}}
+\toprule[1pt]\midrule[0.3pt]
+                  & A          & B          & C          & D          & E          & F          & G          \\ \midrule
+$k_{B}T$ (MeV)    & 1.720      & 17.200     & 1.720      & 0.172      & 1.720      & 1.720      & 1.720      \\
+$\rho$ (g/cm$^3$) & $10^{-26}$ & $10^{-26}$ & $10^{-26}$ & $10^{-26}$ & $10^{-25}$ & $10^{-27}$ & $10^{-26}$ \\
+$\beta\gamma$     & 1.2        & 0.6        & 0.6        & 0.6        & 0.6        & 0.6        & 0.3        \\ \midrule
+\end{tabular}
+\end{table*}
+
+
+\begin{figure*}
+  \includegraphics[width=\textwidth]{figures/fig__jet_parameters.png}
+  \caption
+   {
+    Jets parameters variation around the fiducial run:\
+    $\beta\gamma=1.2$ (left), $\beta\gamma=0.6$ (middle), and $\beta\gamma=0.3$ (right).
+   }
+  \label{fig__jet_parameters}
+\end{figure*}
+
+\begin{figure*}
+  \includegraphics[width=\textwidth]{figures/fig__slice-compare.png}
+  \caption
+   {
+    Simulation results based on the jets parameters in Fig. \ref{fig__jet_parameters}.
+   }
+  \label{fig__slice-compare}
+\end{figure*}
 
 
 %%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
