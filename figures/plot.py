@@ -6,9 +6,9 @@ BoltzConst = 8.617333262145e-5
 
 
 A = [1.2, 1e-26, 2e10*BoltzConst/1e6]
-B = [0.6, 1e-26, 2e11*BoltzConst/1e6]
+B = [0.6, 1e-26, 2e09*BoltzConst/1e6]
 C = [0.6, 1e-26, 2e10*BoltzConst/1e6]
-D = [0.6, 1e-26, 2e09*BoltzConst/1e6]
+D = [0.6, 1e-26, 2e11*BoltzConst/1e6]
 E = [0.6, 1e-25, 2e10*BoltzConst/1e6]
 F = [0.6, 1e-27, 2e10*BoltzConst/1e6]
 G = [0.3, 1e-26, 2e10*BoltzConst/1e6]
@@ -56,9 +56,9 @@ ax[0].set_yscale('log')
 ax[1].set_yscale('log')
 ax[2].set_yscale('log')
 
-ax[0].set_xlim(D[2]*0.8, B[2]*1.5)
-ax[1].set_xlim(D[2]*0.8, B[2]*1.5)
-ax[2].set_xlim(D[2]*0.8, B[2]*1.5)
+ax[0].set_xlim(B[2]*0.8, D[2]*1.5)
+ax[1].set_xlim(B[2]*0.8, D[2]*1.5)
+ax[2].set_xlim(B[2]*0.8, D[2]*1.5)
 ax[0].set_ylim(F[1]*0.8, E[1]*1.7)
 ax[1].set_ylim(F[1]*0.8, E[1]*1.7)
 ax[2].set_ylim(F[1]*0.8, E[1]*1.7)
