@@ -718,15 +718,15 @@ to handle the scattering between ultra-relativistic CRe and photons in the ISRF:
   \begin{align}
   &\frac{dE}{dtd\epsilon_{1}dV} =\nonumber\\
                &\frac{3}{4}\sigma_{T}c\mathbb{C}\epsilon_{1}\int^{\epsilon_{\text{max}}}_{\epsilon_{\text{min}}}
-               \frac{n(\epsilon)}{\epsilon}d\epsilon\int^{\gamma_{\text{max}}}_{\gamma_{\text{min}}\left(\epsilon\right)}
-               \gamma^{-(p+2)}f(q, \Gamma)d\gamma,\\
+               \frac{n(\epsilon)}{\epsilon}d\epsilon\int^{\gamma_{\text{e,max}}}_{\gamma_{\text{e,min}}\left(\epsilon\right)}
+               \gamma_{\text{e}}^{-(p+2)}f(q, \Gamma)d\gamma_{\text{e}},\\
   \nonumber\\
   &f(q, \Gamma) =\nonumber\\
                &2q\ln q+(1+2q)(1-q)+0.5(1-q)\frac{\left(\Gamma q\right)^2}{1+\Gamma q},\\
-  &q=\frac{\epsilon_{1}/\gamma\
-               m_{\text{e}}c^{2}}{\Gamma\left(1-\epsilon_{1}/\gamma m_{\text{e}}c^{2}\right)},\\
-  &\Gamma=\frac{4\epsilon \gamma}{m_{\text{e}}c^2},\\
-  &\gamma_{\text{min}}(\epsilon)=\
+  &q=\frac{\epsilon_{1}/\gamma_{\text{e}}\
+               m_{\text{e}}c^{2}}{\Gamma\left(1-\epsilon_{1}/\gamma_{\text{e}} m_{\text{e}}c^{2}\right)},\\
+  &\Gamma=\frac{4\epsilon \gamma_{\text{e}}}{m_{\text{e}}c^2},\\
+  &\gamma_{\text{e,min}}(\epsilon)=\
    0.5\left(\frac{\epsilon_{1}}{m_{\text{e}}c^2}+\sqrt{\left(\frac{\epsilon_{1}}{m_{\text{e}}c^2}\right)^2+\
    \frac{\epsilon_{1}}{\epsilon}}\right) \label{gamma-min},
   \end{align}
@@ -736,11 +736,11 @@ to handle the scattering between ultra-relativistic CRe and photons in the ISRF:
 where $\sigma_{T}$ is the Thomson cross section, $c$ is the speed of light,\
 $m_{\text{e}}$ is the electron mass,\
 $n(\epsilon)$ is the energy distribution of the photon number density in the ISRF given by \citet{Porter2017},\
-$\gamma$ is the Lorentz factor of CRe, and\
+$\gamma_{\text{e}}$ is the Lorentz factor of CRe, and\
 $\mathbb{C}$ and $p$ are the normalization constant and spectral index of the CRe power-law spectrum.
-$\gamma_{\text{min}}(\epsilon)$ is the minimum Lorentz factor of CRe\
+$\gamma_{\text{e,min}}(\epsilon)$ is the minimum Lorentz factor of CRe\
 that allows the incident photons to be scattered from energy $\epsilon$ to $\epsilon_{1}$, and\
-$\gamma_{\text{max}}$ is the maximum CRe Lorentz factor in the spectrum. To obtain the simulated IC emissivities, we perform the double integration in Eq. \ref{gammaray-emissivity} on each cell\
+$\gamma_{\text{e,max}}$ is the maximum CRe Lorentz factor in the spectrum. To obtain the simulated IC emissivities, we perform the double integration in Eq. \ref{gammaray-emissivity} on each cell\
 over the range of the CRe Lorentz factor and\
 the range of incident photon energy between\
 $\epsilon_{\text{min}}=1.13\times10^{-4}$ eV (cosmic microwave background) and\
@@ -890,12 +890,35 @@ via IC scattering and synchrotron radiation, respectively. Our results thus prov
 
 \section{Discussion}
 Our modeled gamma-ray and microwave spectra assumed that
-the underlying CRe spectrum is spatially uniform.
-Therefore our results imply that, whatever the true re-acceleration and cooling mechanisms are,
+the underlying CRe spectrum is spatially uniform with hard spectral index 2.4;
+however, the high energy CRe severely suffer from synchrotron and IC losses,
+during their passage through the magnetic and radiation fields, respectively.
+
+The typical synchrotron and IC cooling time scale of high energy ($\sim100$ GeV) CRe
+in Milky Way is $\sim$ 1 Myr \citep{Yang2017}, ten times shorter than
+12.39 Myr required for the simulated bubbles to reach the desired morphology.
+
+
+Therefore, the CRe generating the gamma-ray emission would need to be re-accelerated
+by in-situ acceleration mechanisms such as shocks or turbulence.
+Since the forward shock is rather far away from the gamma-ray bubbles,
+re-acceleration is more likely associated with turbulence \citep{Mertsch2011,Mertsch2019},
+possibly in balance with the IC and synchrotron cooling. We will investigate the competition between stochastic acceleration and radiative cooling
+in a future work.
+
+Overall, our results imply that, whatever the true re-acceleration and cooling mechanisms are,
 the CRe spectrum at the present time has to be spatially uniform with
 a spectral index of 2.4 in order to fit the observed spectra.
 
 
+
+%\begin{equation}
+%   \frac{dE}{dt}
+%     = -\frac{4}{3}\sigma_{T}c\beta_{\text{e}}^2\gamma_{\text{e}}^2
+%     \left(U_{\text{photon}}+U_{B}\right),
+%\end{equation}
+%where $\beta_{\text{e}}=v_{\text{e}}/c$, $U_{\text{photon}}$ and $U_{B}$ are
+%energy density of ISRF and magnetic field, respectively.
 
 
 
@@ -945,8 +968,11 @@ the SMBH assuming the leptonic model. The important findings are summarized as f
 \item Assuming a leptonic model with a spatially uniform, power-law CRe spectrum ranging from 0.5 MeV to 562.1 GeV, we showed that the observed gamma-ray and microwave spectra can simultaneously reproduced. The best-fit\
       CRe power-law index is found to be 2.4.
 \item Associated with the Galactic magnetic field\
-      will lead to the stochastic acceleration of CRe, possibly in balance with the IC and synchrotron cooling.\
-      We will investigate the competition between stochastic acceleration and radiative cooling in a future work. {\color{red} KY: This item is to be modified according to the newly added text in the Discussion section.}
+      will lead to the stochastic acceleration of CRe,
+      possibly in balance with the IC and synchrotron cooling.\
+      We will investigate the competition between stochastic acceleration and radiative cooling
+      in a future work.
+      {\color{red} KY: This item is to be modified according to the newly added text in the Discussion section.}
 \end{itemize}
 
 
@@ -1046,7 +1072,7 @@ $\beta\gamma$     & 1.40       & 0.60       & 0.60       & 0.60        & 0.60   
   \includegraphics[width=\textwidth]{figures/fig__slice-compare.png}
   \caption
    {
-    Simulation results based on the jets parameters in Fig. \ref{fig__jet_parameters}.
+    Simulation results based on the jets parameters in Table. \ref{tablb-jet-parameters}.
    }
   \label{fig__slice-compare}
 \end{figure*}
