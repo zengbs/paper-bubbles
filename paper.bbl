@@ -37,6 +37,11 @@ Ade P. A.~R.,  et~al., 2013, \mn@doi [Astronomy {\&} Astrophysics]
 Atwood W.~B.,  et~al., 2009, \mn@doi [The Astrophysical Journal]
   {10.1088/0004-637x/697/2/1071}, 697, 1071
 
+\bibitem[\protect\citeauthoryear{Berkhuijsen, Haslam  \& Salter}{Berkhuijsen
+  et~al.}{1971}]{berkhuijsen1971galactic}
+Berkhuijsen E.~M.,  Haslam C.,   Salter C.,  1971, Astronomy and Astrophysics,
+  14, 252
+
 \bibitem[\protect\citeauthoryear{Blitz \& Robishaw}{Blitz \&
   Robishaw}{2000}]{halo-radius-1}
 Blitz L.,  Robishaw T.,  2000, ] {10.1086/309457}, 541, 675
@@ -71,6 +76,12 @@ Crocker R.~M.,  Jones D.~I.,  Melia F.,  Ott J.,   Protheroe R.~J.,  2010,
   \mn@doi [\apj] {10.1088/0004-637X/808/2/107}, \href
   {http://adsabs.harvard.edu/abs/2015ApJ...808..107C} {808, 107}
 
+\bibitem[\protect\citeauthoryear{Das, Zucker, Speagle, Goodman, Green  \&
+  Alves}{Das et~al.}{2020}]{Das2020}
+Das K.~K.,  Zucker C.,  Speagle J.~S.,  Goodman A.,  Green G.~M.,   Alves J.,
+  2020, \mn@doi [Monthly Notices of the Royal Astronomical Society]
+  {10.1093/mnras/staa2702}, 498, 5863
+
 \bibitem[\protect\citeauthoryear{Dobler \& Finkbeiner}{Dobler \&
   Finkbeiner}{2008}]{Dobler_2008}
 Dobler G.,  Finkbeiner D.~P.,  2008, \mn@doi [The Astrophysical Journal]
@@ -80,11 +91,6 @@ Dobler G.,  Finkbeiner D.~P.,  2008, \mn@doi [The Astrophysical Journal]
   et~al.}{2015}]{Dopita2015}
 Dopita M.~A.,  et~al., 2015, \mn@doi [The Astrophysical Journal Supplement
   Series] {10.1088/0067-0049/217/1/12}, 217, 12
-
-\bibitem[\protect\citeauthoryear{{Egger} \& {Aschenbach}}{{Egger} \&
-  {Aschenbach}}{1995}]{Egger1995}
-{Egger} R.~J.,  {Aschenbach} B.,  1995, \aap, \href
-  {https://ui.adsabs.harvard.edu/abs/1995A&A...294L..25E} {294, L25}
 
 \bibitem[\protect\citeauthoryear{Federrath, Roman-Duval, Klessen, Schmidt  \&
   Low}{Federrath et~al.}{2010}]{Federrath2010}
@@ -132,9 +138,19 @@ Jones F.~C.,  1968, \mn@doi [Physical Review] {10.1103/physrev.167.1159}, 167,
   {https://ui.adsabs.harvard.edu/abs/1993A&AS...97..443K} {97, 443}
 
 \bibitem[\protect\citeauthoryear{Kataoka, Sofue, Inoue, Akita, Nakashima  \&
-  Totani}{Kataoka et~al.}{2018}]{Kataoka2018}
-Kataoka J.,  Sofue Y.,  Inoue Y.,  Akita M.,  Nakashima S.,   Totani T.,  2018,
-  \mn@doi [Galaxies] {10.3390/galaxies6010027}, 6, 27
+  Totani}{Kataoka et~al.}{2018a}]{Kataoka2018}
+Kataoka J.,  Sofue Y.,  Inoue Y.,  Akita M.,  Nakashima S.,   Totani T.,
+  2018a, \mn@doi [Galaxies] {10.3390/galaxies6010027}, 6, 27
+
+\bibitem[\protect\citeauthoryear{Kataoka, Sofue, Inoue, Akita, Nakashima  \&
+  Totani}{Kataoka et~al.}{2018b}]{kataoka2018x}
+Kataoka J.,  Sofue Y.,  Inoue Y.,  Akita M.,  Nakashima S.,   Totani T.,
+  2018b, Galaxies, 6, 27
+
+\bibitem[\protect\citeauthoryear{LaRocca, Kaaret, Kuntz, Hodges-Kluck, Zajczyk,
+  Bluem, Ringuette  \& Jahoda}{LaRocca et~al.}{2020}]{larocca2020analysis}
+LaRocca D.~M.,  Kaaret P.,  Kuntz K.,  Hodges-Kluck E.,  Zajczyk A.,  Bluem J.,
+   Ringuette R.,   Jahoda K.~M.,  2020, The Astrophysical Journal, 904, 54
 
 \bibitem[\protect\citeauthoryear{Lewis \& Austin}{Lewis \&
   Austin}{2002}]{LA2002}
@@ -203,6 +219,12 @@ Morganti R.,  Oosterloo T.,  Oonk J. B.~R.,  Frieswijk W.,   Tadhunter C.,
 Narayanan S.~A.,  Slatyer T.~R.,  2017, \mn@doi [Monthly Notices of the Royal
   Astronomical Society] {10.1093/mnras/stx577}, 468, 3051
 
+\bibitem[\protect\citeauthoryear{Panopoulou, Dickinson, Readhead, Pearson  \&
+  Peel}{Panopoulou et~al.}{2021}]{Panopoulou2021}
+Panopoulou G.~V.,  Dickinson C.,  Readhead A. C.~S.,  Pearson T.~J.,   Peel
+  M.~W.,  2021, \mn@doi [The Astrophysical Journal] {10.3847/1538-4357/ac273f},
+  922, 210
+
 \bibitem[\protect\citeauthoryear{Porter, J{\'{o}}hannesson  \&
   Moskalenko}{Porter et~al.}{2017}]{Porter2017}
 Porter T.~A.,  J{\'{o}}hannesson G.,   Moskalenko I.~V.,  2017, \mn@doi [The
@@ -238,6 +260,9 @@ Schive H.-Y.,  ZuHone J.~A.,  Goldbaum N.~J.,  Turk M.~J.,  Gaspari M.,   Cheng
   et~al.}{2015}]{Selig2015}
 Selig M.,  Vacca V.,  Oppermann N.,   En{\ss}lin T.~A.,  2015, \mn@doi
   [Astronomy {\&} Astrophysics] {10.1051/0004-6361/201425172}, 581, A126
+
+\bibitem[\protect\citeauthoryear{Sofue}{Sofue}{2000}]{sofue2000bipolar}
+Sofue Y.,  2000, The Astrophysical Journal, 540, 224
 
 \bibitem[\protect\citeauthoryear{Strong, Moskalenko  \& Ptuskin}{Strong
   et~al.}{2007}]{Strong2007}
