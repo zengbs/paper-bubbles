@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#                     A      B          C         D        E        F        G
+declare -a kT=( 1.720e6  0.172e6  1.720e6  17.200e6  1.720e6  1.720e6  1.720e6)
+declare -a rho=(  1e-26    1e-26    1e-26     1e-26    1e-25    1e-27    1e-26)
+declare -a U=(    1.395      0.6      0.6       0.6      0.6      0.6    0.273)
+
+
+FILE=/home/tseng/Works/notes/physics/conversion.py
+
+echo "Kinetic power          Thermal power"
+
+for i in "${!kT[@]}";do
+        KineticEnergyPower=`python $FILE -kT ${kT[i]} -rho ${rho[i]} -U ${U[i]} -radi 2| grep "Kinetic energy power"|awk '{print $5}'`
+        ThermalEnergyPower=`python $FILE -kT ${kT[i]} -rho ${rho[i]} -U ${U[i]} -radi 2| grep "Thermal energy power"|awk '{print $5}'`
+
+	printf "%7.2e  " "${KineticEnergyPower}"
+        printf "             "
+        printf "%7.2e\n" "${ThermalEnergyPower}"
+done
