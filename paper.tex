@@ -218,7 +218,7 @@ Finally, the summary and implications of our findings are given in Section \ref{
   In this manner, we provide an elegant approach to avoid the use of pressure/density floor,\
   being unnatural but widely used in almost publicly available codes.\
 
-  In order to track the evolution of CRs injected by the AGN jets and make predictions of the non-thermal radiation they produce, we adopt the CR hydrodynamic formalism and model the CRs as a second fluid \citep{Zweibel2013}. The approach is similar to previous works of \cite{Guo2012} and \cite{Yang2012}, but generalized to CRs that couple with thermal gas moving with relativistic speeds. The detailed implementations in \textsc{gamer-sr} and tests of the algorithm can be found in a forthcoming paper \citep[][in prep.]{Chen2022}. In this approach, the CRs are treated as a single species without distinctions between CR electrons and protons,\
+  In order to track the evolution of CRs injected by the AGN jets and make predictions of the non-thermal radiation they produce, we adopt the CR hydrodynamic formalism and model the CRs as a second fluid \citep{Zweibel2013}. The approach is similar to previous works of \cite{Guo2012} and \cite{Yang2012}, but generalized to CRs that couple with thermal gas moving with relativistic speeds. The detailed implementations in \textsc{gamer-sr} and tests of the algorithm can be found in a forthcoming paper (Chen et al. in prep). In this approach, the CRs are treated as a single species without distinctions between CR electrons and protons,\
   and the CR energy density $e_{\text{cr}}$ is evolved according to Eq. \ref{E evolution}.
   The CRs are advected with the thermal gas and can have adiabatic compression and expansion with the gas. Also, we do not simulate the spectral evolution of the CRs and assume that the CR-to-gas pressure ratio is much less than 1 so that\
   the contribution of CR pressure gradient to the momentum of the gas can be ignored\
@@ -943,14 +943,21 @@ the SMBH assuming the leptonic model. The important findings are summarized as f
       releases the caveat of earlier jet models that the jets must be vertical to the Galactic plane.\
 
 
-%\item The randomness of the clumpy disk has an insignificant impact on the overall dynamic of the Galactic bubbles.\
-%      The development of the reverse shocks (the innermost bubbles) is always associated with the dense disk,\
-%      without the disc, the outermost bubbles and the turbulent plasma will be oblique,\
-%      indicating the dense disc is crucial for\
-%      the symmetry of the Galactic bubbles and for the innermost bubbles formation.
+%\item The clumpiness of the ISM disk has an insignificant impact on the\
+%      overall dynamic of the Galactic bubbles.\
+%      The development of the reverse shocks (the innermost bubbles) is always
+%      associated with the dense disk,\
+%      without the disc, only asymmetric forward shocks exist.
 %      {\color{red} KY: I removed the second point about the innermost bubbles for now, because I think the following two points should be separated: (1) inclusion of the disk is critical for forming symmetric Galactic bubbles, (2) we found a pair of innermost bubbles which are reverse shocks (and perhaps comment on their properties and/or observable signatures). PH: done! }
-\item The development of the expanding forward-reverse shock pair is always associated with the dense disk. Also, without the thin disk, only forward shocks exist. The forward-reverse shock pair heats the turbulent plasma up considerably ($\sim2$ keV) as the plasma is bracketed between their downstream. There exists a dense shell that fits closely to the reverse shock because the gas is immediately compressed as it passes outward through the reverse shock while coinciding with the low gas density further downstream.
+{\color{blue}
+\item The development of the expanding forward-reverse shock pair is always associated with\
+the dense disk, although the clumpiness of the disk has an insignificant impact on the\
+overall dynamic of the Galactic bubbles.
+Furthermore, in the absence of the disk, only forward shocks are present,
+indicating the inclusion of the disk is critical for forming the innermost bubbles.
 
+\item The forward-reverse shock pair heats the turbulent plasma up considerably ($\sim2$ keV) as the plasma is bracketed between their downstream. There exists a dense shell that fits closely to the reverse shock because the gas is immediately compressed as it passes outward through the reverse shock while coinciding with the low gas density further downstream.
+}
 \item In the oblique jet scenario, the edge of the eROSITA bubbles is a forward shock,\
       originally driven by oblique bipolar jets emanating from the GC 12.39 Myr ago for a duration of 1.2 Myr\
       and significantly expanded within the stratified atmosphere afterwards.\
