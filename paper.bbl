@@ -60,6 +60,10 @@ Carretti E.,  et~al., 2013, \mn@doi [Nature] {10.1038/nature11734}, 493, 66
 Cecil G.,  Bland-Hawthorn J.,  Veilleux S.,   Filippenko A.~V.,  2001, \mn@doi
   [The Astrophysical Journal] {10.1086/321481}, 555, 338
 
+\bibitem[\protect\citeauthoryear{Crocker}{Crocker}{2012}]{Crocker2012}
+Crocker R.~M.,  2012, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1111/j.1365-2966.2012.21149.x}, 423, 3512
+
 \bibitem[\protect\citeauthoryear{Crocker \& Aharonian}{Crocker \&
   Aharonian}{2011}]{PhysRevLett.106.101102}
 Crocker R.~M.,  Aharonian F.,  2011, \mn@doi [Phys. Rev. Lett.]
@@ -75,6 +79,10 @@ Crocker R.~M.,  Jones D.~I.,  Melia F.,  Ott J.,   Protheroe R.~J.,  2010,
 {Crocker} R.~M.,  {Bicknell} G.~V.,  {Taylor} A.~M.,   {Carretti} E.,  2015,
   \mn@doi [\apj] {10.1088/0004-637X/808/2/107}, \href
   {http://adsabs.harvard.edu/abs/2015ApJ...808..107C} {808, 107}
+
+\bibitem[\protect\citeauthoryear{Dahmén et~al.,}{Dahmén
+  et~al.}{1998}]{Dahmen1998}
+Dahmén G.,  et~al., 1998, http://dx.doi.org/10.1051/aas:1997389
 
 \bibitem[\protect\citeauthoryear{Das, Zucker, Speagle, Goodman, Green  \&
   Alves}{Das et~al.}{2020}]{Das2020}
@@ -101,6 +109,11 @@ Federrath C.,  Roman-Duval J.,  Klessen R.~S.,  Schmidt W.,   Low M.-M.~M.,
 \bibitem[\protect\citeauthoryear{Ferri{\`{e}}re}{Ferri{\`{e}}re}{2001}]{peak-ism-density}
 Ferri{\`{e}}re K.~M.,  2001, \mn@doi [Rev. Mod. Phys.]
   {10.1103/revmodphys.73.1031}, 73, 1031
+
+\bibitem[\protect\citeauthoryear{Ferri{\`{e}}re, Gillard  \&
+  Jean}{Ferri{\`{e}}re et~al.}{2007}]{Ferrire2007}
+Ferri{\`{e}}re K.,  Gillard W.,   Jean P.,  2007, \mn@doi [Astronomy and
+  Astrophysics] {10.1051/0004-6361:20066992}, 467, 611
 
 \bibitem[\protect\citeauthoryear{Gallimore, Axon, O{\textquotesingle}Dea, Baum
   \& Pedlar}{Gallimore et~al.}{2006}]{Gallimore2006}
@@ -151,6 +164,11 @@ Kataoka J.,  Sofue Y.,  Inoue Y.,  Akita M.,  Nakashima S.,   Totani T.,
   Totani}{Kataoka et~al.}{2018b}]{kataoka2018x}
 Kataoka J.,  Sofue Y.,  Inoue Y.,  Akita M.,  Nakashima S.,   Totani T.,
   2018b, Galaxies, 6, 27
+
+\bibitem[\protect\citeauthoryear{Krumholz \& Kruijssen}{Krumholz \&
+  Kruijssen}{2015}]{Krumholz2015}
+Krumholz M.~R.,  Kruijssen J. M.~D.,  2015, \mn@doi [Monthly Notices of the
+  Royal Astronomical Society] {10.1093/mnras/stv1670}, 453, 739
 
 \bibitem[\protect\citeauthoryear{LaRocca, Kaaret, Kuntz, Hodges-Kluck, Zajczyk,
   Bluem, Ringuette  \& Jahoda}{LaRocca et~al.}{2020}]{larocca2020analysis}
@@ -271,6 +289,11 @@ Selig M.,  Vacca V.,  Oppermann N.,   En{\ss}lin T.~A.,  2015, \mn@doi
 
 \bibitem[\protect\citeauthoryear{Sofue}{Sofue}{2000}]{sofue2000bipolar}
 Sofue Y.,  2000, The Astrophysical Journal, 540, 224
+
+\bibitem[\protect\citeauthoryear{Sormani \& Barnes}{Sormani \&
+  Barnes}{2019}]{Sormani2019}
+Sormani M.~C.,  Barnes A.~T.,  2019, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1093/mnras/stz046}, 484, 1213
 
 \bibitem[\protect\citeauthoryear{Strong, Moskalenko  \& Ptuskin}{Strong
   et~al.}{2007}]{Strong2007}

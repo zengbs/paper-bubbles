@@ -39,7 +39,6 @@ Po-Hsun Tseng$^{1}$%
 \quad Hsi-Yu Schive$^{1,5,6,7}$%
 \thanks{\href{mailto:hyschive@phys.ntu.edu.tw}{hyschive@phys.ntu.edu.tw}}%
 \orcidlink{https://orcid.org/0000-0002-1249-279X}%
-\quad Chun-Yen Chen$^{8}, $
 \quad Tzihong Chiueh$^{1,5,6}$%
 \thanks{\href{mailto:chiuehth@phys.ntu.edu.tw}{chiuehth@phys.ntu.edu.tw}}%
 \orcidlink{https://orcid.org/0000-0003-2654-8763}%
@@ -51,7 +50,6 @@ $^{4}$Center for Informatics and Computation in Astronomy, National Tsing Hua Un
 $^{5}$Physics Division, National Center for Theoretical Sciences, Taipei 10617, Taiwan\\
 $^{6}$Department of Physics, National Taiwan University, Taipei 10617, Taiwan\\
 $^{7}$Center for Theoretical Physics, National Taiwan University, Taipei 10617, Taiwan\\
-$^{8}$Institute of physics, National Taiwan University, Taipei 10617, Taiwan\\
 }
 
 
@@ -895,16 +893,31 @@ via IC scattering and synchrotron radiation, respectively. Our results thus prov
   \end{figure}
 
 \section{Discussion}
-Our modeled gamma-ray and microwave spectra assumed that
+{\color{red}
+As a past violent event at the GC must destroy the Central Molecular Zone (CMZ)
+but the CMZ is currently either in a quasi-steady state or
+presently increasing \citep{Crocker2012,Krumholz2015,Sormani2019};
+we conclude that the time since the violent event must be ``slightly" shorter
+than the reconstruction time of CMZ on a timescale of
+$M_{\text{CMZ}}/\dot{M}_{\text{inflow}}$, where $M_{\text{CMZ}}$ is
+the total mass of molecular gas within $R\sim300$ pc,
+and $\dot{M}_{\text{inflow}}$ is the gas inflow rate from the Galactic disc at
+$R\sim3$ kpc down to the outskirts of the CMZ.
+Since $M_{\text{CMZ}}$ and $\dot{M}_{\text{inflow}}$ have been reported to be in the range
+$2-6\times10^{7}$ M$_{\odot}$ \citep{Dahmen1998,Ferrire2007} and
+$0.4-2.7$ M$_{\odot}$ yr$^{-1}$ \citep{Sormani2019,Crocker2012}, respectively;
+we estimate that the CMZ formation is about a couple of 10 Myrs, similar to
+12 Myr required for our simulated bubbles to reach the desired morphology.
+}
+
+On the other hand, our modeled gamma-ray and microwave spectra assumed that
 the underlying CRe spectrum is spatially uniform with hard spectral index 2.4;
 however, the high energy CRe severely suffer from synchrotron and IC losses,
 during their passage through the magnetic and radiation fields, respectively, within the Galaxy.
 
 The typical synchrotron and IC cooling time scale of high energy ($\sim100$ GeV) CRe
 in Milky Way is $\sim$ 1 Myr \citep{Yang2017}, ten times shorter than
-12 Myr required for the simulated bubbles to reach the desired morphology.
-
-
+12 Myr suggested by our simulation.
 Therefore, the CRe generating the gamma-ray emission would need to be re-accelerated
 by in-situ acceleration mechanisms such as shocks or turbulence.
 Since the forward shock is rather far away from the gamma-ray bubbles,
@@ -912,8 +925,8 @@ re-acceleration is more likely associated with turbulence \citep{Mertsch2011,Mer
 possibly in balance with the IC and synchrotron cooling. We will investigate the
 competition between stochastic acceleration and radiative cooling in future work.
 
-
-Overall, our results imply that in the oblique-jet scenario, whatever the true re-acceleration and cooling mechanisms are,
+Overall, our results imply that in the oblique-jet scenario,
+whatever the true re-acceleration and cooling mechanisms are,
 the CRe spectrum at the present time has to be spatially uniform with
 a spectral index of 2.4 in order to fit the observed spectra.
 
@@ -997,6 +1010,7 @@ The authors thank Mateusz Ruszkowski and Ellen G. Zweibel for insightful comment
 We thank Henry Zovaro for discussions about the innermost bubbles\
 during the final stages of this work.\
 We thank Peter Predehl for providing the range of observed X-ray intensity in Fig. \ref{fig__xray_0.8keV_angle_000}.\
+We further thank Chen Chun-Yen provides the code module solving the cosmic ray convection equation.
 A part of the simulations are performed and analyzed using computing resources\
 operated by the National Center for High-Performance Computing (NCHC).
 HYKY acknowledges support from\
