@@ -80,24 +80,27 @@ have assumed that the jets are vertical to the Galactic plane;\
 however, in general there does not need to be a correlation between
 the jet orientation and the rotational axis of the Galactic disk.\
 Using three-dimensional (3D) special relativistic hydrodynamic (SRHD) simulations that\
-include cosmic rays (CRs) and thermal gas, we show that {\color{red}the clumpy gas within ISM\
+include cosmic rays (CRs) and thermal gas, we show that the dense clumpy gas within disk ISM\
 disrupts jets collimation and confinement (``failed jets" hereafter),
 which in turn causes the failed jets to form
-hot bubbles and subsequent bouyancy makes it vertical to produce
-the symmetric \textit{Fermi} and eROSITA bubbles (collectively, Galactic bubbles).}
+hot bubbles. Subsequent bouyancy in the stratified atmosphere renders them vertical to form
+the symmetric \textit{Fermi} and eROSITA bubbles (collectively, Galactic bubbles).
 Specifically, we find that\
-(1) the simulated Galactic bubbles are nearly symmetric about the GC albeit\
+(1) despite the relativistic jets emanated from the GC 12 Myr ago are at various angles
+$\leq 45^{\circ}$ with respect to
+the rotational axis of the Galaxy, the Galactic bubbles nonetheless appear aligned with the axis;
+the simulated Galactic bubbles are nearly symmetric about the GC albeit\
 the bipolar jets are at an angle $45^{\circ}$ with respect to\
 the rotational axis of the Galaxy;\
-(2) the edge of the eROSITA bubbles corresponds to a forward shock,\
-originally driven by oblique bipolar jets emanating from the GC around 12 million years ago; %,\
-(3) followed by the forward shock is a tangling contact discontinuity,\
-which we interpret as the edge of the \textit{Fermi} bubbles\
+(2) the edge of the eROSITA bubbles corresponds to a forward shock, driven by the hot bubble;
+(3) followed by the forward shock is a tangling contact discontinuity at the edge of the \textit{Fermi} bubbles
 composed of turbulent and high-temperature ($\sim2$ keV)\
 plasma in pressure balance with the external medium;
-(4) assuming a leptonic model with spatially uniform CR electron spectrum,
-we find that the observed gamma-ray and microwave spectra can be reproduced with
-a best-fit CR power-law index of 2.4. The broad agreement between simulated and
+(4) assuming a leptonic model we find that the observed gamma-ray bubbles and microwave haze can be reproduced with
+a best-fit CR power-law index of 2.4;
+(5) the 12 Myr time span between the present and the launch of short-lived jets appears to be the appropriate time
+scale for the observed GC Central Molecular Zone to form.
+The broad agreement between the simulated and the
 observed multi-wavelength features suggests that forming the Galactic bubbles by
 oblique AGN failed jets is a plausible scenario.
 \end{abstract}
@@ -208,10 +211,10 @@ Finally, the summary and implications of our findings are given in Section \ref{
   %accounts for a little minority of total mass inside the simulation box,\
   %we still use the Newtonian gravity to attack this problem.
 
-  \textsc{gamer-sr} adopts a new algorithm \citep{tseng2021} to convert between\
-  primitive ($\rho$, $U^{j}$, $p$) and conserved variables ($D$, $M^{j}$, $\tilde{E}$),\
-  significantly reducing numerical errors caused by catastrophic cancellations\
-  that commonly occur within the regions with high Mach number flows. e.g., jet-ISM interaction zones.\
+  \textsc{gamer-sr} adopts a new SRHD solver \citep{tseng2021}, which significantly reduce numerical errors
+  in non- and ultra-relativistic limits caused by catastrophic cancellations
+  in the conversion between primitive ($\rho$, $U^{j}$, $p$) and conserved variables ($D$, $M^{j}$, $\tilde{E}$).
+  %that commonly occur within the regions with high Mach number flows. e.g., jet-ISM interaction zones.\
   \textsc{gamer-sr} also adaptively and locally reduce the min-mod coefficient\
   \citep{tseng2021} within the failed patch group rarely occurring in the SRHD solver,\
   new patches allocations, and ghost-zone interpolations.\
@@ -893,7 +896,6 @@ via IC scattering and synchrotron radiation, respectively. Our results thus prov
   \end{figure}
 
 \section{Discussion}
-{\color{red}
 As a past violent event at the GC must destroy the Central Molecular Zone (CMZ)
 but the CMZ is currently either in a quasi-steady state or
 presently increasing \citep{Crocker2012,Krumholz2015,Sormani2019};
@@ -908,7 +910,6 @@ $2-6\times10^{7}$ M$_{\odot}$ \citep{Dahmen1998,Ferrire2007} and
 $0.4-2.7$ M$_{\odot}$ yr$^{-1}$ \citep{Crocker2012,Sormani2019}, respectively;
 we estimate that the CMZ formation is about a couple of 10 Myrs, similar to
 12 Myr required for our simulated bubbles to reach the desired morphology.
-}
 
 On the other hand, our modeled gamma-ray and microwave spectra assumed that
 the underlying CRe spectrum is spatially uniform with hard spectral index 2.4;
@@ -947,21 +948,13 @@ a spectral index of 2.4 in order to fit the observed spectra.
 \section{Conclusions}
 \label{Conclusions}
 In this work, we introduce a thin, dense disk composed of clumpy ISM\
-to divert the oblique jets at an angle $45^{\circ}$\
-to the disk normal in the past energetic event of the central SMBH in the Milky Way Galaxy.\
+to stall and thermalize the oblique jets for an outburst event from
+the central SMBH in the Milky Way Galaxy 12 Myrs ago.
 We investigate the properties of the Galactic bubbles and the microwave\
 haze using 3D SRHD simulations of CR jet injections from\
 the SMBH assuming the leptonic model. The important findings are summarized as follows.
 
 \begin{itemize}
-
-\item The Galactic bubbles are nearly symmetric about the Galactic plane albeit\
-      the bipolar jets are at an angle $45^{\circ}$\
-      with respect to the disk normal.\
-      We showed that inclusion of the dense ISM disk (regardless of its clumpiness) is a critical component for producing the symmetric Galactic bubbles when the jets are oblique.\
-      The broad agreement between the simulated and observed multi-wavelength features\
-      demonstrates that oblique jets are a plausible scenario of forming the Galactic bubbles, which\
-      releases the caveat of earlier jet models that the jets must be vertical to the Galactic plane.\
 
 
 %\item The clumpiness of the ISM disk has an insignificant impact on the\
@@ -970,37 +963,72 @@ the SMBH assuming the leptonic model. The important findings are summarized as f
 %      associated with the dense disk,\
 %      without the disc, only asymmetric forward shocks exist.
 %      {\color{red} KY: I removed the second point about the innermost bubbles for now, because I think the following two points should be separated: (1) inclusion of the disk is critical for forming symmetric Galactic bubbles, (2) we found a pair of innermost bubbles which are reverse shocks (and perhaps comment on their properties and/or observable signatures). PH: done! }
-\item The development of the expanding forward-reverse shock pair is always associated with\
-the dense disk, although the clumpiness of the disk has an insignificant impact on the\
-overall dynamic of the Galactic bubbles.
-Furthermore, in the absence of the disk, only forward shocks are present,
+\item The development of the expanding forward-reverse shock pair is always associated with the dense disk.
+%the dense disk, although the clumpiness of the disk has an insignificant impact on the\
+%overall dynamic of the Galactic bubbles.
+%Furthermore,
+In the absence of the disk, only forward shocks are present,
 indicating the inclusion of the disk is critical for forming the innermost bubbles.
 
-\item The forward-reverse shock pair heats the turbulent plasma up considerably ($\sim2$ keV) as the plasma is bracketed between their downstream. There exists a dense shell that fits closely to the reverse shock because the gas is immediately compressed as it passes outward through the reverse shock while coinciding with the low gas density further downstream.
+\item The forward-reverse shock pair heats the turbulent plasma considerably ($\sim2$ keV).
+%as the plasma is bracketed between their downstream.
+There exists a
+%dense shell that fits closely to the reverse shock because the gas is
+%immediately compressed as it passes outward through the reverse shock while coinciding with the low gas density further downstream.
+dense shell immediately downstream of the reverse shock, a situation reminiscent of a supernova shell.
 
-\item In the oblique jet scenario, the edge of the eROSITA bubbles is a forward shock,\
-      originally driven by oblique bipolar jets emanating from the GC around 12 Myr ago for a duration of 1.2 Myr\
-      and significantly expanded within the stratified atmosphere afterwards.\
-      The overall extent of the simulated X-ray bubbles is comparable to that of the eROSITA bubbles, though not as limb-brightened.\
-      Future models including shock-accelerated CRs may help to resolve this issue by increasing the compressibility of the fluid and enhancing the thermal Bremsstrahlung emissivity at the edge of the X-ray bubbles.
+\item The edge of the eROSITA bubbles is a forward shock,
+      originally driven by bipolar jets emanating from the GC around 12 Myr ago
+      for a duration of 1.2 Myr,
+      and significantly expanded in the stratified atmosphere afterwards.
+      The overall extent of the simulated X-ray bubbles is comparable to
+      that of the eROSITA bubbles, though not as limb-brightened.
+      Future models including shock-accelerated CRs may help to resolve this issue by
+      increasing the compressibility of the fluid and enhancing the thermal Bremsstrahlung emissivity
+      at the edge of the X-ray bubbles.
       %The simulated eROSITA bubbles are not as limb-brightened as the observation.\
       %A possibility to enhance the X-ray emission is to include shock-accelerated CRs near the shock,\
       %in which CRs could increase the compressibility of the fluid,\
       %resulting in the enhanced thermal Bremsstrahlung emissivity that is proportional to density squared.
-\item Followed by the forward shock is a turbulent, hot plasma ($\sim2$ keV) filled with the injected CRs in pressure balance with the shocked medium, which we interpret as the \textit{Fermi} bubbles.\
-      The similarity of the morphology, temperature, and gamma-ray spectrum between\
-      simulated and observed bubbles suggests that\
-      the edge of the \textit{Fermi} bubbles are likely associated with the contact discontinuity between the turbulent, hot plasma and the post-shock medium. The surface of the simulated bubbles is not as smooth as the observed ones; inclusion of magnetic fields in the future may help suppress the instabilities at the bubble surface due to the mangetic draping effect.
-\item Assuming a leptonic model with a spatially uniform, power-law CRe spectrum ranging from 0.5 MeV to 562.1 GeV, we showed that the observed gamma-ray and microwave spectra can simultaneously reproduced. The best-fit\
-      CRe power-law index is found to be 2.4.
-\item The elapsed time of 12 Myr required for the simulated bubbles
-      to reach the desired morphology
-      is ten times longer than the typical synchrotron and IC cooling time scale of
+%\item Followed by the forward shock is a turbulent, hot plasma ($\sim2$ keV) filled
+      %with the injected CRs in pressure balance with the shocked medium,
+      %which we interpret as the \textit{Fermi} bubbles.\
+      %The similarity of the morphology, temperature, and gamma-ray spectrum between\
+      %simulated and observed bubbles suggests that\
+      %the edge of the \textit{Fermi} bubbles are likely associated with the contact discontinuity between
+      %the turbulent, hot plasma and the post-shock medium.
+\item Downstream of the reverse shock is filled with hot ($\sim2$ keV) and highly turbulent
+      plasma brought from the disk. The interface between the downstream materials of reverse and
+      forward shocks lies a contact discontinuity, which defines the edge of the Fermi bubble.
+      The surface of the simulated bubbles is
+      not as smooth as the observed ones; inclusion of magnetic fields in the future may help suppress
+      the instabilities at the bubble surface due to the mangetic draping effect.
+\item Assuming a leptonic model with a spatially uniform, power-law CRe spectrum
+      ranging from 0.5 MeV to 562.1 GeV, we showed that the observed gamma-ray and microwave spectra
+      can simultaneously reproduced. The best-fit CRe power-law index is found to be 2.4.
+\item The elapsed time of 12 Myr is required for the simulated bubbles to reach the desired morphology.
+      This time scale is appropriate for the observed Central Molecular Zone, 200 pc
+      in radius surrounding the GC, to form. However, it is 10 times longer than
+      %The elapsed time of 12 Myr required for the simulated bubbles
+      %to reach the desired morphology is ten times longer than
+      the typical synchrotron and IC cooling time scale of
       high energy ($\sim100$ GeV) CRe. Thus, re-acceleration of CRe by shocks or turbulence must be considered
-      in this model. Since the forward shock is rather far away from the gamma-ray bubbles, stochastic acceleration of CRs by turbulence appears to be more plausible.\
+      in this model. Since the forward shock is rather far away from the gamma-ray bubbles,
+      stochastic acceleration of CRs by turbulence appears to be more plausible.\
       We will investigate the competition between stochastic acceleration and radiative cooling
       in a future work.
       %{\color{red} KY: This item is to be modified according to the newly added text in the Discussion section. PH: done!}
+\item The Galactic bubbles are nearly symmetric about the Galactic plane albeit\
+      the bipolar jets are oblique with respect to the disk normal.\
+      We showed that inclusion of the dense ISM disk (regardless of its clumpiness)
+      is an essential ingredient for producing the symmetric Galactic bubbles when the jets are oblique.\
+      The broad agreement between the simulated and observed multi-wavelength features\
+      demonstrates that oblique failed jets are a plausible
+      %scenario of forming the Galactic bubbles,
+      scenario for the formation of the Galactic bubbles,
+      which release the caveat of earlier jet models where jets need to be vertical.
+      %that the jets must be vertical to the Galactic plane.\
+
 \end{itemize}
 
 
@@ -1107,6 +1135,7 @@ $\beta\gamma$     & 1.20       & 0.60       & 0.60       & 0.60        & 0.60   
 \end{document}
 
 % End of mnras_guide.tex
+
 
 
 
