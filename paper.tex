@@ -83,15 +83,15 @@ Using three-dimensional (3D) special relativistic hydrodynamic (SRHD) simulation
 include cosmic rays (CRs) and thermal gas, we show that the dense clumpy gas within disk ISM\
 disrupts jets collimation and confinement (``failed jets" hereafter),
 which in turn causes the failed jets to form
-hot bubbles. Subsequent bouyancy in the stratified atmosphere renders them vertical to form
+hot bubbles. Subsequent buoyancy in the stratified atmosphere renders them vertical to form
 the symmetric \textit{Fermi} and eROSITA bubbles (collectively, Galactic bubbles).
 Specifically, we find that\
 (1) despite the relativistic jets emanated from the GC 12 Myr ago are at various angles
 $\leq 45^{\circ}$ with respect to
 the rotational axis of the Galaxy, the Galactic bubbles nonetheless appear aligned with the axis;
-the simulated Galactic bubbles are nearly symmetric about the GC albeit\
-the bipolar jets are at an angle $45^{\circ}$ with respect to\
-the rotational axis of the Galaxy;\
+%the simulated Galactic bubbles are nearly symmetric about the GC albeit\
+%the bipolar jets are at an angle $45^{\circ}$ with respect to\
+%the rotational axis of the Galaxy;\
 (2) the edge of the eROSITA bubbles corresponds to a forward shock, driven by the hot bubble;
 (3) followed by the forward shock is a tangling contact discontinuity at the edge of the \textit{Fermi} bubbles
 composed of turbulent and high-temperature ($\sim2$ keV)\
@@ -184,7 +184,9 @@ Finally, the summary and implications of our findings are given in Section \ref{
      -\rho\partial_{i}\Phi,\label{M evolution}\\
      &\partial_{t} \tilde{E}+\partial_j \left[\left(\tilde{E}+p_{\text{gas}}\right)U^{j}/\gamma\right]=0, \label{E evoltion}\\
      &\partial_{t} \left(\gamma e_{\text{cr}}\right) + \partial_{j} \left(e_{\text{cr}}U^{j}\right)=\
-     -p_{\text{cr}} \partial_{j} U^{j},\label{E evolution}
+     -p_{\text{cr}} \partial_{j} U^{j},\\
+     &\partial_{i}\partial^{i}\Phi=4\pi G \rho,
+    \label{E evolution}
     \end{align}
   \end{subequations}
 
@@ -200,7 +202,7 @@ Finally, the summary and implications of our findings are given in Section \ref{
   $p_{\text{total}}$ is the sum of $p_{\text{gas}}$ and $p_{\text{cr}}$.\
   Note that we simply replace $p_{\text{total}}$ by $p_{\text{gas}}$ in this paper\
   as we have assumed $p_{\text{cr}}\ll p_{\text{gas}}$.\
-  $\Phi$ is a gravitational potential.\
+  $\Phi$ is a gravitational potential, and $G$ is the gravitational constant.\
   $c$ is the speed of light, and $\delta^{ij}$ is the Kronecker delta notation.\
   Throughout this paper, Latin indices run from 1 to 3, except when stated otherwise. The set of Eq. \ref{governing-eq} is closed by using the Taub-Mathews equation of state \citep[EoS;][]{Taub,TM_EOS}\
   that approximates the exact EoS \citep{Synge} for ultra-relativistically\
@@ -561,7 +563,7 @@ $\delta$                              & Power law index                & -5/3   
              and the smooth disks (Fig. \ref{fig__jetI5+ismSeed3-45deg-b}) in a stratified atmosphere\
              shows that the initial density distribution of the dense disk has an insignificant effect\
              on the overall dynamics of bubbles. However, the outermost bubbles arising from the smooth disk\
-             in an uniform atmosphere (Fig. \ref{fig__jetI5+ismSeed3-45deg-c}) is nearly spherical,\
+             in a uniform atmosphere (Fig. \ref{fig__jetI5+ismSeed3-45deg-c}) are nearly spherical,\
              suggesting that the stratification facilitates the elongation of the outermost bubbles significantly.\
              Fig. \ref{fig__jetI5+ismSeed3-45deg-c} and \ref{fig__jetI5+ismSeed3-45deg-d}\
              reveal that the development of the innermost bubbles\
@@ -709,7 +711,7 @@ comparing the simulated gamma-ray and microwave spectra\
 with the observed spectra of the Fermi bubbles \citep{Ackermann2014}\
 and the microwave haze \citep{Dobler_2008}, respectively.\
 
-We assume the leptonic model for the gamma-ray and microwave emission as previous studies have shown that the bubble and haze spectra can be simulataneously produced by the same population of CRe \citep{Su2010, Ackermann2014, Yang2022}. In the leptonic scenario, the gamma-ray and microwave emission come from IC scattering of the ISRF and synchrotron radiation, respectively.\
+We assume the leptonic model for the gamma-ray and microwave emission as previous studies have shown that the bubble and haze spectra can be simultaneously produced by the same population of CRe \citep{Su2010, Ackermann2014, Yang2022}. In the leptonic scenario, the gamma-ray and microwave emission come from IC scattering of the ISRF and synchrotron radiation, respectively.\
 Because the evolution of CR spectrum is not modelled in the simulations, we assume that the CRe spectrum is spatially uniform and follows a power-law distribution ranging from\
 $0.5$ MeV ($\sim m_{\text{e}}c^2$) to $562.1$ GeV. The choice of $562.1$ GeV is motivated by\
 the observed cutoff gamma-ray energy shown in Fig. \ref{fig__gammaRaySynchtronSpectrum}\
@@ -784,7 +786,7 @@ and gamma-ray (right) spectra averaged over the different patches (shown in the 
 The rows from top to bottom show the spectra with different assumptions of the CRe spectral index, $2.2, 2.4$ and $2.6$.\
 We highlight our findings as follows.\
 
-First, we find that, among the three values of the CR spectral indices assumed, a CRe spectral index of 2.4 (the middle row) provides the best fits for both the the simulated gamma-ray spectra as well as the microwave spectra. This value is slightly steeper than the best-fit spectral index of $\sim 2.17$ found by \cite{Ackermann2014}. However, we note that our calculation takes into account the 3D variations of the ISRF, whereas the previous constraint was based on the ISRF at a fixed height of 5 kpc away from the Galactic plane.
+First, we find that, among the three values of the CR spectral indices assumed, a CRe spectral index of 2.4 (the middle row) provides the best fits for both the simulated gamma-ray spectra as well as the microwave spectra. This value is slightly steeper than the best-fit spectral index of $\sim 2.17$ found by \cite{Ackermann2014}. However, we note that our calculation takes into account the 3D variations of the ISRF, whereas the previous constraint was based on the ISRF at a fixed height of 5 kpc away from the Galactic plane.
 
 Second, the simulated gamma-ray spectra are\
 nearly latitude independent. Note that we have assumed spatially uniform spectrum for the underlying CRe, and hence the simulated gamma-ray spectra at different latitudes mainly reflect how the 3D distribution of the simulated CR number density (see Fig. \ref{fig__jetI5+ismSeed3-45deg-CR})  is projected into different latitude bins. Overall we find good agreement between the simulated and observed spectra \citep{Ackermann2014}; only the simulated spectrum at high latitudes tends to be slightly dimmer than the lower-latitude spectrum because the optical intensity in the ISRF decays with increasing latitudes.
@@ -1003,7 +1005,7 @@ dense shell immediately downstream of the reverse shock, a situation reminiscent
       forward shocks lies a contact discontinuity, which defines the edge of the Fermi bubble.
       The surface of the simulated bubbles is
       not as smooth as the observed ones; inclusion of magnetic fields in the future may help suppress
-      the instabilities at the bubble surface due to the mangetic draping effect.
+      the instabilities at the bubble surface due to the magnetic draping effect.
 \item Assuming a power-law CRe energy spectrum ranging from 0.5 MeV to 560 GeV,
       where the spectrum is space-independent,
       %Assuming a leptonic model with a spatially uniform, power-law CRe spectrum
